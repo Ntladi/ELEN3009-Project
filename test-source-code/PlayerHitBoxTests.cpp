@@ -1,7 +1,5 @@
 #include "Player.h"
 #include "HitBox.h"
-
-#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include <doctest.h>
 
 TEST_CASE("The player's HitBox moves left with the player")
