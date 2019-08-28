@@ -8,7 +8,9 @@
 #include "MoveDirection.h"
 #include "Parameters.h"
 #include "HitBox.h"
+#include "Bullet.h"
 using two_floats = std::tuple<float, float>;
+using vec_of_bullets = std::vector<std::shared_ptr<Bullet>>;
 
 class Player
 {
@@ -20,8 +22,10 @@ public:
 	MoveDirection getMoveDirection() const;
 	HitBox getHitBox() const;
 	Parameters getParameters() const;
+	vec_of_bullets getShotsFired() const;
 	void setMoveDirection(const MoveDirection &direction);
 	void move();
+	void shoot();
 
 private:
 	Parameters parameters_;
