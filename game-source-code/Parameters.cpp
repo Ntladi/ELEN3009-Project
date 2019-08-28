@@ -29,6 +29,20 @@ Parameters::Parameters(ObjectType object, Orientation orientation,
 		this->y_position_ = 0;
 	}
 
+	if (object == ObjectType::ALIEN)
+	{
+		this->x_length_ = Constants::ALIEN_X_LENGTH;
+		this->y_length_ = Constants::ALIEN_Y_LENGTH;
+		this->movement_step_ = Constants::ALIEN_MAXIMUM_MOVEMENT_STEP;
+		this->x_position_ = Constants::ALIEN_INITAL_X_POSITION;
+		if (orientation == Orientation::FACE_UP)
+			this->y_position_ = Constants::SCREEN_Y_LENGTH / 2
+					- Constants::ALIEN_Y_LENGTH;
+		else if (orientation == Orientation::FACE_DOWN)
+			this->y_position_ = Constants::SCREEN_Y_LENGTH / 2
+					+ Constants::ALIEN_Y_LENGTH;
+	}
+
 }
 
 const float Parameters::getXLength() const
