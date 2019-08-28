@@ -182,3 +182,118 @@ TEST_CASE("A player can move right")
 	}
 
 }
+
+TEST_CASE("A player does not exceed the left boundary")
+{
+	SUBCASE("The player is facing down")
+	{
+		auto player = Player
+		{ Orientation::FACE_DOWN };
+
+		auto x_reference1 = player.getParameters().getXLength() / 2;
+		auto x_reference2 = player.getParameters().getXLength();
+
+		auto end_loop = player.getParameters().getXposition()
+				/ player.getParameters().getMovementStep();
+
+		for (auto i = 0u; i < end_loop; i++)
+		{
+			player.setMoveDirection(MoveDirection::LEFT);
+			player.move();
+		}
+
+		auto [x_position, y_position] = player.getPosition();
+		CHECK_FALSE(x_position == y_position)
+		;
+		CHECK(x_position > x_reference1)
+		;
+		CHECK(x_position < x_reference2)
+		;
+	}
+
+	SUBCASE("The player is facing up")
+	{
+		auto player = Player
+		{ Orientation::FACE_UP };
+
+		auto x_reference1 = player.getParameters().getXLength() / 2;
+		auto x_reference2 = player.getParameters().getXLength();
+
+		auto end_loop = player.getParameters().getXposition()
+				/ player.getParameters().getMovementStep();
+
+		for (auto i = 0u; i < end_loop; i++)
+		{
+			player.setMoveDirection(MoveDirection::LEFT);
+			player.move();
+		}
+
+		auto [x_position, y_position] = player.getPosition();
+		CHECK_FALSE(x_position == y_position)
+		;
+		CHECK(x_position > x_reference1)
+		;
+		CHECK(x_position < x_reference2)
+		;
+	}
+}
+
+TEST_CASE("A player does not exceed the right boundary")
+{
+	SUBCASE("The player is facing down")
+	{
+
+		auto player = Player
+		{ Orientation::FACE_DOWN };
+
+		auto end_loop = player.getParameters().getXposition()
+				/ player.getParameters().getMovementStep();
+
+		auto x_reference1 = player.getParameters().getScreenXLength()
+				- player.getParameters().getXLength() / 2;
+		auto x_reference2 = player.getParameters().getScreenXLength()
+				- player.getParameters().getXLength();
+
+		for (auto i = 0u; i < end_loop; i++)
+		{
+			player.setMoveDirection(MoveDirection::RIGHT);
+			player.move();
+		}
+
+		auto [x_position, y_position] = player.getPosition();
+		CHECK_FALSE(x_position == y_position)
+		;
+		CHECK(x_position < x_reference1)
+		;
+		CHECK(x_position > x_reference2)
+		;
+	}
+
+	SUBCASE("The player is facing up")
+	{
+		auto player = Player
+		{ Orientation::FACE_UP };
+
+		auto end_loop = player.getParameters().getXposition()
+				/ player.getParameters().getMovementStep();
+
+		auto x_reference1 = player.getParameters().getScreenXLength()
+				- player.getParameters().getXLength() / 2;
+		auto x_reference2 = player.getParameters().getScreenXLength()
+				- player.getParameters().getXLength();
+
+		for (auto i = 0u; i < end_loop; i++)
+		{
+			player.setMoveDirection(MoveDirection::RIGHT);
+			player.move();
+		}
+
+		auto [x_position, y_position] = player.getPosition();
+		CHECK_FALSE(x_position == y_position)
+		;
+		CHECK(x_position < x_reference1)
+		;
+		CHECK(x_position > x_reference2)
+		;
+	}
+}
