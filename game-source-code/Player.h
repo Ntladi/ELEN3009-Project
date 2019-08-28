@@ -22,7 +22,7 @@ public:
 	MoveDirection getMoveDirection() const;
 	HitBox getHitBox() const;
 	Parameters getParameters() const;
-	vec_of_bullets getShotsFired() const;
+	vec_of_bullets getShotsFired();
 	void setMoveDirection(const MoveDirection &direction);
 	void move();
 	void shoot();
@@ -30,10 +30,12 @@ public:
 private:
 	Parameters parameters_;
 	HitBox player_hitbox_;
+	vec_of_bullets bulletsFired_;
 	void incrementPlayerPosition();
 	bool isWithinScreenBounds();
 	void movePlayerHorizontally();
 	void updateHitBox();
+	void removeWaste();
 };
 
 #endif

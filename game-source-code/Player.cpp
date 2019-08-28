@@ -35,9 +35,16 @@ MoveDirection Player::getMoveDirection() const
 {
 	return parameters_.getMoveDirection();
 }
+
 void Player::setMoveDirection(const MoveDirection &direction)
 {
 	parameters_.setMoveDirection(direction);
+}
+
+vec_of_bullets Player::getShotsFired()
+{
+	removeWaste();
+	return bulletsFired_;
 }
 
 Parameters Player::getParameters() const
@@ -53,6 +60,13 @@ void Player::move()
 
 	updateHitBox();
 	parameters_.setMoveDirection(MoveDirection::NONE);
+}
+
+void Player::shoot()
+{
+	auto newBullet = std::make_shared<Bullet>(getPosition(), getOrientation());
+
+	bulletsFired_.push_back(newBullet);
 }
 
 bool Player::isWithinScreenBounds()
@@ -98,6 +112,18 @@ void Player::movePlayerHorizontally()
 		player_x_position += parameters_.getMovementStep();
 
 	parameters_.setXPosition(player_x_position);
+
+}
+
+void Player::removeWaste()
+{
+	auto lambda = [](std::shared_ptr<Bullet> i)
+	{	return !(i->getStatus());};
+
+	auto remove_idiom = std::remove_if(bulletsFired_.begin(),
+			bulletsFired_.end(), lambda);
+
+	bulletsFired_.erase(remove_idiom, bulletsFired_.end());
 
 }
 
