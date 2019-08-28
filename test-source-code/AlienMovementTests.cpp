@@ -151,13 +151,13 @@ TEST_CASE("The alien moves vertically if it is at the end of the screen")
 		auto alien = Alien{Orientation::FACE_UP};
 
 		auto loopStop = (alien.getParameters().getScreenXLength() / alien.getParameters().getMovementStep());
-		auto [none,y_initial] = alien.getPosition();
+		auto y_initial = std::get<1>(alien.getPosition());
 		for(auto i=0; i<loopStop; i++)
 		{
 			alien.move();
 		}
 
-		auto [none2, y_final] = alien.getPosition();
+		auto y_final = std::get<1>(alien.getPosition());
 		CHECK_FALSE(y_initial == y_final);
 
 		auto increment = y_initial - alien.getParameters().getYHeight();
@@ -171,13 +171,13 @@ TEST_CASE("The alien moves vertically if it is at the end of the screen")
 		auto alien = Alien{Orientation::FACE_DOWN};
 
 		auto loopStop = (alien.getParameters().getScreenXLength() / alien.getParameters().getMovementStep());
-		auto [none,y_initial] = alien.getPosition();
+		auto y_initial = std::get<1>(alien.getPosition());
 		for(auto i=0; i<loopStop; i++)
 		{
 			alien.move();
 		}
 
-		auto [none2, y_final] = alien.getPosition();
+		auto y_final = std::get<1>(alien.getPosition());
 		CHECK_FALSE(y_initial == y_final);
 
 		auto increment = y_initial + alien.getParameters().getYHeight();

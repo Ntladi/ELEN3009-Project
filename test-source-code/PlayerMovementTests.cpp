@@ -204,9 +204,9 @@ TEST_CASE("A player does not exceed the left boundary")
 		auto [x_position, y_position] = player.getPosition();
 		CHECK_FALSE(x_position == y_position)
 		;
-		CHECK(x_position > x_reference1)
+		CHECK(x_position >= x_reference1)
 		;
-		CHECK(x_position < x_reference2)
+		CHECK(x_position <= x_reference2)
 		;
 	}
 
@@ -230,9 +230,9 @@ TEST_CASE("A player does not exceed the left boundary")
 		auto [x_position, y_position] = player.getPosition();
 		CHECK_FALSE(x_position == y_position)
 		;
-		CHECK(x_position > x_reference1)
+		CHECK(x_position >= x_reference1)
 		;
-		CHECK(x_position < x_reference2)
+		CHECK(x_position <= x_reference2)
 		;
 	}
 }
@@ -262,9 +262,9 @@ TEST_CASE("A player does not exceed the right boundary")
 		auto [x_position, y_position] = player.getPosition();
 		CHECK_FALSE(x_position == y_position)
 		;
-		CHECK(x_position < x_reference1)
+		CHECK(x_position <= x_reference1)
 		;
-		CHECK(x_position > x_reference2)
+		CHECK(x_position >= x_reference2)
 		;
 	}
 
@@ -290,9 +290,9 @@ TEST_CASE("A player does not exceed the right boundary")
 		auto [x_position, y_position] = player.getPosition();
 		CHECK_FALSE(x_position == y_position)
 		;
-		CHECK(x_position < x_reference1)
+		CHECK(x_position <= x_reference1)
 		;
-		CHECK(x_position > x_reference2)
+		CHECK(x_position >= x_reference2)
 		;
 	}
 }
