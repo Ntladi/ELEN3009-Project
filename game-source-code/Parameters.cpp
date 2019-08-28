@@ -20,6 +20,15 @@ Parameters::Parameters(ObjectType object, Orientation orientation,
 			this->y_position_ = Constants::PLAYER_Y_LENGTH / 2;
 	}
 
+	if (object == ObjectType::PLAYER_BULLET)
+	{
+		this->x_length_ = Constants::PLAYER_BULLET_X_LENGTH;
+		this->y_length_ = Constants::PLAYER_BULLET_Y_LENGTH;
+		this->movement_step_ = Constants::PLAYER_BULLET_MAXIMUM_MOVEMENT_STEP;
+		this->x_position_ = 0;
+		this->y_position_ = 0;
+	}
+
 }
 
 const float Parameters::getXLength() const
@@ -72,17 +81,17 @@ void Parameters::setXPosition(const float &x)
 	x_position_ = x;
 }
 
-void Parameters::setYPosition(const float & y)
+void Parameters::setYPosition(const float &y)
 {
 	y_position_ = y;
 }
 
-void Parameters::setOrientation(const Orientation & orientation)
+void Parameters::setOrientation(const Orientation &orientation)
 {
 	orientation_ = orientation;
 }
 
-void Parameters::setMoveDirection(const MoveDirection & move_direction)
+void Parameters::setMoveDirection(const MoveDirection &move_direction)
 {
 	move_direction_ = move_direction;
 }

@@ -13,6 +13,10 @@
 
 		const static unsigned int PLAYER_INITAL_X_POSITION = SCREEN_X_LENGTH/2;
 
+		const static unsigned int PLAYER_BULLET_X_LENGTH = 4;
+		const static unsigned int PLAYER_BULLET_Y_LENGTH = 8;
+		const static unsigned int PLAYER_BULLET_MAXIMUM_MOVEMENT_STEP = 1;
+
 	};
 
 
