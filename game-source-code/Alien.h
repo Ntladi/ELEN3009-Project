@@ -15,6 +15,7 @@ public:
 	two_floats getSize() const;
 	MoveDirection getMoveDirection() const;
 	HitBox getHitBox() const;
+	Parameters getParameters() const;
 	void setMoveDirection(const MoveDirection &direction);
 	void move();
 
