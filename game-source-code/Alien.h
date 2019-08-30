@@ -13,19 +13,25 @@ public:
 	Orientation getOriention() const;
 	two_floats getPosition() const;
 	two_floats getSize() const;
+	bool getStatus() const;
 	MoveDirection getMoveDirection() const;
 	HitBox getHitBox() const;
 	Parameters getParameters() const;
 	void setMoveDirection(const MoveDirection &direction);
+	void setYPosition(const float& position);
+	void setXPosition(const float& position);
+	void moveAlienVertically();
+	bool isAtEdgeOfScreen();
+	bool isAtEndOfScreen();
 	void move();
+	void killObject();
 
 private:
 	Parameters parameters_;
 	HitBox alien_hitbox_;
-	void moveAlienVertically();
+	bool isAlive_;
 	void moveAlienHorizontally();
 	void incrementAlienPosition();
-	bool isAtEdgeOfScreen();
 	void updateHitBox();
 };
 

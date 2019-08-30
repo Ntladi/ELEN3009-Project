@@ -38,10 +38,10 @@ Parameters::Parameters(ObjectType object, Orientation orientation,
 
 		if (orientation == Orientation::FACE_UP)
 			this->y_position_ = Constants::SCREEN_Y_LENGTH / 2
-					- Constants::ALIEN_Y_LENGTH/2;
+					- Constants::ALIEN_Y_LENGTH/2 - 5;
 		else if (orientation == Orientation::FACE_DOWN)
 			this->y_position_ = Constants::SCREEN_Y_LENGTH / 2
-					+ Constants::ALIEN_Y_LENGTH/2;
+					+ Constants::ALIEN_Y_LENGTH/2 + 5;
 	}
 
 }
