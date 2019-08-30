@@ -65,7 +65,7 @@ TEST_CASE("An alien can be created with the correct Position")
 		auto [x_position, y_position] = alien.getPosition();
 		auto x_position_ref = alien.getParameters().getXLength() / 2;
 		auto y_position_ref = alien.getParameters().getScreenYHeight() / 2
-				- alien.getParameters().getYHeight() / 2;
+				- alien.getParameters().getYHeight() / 2 - 5;
 
 		CHECK(x_position == x_position_ref)
 		;
@@ -80,7 +80,7 @@ TEST_CASE("An alien can be created with the correct Position")
 		auto [x_position, y_position] = alien.getPosition();
 		auto x_position_ref = alien.getParameters().getXLength() / 2;
 		auto y_position_ref = alien.getParameters().getScreenYHeight() / 2
-				+ alien.getParameters().getYHeight() / 2;
+				+ alien.getParameters().getYHeight() / 2 + 5;
 
 		CHECK(x_position == x_position_ref)
 		;
