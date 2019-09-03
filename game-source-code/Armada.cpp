@@ -31,10 +31,8 @@ two_floats Armada::getAlienSize() const
 bool Armada::isGameOver()
 {
 	for(auto &i:aliens_)
-	{
 		if(i->isAtEndOfScreen())
 			return true;
-	}
 
 	return false;
 }
@@ -78,6 +76,7 @@ void Armada::removeWaste()
 {
 	auto lambda = [](std::shared_ptr<Alien> i)
 	{	return !(i->getStatus());};
+
 	auto remove_idiom = std::remove_if(aliens_.begin(), aliens_.end(), lambda);
 
 	aliens_.erase(remove_idiom, aliens_.end());
