@@ -5,6 +5,8 @@
 #include "MoveDirection.h"
 #include "Armada.h"
 #include "ScreenStates.h"
+#include "SeperatingAxisTheorem.h"
+#include "HitBox.h"
 #include <iostream>
 using namespace sf;
 
@@ -18,6 +20,8 @@ int main() {
 
 	Armada upArmada = Armada { Orientation::FACE_UP };
 	Armada downArmada = Armada { Orientation::FACE_DOWN };
+
+	SeperatingAxisTheorem axisTheorem = SeperatingAxisTheorem{};
 
 	auto [player1x,player1y] = player1.getSize();
 	auto [player1xp,player1yp] = player1.getPosition();
@@ -170,22 +174,30 @@ int main() {
 			auto aliens_from_up = upArmada.getArmada();
 			auto aliens_from_down = downArmada.getArmada();
 
-			for (auto &i : aliens_from_up) {
-				i->move();
-				auto[x_alien_up_position,y_alien_up_position] = i->getPosition();
-				upAlien.setPosition(
-						Vector2f(x_alien_up_position, y_alien_up_position));
-				window.draw(upAlien);
+			if(aliens_from_up.size() > 0)
+			{
+				for (auto &i : aliens_from_up) {
+					i->move();
+					auto[x_alien_up_position,y_alien_up_position] = i->getPosition();
+					upAlien.setPosition(
+							Vector2f(x_alien_up_position, y_alien_up_position));
+					window.draw(upAlien);
+				}
 			}
 
-			for (auto &i : aliens_from_down) {
-				i->move();
-				auto[x_alien_down_position,y_alien_down_position] = i->getPosition();
-				downAlien.setPosition(
-						Vector2f(x_alien_down_position, y_alien_down_position));
-				window.draw(downAlien);
+			if(aliens_from_down.size() > 0)
+			{
+				for (auto &i : aliens_from_down) {
+					i->move();
+					auto[x_alien_down_position,y_alien_down_position] = i->getPosition();
+					downAlien.setPosition(
+							Vector2f(x_alien_down_position, y_alien_down_position));
+					window.draw(downAlien);
+
+				}
 
 			}
+
 
 			auto shots_from_1 = player1.getShotsFired();
 
@@ -206,6 +218,73 @@ int main() {
 						Vector2f(x_bullet_position, y_bullet_position));
 				window.draw(downBullet);
 
+			}
+
+			if(shots_from_1.size() > 0 && aliens_from_up.size() > 0 && aliens_from_down.size() > 0)
+			{
+				for(auto &j:shots_from_1)
+				{
+
+					auto BulletHitBox = j->getHitBox();
+					for(auto &i:aliens_from_down)
+					{
+						auto AlienHitBox = i->getHitBox();
+						if(axisTheorem.isOverlapping(BulletHitBox,AlienHitBox))
+						{
+							j->killBullet();
+							std::cout << "Objects killed" << std::endl;
+							i->killObject();
+						}
+
+					}
+
+					for(auto &i:aliens_from_up)
+					{
+						auto AlienHitBox = i->getHitBox();
+						if(axisTheorem.isOverlapping(BulletHitBox,AlienHitBox))
+						{
+							j->killBullet();
+							i->killObject();
+							std::cout << "Objects killed" << std::endl;
+						}
+
+					}
+				}
+
+			}
+
+			if(shots_from_2.size() > 0 && aliens_from_up.size() > 0 && aliens_from_down.size() > 0)
+			{
+
+				for(auto &j:shots_from_2)
+				{
+
+					auto BulletHitBox = j->getHitBox();
+
+					for(auto &i:aliens_from_down)
+					{
+						auto AlienHitBox = i->getHitBox();
+						if(axisTheorem.isOverlapping(BulletHitBox,AlienHitBox))
+						{
+							j->killBullet();
+							i->killObject();
+							std::cout << "Objects killed" << std::endl;
+						}
+
+					}
+
+					for(auto &i:aliens_from_up)
+					{
+						auto AlienHitBox = i->getHitBox();
+						if(axisTheorem.isOverlapping(BulletHitBox,AlienHitBox))
+						{
+							j->killBullet();
+							i->killObject();
+							std::cout << "Objects killed" << std::endl;
+						}
+
+					}
+				}
 			}
 
 			if (upArmada.isGameOver())

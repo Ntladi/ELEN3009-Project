@@ -151,7 +151,7 @@ bool Alien::isAtEndOfScreen()
 	{
 		auto leftCorner = alien_hitbox_.getTopLeft();
 		auto left_y = std::get<1>(leftCorner);
-		left_y += parameters_.getYHeight()/2;
+		left_y += parameters_.getYHeight();
 
 		if (left_y <= parameters_.getYHeight())
 			return true;
@@ -161,7 +161,7 @@ bool Alien::isAtEndOfScreen()
 	{
 		auto rightCorner = alien_hitbox_.getBottomRight();
 		auto right_y = std::get<1>(rightCorner);
-		right_y -= parameters_.getYHeight()/2;
+		right_y -= parameters_.getYHeight();
 
 		if (right_y >= parameters_.getScreenYHeight() - parameters_.getYHeight())
 			return true;

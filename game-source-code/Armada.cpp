@@ -84,13 +84,15 @@ void Armada::removeWaste()
 
 void Armada::checkEdges()
 {
-		if (aliens_.at(0)->isAtEdgeOfScreen() || aliens_.at(counter_-1)->isAtEdgeOfScreen())
+	auto start_iter = begin(aliens_);
+	auto end_iter = end(aliens_);
+		if ((*start_iter)->isAtEdgeOfScreen() || (*(end_iter - 1))->isAtEdgeOfScreen())
 			moveAllVertically();
 
 }
 
 void Armada::moveAllVertically()
 {
-	for (auto i : aliens_)
-		i->moveAlienVertically();
+	for (auto i = begin(aliens_); i!=end(aliens_); ++i)
+		(*i)->moveAlienVertically();
 }

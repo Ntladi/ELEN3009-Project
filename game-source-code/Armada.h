@@ -18,8 +18,8 @@ private:
 	vec_of_aliens aliens_;
 	int counter_;
 	Orientation orientation_;
-	const int MAX_ROWS_ = 4;
-	const int MAX_COLS_ = 15;
+	const int MAX_ROWS_ = 2;
+	const int MAX_COLS_ = 8;
 	const int SPACE_BETWEEN_ROWS_ = 3;
 	const double SPACE_BETWEEN_COLS_ = 3;
 	std::vector<Alien> latestCol;

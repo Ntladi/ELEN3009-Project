@@ -9,7 +9,7 @@ class HitBox {
 public:
 	HitBox(two_floats position = {}, two_floats size = {});
 	void setNewPositions(two_floats position, two_floats size);
-	std::vector<two_floats> getVertecies(two_floats position, two_floats size);
+	std::vector<two_floats> getVertecies() const;
 	two_floats getTopLeft() const;
 	two_floats getTopRight() const;
 	two_floats getBottomLeft() const;

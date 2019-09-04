@@ -6,11 +6,8 @@ HitBox::HitBox(two_floats position, two_floats size)
 	calculateVertecies();
 }
 
-std::vector<two_floats> HitBox::getVertecies(two_floats position,
-		two_floats size)
+std::vector<two_floats> HitBox::getVertecies() const
 {
-	setNewPositions(position, size);
-	calculateVertecies();
 
 	return
 	{ top_left_,top_right_,bottom_left_,bottom_right_ };
