@@ -15,14 +15,10 @@ void Alien::setMoveDirection(const MoveDirection &direction)
 	parameters_.setMoveDirection(direction);
 }
 
-void Alien::setXPosition(const float & position)
+void Alien::setPosition(const two_floats& position)
 {
-	parameters_.setXPosition(position);
-}
-
-void Alien::setYPosition(const float & position)
-{
-	parameters_.setYPosition(position);
+	parameters_.setXPosition(std::get<0>(position));
+	parameters_.setYPosition(std::get<1>(position));
 }
 
 void Alien::move()

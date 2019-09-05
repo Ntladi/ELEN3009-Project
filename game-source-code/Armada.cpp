@@ -3,10 +3,9 @@
 
 Armada::Armada(Orientation orientation)
 {
-	this->aliens_ = vec_of_aliens
+	aliens_ = vec_of_aliens
 	{ };
-	this->counter_ = 0;
-	this->orientation_ = orientation;
+	parameters_ = ArmadaParameters{orientation};
 	generateRows();
 
 }
@@ -20,11 +19,7 @@ vec_of_aliens Armada::getArmada()
 
 two_floats Armada::getAlienSize() const
 {
-	auto parameters = Parameters
-	{ ObjectType::ALIEN, orientation_ };
-
-	return
-	{	parameters.getXLength(), parameters.getYHeight()};
+	return parameters_.getAlienSize();
 }
 
 bool Armada::isGameOver()
@@ -37,37 +32,33 @@ bool Armada::isGameOver()
 }
 void Armada::generateRows()
 {
-	auto parameters = Parameters
-	{ ObjectType::ALIEN, orientation_ };
-	auto x_position = parameters.getXposition();
-	auto x_length = parameters.getXLength();
+	auto x_position = std::get<0>(parameters_.getAlienSize());
 
-	for (auto i = 0u; i < MAX_COLS_; i++)
+	for (auto i = 0u; i < parameters_.getMaxCols(); i++)
 	{
 		generateColumn(x_position);
 
-		x_position += x_length + SPACE_BETWEEN_COLS_;
+		x_position += std::get<0>(parameters_.getAlienSize()) + parameters_.getSpaceBetweenCols();
 	}
 }
 
 void Armada::generateColumn(const double &x_position)
 {
-	auto parameters = Parameters
-	{ ObjectType::ALIEN, orientation_ };
-	auto y_position = parameters.getYposition();
-	auto y_height = parameters.getYHeight();
 
-	for (auto i = 0u; i < MAX_ROWS_; i++)
+	auto y_position = std::get<1>(parameters_.getAlienPosition());
+
+	for (auto i = 0u; i < parameters_.getMaxRows(); i++)
 	{
-		auto newAlien = std::make_shared<Alien>(orientation_);
-		newAlien->setYPosition(y_position);
-		newAlien->setXPosition(x_position);
+		auto newAlien = std::make_shared<Alien>(parameters_.getOrientation());
+		newAlien->setPosition({x_position, y_position});
 		aliens_.push_back(newAlien);
-		if (orientation_ == Orientation::FACE_DOWN)
-			y_position += y_height + SPACE_BETWEEN_ROWS_;
-		else if (orientation_ == Orientation::FACE_UP)
-			y_position -= y_height + SPACE_BETWEEN_ROWS_;
-		counter_++;
+
+		if (parameters_.getOrientation() == Orientation::FACE_DOWN)
+			y_position += std::get<1>(parameters_.getAlienSize()) + parameters_.getSpaceBetweenRows();
+		else if (parameters_.getOrientation() == Orientation::FACE_UP)
+			y_position -= std::get<1>(parameters_.getAlienSize()) + parameters_.getSpaceBetweenRows();
+
+		parameters_.incrementCounter();
 	}
 }
 
@@ -79,13 +70,13 @@ void Armada::removeWaste()
 	auto remove_idiom = std::remove_if(aliens_.begin(), aliens_.end(), lambda);
 
 	aliens_.erase(remove_idiom, aliens_.end());
-	counter_ = aliens_.size();
+	parameters_.setCounter(aliens_.size());
 }
 
 void Armada::checkEdges()
 {
 	if(aliens_.size() > 0)
-		if (aliens_.at(0)->isAtEdgeOfScreen() || aliens_.at(counter_-1)->isAtEdgeOfScreen())
+		if (aliens_.at(0)->isAtEdgeOfScreen() || aliens_.at(parameters_.getCounterMinus())->isAtEdgeOfScreen())
 			moveAllVertically();
 
 }

@@ -27,10 +27,10 @@ public:
 
 	const static constexpr float ALIEN_INITAL_X_POSITION = ALIEN_X_LENGTH / 2;
 
-	const static unsigned int MAX_ROWS = 2;
-	const static unsigned int MAX_COLS = 8;
-	const static constexpr float SPACE_BETWEEN_ROWS = 3;
-	const static constexpr float SPACE_BETWEEN_COLS = 3;
+	const static unsigned int MAX_ARMADA_ROWS = 2;
+	const static unsigned int MAX_ARMADA_COLS = 8;
+	const static constexpr float SPACE_BETWEEN_ARMADA_ROWS = 3;
+	const static constexpr float SPACE_BETWEEN_ARMADA_COLS = 3;
 
 };
 

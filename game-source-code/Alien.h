@@ -12,8 +12,7 @@ class Alien : public IEntity
 public:
 	Alien(Orientation orientation);
 	void setMoveDirection(const MoveDirection &direction);
-	void setYPosition(const float& position);
-	void setXPosition(const float& position);
+	void setPosition(const two_floats & position);
 	void moveAlienVertically();
 	bool isAtEdgeOfScreen();
 	bool isAtEndOfScreen();

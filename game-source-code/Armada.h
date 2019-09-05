@@ -1,6 +1,7 @@
 #ifndef ARMADA_H_
 #define ARMADA_H_
 #include "Alien.h"
+#include "ArmadaParameters.h"
 #include <memory>
 #include <vector>
 #include <algorithm>
@@ -16,12 +17,13 @@ public:
 
 private:
 	vec_of_aliens aliens_;
-	int counter_;
-	Orientation orientation_;
-	const unsigned int MAX_ROWS_ = 2;
-	const unsigned int MAX_COLS_ = 8;
-	const int SPACE_BETWEEN_ROWS_ = 3;
-	const double SPACE_BETWEEN_COLS_ = 3;
+	ArmadaParameters parameters_;
+	//Orientation orientation_;
+	//int counter_;
+	//const static unsigned int MAX_ROWS_ = 2;
+	//const static unsigned int MAX_COLS_ = 8;
+	//const static constexpr float SPACE_BETWEEN_ROWS_ = 3;
+	//const static constexpr float SPACE_BETWEEN_COLS_ = 3;
 	void generateColumn(const double & x_position);
 	void generateRows();
 	void removeWaste();
