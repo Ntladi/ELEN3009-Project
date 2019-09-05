@@ -5,6 +5,7 @@ Armada::Armada(Orientation orientation)
 {
 	aliens_ = vec_of_aliens
 	{ };
+	bullets_ = vec_of_bullets{};
 	parameters_ = ArmadaParameters{orientation};
 	generateRows();
 
@@ -12,11 +13,23 @@ Armada::Armada(Orientation orientation)
 
 vec_of_aliens Armada::getArmada()
 {
+
+	if( std::fmod(parameters_.getElapsedTime(),1.5) == 0)
+	{
+		auto newBullet = std::make_shared<Bullet>(aliens_.at(parameters_.getCounterMinus())->shoot());
+		bullets_.push_back(newBullet);
+
+	}
+
 	removeWaste();
 	checkEdges();
 	return aliens_;
 }
 
+vec_of_bullets Armada::getOnslaught()
+{
+	return bullets_;
+}
 two_floats Armada::getAlienSize() const
 {
 	return parameters_.getAlienSize();
@@ -30,6 +43,8 @@ bool Armada::isGameOver()
 
 	return false;
 }
+
+
 void Armada::generateRows()
 {
 	auto x_position = std::get<0>(parameters_.getAlienSize());

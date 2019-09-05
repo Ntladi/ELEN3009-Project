@@ -9,6 +9,9 @@ ArmadaParameters::ArmadaParameters(Orientation orientation)
 	SPACE_BETWEEN_COLS_ = Constants::SPACE_BETWEEN_ARMADA_COLS;
 	counter_ = 0;
 	parameters_ = Parameters{ObjectType::ALIEN, orientation};
+	stopwatch_ = StopWatch{};
+	stopwatch_.start();
+
 }
 
 Orientation ArmadaParameters::getOrientation() const
@@ -46,6 +49,10 @@ const unsigned int ArmadaParameters::getCounterMinus() const
 	return counter_ - 1;
 }
 
+float ArmadaParameters::getElapsedTime()
+{
+	return stopwatch_.getTimeElapsed();
+}
 two_floats ArmadaParameters::getAlienPosition() const
 {
 	return {parameters_.getXposition(), parameters_.getYposition()};

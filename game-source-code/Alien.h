@@ -5,6 +5,7 @@
 #include "HitBox.h"
 #include "Parameters.h"
 #include "IEntity.h"
+#include "Bullet.h"
 using two_floats = std::tuple<float, float>;
 
 class Alien : public IEntity
@@ -17,6 +18,7 @@ public:
 	bool isAtEdgeOfScreen();
 	bool isAtEndOfScreen();
 	void move() override;
+	Bullet shoot();
 
 private:
 	void moveAlienHorizontally();

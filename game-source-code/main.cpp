@@ -174,6 +174,7 @@ int main() {
 			auto aliens_from_up = upArmada.getArmada();
 			auto aliens_from_down = downArmada.getArmada();
 
+
 			if(aliens_from_up.size() > 0)
 			{
 				for (auto &i : aliens_from_up) {
@@ -200,8 +201,10 @@ int main() {
 
 
 			auto shots_from_1 = player1.getShotsFired();
-
 			auto shots_from_2 = player2.getShotsFired();
+
+			auto shots_from_up_armada = upArmada.getOnslaught();
+			auto shots_from_down_armada = downArmada.getOnslaught();
 
 			for (auto &i : shots_from_1) {
 				i->move();
@@ -211,7 +214,24 @@ int main() {
 				window.draw(upBullet);
 			}
 
+			for (auto &i : shots_from_up_armada) {
+				i->move();
+				auto [x_bullet_position, y_bullet_position] = i->getPosition();
+				upBullet.setPosition(
+						Vector2f(x_bullet_position, y_bullet_position));
+				window.draw(upBullet);
+			}
+
 			for (auto &i : shots_from_2) {
+				i->move();
+				auto [x_bullet_position, y_bullet_position] = i->getPosition();
+				downBullet.setPosition(
+						Vector2f(x_bullet_position, y_bullet_position));
+				window.draw(downBullet);
+
+			}
+
+			for (auto &i : shots_from_down_armada) {
 				i->move();
 				auto [x_bullet_position, y_bullet_position] = i->getPosition();
 				downBullet.setPosition(

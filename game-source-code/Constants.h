@@ -19,7 +19,7 @@ public:
 
 	const static constexpr float PLAYER_BULLET_X_LENGTH = 3 * SCALE;
 	const static constexpr float PLAYER_BULLET_Y_LENGTH = 18 * SCALE;
-	const static constexpr float PLAYER_BULLET_MAXIMUM_MOVEMENT_STEP = 1;
+	const static constexpr float PLAYER_BULLET_MAXIMUM_MOVEMENT_STEP = 0.2;
 
 	const static constexpr float ALIEN_X_LENGTH = 29 * SCALE;
 	const static constexpr float ALIEN_Y_LENGTH = 38 * SCALE;
@@ -27,7 +27,7 @@ public:
 
 	const static constexpr float ALIEN_INITAL_X_POSITION = ALIEN_X_LENGTH / 2;
 
-	const static unsigned int MAX_ARMADA_ROWS = 2;
+	const static unsigned int MAX_ARMADA_ROWS = 3;
 	const static unsigned int MAX_ARMADA_COLS = 8;
 	const static constexpr float SPACE_BETWEEN_ARMADA_ROWS = 3;
 	const static constexpr float SPACE_BETWEEN_ARMADA_COLS = 3;

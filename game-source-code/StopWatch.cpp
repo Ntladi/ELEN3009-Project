@@ -14,23 +14,23 @@ void StopWatch::stop()
 	stop_ = timeElapsed();
 }
 
-const double StopWatch::getTimeElapsed()
+const float StopWatch::getTimeElapsed()
 {
 	return timeElapsed();
 }
 
-const double StopWatch::getStopTime() const
+const float StopWatch::getStopTime() const
 {
 	return stop_;
 }
 
-double StopWatch::getProcessTime()
+float StopWatch::getProcessTime()
 {
 	clock_t time = clock();
 	return static_cast<double>(time) / CLOCKS_PER_SEC;
 }
 
-double StopWatch::timeElapsed()
+float StopWatch::timeElapsed()
 {
 	elapsedTime_ = getProcessTime();
 

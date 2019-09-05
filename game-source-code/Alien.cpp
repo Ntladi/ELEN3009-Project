@@ -30,6 +30,11 @@ void Alien::move()
 	updateHitBox();
 }
 
+Bullet Alien::shoot()
+{
+	return Bullet{getPosition(), parameters_.getOrientation()};
+}
+
 void Alien::updateHitBox()
 {
 	hitbox_.setNewPositions(getPosition(), getSize());

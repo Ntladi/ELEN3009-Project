@@ -4,6 +4,7 @@
 #include "Constants.h"
 #include "Parameters.h"
 #include <tuple>
+#include "StopWatch.h"
 using two_floats = std::tuple<float,float>;
 
 class ArmadaParameters
@@ -19,6 +20,7 @@ public:
 	const unsigned int getCounterMinus() const;
 	two_floats getAlienPosition() const;
 	two_floats getAlienSize() const;
+	float getElapsedTime();
 	void incrementCounter();
 	void setCounter(const unsigned int & i);
 private:
@@ -29,6 +31,7 @@ private:
 	float SPACE_BETWEEN_COLS_;
 	unsigned int counter_;
 	Parameters parameters_;
+	StopWatch stopwatch_;
 
 
 };
