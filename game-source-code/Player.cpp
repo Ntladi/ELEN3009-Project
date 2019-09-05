@@ -42,27 +42,22 @@ bool Player::isWithinScreenBounds()
 
 	updateHitBox();
 
-	auto player_movement_direction = parameters_.getMoveDirection();
-
-	if (player_movement_direction == MoveDirection::LEFT)
+	if (parameters_.getMoveDirection() == MoveDirection::LEFT)
 	{
-		auto leftCorner = hitbox_.getTopLeft();
-		auto left_x = std::get<0>(leftCorner);
+		auto left_x = std::get<0>(hitbox_.getTopLeft());
 		left_x -= parameters_.getMovementStep();
 
 		if (left_x >= 0)
 			return true;
 	}
 
-	else if (player_movement_direction == MoveDirection::RIGHT)
+	else if (parameters_.getMoveDirection() == MoveDirection::RIGHT)
 	{
-		auto rightCorner = hitbox_.getTopRight();
-		auto right_x = std::get<0>(rightCorner);
+		auto right_x = std::get<0>(hitbox_.getTopRight());
 		right_x += parameters_.getMovementStep();
 
 		if (right_x <= parameters_.getScreenXLength())
 			return true;
-
 	}
 
 	return false;
@@ -71,12 +66,11 @@ bool Player::isWithinScreenBounds()
 
 void Player::movePlayerHorizontally()
 {
-	auto player_movement_direction_ = parameters_.getMoveDirection();
 	auto player_x_position = parameters_.getXposition();
 
-	if (player_movement_direction_ == MoveDirection::LEFT)
+	if (parameters_.getMoveDirection() == MoveDirection::LEFT)
 		player_x_position -= parameters_.getMovementStep();
-	else if (player_movement_direction_ == MoveDirection::RIGHT)
+	else if (parameters_.getMoveDirection() == MoveDirection::RIGHT)
 		player_x_position += parameters_.getMovementStep();
 
 	parameters_.setXPosition(player_x_position);
@@ -99,3 +93,4 @@ void Player::updateHitBox()
 {
 	hitbox_.setNewPositions(getPosition(), getSize());
 }
+

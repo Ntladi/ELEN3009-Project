@@ -7,8 +7,6 @@ Armada::Armada(Orientation orientation)
 	{ };
 	this->counter_ = 0;
 	this->orientation_ = orientation;
-	this->latestCol = std::vector<Alien>
-	{ };
 	generateRows();
 
 }
@@ -28,6 +26,7 @@ two_floats Armada::getAlienSize() const
 	return
 	{	parameters.getXLength(), parameters.getYHeight()};
 }
+
 bool Armada::isGameOver()
 {
 	for(auto &i:aliens_)

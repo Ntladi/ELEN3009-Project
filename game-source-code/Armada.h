@@ -22,7 +22,6 @@ private:
 	const unsigned int MAX_COLS_ = 8;
 	const int SPACE_BETWEEN_ROWS_ = 3;
 	const double SPACE_BETWEEN_COLS_ = 3;
-	std::vector<Alien> latestCol;
 	void generateColumn(const double & x_position);
 	void generateRows();
 	void removeWaste();

@@ -42,22 +42,19 @@ void Alien::updateHitBox()
 bool Alien::isAtEdgeOfScreen()
 {
 	updateHitBox();
-	auto alien_movement_direction = parameters_.getMoveDirection();
 
-	if (alien_movement_direction == MoveDirection::LEFT)
+	if (parameters_.getMoveDirection() == MoveDirection::LEFT)
 	{
-		auto leftCorner = hitbox_.getTopLeft();
-		auto left_x = std::get<0>(leftCorner);
+		auto left_x = std::get<0>(hitbox_.getTopLeft());
 		left_x += parameters_.getMovementStep();
 
 		if (left_x <= 0)
 			return true;
 	}
 
-	else if (alien_movement_direction == MoveDirection::RIGHT)
+	else if (parameters_.getMoveDirection() == MoveDirection::RIGHT)
 	{
-		auto rightCorner = hitbox_.getTopRight();
-		auto right_x = std::get<0>(rightCorner);
+		auto right_x = std::get<0>(hitbox_.getTopRight());
 		right_x -= parameters_.getMovementStep();
 
 		if (right_x >= parameters_.getScreenXLength())
@@ -69,37 +66,33 @@ bool Alien::isAtEdgeOfScreen()
 
 void Alien::moveAlienVertically()
 {
-	auto alien_orientation = parameters_.getOrientation();
 	auto alien_y_position = parameters_.getYposition();
-	auto alien_movement_direction = parameters_.getMoveDirection();
 
-	if (alien_orientation == Orientation::FACE_UP)
+	if (parameters_.getOrientation() == Orientation::FACE_UP)
 	{
 		alien_y_position -= parameters_.getYHeight();
 		parameters_.setYPosition(alien_y_position);
-
 	}
 
-	else if (alien_orientation == Orientation::FACE_DOWN)
+	else if (parameters_.getOrientation() == Orientation::FACE_DOWN)
 	{
 		alien_y_position += parameters_.getYHeight();
 		parameters_.setYPosition(alien_y_position);
 	}
 
-	if (alien_movement_direction == MoveDirection::LEFT)
+	if (parameters_.getMoveDirection() == MoveDirection::LEFT)
 		parameters_.setMoveDirection(MoveDirection::RIGHT);
-	else if (alien_movement_direction == MoveDirection::RIGHT)
+	else if (parameters_.getMoveDirection() == MoveDirection::RIGHT)
 		parameters_.setMoveDirection(MoveDirection::LEFT);
 }
 
 void Alien::moveAlienHorizontally()
 {
 	auto alien_x_position = parameters_.getXposition();
-	auto alien_movement_direction = parameters_.getMoveDirection();
 
-	if (alien_movement_direction == MoveDirection::LEFT)
+	if (parameters_.getMoveDirection() == MoveDirection::LEFT)
 		alien_x_position -= parameters_.getMovementStep();
-	else if (alien_movement_direction == MoveDirection::RIGHT)
+	else if (parameters_.getMoveDirection() == MoveDirection::RIGHT)
 		alien_x_position += parameters_.getMovementStep();
 
 	parameters_.setXPosition(alien_x_position);
@@ -108,22 +101,19 @@ void Alien::moveAlienHorizontally()
 bool Alien::isAtEndOfScreen()
 {
 	updateHitBox();
-	auto alien_orientation = parameters_.getOrientation();
 
-	if (alien_orientation == Orientation::FACE_UP)
+	if (parameters_.getOrientation() == Orientation::FACE_UP)
 	{
-		auto leftCorner = hitbox_.getTopLeft();
-		auto left_y = std::get<1>(leftCorner);
+		auto left_y = std::get<1>(hitbox_.getTopLeft());
 		left_y += parameters_.getYHeight();
 
 		if (left_y <= parameters_.getYHeight())
 			return true;
 	}
 
-	else if (alien_orientation == Orientation::FACE_DOWN)
+	else if (parameters_.getOrientation() == Orientation::FACE_DOWN)
 	{
-		auto rightCorner = hitbox_.getBottomRight();
-		auto right_y = std::get<1>(rightCorner);
+		auto right_y = std::get<1>(hitbox_.getBottomRight());
 		right_y -= parameters_.getYHeight();
 
 		if (right_y >= parameters_.getScreenYHeight() - parameters_.getYHeight())
