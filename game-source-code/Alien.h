@@ -4,32 +4,22 @@
 #include "MoveDirection.h"
 #include "HitBox.h"
 #include "Parameters.h"
+#include "IEntity.h"
 using two_floats = std::tuple<float, float>;
 
-class Alien
+class Alien : public IEntity
 {
 public:
 	Alien(Orientation orientation);
-	Orientation getOriention() const;
-	two_floats getPosition() const;
-	two_floats getSize() const;
-	bool getStatus() const;
-	MoveDirection getMoveDirection() const;
-	HitBox getHitBox() const;
-	Parameters getParameters() const;
 	void setMoveDirection(const MoveDirection &direction);
 	void setYPosition(const float& position);
 	void setXPosition(const float& position);
 	void moveAlienVertically();
 	bool isAtEdgeOfScreen();
 	bool isAtEndOfScreen();
-	void move();
-	void killObject();
+	void move() override;
 
 private:
-	Parameters parameters_;
-	HitBox alien_hitbox_;
-	bool isAlive_;
 	void moveAlienHorizontally();
 	void incrementAlienPosition();
 	void updateHitBox();

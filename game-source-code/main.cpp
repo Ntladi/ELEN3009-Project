@@ -220,7 +220,7 @@ int main() {
 
 			}
 
-			if(shots_from_1.size() > 0 && aliens_from_up.size() > 0 && aliens_from_down.size() > 0)
+			if(shots_from_1.size() > 0)
 			{
 				for(auto &j:shots_from_1)
 				{
@@ -231,9 +231,9 @@ int main() {
 						auto AlienHitBox = i->getHitBox();
 						if(axisTheorem.isOverlapping(BulletHitBox,AlienHitBox))
 						{
-							j->killBullet();
+							j->killEntity();
 							std::cout << "Objects killed" << std::endl;
-							i->killObject();
+							i->killEntity();
 						}
 
 					}
@@ -243,8 +243,8 @@ int main() {
 						auto AlienHitBox = i->getHitBox();
 						if(axisTheorem.isOverlapping(BulletHitBox,AlienHitBox))
 						{
-							j->killBullet();
-							i->killObject();
+							j->killEntity();
+							i->killEntity();
 							std::cout << "Objects killed" << std::endl;
 						}
 
@@ -253,7 +253,7 @@ int main() {
 
 			}
 
-			if(shots_from_2.size() > 0 && aliens_from_up.size() > 0 && aliens_from_down.size() > 0)
+			if(shots_from_2.size() > 0)
 			{
 
 				for(auto &j:shots_from_2)
@@ -266,8 +266,8 @@ int main() {
 						auto AlienHitBox = i->getHitBox();
 						if(axisTheorem.isOverlapping(BulletHitBox,AlienHitBox))
 						{
-							j->killBullet();
-							i->killObject();
+							j->killEntity();
+							i->killEntity();
 							std::cout << "Objects killed" << std::endl;
 						}
 
@@ -278,8 +278,8 @@ int main() {
 						auto AlienHitBox = i->getHitBox();
 						if(axisTheorem.isOverlapping(BulletHitBox,AlienHitBox))
 						{
-							j->killBullet();
-							i->killObject();
+							j->killEntity();
+							i->killEntity();
 							std::cout << "Objects killed" << std::endl;
 						}
 

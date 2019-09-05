@@ -18,10 +18,12 @@ public:
 	float getYposition() const;
 	Orientation getOrientation() const;
 	MoveDirection getMoveDirection() const;
+	bool getStatus() const;
 	void setXPosition(const float &x);
 	void setYPosition(const float &y);
 	void setOrientation(const Orientation& orientation);
 	void setMoveDirection(const MoveDirection& moveDirection);
+	void setStatus(const bool &status);
 
 
 private:
@@ -33,6 +35,7 @@ private:
 	float x_position_;
 	float y_position_;
 	float movement_step_;
+	bool is_Alive_;
 
 
 };

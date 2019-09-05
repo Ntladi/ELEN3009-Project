@@ -6,6 +6,7 @@ Parameters::Parameters(ObjectType object, Orientation orientation,
 	this->object_ = object;
 	this->orientation_ = orientation;
 	this->move_direction_ = moveDirection;
+	this->is_Alive_ = true;
 
 	if (object == ObjectType::PLAYER)
 	{
@@ -91,6 +92,10 @@ MoveDirection Parameters::getMoveDirection() const
 	return move_direction_;
 }
 
+bool Parameters::getStatus() const
+{
+	return is_Alive_;
+}
 void Parameters::setXPosition(const float &x)
 {
 	x_position_ = x;
@@ -109,4 +114,9 @@ void Parameters::setOrientation(const Orientation &orientation)
 void Parameters::setMoveDirection(const MoveDirection &move_direction)
 {
 	move_direction_ = move_direction;
+}
+
+void Parameters::setStatus(const bool &status)
+{
+	is_Alive_ = status;
 }

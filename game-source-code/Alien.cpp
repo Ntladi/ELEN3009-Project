@@ -3,44 +3,12 @@
 
 Alien::Alien(Orientation orientation)
 {
-	this->parameters_ = Parameters
+	parameters_ = Parameters
 	{ ObjectType::ALIEN, orientation, MoveDirection::RIGHT };
-	this->alien_hitbox_ = HitBox
-	{ this->getPosition(), this->getSize() };
-	this->isAlive_ = true;
+	hitbox_ = HitBox
+	{ getPosition(), getSize() };
 }
 
-Orientation Alien::getOriention() const
-{
-	return parameters_.getOrientation();
-}
-
-two_floats Alien::getPosition() const
-{
-	return
-	{	parameters_.getXposition(), parameters_.getYposition()};
-}
-
-two_floats Alien::getSize() const
-{
-	return
-	{	parameters_.getXLength(), parameters_.getYHeight()};
-}
-
-HitBox Alien::getHitBox() const
-{
-	return alien_hitbox_;
-}
-
-bool Alien::getStatus() const
-{
-	return isAlive_;
-}
-
-MoveDirection Alien::getMoveDirection() const
-{
-	return parameters_.getMoveDirection();
-}
 
 void Alien::setMoveDirection(const MoveDirection &direction)
 {
@@ -57,11 +25,6 @@ void Alien::setYPosition(const float & position)
 	parameters_.setYPosition(position);
 }
 
-Parameters Alien::getParameters() const
-{
-	return parameters_;
-}
-
 void Alien::move()
 {
 	if (isAtEdgeOfScreen())
@@ -73,7 +36,7 @@ void Alien::move()
 
 void Alien::updateHitBox()
 {
-	alien_hitbox_.setNewPositions(this->getPosition(), this->getSize());
+	hitbox_.setNewPositions(getPosition(), getSize());
 }
 
 bool Alien::isAtEdgeOfScreen()
@@ -83,7 +46,7 @@ bool Alien::isAtEdgeOfScreen()
 
 	if (alien_movement_direction == MoveDirection::LEFT)
 	{
-		auto leftCorner = alien_hitbox_.getTopLeft();
+		auto leftCorner = hitbox_.getTopLeft();
 		auto left_x = std::get<0>(leftCorner);
 		left_x += parameters_.getMovementStep();
 
@@ -93,7 +56,7 @@ bool Alien::isAtEdgeOfScreen()
 
 	else if (alien_movement_direction == MoveDirection::RIGHT)
 	{
-		auto rightCorner = alien_hitbox_.getTopRight();
+		auto rightCorner = hitbox_.getTopRight();
 		auto right_x = std::get<0>(rightCorner);
 		right_x -= parameters_.getMovementStep();
 
@@ -149,7 +112,7 @@ bool Alien::isAtEndOfScreen()
 
 	if (alien_orientation == Orientation::FACE_UP)
 	{
-		auto leftCorner = alien_hitbox_.getTopLeft();
+		auto leftCorner = hitbox_.getTopLeft();
 		auto left_y = std::get<1>(leftCorner);
 		left_y += parameters_.getYHeight();
 
@@ -159,7 +122,7 @@ bool Alien::isAtEndOfScreen()
 
 	else if (alien_orientation == Orientation::FACE_DOWN)
 	{
-		auto rightCorner = alien_hitbox_.getBottomRight();
+		auto rightCorner = hitbox_.getBottomRight();
 		auto right_y = std::get<1>(rightCorner);
 		right_y -= parameters_.getYHeight();
 
@@ -169,7 +132,3 @@ bool Alien::isAtEndOfScreen()
 	return false;
 }
 
-void Alien::killObject()
-{
-	isAlive_= false;
-}

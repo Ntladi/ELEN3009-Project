@@ -2,38 +2,11 @@
 
 Player::Player(Orientation orientation)
 {
-	this->parameters_ = Parameters
+	parameters_ = Parameters
 	{ ObjectType::PLAYER, orientation };
 
-	this->player_hitbox_ = HitBox
-	{ this->getPosition(), this->getSize() };
-}
-
-Orientation Player::getOrientation() const
-{
-	return parameters_.getOrientation();
-}
-
-two_floats Player::getPosition() const
-{
-	return
-	{	parameters_.getXposition(), parameters_.getYposition()};
-}
-
-two_floats Player::getSize() const
-{
-	return
-	{	parameters_.getXLength(), parameters_.getYHeight()};
-}
-
-HitBox Player::getHitBox() const
-{
-	return player_hitbox_;
-}
-
-MoveDirection Player::getMoveDirection() const
-{
-	return parameters_.getMoveDirection();
+	hitbox_ = HitBox
+	{ getPosition(), getSize() };
 }
 
 void Player::setMoveDirection(const MoveDirection &direction)
@@ -45,11 +18,6 @@ vec_of_bullets Player::getShotsFired()
 {
 	removeWaste();
 	return bulletsFired_;
-}
-
-Parameters Player::getParameters() const
-{
-	return parameters_;
 }
 
 void Player::move()
@@ -78,7 +46,7 @@ bool Player::isWithinScreenBounds()
 
 	if (player_movement_direction == MoveDirection::LEFT)
 	{
-		auto leftCorner = player_hitbox_.getTopLeft();
+		auto leftCorner = hitbox_.getTopLeft();
 		auto left_x = std::get<0>(leftCorner);
 		left_x -= parameters_.getMovementStep();
 
@@ -88,7 +56,7 @@ bool Player::isWithinScreenBounds()
 
 	else if (player_movement_direction == MoveDirection::RIGHT)
 	{
-		auto rightCorner = player_hitbox_.getTopRight();
+		auto rightCorner = hitbox_.getTopRight();
 		auto right_x = std::get<0>(rightCorner);
 		right_x += parameters_.getMovementStep();
 
@@ -129,5 +97,5 @@ void Player::removeWaste()
 
 void Player::updateHitBox()
 {
-	player_hitbox_.setNewPositions(getPosition(), getSize());
+	hitbox_.setNewPositions(getPosition(), getSize());
 }

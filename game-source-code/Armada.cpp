@@ -80,19 +80,19 @@ void Armada::removeWaste()
 	auto remove_idiom = std::remove_if(aliens_.begin(), aliens_.end(), lambda);
 
 	aliens_.erase(remove_idiom, aliens_.end());
+	counter_ = aliens_.size();
 }
 
 void Armada::checkEdges()
 {
-	auto start_iter = begin(aliens_);
-	auto end_iter = end(aliens_);
-		if ((*start_iter)->isAtEdgeOfScreen() || (*(end_iter - 1))->isAtEdgeOfScreen())
+	if(aliens_.size() > 0)
+		if (aliens_.at(0)->isAtEdgeOfScreen() || aliens_.at(counter_-1)->isAtEdgeOfScreen())
 			moveAllVertically();
 
 }
 
 void Armada::moveAllVertically()
 {
-	for (auto i = begin(aliens_); i!=end(aliens_); ++i)
-		(*i)->moveAlienVertically();
+	for (auto &i:aliens_)
+		i->moveAlienVertically();
 }

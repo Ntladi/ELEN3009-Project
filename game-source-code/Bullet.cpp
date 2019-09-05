@@ -4,77 +4,37 @@
 Bullet::Bullet(two_floats position, Orientation orientation)
 {
 	if (orientation == Orientation::FACE_UP)
-		this->parameters_ = Parameters
+		parameters_ = Parameters
 			{ ObjectType::PLAYER_BULLET, orientation, MoveDirection::UP };
 
 	else if (orientation == Orientation::FACE_DOWN)
-		this->parameters_ = Parameters
+		parameters_ = Parameters
 			{ ObjectType::PLAYER_BULLET, orientation, MoveDirection::DOWN };
 
 	auto[x_position, y_position] = position;
 	parameters_.setXPosition(x_position);
 	parameters_.setYPosition(y_position);
-	this->hitbox_ = HitBox
-	{ this->getPosition(), this->getSize() };
-	this->isAlive_ = true;
+	hitbox_ = HitBox
+	{ getPosition(), getSize() };
 
 }
 
 Bullet::~Bullet()
 {
-	//std::cout << "Bullet is destroyed" << std::endl;
+	std::cout << "Bullet is destroyed" << std::endl;
 }
 
-Orientation Bullet::getOrientation() const
-{
-	return parameters_.getOrientation();
-}
 
-two_floats Bullet::getPosition() const
-{
-	return
-	{	parameters_.getXposition(),parameters_.getYposition()};
-}
-
-two_floats Bullet::getSize() const
-{
-	return
-	{	parameters_.getXLength(), parameters_.getYHeight()};
-}
-
-MoveDirection Bullet::getMoveDirection() const
-{
-	return parameters_.getMoveDirection();
-}
-
-HitBox Bullet::getHitBox()
-{
-	return hitbox_;
-}
-
-bool Bullet::getStatus() const
-{
-	return isAlive_;
-}
-
-Parameters Bullet::getParameters() const
-{
-	return parameters_;
-}
 void Bullet::move()
 {
 	if(isOnScreen())
 		moveBullet();
 	else
-		killBullet();
+		killEntity();
 
 	updateHitBox();
 }
 
-void Bullet::killBullet()
-{
-	isAlive_ = false;
-}
 
 bool Bullet::isOnScreen()
 {

@@ -22,7 +22,7 @@
 
 		const static constexpr float ALIEN_X_LENGTH = 29*SCALE;
 		const static constexpr float ALIEN_Y_LENGTH = 38*SCALE;
-		const static constexpr float ALIEN_MAXIMUM_MOVEMENT_STEP = 0.3;
+		const static constexpr float ALIEN_MAXIMUM_MOVEMENT_STEP = 0.1; // 0.3
 
 		const static constexpr float ALIEN_INITAL_X_POSITION = ALIEN_X_LENGTH/2;
 

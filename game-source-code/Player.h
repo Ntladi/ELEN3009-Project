@@ -9,27 +9,20 @@
 #include "Parameters.h"
 #include "HitBox.h"
 #include "Bullet.h"
+#include "IEntity.h"
 using two_floats = std::tuple<float, float>;
 using vec_of_bullets = std::vector<std::shared_ptr<Bullet>>;
 
-class Player
+class Player : public IEntity
 {
 public:
 	Player(Orientation orientation);
-	Orientation getOrientation() const;
-	two_floats getPosition() const;
-	two_floats getSize() const;
-	MoveDirection getMoveDirection() const;
-	HitBox getHitBox() const;
-	Parameters getParameters() const;
 	vec_of_bullets getShotsFired();
 	void setMoveDirection(const MoveDirection &direction);
-	void move();
+	virtual void move() override;
 	void shoot();
 
 private:
-	Parameters parameters_;
-	HitBox player_hitbox_;
 	vec_of_bullets bulletsFired_;
 	void incrementPlayerPosition();
 	bool isWithinScreenBounds();
