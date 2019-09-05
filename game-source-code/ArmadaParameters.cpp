@@ -3,6 +3,7 @@
 ArmadaParameters::ArmadaParameters(Orientation orientation)
 {
 	orientation_ = orientation;
+	move_direction_ = MoveDirection::LEFT;
 	MAX_ROWS_ = Constants::MAX_ARMADA_ROWS;
 	MAX_COLS_ = Constants::MAX_ARMADA_COLS;
 	SPACE_BETWEEN_ROWS_ = Constants::SPACE_BETWEEN_ARMADA_ROWS;
@@ -17,6 +18,11 @@ ArmadaParameters::ArmadaParameters(Orientation orientation)
 Orientation ArmadaParameters::getOrientation() const
 {
 	return orientation_;
+}
+
+MoveDirection ArmadaParameters::getMoveDirection() const
+{
+	return move_direction_;
 }
 
 const unsigned int ArmadaParameters::getMaxRows() const
@@ -72,4 +78,12 @@ void ArmadaParameters::incrementCounter()
 void ArmadaParameters::setCounter(const unsigned int &i)
 {
 	counter_ = i;
+}
+
+void ArmadaParameters::changeDirection()
+{
+	if(move_direction_ == MoveDirection::LEFT)
+		move_direction_ = MoveDirection::RIGHT;
+	else if(move_direction_ == MoveDirection::RIGHT)
+		move_direction_ = MoveDirection::LEFT;
 }

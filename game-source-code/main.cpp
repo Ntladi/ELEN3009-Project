@@ -103,7 +103,11 @@ int main() {
 	gameOverScreen.setTexture(&gameOverScreen_texture);
 
 	auto fire1 = false;
-	bool fire2 = false;
+	auto fire2 = false;
+	auto stopwatch1 = StopWatch{};
+	auto stopwatch2 = StopWatch{};
+	stopwatch1.start();
+	stopwatch2.start();
 	while (window.isOpen()) {
 		Event evnt1;
 		while (window.pollEvent(evnt1)) {
@@ -153,8 +157,9 @@ int main() {
 				upPlayer.setPosition(Vector2f(newx, newy));
 			}
 
-			if (Keyboard::isKeyPressed(Keyboard::Space)) {
+			if (Keyboard::isKeyPressed(Keyboard::Space) && stopwatch1.getTimeElapsed() > 0.3) {
 				fire1 = true;
+				stopwatch1.start();
 			}
 			if (Keyboard::isKeyPressed(Keyboard::A)) {
 				player2.setMoveDirection(MoveDirection::LEFT);
@@ -167,8 +172,9 @@ int main() {
 				auto [newx, newy] = player2.getPosition();
 				downPlayer.setPosition(Vector2f(newx, newy));
 			}
-			if (Keyboard::isKeyPressed(Keyboard::Q)) {
+			if (Keyboard::isKeyPressed(Keyboard::Q) ) {
 				fire2 = true;
+				stopwatch2.start();
 			}
 
 			auto aliens_from_up = upArmada.getArmada();
@@ -178,7 +184,7 @@ int main() {
 			if(aliens_from_up.size() > 0)
 			{
 				for (auto &i : aliens_from_up) {
-					i->move();
+					//i->move();
 					auto[x_alien_up_position,y_alien_up_position] = i->getPosition();
 					upAlien.setPosition(
 							Vector2f(x_alien_up_position, y_alien_up_position));
@@ -189,7 +195,7 @@ int main() {
 			if(aliens_from_down.size() > 0)
 			{
 				for (auto &i : aliens_from_down) {
-					i->move();
+					//i->move();
 					auto[x_alien_down_position,y_alien_down_position] = i->getPosition();
 					downAlien.setPosition(
 							Vector2f(x_alien_down_position, y_alien_down_position));

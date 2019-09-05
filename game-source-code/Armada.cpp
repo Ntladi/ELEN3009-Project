@@ -14,10 +14,20 @@ Armada::Armada(Orientation orientation)
 vec_of_aliens Armada::getArmada()
 {
 
-	if( std::fmod(parameters_.getElapsedTime(),1.5) == 0)
+	if( std::fmod(parameters_.getElapsedTime(),1.5) == 0 && aliens_.size() > 0)
 	{
-		auto newBullet = std::make_shared<Bullet>(aliens_.at(parameters_.getCounterMinus())->shoot());
-		bullets_.push_back(newBullet);
+		if(parameters_.getMoveDirection() == MoveDirection::LEFT)
+		{
+			//std::cout << "Moving Left" << std::endl;
+			auto newBullet = std::make_shared<Bullet>(aliens_.at(parameters_.getCounterMinus())->shoot());
+			bullets_.push_back(newBullet);
+		}
+		else if(parameters_.getMoveDirection() == MoveDirection::RIGHT)
+		{
+			//std::cout << "Moving right" << std::endl;
+			auto newBullet = std::make_shared<Bullet>(aliens_.at(0 + parameters_.getMaxRows() -1)->shoot());
+			bullets_.push_back(newBullet);
+		}
 
 	}
 
@@ -92,7 +102,11 @@ void Armada::checkEdges()
 {
 	if(aliens_.size() > 0)
 		if (aliens_.at(0)->isAtEdgeOfScreen() || aliens_.at(parameters_.getCounterMinus())->isAtEdgeOfScreen())
+		{
 			moveAllVertically();
+			parameters_.changeDirection();
+		}
+
 
 }
 
