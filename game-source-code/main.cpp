@@ -9,7 +9,7 @@
 #include "HitBox.h"
 #include <iostream>
 using namespace sf;
-
+using std::vector;
 int main() {
 	auto screenState = ScreenStates::SPLASHSCREEN;
 	auto x_bullet_size = Constants::PLAYER_BULLET_X_LENGTH;
@@ -184,7 +184,7 @@ int main() {
 			if(aliens_from_up.size() > 0)
 			{
 				for (auto &i : aliens_from_up) {
-					//i->move();
+					i->move();
 					auto[x_alien_up_position,y_alien_up_position] = i->getPosition();
 					upAlien.setPosition(
 							Vector2f(x_alien_up_position, y_alien_up_position));
@@ -195,7 +195,7 @@ int main() {
 			if(aliens_from_down.size() > 0)
 			{
 				for (auto &i : aliens_from_down) {
-					//i->move();
+					i->move();
 					auto[x_alien_down_position,y_alien_down_position] = i->getPosition();
 					downAlien.setPosition(
 							Vector2f(x_alien_down_position, y_alien_down_position));

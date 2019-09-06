@@ -18,7 +18,6 @@ public:
 	bool isAtEdgeOfScreen();
 	bool isAtEndOfScreen();
 	void move() override;
-	Bullet shoot();
 
 private:
 	void moveAlienHorizontally();

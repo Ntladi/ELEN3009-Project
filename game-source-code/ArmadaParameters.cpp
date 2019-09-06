@@ -2,6 +2,7 @@
 
 ArmadaParameters::ArmadaParameters(Orientation orientation)
 {
+	srand(time(0));
 	orientation_ = orientation;
 	move_direction_ = MoveDirection::LEFT;
 	MAX_ROWS_ = Constants::MAX_ARMADA_ROWS;
@@ -53,6 +54,13 @@ const unsigned int ArmadaParameters::getCounter() const
 const unsigned int ArmadaParameters::getCounterMinus() const
 {
 	return counter_ - 1;
+}
+
+const unsigned int ArmadaParameters::getAlienToShoot()
+{
+	auto index = rand()%counter_;
+
+	return index;
 }
 
 float ArmadaParameters::getElapsedTime()

@@ -4,6 +4,8 @@
 #include "Constants.h"
 #include "Parameters.h"
 #include "MoveDirection.h"
+#include <ctime>
+#include <cstdlib>
 #include <tuple>
 #include "StopWatch.h"
 using two_floats = std::tuple<float,float>;
@@ -20,6 +22,7 @@ public:
 	const float getSpaceBetweenCols() const;
 	const unsigned int getCounter() const;
 	const unsigned int getCounterMinus() const;
+	const unsigned int getAlienToShoot();
 	two_floats getAlienPosition() const;
 	two_floats getAlienSize() const;
 	float getElapsedTime();

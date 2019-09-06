@@ -30,10 +30,6 @@ void Alien::move()
 	updateHitBox();
 }
 
-Bullet Alien::shoot()
-{
-	return Bullet{getPosition(), parameters_.getOrientation()};
-}
 
 void Alien::updateHitBox()
 {
@@ -108,7 +104,7 @@ bool Alien::isAtEndOfScreen()
 		auto left_y = std::get<1>(hitbox_.getTopLeft());
 		left_y += parameters_.getYHeight();
 
-		if (left_y <= parameters_.getYHeight())
+		if (left_y <= parameters_.getYHeight()/2)
 			return true;
 	}
 
@@ -117,7 +113,7 @@ bool Alien::isAtEndOfScreen()
 		auto right_y = std::get<1>(hitbox_.getBottomRight());
 		right_y -= parameters_.getYHeight();
 
-		if (right_y >= parameters_.getScreenYHeight() - parameters_.getYHeight())
+		if (right_y >= parameters_.getScreenYHeight() - parameters_.getYHeight()/2)
 			return true;
 	}
 	return false;

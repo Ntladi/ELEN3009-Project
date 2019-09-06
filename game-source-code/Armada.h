@@ -7,6 +7,7 @@
 #include <algorithm>
 #include <cmath>
 using vec_of_aliens = std::vector<std::shared_ptr<Alien>>;
+using aliens_2d = std::vector<vec_of_aliens>;
 using vec_of_bullets = std::vector<std::shared_ptr<Bullet>>;
 
 class Armada
@@ -17,17 +18,20 @@ public:
 	vec_of_aliens getArmada();
 	vec_of_bullets getOnslaught();
 	bool isGameOver();
-	void makeBullets();
+	void generateBullets();
 
 private:
 	vec_of_aliens aliens_;
+	aliens_2d armada_;
 	vec_of_bullets bullets_;
 	ArmadaParameters parameters_;
-	void generateColumn(const double & x_position);
+	void generateColumn(const double & x_position, const unsigned int & index);
 	void generateRows();
 	void removeWaste();
 	void checkEdges();
 	void moveAllVertically();
+	vec_of_aliens aliens1D();
+	void removeForEach(vec_of_aliens & aliens);
 };
 
 #endif
