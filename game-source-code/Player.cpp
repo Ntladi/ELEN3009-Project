@@ -32,7 +32,7 @@ void Player::move()
 
 void Player::shoot()
 {
-	auto newBullet = std::make_shared<Bullet>(getPosition(), getOrientation());
+	auto newBullet = std::make_shared<Bullet>(getPosition(), ObjectType::PLAYER_BULLET, getOrientation());
 
 	bulletsFired_.push_back(newBullet);
 }

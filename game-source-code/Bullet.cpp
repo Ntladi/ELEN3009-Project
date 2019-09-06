@@ -1,15 +1,15 @@
 #include <Bullet.h>
 #include <iostream>
 
-Bullet::Bullet(two_floats position, Orientation orientation)
+Bullet::Bullet(two_floats position, ObjectType bullet_type, Orientation orientation)
 {
 	if (orientation == Orientation::FACE_UP)
 		parameters_ = Parameters
-			{ ObjectType::PLAYER_BULLET, orientation, MoveDirection::UP };
+			{ bullet_type, orientation, MoveDirection::UP };
 
 	else if (orientation == Orientation::FACE_DOWN)
 		parameters_ = Parameters
-			{ ObjectType::PLAYER_BULLET, orientation, MoveDirection::DOWN };
+			{ bullet_type, orientation, MoveDirection::DOWN };
 
 	auto[x_position, y_position] = position;
 	parameters_.setXPosition(x_position);

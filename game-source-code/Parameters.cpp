@@ -21,7 +21,7 @@ Parameters::Parameters(ObjectType object, Orientation orientation,
 			this->y_position_ = Constants::PLAYER_Y_LENGTH / 2;
 	}
 
-	if (object == ObjectType::PLAYER_BULLET)
+	if (object == ObjectType::PLAYER_BULLET || object == ObjectType::ALIEN_BULLET)
 	{
 		this->x_length_ = Constants::PLAYER_BULLET_X_LENGTH;
 		this->y_length_ = Constants::PLAYER_BULLET_Y_LENGTH;

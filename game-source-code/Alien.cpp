@@ -32,7 +32,7 @@ void Alien::move()
 
 Bullet Alien::shoot()
 {
-	return Bullet{getPosition(), parameters_.getOrientation()};
+	return Bullet{getPosition(), ObjectType::ALIEN_BULLET, parameters_.getOrientation()};
 }
 
 void Alien::updateHitBox()
