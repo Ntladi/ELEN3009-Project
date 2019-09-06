@@ -18,9 +18,8 @@ Armada::Armada(Orientation orientation)
 vec_of_aliens Armada::getArmada()
 {
 
-
-
 	removeWaste();
+	generateBullets();
 	checkEdges();
 	return aliens1D();
 }
@@ -45,8 +44,27 @@ bool Armada::isGameOver()
 
 void Armada::generateBullets()
 {
-	if (std::fmod(parameters_.getElapsedTime(), 1.5) == 0 && parameters_.getCounter() > 0)
+	if (std::fmod(parameters_.getElapsedTime(),
+			parameters_.getSecondsBetweenShots()) >= 0
+			&& std::fmod(parameters_.getElapsedTime(),
+					parameters_.getSecondsBetweenShots()) <= 0.001
+			&& parameters_.getCounter() > 0)
 	{
+		std::vector<unsigned int> endOfCols;
+
+		std::for_each(begin(armada_), end(armada_), [&](auto i)
+		{	endOfCols.push_back(i.size()-1);});
+
+		auto shot_col = rand() % armada_.size();
+
+		if (armada_.at(shot_col).size() > 0)
+		{
+			auto shot_row = endOfCols.at(shot_col);
+
+			auto newBullet = std::make_shared<Bullet>(
+					armada_.at(shot_col).at(shot_row)->shoot());
+			bullets_.push_back(newBullet);
+		}
 
 	}
 }
@@ -91,10 +109,11 @@ void Armada::removeWaste()
 {
 
 	parameters_.setCounter(0);
-	for(auto &i:armada_)
+	for (auto &i : armada_)
 	{
 		removeForEach(i);
-		std::for_each(begin(i),end(i),[&](auto &j){parameters_.incrementCounter();});
+		std::for_each(begin(i), end(i), [&](auto &j)
+		{	parameters_.incrementCounter();});
 	}
 
 }
@@ -129,12 +148,12 @@ vec_of_aliens Armada::aliens1D()
 	return aliens;
 }
 
-void Armada::removeForEach(vec_of_aliens & aliens)
+void Armada::removeForEach(vec_of_aliens &aliens)
 {
 	auto lambda = [](auto i)
 	{	return !(i->getStatus());};
 
 	auto remove_idiom = std::remove_if(begin(aliens), end(aliens), lambda);
-	aliens.erase(remove_idiom,end(aliens));
+	aliens.erase(remove_idiom, end(aliens));
 
 }

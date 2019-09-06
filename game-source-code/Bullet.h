@@ -12,7 +12,7 @@ class Bullet : public IEntity
 public:
 	Bullet(two_floats position, Orientation orientation);
 	~Bullet();
-	void move();
+	void move() override;
 	bool isOnScreen();
 
 private:

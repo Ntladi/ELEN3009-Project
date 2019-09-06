@@ -9,6 +9,7 @@ ArmadaParameters::ArmadaParameters(Orientation orientation)
 	MAX_COLS_ = Constants::MAX_ARMADA_COLS;
 	SPACE_BETWEEN_ROWS_ = Constants::SPACE_BETWEEN_ARMADA_ROWS;
 	SPACE_BETWEEN_COLS_ = Constants::SPACE_BETWEEN_ARMADA_COLS;
+	SECONDS_BETWEEN_ALIEN_SHOTS_ = Constants::SECONDS_BETWEEN_ALIEN_SHOTS;
 	counter_ = 0;
 	parameters_ = Parameters{ObjectType::ALIEN, orientation};
 	stopwatch_ = StopWatch{};
@@ -46,6 +47,10 @@ const float ArmadaParameters::getSpaceBetweenCols() const
 	return SPACE_BETWEEN_COLS_;
 }
 
+const float ArmadaParameters::getSecondsBetweenShots() const
+{
+	return SECONDS_BETWEEN_ALIEN_SHOTS_;
+}
 const unsigned int ArmadaParameters::getCounter() const
 {
 	return counter_;

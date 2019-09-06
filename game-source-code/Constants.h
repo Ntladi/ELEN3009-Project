@@ -31,6 +31,7 @@ public:
 	const static unsigned int MAX_ARMADA_COLS = 8;
 	const static constexpr float SPACE_BETWEEN_ARMADA_ROWS = 3;
 	const static constexpr float SPACE_BETWEEN_ARMADA_COLS = 3;
+	const static constexpr float SECONDS_BETWEEN_ALIEN_SHOTS = 1;
 
 };
 

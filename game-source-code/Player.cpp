@@ -79,7 +79,7 @@ void Player::movePlayerHorizontally()
 
 void Player::removeWaste()
 {
-	auto lambda = [](std::shared_ptr<Bullet> i)
+	auto lambda = [](auto i)
 	{	return !(i->getStatus());};
 
 	auto remove_idiom = std::remove_if(bulletsFired_.begin(),

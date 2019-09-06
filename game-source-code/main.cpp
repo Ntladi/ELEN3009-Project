@@ -48,11 +48,17 @@ int main() {
 	Texture downAlien_texture;
 	downAlien_texture.loadFromFile("Assets/Alien2.png");
 
-	Texture upbullet_texture;
-	upbullet_texture.loadFromFile("Assets/Player1Bullet.png");
+	Texture upPlayer_bullet_texture;
+	upPlayer_bullet_texture.loadFromFile("Assets/Player1Bullet.png");
 
-	Texture downbullet_texture;
-	downbullet_texture.loadFromFile("Assets/Player2Bullet.png");
+	Texture downPlayer_bullet_texture;
+	downPlayer_bullet_texture.loadFromFile("Assets/Player2Bullet.png");
+
+	Texture upAlien_bullet_texture;
+	upAlien_bullet_texture.loadFromFile("Assets/Alien1Bullet.png");
+
+	Texture downAlien_bullet_texture;
+	downAlien_bullet_texture.loadFromFile("Assets/Alien2Bullet.png");
 
 	Texture splashScreen_texture;
 	splashScreen_texture.loadFromFile("Assets/SplashScreen.jpg");
@@ -83,14 +89,23 @@ int main() {
 	downAlien.setTexture(&downAlien_texture);
 	downAlien.setRotation(180.0f);
 
-	RectangleShape upBullet(Vector2f(x_bullet_size, y_bullet_size));
-	upBullet.setOrigin(Vector2f(x_bullet_size / 2, y_bullet_size / 2));
-	upBullet.setTexture(&upbullet_texture);
+	RectangleShape upPlayerBullet(Vector2f(x_bullet_size, y_bullet_size));
+	upPlayerBullet.setOrigin(Vector2f(x_bullet_size / 2, y_bullet_size / 2));
+	upPlayerBullet.setTexture(&upPlayer_bullet_texture);
 
-	RectangleShape downBullet(Vector2f(x_bullet_size, y_bullet_size));
-	downBullet.setOrigin(Vector2f(x_bullet_size / 2, y_bullet_size / 2));
-	downBullet.setTexture(&downbullet_texture);
-	downBullet.setRotation(180.0f);
+	RectangleShape downPlayerBullet(Vector2f(x_bullet_size, y_bullet_size));
+	downPlayerBullet.setOrigin(Vector2f(x_bullet_size / 2, y_bullet_size / 2));
+	downPlayerBullet.setTexture(&downPlayer_bullet_texture);
+	downPlayerBullet.setRotation(180.0f);
+
+	RectangleShape upAlienBullet(Vector2f(x_bullet_size, y_bullet_size));
+	upAlienBullet.setOrigin(Vector2f(x_bullet_size / 2, y_bullet_size / 2));
+	upAlienBullet.setTexture(&upAlien_bullet_texture);
+
+	RectangleShape downAlienBullet(Vector2f(x_bullet_size, y_bullet_size));
+	downAlienBullet.setOrigin(Vector2f(x_bullet_size / 2, y_bullet_size / 2));
+	downAlienBullet.setTexture(&downAlien_bullet_texture);
+	downAlienBullet.setRotation(180.0f);
 
 
 	RectangleShape splashScreen(Vector2f(Constants::SCREEN_X_LENGTH,Constants::SCREEN_Y_LENGTH));
@@ -215,34 +230,34 @@ int main() {
 			for (auto &i : shots_from_1) {
 				i->move();
 				auto [x_bullet_position, y_bullet_position] = i->getPosition();
-				upBullet.setPosition(
+				upPlayerBullet.setPosition(
 						Vector2f(x_bullet_position, y_bullet_position));
-				window.draw(upBullet);
+				window.draw(upPlayerBullet);
 			}
 
 			for (auto &i : shots_from_up_armada) {
 				i->move();
 				auto [x_bullet_position, y_bullet_position] = i->getPosition();
-				upBullet.setPosition(
+				upAlienBullet.setPosition(
 						Vector2f(x_bullet_position, y_bullet_position));
-				window.draw(upBullet);
+				window.draw(upAlienBullet);
 			}
 
 			for (auto &i : shots_from_2) {
 				i->move();
 				auto [x_bullet_position, y_bullet_position] = i->getPosition();
-				downBullet.setPosition(
+				downPlayerBullet.setPosition(
 						Vector2f(x_bullet_position, y_bullet_position));
-				window.draw(downBullet);
+				window.draw(downPlayerBullet);
 
 			}
 
 			for (auto &i : shots_from_down_armada) {
 				i->move();
 				auto [x_bullet_position, y_bullet_position] = i->getPosition();
-				downBullet.setPosition(
+				downAlienBullet.setPosition(
 						Vector2f(x_bullet_position, y_bullet_position));
-				window.draw(downBullet);
+				window.draw(downAlienBullet);
 
 			}
 

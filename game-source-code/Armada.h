@@ -21,7 +21,6 @@ public:
 	void generateBullets();
 
 private:
-	vec_of_aliens aliens_;
 	aliens_2d armada_;
 	vec_of_bullets bullets_;
 	ArmadaParameters parameters_;

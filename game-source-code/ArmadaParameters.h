@@ -20,6 +20,7 @@ public:
 	const unsigned int getMaxCols() const;
 	const float getSpaceBetweenRows() const;
 	const float getSpaceBetweenCols() const;
+	const float getSecondsBetweenShots() const;
 	const unsigned int getCounter() const;
 	const unsigned int getCounterMinus() const;
 	const unsigned int getAlienToShoot();
@@ -36,6 +37,7 @@ private:
 	unsigned int MAX_COLS_;
 	float SPACE_BETWEEN_ROWS_;
 	float SPACE_BETWEEN_COLS_;
+	float SECONDS_BETWEEN_ALIEN_SHOTS_;
 	unsigned int counter_;
 	Parameters parameters_;
 	StopWatch stopwatch_;
