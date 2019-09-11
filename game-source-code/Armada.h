@@ -9,12 +9,14 @@
 using vec_of_aliens = std::vector<std::shared_ptr<Alien>>;
 using aliens_2d = std::vector<vec_of_aliens>;
 using vec_of_bullets = std::vector<std::shared_ptr<Bullet>>;
+using vec_of_two_floats = std::vector<std::tuple<float,float>>;
 
 class Armada
 {
 public:
-	Armada(Orientation orientation);
+	Armada(Orientation orientation = Orientation::FACE_DOWN);
 	two_floats getAlienSize() const;
+	vec_of_two_floats getPositions();
 	vec_of_aliens getArmada();
 	vec_of_bullets getOnslaught();
 	bool isGameOver();

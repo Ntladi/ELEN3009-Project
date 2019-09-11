@@ -8,7 +8,7 @@ Armada::Armada(Orientation orientation)
 
 	armada_.resize(parameters_.getMaxCols());
 
-	std::for_each(begin(armada_), end(armada_), [&](vec_of_aliens &i)
+	std::for_each(begin(armada_), end(armada_), [&](auto &i)
 	{	i.resize(parameters_.getMaxRows());});
 
 	generateRows();
@@ -17,15 +17,14 @@ Armada::Armada(Orientation orientation)
 
 vec_of_aliens Armada::getArmada()
 {
-
 	removeWaste();
-	generateBullets();
 	checkEdges();
 	return aliens1D();
 }
 
 vec_of_bullets Armada::getOnslaught()
 {
+	generateBullets();
 	return bullets_;
 }
 two_floats Armada::getAlienSize() const
@@ -33,6 +32,16 @@ two_floats Armada::getAlienSize() const
 	return parameters_.getAlienSize();
 }
 
+vec_of_two_floats Armada::getPositions()
+{
+	auto aliens = vec_of_two_floats{};
+	aliens.resize(aliens1D().size());
+
+	std::for_each(begin(aliens1D()),end(aliens1D()),[&](auto &i){aliens.push_back(i->getPosition());});
+
+	return aliens;
+
+}
 bool Armada::isGameOver()
 {
 	for (auto &i : aliens1D())
