@@ -139,4 +139,35 @@ TEST_CASE("A bullet is deleted if it moves out of the screen")
 		CHECK(bullets.size()==0);
 
 	}
+
+	SUBCASE("The player is facing down")
+	{
+		auto player = Player
+		{	Orientation::FACE_DOWN};
+		player.shoot();
+
+		{
+			auto bullets = player.getShotsFired();
+			CHECK(bullets.size() == 1);
+
+			auto &bullet = bullets.at(0);
+			CHECK(bullet->getStatus())
+			;
+			auto endLoop = bullet->getParameters().getScreenYHeight()
+			/ bullet->getParameters().getMovementStep();
+
+			for (auto i = 0u; i <endLoop; i++)
+			{
+				bullet->move();
+			}
+
+
+			CHECK_FALSE(bullet->getStatus());
+
+		}
+
+		auto bullets = player.getShotsFired();
+		CHECK(bullets.size()==0);
+
+	}
 }
