@@ -7,11 +7,17 @@
 #include "ScreenStates.h"
 #include "SeperatingAxisTheorem.h"
 #include "HitBox.h"
+#include "IEntity.h"
+#include "Logic.h"
 #include <iostream>
 using namespace sf;
 using std::vector;
+
 int main() {
-	auto screenState = ScreenStates::SPLASHSCREEN;
+
+	Logic logic;
+	logic.run();
+/*	auto screenState = ScreenStates::SPLASHSCREEN;
 	auto x_bullet_size = Constants::PLAYER_BULLET_X_LENGTH;
 	auto y_bullet_size = Constants::PLAYER_BULLET_Y_LENGTH;
 
@@ -33,8 +39,8 @@ int main() {
 	auto [downAlienx,downAlieny] = downArmada.getAlienSize();
 
 	RenderWindow window(
-			VideoMode(Constants::SCREEN_X_LENGTH, Constants::SCREEN_Y_LENGTH),
-			"Dual Invaders", Style::Close);
+			sf::VideoMode(Constants::SCREEN_X_LENGTH, Constants::SCREEN_Y_LENGTH),
+			"Dual Invaders", sf::Style::Close);
 
 	Texture upPlayer_texture;
 	upPlayer_texture.loadFromFile("Assets/Player1.png");
@@ -172,7 +178,7 @@ int main() {
 				upPlayer.setPosition(Vector2f(newx, newy));
 			}
 
-			if (Keyboard::isKeyPressed(Keyboard::Space) && stopwatch1.getTimeElapsed() > 0.3) {
+			if (Keyboard::isKeyPressed(Keyboard::Space) && stopwatch1.getTimeElapsed() > 0.05) {
 				fire1 = true;
 				stopwatch1.start();
 			}
@@ -345,5 +351,5 @@ int main() {
 		}
 
 		window.display();
-	}
+	}*/
 }
