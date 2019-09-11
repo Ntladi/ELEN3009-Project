@@ -3,6 +3,7 @@
 #include "Orientation.h"
 #include "MoveDirection.h"
 #include "Parameters.h"
+#include "ObjectType.h"
 #include "HitBox.h"
 using two_floats = std::tuple<float, float>;
 
@@ -11,6 +12,7 @@ class IEntity
 public:
 	virtual ~IEntity();
 	Orientation getOrientation() const;
+	ObjectType getObjectType() const;
 	two_floats getPosition() const;
 	two_floats getSize() const;
 	MoveDirection getMoveDirection() const;
@@ -18,7 +20,7 @@ public:
 	Parameters getParameters() const;
 	bool getStatus() const;
 	void killEntity();
-	virtual void move() = 0;
+	virtual void move();
 
 protected:
 	Parameters parameters_;

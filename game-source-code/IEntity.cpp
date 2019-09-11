@@ -10,6 +10,10 @@ Orientation IEntity::getOrientation() const
 	return parameters_.getOrientation();
 }
 
+ObjectType IEntity::getObjectType() const
+{
+	return parameters_.getObjectType();
+}
 two_floats IEntity::getPosition() const
 {
 	return {parameters_.getXposition(), parameters_.getYposition()};
@@ -44,4 +48,9 @@ bool IEntity::getStatus() const
 void IEntity::killEntity()
 {
 	parameters_.setStatus(false);
+}
+
+void IEntity::move()
+{
+
 }
