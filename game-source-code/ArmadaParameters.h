@@ -30,6 +30,7 @@ public:
 	void incrementCounter();
 	void setCounter(const unsigned int & i);
 	void changeDirection();
+	void resetStopWatch();
 private:
 	Orientation orientation_;
 	MoveDirection move_direction_;

@@ -34,10 +34,12 @@ two_floats Armada::getAlienSize() const
 
 vec_of_two_floats Armada::getPositions()
 {
-	auto aliens = vec_of_two_floats{};
+	auto aliens = vec_of_two_floats
+	{ };
 	aliens.resize(aliens1D().size());
 
-	std::for_each(begin(aliens1D()),end(aliens1D()),[&](auto &i){aliens.push_back(i->getPosition());});
+	std::for_each(begin(aliens1D()), end(aliens1D()), [&](auto &i)
+	{	aliens.push_back(i->getPosition());});
 
 	return aliens;
 
@@ -53,27 +55,23 @@ bool Armada::isGameOver()
 
 void Armada::generateBullets()
 {
-	if (std::fmod(parameters_.getElapsedTime(),
-			parameters_.getSecondsBetweenShots()) >= 0
-			&& std::fmod(parameters_.getElapsedTime(),
-					parameters_.getSecondsBetweenShots()) <= 0.001
+	if (parameters_.getElapsedTime() > parameters_.getSecondsBetweenShots()
 			&& parameters_.getCounter() > 0)
 	{
+		parameters_.resetStopWatch();
+
 		std::vector<unsigned int> endOfCols;
 
 		std::for_each(begin(armada_), end(armada_), [&](auto i)
 		{	endOfCols.push_back(i.size()-1);});
 
-		auto shot_col = rand() % armada_.size();
+		auto shot_col1 = rand() % armada_.size();
+		auto shot_col2 = (shot_col1 + 1) % armada_.size();
+		auto shot_col3 = (shot_col2 + 1) % armada_.size();
 
-		if (armada_.at(shot_col).size() > 0)
-		{
-			auto shot_row = endOfCols.at(shot_col);
-
-			auto newBullet = std::make_shared<Bullet>(
-					armada_.at(shot_col).at(shot_row)->shoot());
-			bullets_.push_back(newBullet);
-		}
+		addBullet(endOfCols,shot_col1);
+		addBullet(endOfCols,shot_col2);
+		addBullet(endOfCols,shot_col3);
 
 	}
 }
@@ -165,4 +163,15 @@ void Armada::removeForEach(vec_of_aliens &aliens)
 	auto remove_idiom = std::remove_if(begin(aliens), end(aliens), lambda);
 	aliens.erase(remove_idiom, end(aliens));
 
+}
+
+void Armada::addBullet(std::vector<unsigned int > & endOfCols, const unsigned int & index)
+{
+	if (armada_.at(index).size() > 0)
+	{
+		auto shot_row = endOfCols.at(index);
+		auto newBullet = std::make_shared<Bullet>(
+				armada_.at(index).at(shot_row)->shoot());
+		bullets_.push_back(newBullet);
+	}
 }

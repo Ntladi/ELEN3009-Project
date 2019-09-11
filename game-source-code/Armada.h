@@ -31,6 +31,7 @@ private:
 	void removeWaste();
 	void checkEdges();
 	void moveAllVertically();
+	void addBullet(std::vector<unsigned int >& endOfCols, const unsigned int &index);
 	vec_of_aliens aliens1D();
 	void removeForEach(vec_of_aliens & aliens);
 };

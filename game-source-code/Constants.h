@@ -9,7 +9,7 @@ public:
 	const static constexpr float SCALE = 1; // 1.83  for 1080p
 
 	const static constexpr float SCREEN_X_LENGTH = 1050 * SCALE;
-	const static constexpr float SCREEN_Y_LENGTH = 630 * SCALE;
+	const static constexpr float SCREEN_Y_LENGTH = 655 * SCALE;
 
 	const static constexpr float PLAYER_X_LENGTH = 43 * SCALE;
 	const static constexpr float PLAYER_Y_LENGTH = 37 * SCALE;

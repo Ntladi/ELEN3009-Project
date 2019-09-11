@@ -100,3 +100,8 @@ void ArmadaParameters::changeDirection()
 	else if(move_direction_ == MoveDirection::RIGHT)
 		move_direction_ = MoveDirection::LEFT;
 }
+
+void ArmadaParameters::resetStopWatch()
+{
+	stopwatch_.start();
+}
