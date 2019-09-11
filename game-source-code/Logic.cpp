@@ -54,7 +54,7 @@ void Logic::process(std::vector<bool> &inputs)
 {
 	changePlayerDirections(inputs);
 	moveAllObjects();
-	checkColisions();
+	//checkColisions();
 
 	loadPositions();
 }

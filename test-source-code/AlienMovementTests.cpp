@@ -8,7 +8,7 @@ TEST_CASE("An alien can be created in the correct orientation")
 	{
 		auto alien = Alien
 		{ Orientation::FACE_UP };
-		auto orientation = alien.getOriention();
+		auto orientation = alien.getOrientation();
 		CHECK(orientation == Orientation::FACE_UP)
 		;
 	}
@@ -17,7 +17,7 @@ TEST_CASE("An alien can be created in the correct orientation")
 	{
 		auto alien = Alien
 		{ Orientation::FACE_DOWN };
-		auto orientation = alien.getOriention();
+		auto orientation = alien.getOrientation();
 		CHECK(orientation == Orientation::FACE_DOWN)
 		;
 	}

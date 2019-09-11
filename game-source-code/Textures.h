@@ -2,6 +2,7 @@
 #define TEXTURES_H_
 #include <SFML/Graphics.hpp>
 #include <vector>
+#include <memory>
 using texture_ptr = std::shared_ptr<sf::Texture>;
 using vec_of_texture_ptrs = std::vector<texture_ptr>;
 
