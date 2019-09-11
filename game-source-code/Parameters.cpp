@@ -85,6 +85,10 @@ float Parameters::getYposition() const
 	return y_position_;
 }
 
+ObjectType Parameters::getObjectType() const
+{
+	return object_;
+}
 Orientation Parameters::getOrientation() const
 {
 	return orientation_;

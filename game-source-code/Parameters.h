@@ -8,7 +8,7 @@
 class Parameters {
 
 public:
-	Parameters(ObjectType object = ObjectType::NONE,  Orientation orientation = Orientation::FACE_UP, MoveDirection moveDirection = MoveDirection::NONE);
+	Parameters(ObjectType object = ObjectType::NONE, Orientation orientation = Orientation::FACE_UP, MoveDirection moveDirection = MoveDirection::NONE);
 	const float getXLength() const;
 	const float getYHeight() const;
 	const float getScreenXLength() const;
@@ -16,6 +16,7 @@ public:
 	const float getMovementStep() const;
 	float getXposition() const;
 	float getYposition() const;
+	ObjectType getObjectType() const;
 	Orientation getOrientation() const;
 	MoveDirection getMoveDirection() const;
 	bool getStatus() const;
@@ -24,7 +25,6 @@ public:
 	void setOrientation(const Orientation& orientation);
 	void setMoveDirection(const MoveDirection& moveDirection);
 	void setStatus(const bool &status);
-
 
 private:
 	ObjectType object_;
