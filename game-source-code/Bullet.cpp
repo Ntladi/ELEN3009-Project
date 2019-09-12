@@ -21,7 +21,7 @@ Bullet::Bullet(two_floats position, ObjectType bullet_type, Orientation orientat
 
 Bullet::~Bullet()
 {
-	std::cout << "Bullet is destroyed" << std::endl;
+	//std::cout << "Bullet is destroyed" << std::endl;
 }
 
 

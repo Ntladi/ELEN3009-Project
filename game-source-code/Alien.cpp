@@ -11,7 +11,7 @@ Alien::Alien(Orientation orientation)
 
 Alien::~Alien()
 {
-	std::cout << "ALien is gone" << std::endl;
+	//std::cout << "ALien is gone" << std::endl;
 }
 void Alien::setMoveDirection(const MoveDirection &direction)
 {
