@@ -18,7 +18,7 @@ void Backgrounds::setTextures()
 	game_over_screen_texture_->loadFromFile("Assets/GameOverScreen.jpg");
 
 	game_won_screen_texture_ = std::make_shared<sf::Texture>();
-	game_won_screen_texture_->loadFromFile("Assets/SplashScreen.jpg");
+	game_won_screen_texture_->loadFromFile("Assets/GameWonScreen.jpg");
 }
 
 void Backgrounds::setShapes()

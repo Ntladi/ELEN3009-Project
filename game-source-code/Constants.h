@@ -8,7 +8,7 @@ public:
 
 	const static constexpr float SCALE = 1; // 1.83  for 1080p
 
-	const static constexpr float GAME_SPEED = 1;
+	const static constexpr float GAME_SPEED = 0.3;
 	const static constexpr float SCREEN_X_LENGTH = 1050 * SCALE;
 	const static constexpr float SCREEN_Y_LENGTH = 655 * SCALE;
 
@@ -33,7 +33,7 @@ public:
 	const static constexpr float SPACE_BETWEEN_ARMADA_ROWS = 7;
 	const static constexpr float SPACE_BETWEEN_ARMADA_COLS = 15;
 	const static constexpr float SECONDS_BETWEEN_ALIEN_SHOTS = 1/GAME_SPEED;
-	const static constexpr float SECONDS_BETWEEN_PLAYER_SHOTS = 0.25/GAME_SPEED;
+	const static constexpr float SECONDS_BETWEEN_PLAYER_SHOTS = 0.2/GAME_SPEED;
 
 };
 
