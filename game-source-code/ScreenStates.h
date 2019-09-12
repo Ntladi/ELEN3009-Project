@@ -4,7 +4,8 @@
 enum class ScreenStates{
 	SPLASHSCREEN,
 	GAME_SCREEN,
-	GAME_OVER
+	GAME_OVER,
+	GAME_WON
 };
 
 

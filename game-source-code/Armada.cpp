@@ -188,3 +188,8 @@ void Armada::removeBulletWaste()
 	bullets_.erase(remove_idiom, bullets_.end());
 
 }
+
+bool Armada::isArmadaEmpty()
+{
+	return aliens1D().size() == 0;
+}

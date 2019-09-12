@@ -22,6 +22,7 @@ public:
 	vec_of_bullets getOnslaught();
 	bool isGameOver();
 	void generateBullets();
+	bool isArmadaEmpty();
 
 private:
 	aliens_2d armada_;

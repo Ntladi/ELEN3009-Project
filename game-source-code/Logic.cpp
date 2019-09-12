@@ -161,14 +161,14 @@ void Logic::getPlayerBullets(vec_of_objects & objects)
 
 void Logic::getAlienBullets(vec_of_objects & objects)
 {
-	auto upAlienBullets = upArmada_->getOnslaught();
-	auto downAlienBullets = downArmada_->getOnslaught();
-
-	for (auto &i : upAlienBullets)
-		objects.push_back(i);
-
-	for (auto &i : downAlienBullets)
-		objects.push_back(i);
+//	auto upAlienBullets = upArmada_->getOnslaught();
+//	auto downAlienBullets = downArmada_->getOnslaught();
+//
+//	for (auto &i : upAlienBullets)
+//		objects.push_back(i);
+//
+//	for (auto &i : downAlienBullets)
+//		objects.push_back(i);
 }
 
 void Logic::checkColisions()
@@ -190,4 +190,6 @@ void Logic::checkGameOver()
 		presentation_.setGameOver();
 	if(upArmada_->isGameOver() || downArmada_->isGameOver())
 		presentation_.setGameOver();
+	if(upArmada_->isArmadaEmpty() && downArmada_->isArmadaEmpty())
+		presentation_.setGameWon();
 }

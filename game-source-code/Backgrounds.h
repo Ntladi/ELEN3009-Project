@@ -15,14 +15,17 @@ public:
 	sf::RectangleShape getSplashScreen() const;
 	sf::RectangleShape getBackgroundScreen() const;
 	sf::RectangleShape getGameOverScreen() const;
+	sf::RectangleShape getGameWonScreen() const;
 
 private:
-	sf::RectangleShape splashScreen_;
-	sf::RectangleShape backgroundScreen_;
-	sf::RectangleShape gameOverScreen_;
-	texture_ptr splashScreen_texture_;
-	texture_ptr backgroundScreen_texture_;
-	texture_ptr gameOverScreen_texture_;
+	sf::RectangleShape splash_screen_;
+	sf::RectangleShape background_screen_;
+	sf::RectangleShape game_over_screen_;
+	sf::RectangleShape game_won_screen_;
+	texture_ptr splash_screen_texture_;
+	texture_ptr background_screen_texture_;
+	texture_ptr game_over_screen_texture_;
+	texture_ptr game_won_screen_texture_;
 
 };
 

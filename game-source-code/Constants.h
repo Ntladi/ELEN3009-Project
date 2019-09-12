@@ -33,7 +33,7 @@ public:
 	const static constexpr float SPACE_BETWEEN_ARMADA_ROWS = 7;
 	const static constexpr float SPACE_BETWEEN_ARMADA_COLS = 15;
 	const static constexpr float SECONDS_BETWEEN_ALIEN_SHOTS = 0.5/GAME_SPEED;
-	const static constexpr float SECONDS_BETWEEN_PLAYER_SHOTS = 0.3*GAME_SPEED;
+	const static constexpr float SECONDS_BETWEEN_PLAYER_SHOTS = 0.05*GAME_SPEED;
 
 };
 

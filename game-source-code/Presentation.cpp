@@ -74,6 +74,8 @@ void Presentation::enterPressed()
 		screenstate_ = ScreenStates::GAME_SCREEN;
 	else if (screenstate_ == ScreenStates::GAME_OVER)
 		window_->close();
+	else if (screenstate_ == ScreenStates::GAME_WON)
+		window_->close();
 }
 bool Presentation::isWindowOpen()
 {
@@ -138,6 +140,8 @@ void Presentation::clearWindow()
 		window_->draw(backgrounds_.getBackgroundScreen());
 	if (screenstate_ == ScreenStates::GAME_OVER)
 		window_->draw(backgrounds_.getGameOverScreen());
+	if (screenstate_ == ScreenStates::GAME_WON)
+		window_->draw(backgrounds_.getGameWonScreen());
 }
 
 void Presentation::resetInputs()
@@ -152,5 +156,10 @@ void Presentation::resetInputs()
 
 void Presentation::setGameOver()
 {
-		screenstate_ = ScreenStates::GAME_OVER;
+	screenstate_ = ScreenStates::GAME_OVER;
+}
+
+void Presentation::setGameWon()
+{
+	screenstate_ = ScreenStates::GAME_WON;
 }

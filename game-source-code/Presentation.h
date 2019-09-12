@@ -21,6 +21,7 @@ public:
 	void closeWindow();
 	void displayWindow();
 	void setGameOver();
+	void setGameWon();
 	std::vector<bool> checkInputs();
 	ScreenStates getScreenstate() const;
 

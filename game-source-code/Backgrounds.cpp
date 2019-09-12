@@ -8,40 +8,51 @@ Backgrounds::Backgrounds()
 
 void Backgrounds::setTextures()
 {
-	splashScreen_texture_ = std::make_shared<sf::Texture>();
-	splashScreen_texture_->loadFromFile("Assets/SplashScreen.jpg");
+	splash_screen_texture_ = std::make_shared<sf::Texture>();
+	splash_screen_texture_->loadFromFile("Assets/SplashScreen.jpg");
 
-	backgroundScreen_texture_ = std::make_shared<sf::Texture>();
-	backgroundScreen_texture_->loadFromFile("Assets/BackgroundScreen.jpg");
+	background_screen_texture_ = std::make_shared<sf::Texture>();
+	background_screen_texture_->loadFromFile("Assets/BackgroundScreen.jpg");
 
-	gameOverScreen_texture_ = std::make_shared<sf::Texture>();
-	gameOverScreen_texture_->loadFromFile("Assets/GameOverScreen.jpg");
+	game_over_screen_texture_ = std::make_shared<sf::Texture>();
+	game_over_screen_texture_->loadFromFile("Assets/GameOverScreen.jpg");
+
+	game_won_screen_texture_ = std::make_shared<sf::Texture>();
+	game_won_screen_texture_->loadFromFile("Assets/SplashScreen.jpg");
 }
 
 void Backgrounds::setShapes()
 {
-	splashScreen_.setSize(sf::Vector2f(Constants::SCREEN_X_LENGTH,Constants::SCREEN_Y_LENGTH));
-	splashScreen_.setTexture(&(*splashScreen_texture_));
+	splash_screen_.setSize(sf::Vector2f(Constants::SCREEN_X_LENGTH,Constants::SCREEN_Y_LENGTH));
+	splash_screen_.setTexture(&(*splash_screen_texture_));
 
-	backgroundScreen_.setSize(sf::Vector2f(Constants::SCREEN_X_LENGTH,Constants::SCREEN_Y_LENGTH));
-	backgroundScreen_.setTexture(&(*backgroundScreen_texture_));
+	background_screen_.setSize(sf::Vector2f(Constants::SCREEN_X_LENGTH,Constants::SCREEN_Y_LENGTH));
+	background_screen_.setTexture(&(*background_screen_texture_));
 
-	gameOverScreen_.setSize(sf::Vector2f(Constants::SCREEN_X_LENGTH,Constants::SCREEN_Y_LENGTH));
-	gameOverScreen_.setTexture(&(*gameOverScreen_texture_));
+	game_over_screen_.setSize(sf::Vector2f(Constants::SCREEN_X_LENGTH,Constants::SCREEN_Y_LENGTH));
+	game_over_screen_.setTexture(&(*game_over_screen_texture_));
+
+	game_won_screen_.setSize(sf::Vector2f(Constants::SCREEN_X_LENGTH,Constants::SCREEN_Y_LENGTH));
+	game_won_screen_.setTexture(&(*game_won_screen_texture_));
 }
 
 sf::RectangleShape Backgrounds::getSplashScreen() const
 {
-	return splashScreen_;
+	return splash_screen_;
 }
 
 sf::RectangleShape Backgrounds::getGameOverScreen() const
 {
-	return gameOverScreen_;
+	return game_over_screen_;
 }
 
 sf::RectangleShape Backgrounds::getBackgroundScreen() const
 {
-	return backgroundScreen_;
+	return background_screen_;
+}
+
+sf::RectangleShape Backgrounds::getGameWonScreen() const
+{
+	return game_won_screen_;
 }
 
