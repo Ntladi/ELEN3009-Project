@@ -5,7 +5,7 @@ Presentation::Presentation()
 	resetInputs();
 	stopwatch1_.start();
 	stopwatch2_.start();
-	screenstate_ = ScreenStates::SPLASHSCREEN;
+	screen_state_ = ScreenStates::SPLASHSCREEN;
 }
 
 void Presentation::createWindow()
@@ -59,8 +59,7 @@ void Presentation::events()
 			window_->close();
 			break;
 		case sf::Event::KeyPressed:
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
-				enterPressed();
+			checkPressed();
 			break;
 		default:
 			break;
@@ -68,13 +67,23 @@ void Presentation::events()
 	}
 }
 
-void Presentation::enterPressed()
+void Presentation::checkPressed()
 {
-	if (screenstate_ == ScreenStates::SPLASHSCREEN)
-		screenstate_ = ScreenStates::GAME_SCREEN;
-	else if (screenstate_ == ScreenStates::GAME_OVER)
-		window_->close();
-	else if (screenstate_ == ScreenStates::GAME_WON)
+
+	if (screen_state_ == ScreenStates::SPLASHSCREEN)
+	{
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
+		{
+			screen_state_ = ScreenStates::GAME_SCREEN;
+			game_mode_ = GameModes::SINGLE_PLAYER;
+		}
+		else if(sf::Keyboard::isKeyPressed(sf::Keyboard::M))
+		{
+			screen_state_ = ScreenStates::GAME_SCREEN;
+			game_mode_ = GameModes::MULTI_PLAYER;
+		}
+	}
+	else if (screen_state_ == ScreenStates::GAME_OVER)
 		window_->close();
 }
 bool Presentation::isWindowOpen()
@@ -93,6 +102,54 @@ std::vector<bool> Presentation::checkInputs()
 	events();
 	resetInputs();
 
+	if(game_mode_ == GameModes::SINGLE_PLAYER)
+		singlePlayerInputs();
+
+	return
+	{	moveUpPlayerLeft_, moveUpPlayerRight_, moveDownPlayerLeft_,
+		moveDownPlayerRight_, upPlayerShoots_, downPlayerShoots_};
+
+}
+
+ScreenStates Presentation::getScreenstate() const
+{
+	return screen_state_;
+}
+
+void Presentation::clearWindow()
+{
+	window_->clear(sf::Color::White);
+
+	if (screen_state_ == ScreenStates::SPLASHSCREEN)
+		window_->draw(backgrounds_.getSplashScreen());
+	if (screen_state_ == ScreenStates::GAME_SCREEN)
+		window_->draw(backgrounds_.getBackgroundScreen());
+	if (screen_state_ == ScreenStates::GAME_OVER)
+		window_->draw(backgrounds_.getGameOverScreen());
+}
+
+void Presentation::resetInputs()
+{
+	moveUpPlayerLeft_ = false;
+	moveUpPlayerRight_ = false;
+	moveDownPlayerLeft_ = false;
+	moveDownPlayerRight_ = false;
+	upPlayerShoots_ = false;
+	downPlayerShoots_ = false;
+}
+
+void Presentation::setGameOver()
+{
+	screen_state_ = ScreenStates::GAME_OVER;
+}
+
+void Presentation::setGameWon()
+{
+	screen_state_ = ScreenStates::GAME_WON;
+}
+
+void Presentation::singlePlayerInputs()
+{
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 		moveUpPlayerLeft_ = true;
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
@@ -118,48 +175,13 @@ std::vector<bool> Presentation::checkInputs()
 		downPlayerShoots_ = true;
 		stopwatch2_.start();
 	}
-
-	return
-	{	moveUpPlayerLeft_, moveUpPlayerRight_, moveDownPlayerLeft_,
-		moveDownPlayerRight_, upPlayerShoots_, downPlayerShoots_};
-
 }
 
-ScreenStates Presentation::getScreenstate() const
+void Presentation::multiPlayerInputs()
 {
-	return screenstate_;
-}
-
-void Presentation::clearWindow()
-{
-	window_->clear(sf::Color::White);
-
-	if (screenstate_ == ScreenStates::SPLASHSCREEN)
-		window_->draw(backgrounds_.getSplashScreen());
-	if (screenstate_ == ScreenStates::GAME_SCREEN)
-		window_->draw(backgrounds_.getBackgroundScreen());
-	if (screenstate_ == ScreenStates::GAME_OVER)
-		window_->draw(backgrounds_.getGameOverScreen());
-	if (screenstate_ == ScreenStates::GAME_WON)
-		window_->draw(backgrounds_.getGameWonScreen());
-}
-
-void Presentation::resetInputs()
-{
-	moveUpPlayerLeft_ = false;
-	moveUpPlayerRight_ = false;
-	moveDownPlayerLeft_ = false;
-	moveDownPlayerRight_ = false;
-	upPlayerShoots_ = false;
-	downPlayerShoots_ = false;
-}
-
-void Presentation::setGameOver()
-{
-	screenstate_ = ScreenStates::GAME_OVER;
-}
-
-void Presentation::setGameWon()
-{
-	screenstate_ = ScreenStates::GAME_WON;
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+	{
+		moveUpPlayerLeft_ = true;
+		moveDownPlayerLeft_ = true;
+	}
 }

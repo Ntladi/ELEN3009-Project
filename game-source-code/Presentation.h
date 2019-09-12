@@ -5,6 +5,7 @@
 #include "Backgrounds.h"
 #include "StopWatch.h"
 #include "ScreenStates.h"
+#include "GameModes.h"
 #include <memory>
 using window_ptr = std::shared_ptr<sf::RenderWindow>;
 
@@ -38,8 +39,11 @@ private:
 	bool downPlayerShoots_;
 	StopWatch stopwatch1_;
 	StopWatch stopwatch2_;
-	ScreenStates screenstate_;
-	void enterPressed();
+	ScreenStates screen_state_;
+	GameModes game_mode_;
+	void checkPressed();
+	void multiPlayerInputs();
+	void singlePlayerInputs();
 	void shoot();
 	void resetInputs();
 };
