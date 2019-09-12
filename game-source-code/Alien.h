@@ -12,6 +12,7 @@ class Alien : public IEntity
 {
 public:
 	Alien(Orientation orientation);
+	~Alien();
 	void setMoveDirection(const MoveDirection &direction);
 	void setPosition(const two_floats & position);
 	void moveAlienVertically();

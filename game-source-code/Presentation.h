@@ -20,6 +20,7 @@ public:
 	bool isWindowOpen();
 	void closeWindow();
 	void displayWindow();
+	void setGameOver();
 	std::vector<bool> checkInputs();
 	ScreenStates getScreenstate() const;
 

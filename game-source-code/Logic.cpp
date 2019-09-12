@@ -1,4 +1,5 @@
 #include <Logic.h>
+#include <iostream>
 
 Logic::Logic()
 {
@@ -44,7 +45,8 @@ void Logic::reset()
 void Logic::loadPositions()
 {
 
-	auto objects = objectVector();
+	vec_of_objects objects;
+	getObjects(objects);
 
 	for (auto &i : objects)
 		moveObject(i);
@@ -54,14 +56,17 @@ void Logic::process(std::vector<bool> &inputs)
 {
 	changePlayerDirections(inputs);
 	moveAllObjects();
-	//checkColisions();
 
 	loadPositions();
+	checkColisions();
+	checkGameOver();
+
 }
 
 void Logic::moveAllObjects()
 {
-	auto objects = objectVector();
+	vec_of_objects objects;
+	getObjects(objects);
 
 	for (auto &i : objects)
 		i->move();
@@ -72,7 +77,7 @@ void Logic::run()
 	reset();
 	while (presentation_.isWindowOpen())
 	{
-		stopwatch_.start();
+		//stopwatch_.start();
 		presentation_.clearWindow();
 		auto inputs = presentation_.checkInputs();
 
@@ -112,35 +117,75 @@ void Logic::changePlayerDirections(std::vector<bool> &inputs)
 		downPlayer_->shoot();
 }
 
-std::vector<std::shared_ptr<IEntity> > Logic::objectVector()
+void Logic::getObjects(vec_of_objects & objects)
 {
-	auto upPlayerBullets = upPlayer_->getShotsFired();
-	auto downPlayerBullets = downPlayer_->getShotsFired();
+
+	getPlayers(objects);
+
+	getAliens(objects);
+
+	getPlayerBullets(objects);
+
+	getAlienBullets(objects);
+
+
+}
+
+void Logic::getPlayers(vec_of_objects & objects)
+{
+	objects.push_back(upPlayer_);
+	objects.push_back(downPlayer_);
+}
+
+void Logic::getAliens(vec_of_objects & objects)
+{
 	auto upAliens = upArmada_->getArmada();
 	auto downAliens = downArmada_->getArmada();
-	auto upAlienBullets = upArmada_->getOnslaught();
-	auto downAlienBullets = downArmada_->getOnslaught();
-
-	auto objects = vec_of_objects
-	{ upPlayer_, downPlayer_ };
 
 	for (auto &i : upAliens)
 		objects.push_back(i);
 
 	for (auto &i : downAliens)
 		objects.push_back(i);
+}
+
+void Logic::getPlayerBullets(vec_of_objects & objects)
+{
+	auto upPlayerBullets = upPlayer_->getShotsFired();
+	auto downPlayerBullets = downPlayer_->getShotsFired();
 
 	for (auto &i : upPlayerBullets)
 		objects.push_back(i);
 
 	for (auto &i : downPlayerBullets)
 		objects.push_back(i);
+}
+
+void Logic::getAlienBullets(vec_of_objects & objects)
+{
+	auto upAlienBullets = upArmada_->getOnslaught();
+	auto downAlienBullets = downArmada_->getOnslaught();
 
 	for (auto &i : upAlienBullets)
 		objects.push_back(i);
 
 	for (auto &i : downAlienBullets)
 		objects.push_back(i);
+}
 
-	return objects;
+void Logic::checkColisions()
+{
+	vec_of_objects playerBullets;
+	vec_of_objects aliens;
+	getPlayerBullets(playerBullets);
+	getAliens(aliens);
+	collision_handler_.handlecollisions(playerBullets,aliens);
+}
+
+void Logic::checkGameOver()
+{
+	if(!(upPlayer_->getStatus()) || !(downPlayer_->getStatus()))
+		presentation_.setGameOver();
+	if(upArmada_->isGameOver() || downArmada_->isGameOver())
+		presentation_.setGameOver();
 }

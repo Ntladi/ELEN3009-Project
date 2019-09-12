@@ -25,6 +25,7 @@ vec_of_aliens Armada::getArmada()
 vec_of_bullets Armada::getOnslaught()
 {
 	generateBullets();
+	removeBulletWaste();
 	return bullets_;
 }
 two_floats Armada::getAlienSize() const
@@ -174,4 +175,16 @@ void Armada::addBullet(std::vector<unsigned int > & endOfCols, const unsigned in
 				armada_.at(index).at(shot_row)->shoot());
 		bullets_.push_back(newBullet);
 	}
+}
+
+void Armada::removeBulletWaste()
+{
+	auto lambda = [](auto i)
+	{	return !(i->getStatus());};
+
+	auto remove_idiom = std::remove_if(bullets_.begin(),
+			bullets_.end(), lambda);
+
+	bullets_.erase(remove_idiom, bullets_.end());
+
 }

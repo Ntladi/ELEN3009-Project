@@ -9,7 +9,10 @@ Alien::Alien(Orientation orientation)
 	{ getPosition(), getSize() };
 }
 
-
+Alien::~Alien()
+{
+	std::cout << "ALien is gone" << std::endl;
+}
 void Alien::setMoveDirection(const MoveDirection &direction)
 {
 	parameters_.setMoveDirection(direction);

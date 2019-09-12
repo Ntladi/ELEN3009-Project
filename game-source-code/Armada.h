@@ -2,6 +2,7 @@
 #define ARMADA_H_
 #include "Alien.h"
 #include "ArmadaParameters.h"
+#include "IEntity.h"
 #include <memory>
 #include <vector>
 #include <algorithm>
@@ -29,6 +30,7 @@ private:
 	void generateColumn(const double & x_position, const unsigned int & index);
 	void generateRows();
 	void removeWaste();
+	void removeBulletWaste();
 	void checkEdges();
 	void moveAllVertically();
 	void addBullet(std::vector<unsigned int >& endOfCols, const unsigned int &index);

@@ -102,14 +102,16 @@ std::vector<bool> Presentation::checkInputs()
 		moveDownPlayerRight_ = true;
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)
-			&& stopwatch1_.getTimeElapsed() > 0.1)
+			&& stopwatch1_.getTimeElapsed()
+					> Constants::SECONDS_BETWEEN_PLAYER_SHOTS)
 	{
 		upPlayerShoots_ = true;
 		stopwatch1_.start();
 	}
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q)
-			&& stopwatch2_.getTimeElapsed() > 0.1)
+			&& stopwatch2_.getTimeElapsed()
+					> Constants::SECONDS_BETWEEN_PLAYER_SHOTS)
 	{
 		downPlayerShoots_ = true;
 		stopwatch2_.start();
@@ -134,6 +136,8 @@ void Presentation::clearWindow()
 		window_->draw(backgrounds_.getSplashScreen());
 	if (screenstate_ == ScreenStates::GAME_SCREEN)
 		window_->draw(backgrounds_.getBackgroundScreen());
+	if (screenstate_ == ScreenStates::GAME_OVER)
+		window_->draw(backgrounds_.getGameOverScreen());
 }
 
 void Presentation::resetInputs()
@@ -144,4 +148,9 @@ void Presentation::resetInputs()
 	moveDownPlayerRight_ = false;
 	upPlayerShoots_ = false;
 	downPlayerShoots_ = false;
+}
+
+void Presentation::setGameOver()
+{
+		screenstate_ = ScreenStates::GAME_OVER;
 }
