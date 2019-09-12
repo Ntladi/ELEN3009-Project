@@ -161,14 +161,14 @@ void Logic::getPlayerBullets(vec_of_objects & objects)
 
 void Logic::getAlienBullets(vec_of_objects & objects)
 {
-//	auto upAlienBullets = upArmada_->getOnslaught();
-//	auto downAlienBullets = downArmada_->getOnslaught();
-//
-//	for (auto &i : upAlienBullets)
-//		objects.push_back(i);
-//
-//	for (auto &i : downAlienBullets)
-//		objects.push_back(i);
+	auto upAlienBullets = upArmada_->getOnslaught();
+	auto downAlienBullets = downArmada_->getOnslaught();
+
+	for (auto &i : upAlienBullets)
+		objects.push_back(i);
+
+	for (auto &i : downAlienBullets)
+		objects.push_back(i);
 }
 
 void Logic::checkColisions()

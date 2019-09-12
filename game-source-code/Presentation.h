@@ -43,7 +43,8 @@ private:
 	GameModes game_mode_;
 	void checkPressed();
 	void multiPlayerInputs();
-	void singlePlayerInputs();
+	void singlePlayerMirroredInputs();
+	void singlePlayerInvertedInputs();
 	void shoot();
 	void resetInputs();
 };

@@ -75,15 +75,20 @@ void Presentation::checkPressed()
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
 		{
 			screen_state_ = ScreenStates::GAME_SCREEN;
-			game_mode_ = GameModes::SINGLE_PLAYER;
+			game_mode_ = GameModes::MULTI_PLAYER;
+		}
+		else if(sf::Keyboard::isKeyPressed(sf::Keyboard::I))
+		{
+			screen_state_ = ScreenStates::GAME_SCREEN;
+			game_mode_ = GameModes::SINGLE_PLAYER_INVERTED;
 		}
 		else if(sf::Keyboard::isKeyPressed(sf::Keyboard::M))
 		{
 			screen_state_ = ScreenStates::GAME_SCREEN;
-			game_mode_ = GameModes::MULTI_PLAYER;
+			game_mode_ = GameModes::SINGLE_PLAYER_MIRRORED;
 		}
 	}
-	else if (screen_state_ == ScreenStates::GAME_OVER)
+	else if (screen_state_ == ScreenStates::GAME_OVER || screen_state_ == ScreenStates::GAME_WON)
 		window_->close();
 }
 bool Presentation::isWindowOpen()
@@ -102,8 +107,12 @@ std::vector<bool> Presentation::checkInputs()
 	events();
 	resetInputs();
 
-	if(game_mode_ == GameModes::SINGLE_PLAYER)
-		singlePlayerInputs();
+	if(game_mode_ == GameModes::SINGLE_PLAYER_MIRRORED)
+		singlePlayerMirroredInputs();
+	else if(game_mode_ == GameModes::SINGLE_PLAYER_INVERTED)
+		singlePlayerInvertedInputs();
+	else if(game_mode_ == GameModes::MULTI_PLAYER)
+		multiPlayerInputs();
 
 	return
 	{	moveUpPlayerLeft_, moveUpPlayerRight_, moveDownPlayerLeft_,
@@ -126,6 +135,8 @@ void Presentation::clearWindow()
 		window_->draw(backgrounds_.getBackgroundScreen());
 	if (screen_state_ == ScreenStates::GAME_OVER)
 		window_->draw(backgrounds_.getGameOverScreen());
+	if (screen_state_ == ScreenStates::GAME_WON)
+		window_->draw(backgrounds_.getGameWonScreen());
 }
 
 void Presentation::resetInputs()
@@ -148,7 +159,7 @@ void Presentation::setGameWon()
 	screen_state_ = ScreenStates::GAME_WON;
 }
 
-void Presentation::singlePlayerInputs()
+void Presentation::multiPlayerInputs()
 {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 		moveUpPlayerLeft_ = true;
@@ -177,11 +188,48 @@ void Presentation::singlePlayerInputs()
 	}
 }
 
-void Presentation::multiPlayerInputs()
+void Presentation::singlePlayerMirroredInputs()
 {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 	{
 		moveUpPlayerLeft_ = true;
 		moveDownPlayerLeft_ = true;
+	}
+	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+	{
+		moveUpPlayerRight_ = true;
+		moveDownPlayerRight_ = true;
+	}
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)
+			&& stopwatch1_.getTimeElapsed()
+					> Constants::SECONDS_BETWEEN_PLAYER_SHOTS)
+	{
+		upPlayerShoots_ = true;
+		downPlayerShoots_ = true;
+		stopwatch1_.start();
+	}
+}
+
+void Presentation::singlePlayerInvertedInputs()
+{
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+	{
+		moveUpPlayerLeft_ = true;
+		moveDownPlayerRight_ = true;
+	}
+	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+	{
+		moveUpPlayerRight_ = true;
+		moveDownPlayerLeft_ = true;
+	}
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)
+			&& stopwatch1_.getTimeElapsed()
+					> Constants::SECONDS_BETWEEN_PLAYER_SHOTS)
+	{
+		upPlayerShoots_ = true;
+		downPlayerShoots_ = true;
+		stopwatch1_.start();
 	}
 }
