@@ -6,19 +6,26 @@ CollisionHandler::CollisionHandler()
 
 }
 
-void CollisionHandler::handlecollisions(vec_of_objects &playerBullets,
-		vec_of_objects &aliens)
+void CollisionHandler::handlecollisions(vec_of_objects &player_bullets,
+		vec_of_objects &aliens, vec_of_objects &players,
+		vec_of_objects &alien_bullets)
 {
-	playerBulletsAliens(playerBullets,aliens);
+	dualCollisions(player_bullets, aliens);
+	monoCollisions(player_bullets, players);
+	dualCollisions(alien_bullets,players);
+	dualCollisions(players, aliens);
+	monoCollisions(player_bullets,player_bullets);
+	monoCollisions(player_bullets,alien_bullets);
+
 }
 
-void CollisionHandler::playerBulletsAliens(vec_of_objects &playerBullets,
-		vec_of_objects &Aliens)
+void CollisionHandler::dualCollisions(vec_of_objects &player_bullets,
+		vec_of_objects &aliens)
 {
-	for (auto &i : playerBullets)
+	for (auto &i : player_bullets)
 	{
 		if (i->getStatus())
-			for (auto &j : Aliens)
+			for (auto &j : aliens)
 				if (j->getStatus())
 					checkColision(i, j);
 
@@ -35,4 +42,28 @@ void CollisionHandler::checkColision(object &object1, object &object2)
 		object2->killEntity();
 	}
 
+}
+
+void CollisionHandler::monoCollisions(vec_of_objects &objects,
+		vec_of_objects &players)
+{
+	for (auto &i : objects)
+	{
+		if (i->getStatus())
+		{
+			if (i->getOrientation() == Orientation::FACE_UP)
+				checkMonoCollision(players, i, Orientation::FACE_DOWN);
+			else if (i->getOrientation() == Orientation::FACE_DOWN)
+				checkMonoCollision(players, i, Orientation::FACE_UP);
+
+		}
+	}
+}
+
+void CollisionHandler::checkMonoCollision(vec_of_objects &objects,
+		object &object1, Orientation orientation)
+{
+	for (auto &j : objects)
+		if (j->getOrientation() == orientation)
+			checkColision(j, object1);
 }

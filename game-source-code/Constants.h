@@ -8,7 +8,7 @@ public:
 
 	const static constexpr float SCALE = 1; // 1.83  for 1080p
 
-	const static constexpr float GAME_SPEED = 0.5;
+	const static constexpr float GAME_SPEED = 1;
 	const static constexpr float SCREEN_X_LENGTH = 1050 * SCALE;
 	const static constexpr float SCREEN_Y_LENGTH = 655 * SCALE;
 

@@ -5,7 +5,6 @@ Logic::Logic()
 {
 	presentation_.createWindow();
 	initializeObjects();
-	stopwatch_.start();
 }
 
 void Logic::loadInitialPositions()
@@ -77,7 +76,6 @@ void Logic::run()
 	reset();
 	while (presentation_.isWindowOpen())
 	{
-		//stopwatch_.start();
 		presentation_.clearWindow();
 		auto inputs = presentation_.checkInputs();
 
@@ -175,11 +173,15 @@ void Logic::getAlienBullets(vec_of_objects & objects)
 
 void Logic::checkColisions()
 {
-	vec_of_objects playerBullets;
+	vec_of_objects player_bullets;
 	vec_of_objects aliens;
-	getPlayerBullets(playerBullets);
+	vec_of_objects players;
+	vec_of_objects alien_bullets;
+	getPlayerBullets(player_bullets);
 	getAliens(aliens);
-	collision_handler_.handlecollisions(playerBullets,aliens);
+	getPlayers(players);
+	getAlienBullets(alien_bullets);
+	collision_handler_.handlecollisions(player_bullets,aliens,players,alien_bullets);
 }
 
 void Logic::checkGameOver()

@@ -25,7 +25,6 @@ private:
 	std::shared_ptr<Player> downPlayer_;
 	std::shared_ptr<Armada> upArmada_;
 	std::shared_ptr<Armada> downArmada_;
-	StopWatch stopwatch_;
 	Presentation presentation_;
 	CollisionHandler collision_handler_;
 	void process(std::vector<bool> & inputs);
