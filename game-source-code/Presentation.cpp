@@ -166,9 +166,9 @@ void Presentation::multiPlayerInputs()
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 		moveUpPlayerRight_ = true;
 
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
 		moveDownPlayerLeft_ = true;
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::G))
 		moveDownPlayerRight_ = true;
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)
