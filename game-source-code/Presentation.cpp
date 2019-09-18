@@ -28,24 +28,8 @@ bool Presentation::isPlaying() const
 void Presentation::moveSprite(const ObjectType &object,
 		const Orientation &orientation, const two_floats &position)
 {
-	switch (object)
-	{
-	case ObjectType::PLAYER:
-		sprites_.movePlayer(orientation, position);
-		break;
-	case ObjectType::ALIEN:
-		sprites_.moveAlien(orientation, position);
-		break;
-	case ObjectType::PLAYER_BULLET:
-		sprites_.movePlayerBullet(orientation, position);
-		break;
-	case ObjectType::ALIEN_BULLET:
-		sprites_.moveAlienBullet(orientation, position);
-		break;
-	default:
-		break;
-	}
 
+	sprites_.moveSprite(object,orientation,position);
 	sprites_.drawLatestObject(window_);
 }
 

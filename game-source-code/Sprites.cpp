@@ -12,76 +12,44 @@ Sprites::Sprites()
 	downAlienBullet_ = std::make_shared<sf::RectangleShape>();
 }
 
-void Sprites::movePlayer(const Orientation &orientation,
-		const two_floats &position)
+void Sprites::moveSprite(const ObjectType &object,
+		const Orientation &orientation, const two_floats &position)
 {
-	float x_position, y_position;
-	std::tie(x_position, y_position) = position;
-
-	if (orientation == Orientation::FACE_UP)
+	switch (object)
 	{
-		upPlayer_->setPosition(sf::Vector2f(x_position, y_position));
-		latestObject_ = upPlayer_;
-	}
-	else if (orientation == Orientation::FACE_DOWN)
-	{
-		downPlayer_->setPosition(sf::Vector2f(x_position, y_position));
-		latestObject_ = downPlayer_;
+	case ObjectType::PLAYER:
+		moveSpriteObject(upPlayer_,downPlayer_,orientation,position);
+		break;
+	case ObjectType::ALIEN:
+		moveSpriteObject(upAlien_,downAlien_,orientation,position);
+		break;
+	case ObjectType::PLAYER_BULLET:
+		moveSpriteObject(upPlayerBullet_,downPlayerBullet_,orientation,position);
+		break;
+	case ObjectType::ALIEN_BULLET:
+		moveSpriteObject(upAlienBullet_,downAlienBullet_,orientation,position);
+		break;
+	default:
+		break;
 	}
 }
 
-void Sprites::moveAlien(const Orientation &orientation,
-		const two_floats &position)
+
+void Sprites::moveSpriteObject(sprite_ptr & upSprite, sprite_ptr & downSprite, const Orientation &orientation, const two_floats &position)
 {
 	float x_position, y_position;
 	std::tie(x_position, y_position) = position;
 
 	if (orientation == Orientation::FACE_UP)
 	{
-		upAlien_->setPosition(sf::Vector2f(x_position, y_position));
-		latestObject_ = upAlien_;
+		upSprite->setPosition(sf::Vector2f(x_position, y_position));
+		latestObject_ = upSprite;
 	}
 	else if (orientation == Orientation::FACE_DOWN)
 	{
-		downAlien_->setPosition(sf::Vector2f(x_position, y_position));
-		latestObject_ = downAlien_;
+		downSprite->setPosition(sf::Vector2f(x_position, y_position));
+		latestObject_ = downSprite;
 	}
-}
-
-void Sprites::movePlayerBullet(const Orientation &orientation,
-		const two_floats &position)
-{
-	float x_position, y_position;
-	std::tie(x_position, y_position) = position;
-
-	if (orientation == Orientation::FACE_UP)
-	{
-		upPlayerBullet_->setPosition(sf::Vector2f(x_position, y_position));
-		latestObject_ = upPlayerBullet_;
-	}
-	else if (orientation == Orientation::FACE_DOWN)
-	{
-		downPlayerBullet_->setPosition(sf::Vector2f(x_position, y_position));
-		latestObject_ = downPlayerBullet_;
-	}
-}
-
-void Sprites::moveAlienBullet(const Orientation &orientation,
-		const two_floats &position)
-{
-	float x_position, y_position;
-	std::tie(x_position, y_position) = position;
-	if (orientation == Orientation::FACE_UP)
-	{
-		upAlienBullet_->setPosition(sf::Vector2f(x_position, y_position));
-		latestObject_ = upAlienBullet_;
-	}
-	else if (orientation == Orientation::FACE_DOWN)
-	{
-		downAlienBullet_->setPosition(sf::Vector2f(x_position, y_position));
-		latestObject_ = downAlienBullet_;
-	}
-
 }
 
 void Sprites::drawLatestObject(std::shared_ptr<sf::RenderWindow> &window)

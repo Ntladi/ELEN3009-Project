@@ -17,10 +17,8 @@ class Sprites
 {
 public:
 	Sprites();
-	void movePlayer(const Orientation &orientation, const two_floats &position);
-	void moveAlien(const Orientation &orientation, const two_floats &position);
-	void movePlayerBullet(const Orientation &orientation, const two_floats &position);
-	void moveAlienBullet(const Orientation &orientation, const two_floats &position);
+	void moveSprite(const ObjectType &object, const Orientation &orientation,
+			const two_floats &positions);
 	void drawLatestObject(std::shared_ptr<sf::RenderWindow> &window);
 	void setInitialSizes(const vec_of_two_floats &sizes);
 
@@ -38,6 +36,7 @@ private:
 	vec_of_sprite_ptrs getSprites();
 	void setLatestObject(const ObjectType &object, const Orientation &orientation);
 	void setInitialPositions(const vec_of_two_floats &positions);
+	void moveSpriteObject(sprite_ptr & upSprite, sprite_ptr & downSprite, const Orientation &orientation, const two_floats &position);
 };
 
 #endif
