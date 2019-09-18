@@ -16,7 +16,7 @@ ObjectType IEntity::getObjectType() const
 }
 two_floats IEntity::getPosition() const
 {
-	return {parameters_.getXposition(), parameters_.getYposition()};
+	return {position_.getXPosition(), position_.getYPosition()};
 }
 
 two_floats IEntity::getSize() const
@@ -32,7 +32,7 @@ HitBox IEntity::getHitBox() const
 
 MoveDirection IEntity::getMoveDirection() const
 {
-	return parameters_.getMoveDirection();
+	return movement_.getMoveDirection();
 }
 
 Parameters IEntity::getParameters() const
@@ -53,4 +53,9 @@ void IEntity::killEntity()
 void IEntity::move()
 {
 
+}
+
+void IEntity::updateHitBox()
+{
+	hitbox_.setNewPositions(getPosition(), getSize());
 }

@@ -12,12 +12,10 @@ class Bullet : public IEntity
 {
 public:
 	Bullet(two_floats position, ObjectType bullet_type, Orientation orientation);
-	~Bullet();
 	void move() override;
 	bool isOnScreen();
 
 private:
-	void updateHitBox();
 	void moveBullet();
 };
 

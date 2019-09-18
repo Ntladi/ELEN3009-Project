@@ -3,16 +3,7 @@
 
 Armada::Armada(Orientation orientation)
 {
-	parameters_ = ArmadaParameters
-	{ orientation };
-
-	armada_.resize(parameters_.getMaxCols());
-
-	std::for_each(begin(armada_), end(armada_), [&](auto &i)
-	{	i.resize(parameters_.getMaxRows());});
-
-	generateRows();
-
+	alien_factory_.initializeArmada(armada_,orientation);
 }
 
 vec_of_aliens Armada::getArmada()
@@ -24,27 +15,11 @@ vec_of_aliens Armada::getArmada()
 
 vec_of_bullets Armada::getOnslaught()
 {
-	generateBullets();
-	removeBulletWaste();
-	return bullets_;
-}
-two_floats Armada::getAlienSize() const
-{
-	return parameters_.getAlienSize();
+	bullet_factory_.generateBullets(armada_, aliens1D().size());
+	return bullet_factory_.getOnslaught();
 }
 
-vec_of_two_floats Armada::getPositions()
-{
-	auto aliens = vec_of_two_floats
-	{ };
-	aliens.resize(aliens1D().size());
 
-	std::for_each(begin(aliens1D()), end(aliens1D()), [&](auto &i)
-	{	aliens.push_back(i->getPosition());});
-
-	return aliens;
-
-}
 bool Armada::isGameOver()
 {
 	for (auto &i : aliens1D())
@@ -54,86 +29,26 @@ bool Armada::isGameOver()
 	return false;
 }
 
-void Armada::generateBullets()
-{
-	if (parameters_.getElapsedTime() > parameters_.getSecondsBetweenShots()
-			&& parameters_.getCounter() > 0)
-	{
-		parameters_.resetStopWatch();
-
-		std::vector<unsigned int> endOfCols;
-
-		std::for_each(begin(armada_), end(armada_), [&](auto i)
-		{	endOfCols.push_back(i.size()-1);});
-
-		auto shot_col1 = rand() % armada_.size();
-		auto shot_col2 = (shot_col1 + 1) % armada_.size();
-		auto shot_col3 = (shot_col2 + 1) % armada_.size();
-
-		addBullet(endOfCols,shot_col1);
-		addBullet(endOfCols,shot_col2);
-		addBullet(endOfCols,shot_col3);
-
-	}
-}
-
-void Armada::generateRows()
-{
-	auto x_position = std::get<0>(parameters_.getAlienSize());
-
-	for (auto i = 0u; i < parameters_.getMaxCols(); i++)
-	{
-		generateColumn(x_position, i);
-
-		x_position += std::get<0>(parameters_.getAlienSize())
-				+ parameters_.getSpaceBetweenCols();
-	}
-}
-
-void Armada::generateColumn(const double &x_position, const unsigned int &index)
-{
-
-	auto y_position = std::get<1>(parameters_.getAlienPosition());
-
-	for (auto j = 0u; j < parameters_.getMaxRows(); j++)
-	{
-		auto newAlien = std::make_shared<Alien>(parameters_.getOrientation());
-		newAlien->setPosition(
-		{ x_position, y_position });
-		armada_.at(index).at(j) = newAlien;
-
-		if (parameters_.getOrientation() == Orientation::FACE_DOWN)
-			y_position += std::get<1>(parameters_.getAlienSize())
-					+ parameters_.getSpaceBetweenRows();
-		else if (parameters_.getOrientation() == Orientation::FACE_UP)
-			y_position -= std::get<1>(parameters_.getAlienSize())
-					+ parameters_.getSpaceBetweenRows();
-
-		parameters_.incrementCounter();
-	}
-}
-
 void Armada::removeWaste()
 {
 
-	parameters_.setCounter(0);
+	alien_factory_.setCounter(0);
 	for (auto &i : armada_)
 	{
 		removeForEach(i);
 		std::for_each(begin(i), end(i), [&](auto &j)
-		{	parameters_.incrementCounter();});
+		{	alien_factory_.incrementCounter();});
 	}
 
 }
 
 void Armada::checkEdges()
 {
-	if (parameters_.getCounter() > 0)
+	if (alien_factory_.getCounter() > 0)
 		if (aliens1D().at(0)->isAtEdgeOfScreen()
-				|| aliens1D().at(parameters_.getCounterMinus())->isAtEdgeOfScreen())
+				|| aliens1D().at(alien_factory_.getCounter()-1)->isAtEdgeOfScreen())
 		{
 			moveAllVertically();
-			parameters_.changeDirection();
 		}
 
 }
@@ -163,29 +78,6 @@ void Armada::removeForEach(vec_of_aliens &aliens)
 
 	auto remove_idiom = std::remove_if(begin(aliens), end(aliens), lambda);
 	aliens.erase(remove_idiom, end(aliens));
-
-}
-
-void Armada::addBullet(std::vector<unsigned int > & endOfCols, const unsigned int & index)
-{
-	if (armada_.at(index).size() > 0)
-	{
-		auto shot_row = endOfCols.at(index);
-		auto newBullet = std::make_shared<Bullet>(
-				armada_.at(index).at(shot_row)->shoot());
-		bullets_.push_back(newBullet);
-	}
-}
-
-void Armada::removeBulletWaste()
-{
-	auto lambda = [](auto i)
-	{	return !(i->getStatus());};
-
-	auto remove_idiom = std::remove_if(bullets_.begin(),
-			bullets_.end(), lambda);
-
-	bullets_.erase(remove_idiom, bullets_.end());
 
 }
 

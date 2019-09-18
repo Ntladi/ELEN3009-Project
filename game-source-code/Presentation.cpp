@@ -2,9 +2,7 @@
 #include "Constants.h"
 Presentation::Presentation()
 {
-	resetInputs();
-	stopwatch1_.start();
-	stopwatch2_.start();
+	game_mode_ = GameModes::NONE;
 	screen_state_ = ScreenStates::SPLASHSCREEN;
 }
 
@@ -22,10 +20,14 @@ void Presentation::initializeSpriteSizes(const vec_of_two_floats &sizes)
 	sprites_.setInitialSizes(sizes);
 }
 
+bool Presentation::isPlaying() const
+{
+	return screen_state_ == ScreenStates::GAME_SCREEN;
+}
+
 void Presentation::moveSprite(const ObjectType &object,
 		const Orientation &orientation, const two_floats &position)
 {
-
 	switch (object)
 	{
 	case ObjectType::PLAYER:
@@ -69,28 +71,25 @@ void Presentation::events()
 
 void Presentation::checkPressed()
 {
-
 	if (screen_state_ == ScreenStates::SPLASHSCREEN)
 	{
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
-		{
-			screen_state_ = ScreenStates::GAME_SCREEN;
 			game_mode_ = GameModes::MULTI_PLAYER;
-		}
-		else if(sf::Keyboard::isKeyPressed(sf::Keyboard::I))
-		{
-			screen_state_ = ScreenStates::GAME_SCREEN;
+		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::I))
 			game_mode_ = GameModes::SINGLE_PLAYER_INVERTED;
-		}
-		else if(sf::Keyboard::isKeyPressed(sf::Keyboard::M))
-		{
-			screen_state_ = ScreenStates::GAME_SCREEN;
+		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::M))
 			game_mode_ = GameModes::SINGLE_PLAYER_MIRRORED;
-		}
+		if (game_mode_ != GameModes::NONE)
+			screen_state_ = ScreenStates::GAME_SCREEN;
 	}
-	else if (screen_state_ == ScreenStates::GAME_OVER || screen_state_ == ScreenStates::GAME_WON)
-		window_->close();
+	else if (screen_state_ == ScreenStates::GAME_OVER
+			|| screen_state_ == ScreenStates::GAME_WON)
+	{
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
+			window_->close();
+	}
 }
+
 bool Presentation::isWindowOpen()
 {
 	return window_->isOpen();
@@ -98,31 +97,22 @@ bool Presentation::isWindowOpen()
 
 void Presentation::displayWindow()
 {
-
 	window_->display();
 }
 
 std::vector<bool> Presentation::checkInputs()
 {
 	events();
-	resetInputs();
+	player_input_handler_.resetInputs();
 
-	if(game_mode_ == GameModes::SINGLE_PLAYER_MIRRORED)
-		singlePlayerMirroredInputs();
-	else if(game_mode_ == GameModes::SINGLE_PLAYER_INVERTED)
-		singlePlayerInvertedInputs();
-	else if(game_mode_ == GameModes::MULTI_PLAYER)
-		multiPlayerInputs();
+	if (game_mode_ == GameModes::SINGLE_PLAYER_MIRRORED)
+		player_input_handler_.singlePlayerMirroredInputs();
+	else if (game_mode_ == GameModes::SINGLE_PLAYER_INVERTED)
+		player_input_handler_.singlePlayerInvertedInputs();
+	else if (game_mode_ == GameModes::MULTI_PLAYER)
+		player_input_handler_.multiPlayerInputs();
 
-	return
-	{	moveUpPlayerLeft_, moveUpPlayerRight_, moveDownPlayerLeft_,
-		moveDownPlayerRight_, upPlayerShoots_, downPlayerShoots_};
-
-}
-
-ScreenStates Presentation::getScreenstate() const
-{
-	return screen_state_;
+	return player_input_handler_.getInputs();
 }
 
 void Presentation::clearWindow()
@@ -139,16 +129,6 @@ void Presentation::clearWindow()
 		window_->draw(backgrounds_.getGameWonScreen());
 }
 
-void Presentation::resetInputs()
-{
-	moveUpPlayerLeft_ = false;
-	moveUpPlayerRight_ = false;
-	moveDownPlayerLeft_ = false;
-	moveDownPlayerRight_ = false;
-	upPlayerShoots_ = false;
-	downPlayerShoots_ = false;
-}
-
 void Presentation::setGameOver()
 {
 	screen_state_ = ScreenStates::GAME_OVER;
@@ -157,79 +137,4 @@ void Presentation::setGameOver()
 void Presentation::setGameWon()
 {
 	screen_state_ = ScreenStates::GAME_WON;
-}
-
-void Presentation::multiPlayerInputs()
-{
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-		moveUpPlayerLeft_ = true;
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-		moveUpPlayerRight_ = true;
-
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-		moveDownPlayerLeft_ = true;
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::G))
-		moveDownPlayerRight_ = true;
-
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)
-			&& stopwatch1_.getTimeElapsed()
-					> Constants::SECONDS_BETWEEN_PLAYER_SHOTS)
-	{
-		upPlayerShoots_ = true;
-		stopwatch1_.start();
-	}
-
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q)
-			&& stopwatch2_.getTimeElapsed()
-					> Constants::SECONDS_BETWEEN_PLAYER_SHOTS)
-	{
-		downPlayerShoots_ = true;
-		stopwatch2_.start();
-	}
-}
-
-void Presentation::singlePlayerMirroredInputs()
-{
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-	{
-		moveUpPlayerLeft_ = true;
-		moveDownPlayerLeft_ = true;
-	}
-	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-	{
-		moveUpPlayerRight_ = true;
-		moveDownPlayerRight_ = true;
-	}
-
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)
-			&& stopwatch1_.getTimeElapsed()
-					> Constants::SECONDS_BETWEEN_PLAYER_SHOTS)
-	{
-		upPlayerShoots_ = true;
-		downPlayerShoots_ = true;
-		stopwatch1_.start();
-	}
-}
-
-void Presentation::singlePlayerInvertedInputs()
-{
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-	{
-		moveUpPlayerLeft_ = true;
-		moveDownPlayerRight_ = true;
-	}
-	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-	{
-		moveUpPlayerRight_ = true;
-		moveDownPlayerLeft_ = true;
-	}
-
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)
-			&& stopwatch1_.getTimeElapsed()
-					> Constants::SECONDS_BETWEEN_PLAYER_SHOTS)
-	{
-		upPlayerShoots_ = true;
-		downPlayerShoots_ = true;
-		stopwatch1_.start();
-	}
 }

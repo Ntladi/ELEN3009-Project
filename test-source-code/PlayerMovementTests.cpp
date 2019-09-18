@@ -192,7 +192,7 @@ TEST_CASE("A player does not exceed the left boundary")
 		auto x_reference1 = player.getParameters().getXLength() / 2;
 		auto x_reference2 = player.getParameters().getXLength();
 
-		auto end_loop = player.getParameters().getXposition()
+		auto end_loop = std::get<0>(player.getPosition())
 				/ player.getParameters().getMovementStep();
 
 		for (auto i = 0u; i < end_loop; i++)
@@ -218,7 +218,7 @@ TEST_CASE("A player does not exceed the left boundary")
 		auto x_reference1 = player.getParameters().getXLength() / 2;
 		auto x_reference2 = player.getParameters().getXLength();
 
-		auto end_loop = player.getParameters().getXposition()
+		auto end_loop = std::get<0>(player.getPosition())
 				/ player.getParameters().getMovementStep();
 
 		for (auto i = 0u; i < end_loop; i++)
@@ -245,7 +245,7 @@ TEST_CASE("A player does not exceed the right boundary")
 		auto player = Player
 		{ Orientation::FACE_DOWN };
 
-		auto end_loop = player.getParameters().getXposition()
+		auto end_loop = std::get<0>(player.getPosition())
 				/ player.getParameters().getMovementStep();
 
 		auto x_reference1 = player.getParameters().getScreenXLength()
@@ -273,7 +273,7 @@ TEST_CASE("A player does not exceed the right boundary")
 		auto player = Player
 		{ Orientation::FACE_UP };
 
-		auto end_loop = player.getParameters().getXposition()
+		auto end_loop = std::get<0>(player.getPosition())
 				/ player.getParameters().getMovementStep();
 
 		auto x_reference1 = player.getParameters().getScreenXLength()

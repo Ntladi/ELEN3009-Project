@@ -24,8 +24,7 @@ bool SeperatingAxisTheorem::isOverlapping(HitBox& obj_1, HitBox& obj_2)
 
 two_floats SeperatingAxisTheorem::normalizeAxis(two_floats& axis)
 {
-	auto axis_x = std::get<0>(axis);
-	auto axis_y = std::get<1>(axis);
+	auto [axis_x,axis_y] = axis;
 	auto axis_magnitude = std::sqrt((std::pow(axis_x,2))+(std::pow(axis_y,2)));
 
 	return {axis_x/axis_magnitude, axis_y/axis_magnitude};
@@ -72,14 +71,13 @@ two_floats SeperatingAxisTheorem::projection(const two_floats& axis,vector<two_f
 	vector<two_floats> projected_verticies(4);
 	auto iter_projected_vertecies = begin(projected_verticies);
 
-	auto axis_x = std::get<0>(axis);
-	auto axis_y = std::get<1>(axis);
+	auto [axis_x,axis_y] = axis;
 	auto axis_magnitude_sqrd = (std::pow(axis_x,2))+(std::pow(axis_y,2));
 
 	for(const auto &vertex:verticies)
 	{
 		auto dot_product = getDotProduct(vertex,axis)/axis_magnitude_sqrd;
-		*iter_projected_vertecies = two_floats{dot_product * std::get<0>(axis), dot_product * std::get<1>(axis)};
+		*iter_projected_vertecies = two_floats{dot_product * axis_x, dot_product * axis_y};
 		++iter_projected_vertecies;
 	}
 

@@ -26,16 +26,6 @@ Textures::Textures()
 	downAlien_bullet_texture_ = std::make_shared<sf::Texture>();
 	downAlien_bullet_texture_->loadFromFile("Assets/Alien2Bullet.png");
 
-	splashScreen_texture_ = std::make_shared<sf::Texture>();
-	splashScreen_texture_->loadFromFile("Assets/SplashScreen.jpg");
-
-	backgroundScreen_texture_ = std::make_shared<sf::Texture>();
-	backgroundScreen_texture_->loadFromFile("Assets/BackgroundScreen.jpg");
-
-	gameOverScreen_texture_ = std::make_shared<sf::Texture>();
-	gameOverScreen_texture_->loadFromFile("Assets/GameOverScreen.jpg");
-
-
 }
 
 vec_of_texture_ptrs Textures::getTextures()

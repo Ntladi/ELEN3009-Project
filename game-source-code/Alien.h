@@ -2,17 +2,15 @@
 #define ALIEN_H_
 #include "Orientation.h"
 #include "MoveDirection.h"
-#include "HitBox.h"
-#include "Parameters.h"
 #include "IEntity.h"
 #include "Bullet.h"
+#include <tuple>
 using two_floats = std::tuple<float, float>;
 
 class Alien : public IEntity
 {
 public:
 	Alien(Orientation orientation);
-	~Alien();
 	void setMoveDirection(const MoveDirection &direction);
 	void setPosition(const two_floats & position);
 	void moveAlienVertically();
@@ -24,7 +22,6 @@ public:
 private:
 	void moveAlienHorizontally();
 	void incrementAlienPosition();
-	void updateHitBox();
 };
 
 #endif

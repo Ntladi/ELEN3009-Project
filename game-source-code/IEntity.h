@@ -5,6 +5,8 @@
 #include "Parameters.h"
 #include "ObjectType.h"
 #include "HitBox.h"
+#include "Position.h"
+#include "Movement.h"
 using two_floats = std::tuple<float, float>;
 
 class IEntity
@@ -25,6 +27,10 @@ public:
 protected:
 	Parameters parameters_;
 	HitBox hitbox_;
+	Position position_;
+	Movement movement_;
+	void updateHitBox();
+
 };
 
 #endif

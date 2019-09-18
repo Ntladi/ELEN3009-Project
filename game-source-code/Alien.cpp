@@ -1,27 +1,30 @@
 #include <Alien.h>
-#include <iostream>
 
 Alien::Alien(Orientation orientation)
 {
 	parameters_ = Parameters
-	{ ObjectType::ALIEN, orientation, MoveDirection::RIGHT };
+	{ ObjectType::ALIEN, orientation};
+
+	position_ = Position
+	{ ObjectType::ALIEN, orientation };
+
+	movement_ = Movement
+	{ MoveDirection::RIGHT };
+
 	hitbox_ = HitBox
 	{ getPosition(), getSize() };
 }
 
-Alien::~Alien()
-{
-	//std::cout << "ALien is gone" << std::endl;
-}
+
 void Alien::setMoveDirection(const MoveDirection &direction)
 {
-	parameters_.setMoveDirection(direction);
+	movement_.setMoveDirection(direction);
 }
 
-void Alien::setPosition(const two_floats& position)
+void Alien::setPosition(const two_floats &position)
 {
-	parameters_.setXPosition(std::get<0>(position));
-	parameters_.setYPosition(std::get<1>(position));
+	position_.setXPosition(std::get<0>(position));
+	position_.setYPosition(std::get<1>(position));
 }
 
 void Alien::move()
@@ -35,19 +38,15 @@ void Alien::move()
 
 Bullet Alien::shoot()
 {
-	return Bullet{getPosition(), ObjectType::ALIEN_BULLET, parameters_.getOrientation()};
-}
-
-void Alien::updateHitBox()
-{
-	hitbox_.setNewPositions(getPosition(), getSize());
+	return Bullet
+	{ getPosition(), ObjectType::ALIEN_BULLET, parameters_.getOrientation() };
 }
 
 bool Alien::isAtEdgeOfScreen()
 {
 	updateHitBox();
 
-	if (parameters_.getMoveDirection() == MoveDirection::LEFT)
+	if (movement_.isMovingLeft())
 	{
 		auto left_x = std::get<0>(hitbox_.getTopLeft());
 		left_x += parameters_.getMovementStep();
@@ -56,7 +55,7 @@ bool Alien::isAtEdgeOfScreen()
 			return true;
 	}
 
-	else if (parameters_.getMoveDirection() == MoveDirection::RIGHT)
+	else if (movement_.isMovingRight())
 	{
 		auto right_x = std::get<0>(hitbox_.getTopRight());
 		right_x -= parameters_.getMovementStep();
@@ -70,57 +69,57 @@ bool Alien::isAtEdgeOfScreen()
 
 void Alien::moveAlienVertically()
 {
-	auto alien_y_position = parameters_.getYposition();
+	auto alien_y_position = position_.getYPosition();
 
-	if (parameters_.getOrientation() == Orientation::FACE_UP)
+	if (parameters_.isFacingUp())
 	{
 		alien_y_position -= parameters_.getYHeight();
-		parameters_.setYPosition(alien_y_position);
+		position_.setYPosition(alien_y_position);
 	}
 
-	else if (parameters_.getOrientation() == Orientation::FACE_DOWN)
+	else if (parameters_.isFacingDown())
 	{
 		alien_y_position += parameters_.getYHeight();
-		parameters_.setYPosition(alien_y_position);
+		position_.setYPosition(alien_y_position);
 	}
 
-	if (parameters_.getMoveDirection() == MoveDirection::LEFT)
-		parameters_.setMoveDirection(MoveDirection::RIGHT);
-	else if (parameters_.getMoveDirection() == MoveDirection::RIGHT)
-		parameters_.setMoveDirection(MoveDirection::LEFT);
+	movement_.changeHorizontalDirection();
+
 }
 
 void Alien::moveAlienHorizontally()
 {
-	auto alien_x_position = parameters_.getXposition();
+	auto alien_x_position = position_.getXPosition();
 
-	if (parameters_.getMoveDirection() == MoveDirection::LEFT)
+	if (movement_.isMovingLeft())
 		alien_x_position -= parameters_.getMovementStep();
-	else if (parameters_.getMoveDirection() == MoveDirection::RIGHT)
+	else if (movement_.isMovingRight())
 		alien_x_position += parameters_.getMovementStep();
 
-	parameters_.setXPosition(alien_x_position);
+	position_.setXPosition(alien_x_position);
 }
 
 bool Alien::isAtEndOfScreen()
 {
 	updateHitBox();
 
-	if (parameters_.getOrientation() == Orientation::FACE_UP)
+	if (parameters_.isFacingUp())
 	{
 		auto left_y = std::get<1>(hitbox_.getTopLeft());
 		left_y += parameters_.getYHeight();
 
-		if (left_y <= parameters_.getYHeight()/2)
+		if (left_y <= parameters_.getYHeight() / 2)
 			return true;
 	}
 
-	else if (parameters_.getOrientation() == Orientation::FACE_DOWN)
+	else if (parameters_.isFacingDown())
 	{
 		auto right_y = std::get<1>(hitbox_.getBottomRight());
 		right_y -= parameters_.getYHeight();
 
-		if (right_y >= parameters_.getScreenYHeight() - parameters_.getYHeight()/2)
+		if (right_y
+				>= parameters_.getScreenYHeight()
+						- parameters_.getYHeight() / 2)
 			return true;
 	}
 	return false;

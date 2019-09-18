@@ -6,6 +6,7 @@
 #include "StopWatch.h"
 #include "ScreenStates.h"
 #include "GameModes.h"
+#include "PlayerInputHandler.h"
 #include <memory>
 using window_ptr = std::shared_ptr<sf::RenderWindow>;
 
@@ -19,33 +20,24 @@ public:
 			const two_floats &positions);
 	void clearWindow();
 	bool isWindowOpen();
-	void closeWindow();
 	void displayWindow();
 	void setGameOver();
 	void setGameWon();
 	std::vector<bool> checkInputs();
-	ScreenStates getScreenstate() const;
+	bool isPlaying() const;
 
 private:
 	void events();
 	Sprites sprites_;
 	Backgrounds backgrounds_;
 	window_ptr window_;
-	bool moveUpPlayerLeft_;
-	bool moveUpPlayerRight_;
-	bool upPlayerShoots_;
-	bool moveDownPlayerLeft_;
-	bool moveDownPlayerRight_;
-	bool downPlayerShoots_;
-	StopWatch stopwatch1_;
-	StopWatch stopwatch2_;
+	PlayerInputHandler player_input_handler_;
 	ScreenStates screen_state_;
 	GameModes game_mode_;
 	void checkPressed();
 	void multiPlayerInputs();
 	void singlePlayerMirroredInputs();
 	void singlePlayerInvertedInputs();
-	void shoot();
 	void resetInputs();
 };
 

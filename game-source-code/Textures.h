@@ -12,8 +12,6 @@ class Textures
 public:
 	Textures();
 	vec_of_texture_ptrs getTextures();
-
-
 private:
 	texture_ptr upPlayer_texture_;
 	texture_ptr downPlayer_texture_;
@@ -23,9 +21,6 @@ private:
 	texture_ptr downPlayer_bullet_texture_;
 	texture_ptr upAlien_bullet_texture_;
 	texture_ptr downAlien_bullet_texture_;
-	texture_ptr splashScreen_texture_;
-	texture_ptr backgroundScreen_texture_;
-	texture_ptr gameOverScreen_texture_;
 
 };
 
