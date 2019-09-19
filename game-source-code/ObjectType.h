@@ -7,6 +7,7 @@ enum class ObjectType
 	ALIEN,
 	PLAYER_BULLET,
 	ALIEN_BULLET,
+	PLAYER_GLYPH,
 	NONE
 };
 

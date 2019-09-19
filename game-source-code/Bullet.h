@@ -18,6 +18,7 @@ public:
 
 private:
 	void moveBullet();
+	virtual two_floats initializePosition() override;
 
 
 };

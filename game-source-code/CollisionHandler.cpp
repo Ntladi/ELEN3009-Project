@@ -6,6 +6,10 @@ CollisionHandler::CollisionHandler()
 	score_= 0;
 }
 
+float CollisionHandler::getScore() const
+{
+	return score_;
+}
 void CollisionHandler::handlecollisions(vec_of_moving_objects &player_bullets,
 		vec_of_moving_objects &aliens, vec_of_moving_objects &players,
 		vec_of_moving_objects &alien_bullets)
@@ -38,8 +42,10 @@ void CollisionHandler::checkColision(moving_object &object1, moving_object &obje
 
 	if (theorem_.isOverlapping(box_1, box_2))
 	{
-		object1->killEntity();
-		object2->killEntity();
+		object1->hitEntity();
+		score_ += object1->getScore();
+		object2->hitEntity();
+		score_ += object2->getScore();
 	}
 
 }

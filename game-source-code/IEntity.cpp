@@ -29,6 +29,10 @@ HitBox IEntity::getHitBox() const
 	return hitbox_;
 }
 
+float IEntity::getScore() const
+{
+	return parameters_.getWorth();
+}
 bool IEntity::getStatus() const
 {
 	return parameters_.getStatus();
@@ -37,4 +41,9 @@ bool IEntity::getStatus() const
 void IEntity::killEntity()
 {
 	parameters_.setStatus(false);
+}
+
+void IEntity::hitEntity()
+{
+	parameters_.damage();
 }

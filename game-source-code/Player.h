@@ -28,6 +28,7 @@ private:
 	bool isWithinScreenBounds();
 	void movePlayerHorizontally();
 	void removeWaste();
+	virtual two_floats initializePosition() override;
 };
 
 #endif

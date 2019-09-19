@@ -19,12 +19,15 @@ public:
 	two_floats getSize() const;
 	HitBox getHitBox() const;
 	bool getStatus() const;
+	float getScore() const;
 	void killEntity();
+	void hitEntity();
 
 protected:
 	Parameters parameters_;
 	HitBox hitbox_;
 	Position position_;
+	virtual two_floats initializePosition() = 0;
 
 };
 

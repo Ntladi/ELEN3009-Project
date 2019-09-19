@@ -90,6 +90,8 @@ void Logic::checkColisions()
 	object_factory_.getAlienBullets(alien_bullets);
 	collision_handler_.handlecollisions(player_bullets, aliens, players,
 			alien_bullets);
+
+	std::cout << collision_handler_.getScore() << std::endl;
 }
 
 void Logic::checkGameOver()

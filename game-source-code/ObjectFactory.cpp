@@ -57,11 +57,11 @@ void ObjectFactory::getAlienBullets(vec_of_moving_objects &objects)
 	auto upAlienBullets = upArmada_->getOnslaught();
 	auto downAlienBullets = downArmada_->getOnslaught();
 
-//	for (auto &i : upAlienBullets)
-//		objects.push_back(i);
-//
-//	for (auto &i : downAlienBullets)
-//		objects.push_back(i);
+	for (auto &i : upAlienBullets)
+		objects.push_back(i);
+
+	for (auto &i : downAlienBullets)
+		objects.push_back(i);
 }
 
 bool ObjectFactory::gameOverStatus() const

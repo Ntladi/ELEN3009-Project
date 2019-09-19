@@ -24,6 +24,7 @@ public:
 private:
 	void moveAlienHorizontally();
 	void incrementAlienPosition();
+	virtual two_floats initializePosition() override;
 };
 
 #endif

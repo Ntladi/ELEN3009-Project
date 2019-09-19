@@ -10,7 +10,7 @@ Player::Player(Orientation orientation)
 	{ ObjectType::PLAYER, orientation, params };
 
 	position_ = Position
-	{ ObjectType::PLAYER, orientation };
+	{ ObjectType::PLAYER, orientation, initializePosition() };
 
 	movement_ = Movement
 	{ MoveDirection::NONE, Constants::PLAYER_MAXIMUM_MOVEMENT_STEP };
@@ -96,4 +96,18 @@ void Player::removeWaste()
 
 	bulletsFired_.erase(remove_idiom, bulletsFired_.end());
 
+}
+
+two_floats Player::initializePosition()
+{
+	auto x_position = Constants::PLAYER_INITAL_X_POSITION;
+	auto y_position = 0.0f;
+
+	if (parameters_.isFacingUp())
+		y_position = Constants::SCREEN_Y_LENGTH
+				- Constants::PLAYER_Y_LENGTH/2;
+	else if (parameters_.isFacingDown())
+		y_position = Constants::PLAYER_Y_LENGTH*1.5;
+
+	return {x_position,y_position};
 }

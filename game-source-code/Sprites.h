@@ -31,6 +31,8 @@ private:
 	sprite_ptr downPlayerBullet_;
 	sprite_ptr upAlienBullet_;
 	sprite_ptr downAlienBullet_;
+	sprite_ptr upPlayer_life_;
+	sprite_ptr downPlayer_life_;
 	sprite_ptr latestObject_;
 	SpriteFactory sprite_factory_;
 	vec_of_sprite_ptrs getSprites();

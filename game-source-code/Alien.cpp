@@ -10,7 +10,7 @@ Alien::Alien(Orientation orientation)
 	{ ObjectType::ALIEN, orientation, params };
 
 	position_ = Position
-	{ ObjectType::ALIEN, orientation };
+	{ ObjectType::ALIEN, orientation, initializePosition() };
 
 	movement_ = Movement
 	{ MoveDirection::RIGHT, Constants::ALIEN_MAXIMUM_MOVEMENT_STEP };
@@ -128,3 +128,17 @@ bool Alien::isAtEndOfScreen()
 	return false;
 }
 
+two_floats Alien::initializePosition()
+{
+	auto x_position = Constants::ALIEN_INITAL_X_POSITION;
+	auto y_position = 0.0f;
+
+	if (parameters_.isFacingUp())
+		y_position = Constants::SCREEN_Y_LENGTH / 2
+				- Constants::ALIEN_Y_LENGTH / 2 - 5 + Constants::PLAYER_Y_LENGTH/2;
+	else if (parameters_.isFacingDown())
+		y_position = Constants::SCREEN_Y_LENGTH / 2
+				+ Constants::ALIEN_Y_LENGTH / 2 + 5 + Constants::PLAYER_Y_LENGTH/2;
+
+	return {x_position,y_position};
+}

@@ -21,13 +21,17 @@ two_floats Parameters::getScreenSize() const
 	return {Constants::SCREEN_X_LENGTH,Constants::SCREEN_Y_LENGTH};
 }
 
-
 void Parameters::damage()
 {
 	if(hit_points_ > 0)
 		hit_points_--;
 	if(hit_points_ <= 0)
 		setStatus(false);
+}
+
+float Parameters::getWorth() const
+{
+	return worth_;
 }
 
 ObjectType Parameters::getObjectType() const

@@ -10,6 +10,8 @@ Sprites::Sprites()
 	downPlayerBullet_ = std::make_shared<sf::RectangleShape>();
 	upAlienBullet_ = std::make_shared<sf::RectangleShape>();
 	downAlienBullet_ = std::make_shared<sf::RectangleShape>();
+	upPlayer_life_ = std::make_shared<sf::RectangleShape>();
+	downPlayer_life_ = std::make_shared<sf::RectangleShape>();
 }
 
 void Sprites::moveSprite(const ObjectType &object,

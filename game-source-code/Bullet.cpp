@@ -74,3 +74,17 @@ void Bullet::moveBullet()
 	}
 }
 
+two_floats Bullet::initializePosition()
+{
+	auto x_position = 0.0f;
+	auto y_position = 0.0f;
+
+	if (parameters_.isFacingUp())
+		y_position = -(Constants::BULLET_Y_LENGTH / 2)
+				- Constants::BULLET_Y_LENGTH;
+	else if (parameters_.isFacingDown())
+		y_position = (Constants::BULLET_Y_LENGTH / 2)
+				+ Constants::BULLET_Y_LENGTH;
+
+	return {x_position,y_position};
+}
