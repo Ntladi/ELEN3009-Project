@@ -18,7 +18,6 @@ public:
 	two_floats getPosition() const;
 	two_floats getSize() const;
 	HitBox getHitBox() const;
-	Parameters getParameters() const;
 	bool getStatus() const;
 	void killEntity();
 

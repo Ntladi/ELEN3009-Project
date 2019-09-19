@@ -6,20 +6,17 @@
 #include "Orientation.h"
 #include "MoveDirection.h"
 using two_floats = std::tuple<float, float>;
+using four_floats = std::tuple<float, float, float, float>;
 
 class Parameters {
 
 public:
-	Parameters(ObjectType object = ObjectType::NONE, Orientation orientation = Orientation::FACE_UP);
-//	const float getXLength() const;
-//	const float getYHeight() const;
+	Parameters(ObjectType object = ObjectType::NONE, Orientation orientation = Orientation::FACE_UP, four_floats params = {0,0,0,0});
 	two_floats getSize() const;
 	two_floats getScreenSize() const;
-//	const float getScreenXLength() const;
-//	const float getScreenYHeight() const;
-	const float getMovementStep() const;
 	ObjectType getObjectType() const;
 	Orientation getOrientation() const;
+	void damage();
 	bool getStatus() const;
 	void setOrientation(const Orientation& orientation);
 	void setStatus(const bool &status);
@@ -29,15 +26,11 @@ public:
 private:
 	ObjectType object_;
 	Orientation orientation_;
+	bool is_Alive_;
 	float x_length_;
 	float y_length_;
-	float movement_step_;
-	int score_value_;
-	int hit_points_;
-	bool is_Alive_;
-	void initializePlayer();
-	void initializeBullet();
-	void initializeAlien();
+	float hit_points_;
+	float worth_;
 
 
 };

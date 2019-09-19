@@ -49,11 +49,11 @@ void Position::initializeBulletPosition(Orientation &orientation)
 	x_position_ = 0;
 
 	if (orientation == Orientation::FACE_UP)
-		y_position_ = -(Constants::PLAYER_BULLET_Y_LENGTH / 2)
-				- Constants::PLAYER_BULLET_Y_LENGTH;
+		y_position_ = -(Constants::BULLET_Y_LENGTH / 2)
+				- Constants::BULLET_Y_LENGTH;
 	else if (orientation == Orientation::FACE_DOWN)
-		y_position_ = (Constants::PLAYER_BULLET_Y_LENGTH / 2)
-				+ Constants::PLAYER_BULLET_Y_LENGTH;
+		y_position_ = (Constants::BULLET_Y_LENGTH / 2)
+				+ Constants::BULLET_Y_LENGTH;
 }
 
 void Position::initializeAliePosition(Orientation &orientation)

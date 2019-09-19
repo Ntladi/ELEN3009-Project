@@ -21,6 +21,7 @@ private:
 	void checkColision(moving_object &object1, moving_object &object2);
 	void checkMonoCollision(vec_of_moving_objects &objects, moving_object &object1, Orientation orientation);
 	SeperatingAxisTheorem theorem_;
+	float score_;
 };
 
 #endif

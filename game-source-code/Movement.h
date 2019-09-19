@@ -5,9 +5,10 @@
 class Movement
 {
 public:
-	Movement(MoveDirection move_direction = MoveDirection::NONE);
+	Movement(MoveDirection move_direction = MoveDirection::NONE, const float movement_step = 0);
 	void setMoveDirection(const MoveDirection& moveDirection);
 	MoveDirection getMoveDirection() const;
+	const float getMovementStep() const;
 	void changeHorizontalDirection();
 	bool isMovingUp() const;
 	bool isMovingDown() const;
@@ -17,6 +18,7 @@ public:
 
 private:
 	MoveDirection move_direction_;
+	float movement_step_;
 };
 
 #endif

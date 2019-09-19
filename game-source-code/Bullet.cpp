@@ -4,16 +4,20 @@
 Bullet::Bullet(two_floats position, ObjectType bullet_type,
 		Orientation orientation)
 {
+	four_floats params =
+	{ Constants::BULLET_X_LENGTH, Constants::BULLET_Y_LENGTH,
+			Constants::BULLET_HIT_POINTS, Constants::BULLET_WORTH };
+
 	parameters_ = Parameters
-	{ bullet_type, orientation };
+	{ bullet_type, orientation, params };
 
 	if (parameters_.isFacingUp())
 		movement_ = Movement
-		{ MoveDirection::UP };
+		{ MoveDirection::UP, Constants::BULLET_MAXIMUM_MOVEMENT_STEP };
 
 	else if (parameters_.isFacingDown())
 		movement_ = Movement
-		{ MoveDirection::DOWN };
+		{ MoveDirection::DOWN, Constants::BULLET_MAXIMUM_MOVEMENT_STEP };
 
 	position_.setXPosition(std::get<0>(position));
 	position_.setYPosition(std::get<1>(position));
@@ -21,7 +25,6 @@ Bullet::Bullet(two_floats position, ObjectType bullet_type,
 	{ getPosition(), getSize() };
 
 }
-
 
 void Bullet::move()
 {
@@ -60,13 +63,14 @@ void Bullet::moveBullet()
 
 	if (movement_.isMovingUp())
 	{
-		bullet_y_position -= parameters_.getMovementStep();
+		bullet_y_position -= movement_.getMovementStep();
 		position_.setYPosition(bullet_y_position);
 	}
 	else if (movement_.isMovingDown())
 	{
-		bullet_y_position += parameters_.getMovementStep();
+		bullet_y_position += movement_.getMovementStep();
 		position_.setYPosition(bullet_y_position);
 
 	}
 }
+

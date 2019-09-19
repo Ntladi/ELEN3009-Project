@@ -11,18 +11,14 @@ void Logic::loadSizes()
 	vec_of_two_floats sizes;
 	sizes.clear();
 
-	auto player_param = Parameters
-	{ ObjectType::PLAYER };
 
-	auto alien_param = Parameters
-	{ ObjectType::ALIEN };
+	Player temp_player;
+	Alien temp_alien;
+	Bullet temp_bullet;
 
-	auto bullet_param = Parameters
-	{ ObjectType::PLAYER_BULLET};
-
-	sizes.push_back(player_param.getSize());
-	sizes.push_back(alien_param.getSize());
-	sizes.push_back(bullet_param.getSize());
+	sizes.push_back(temp_player.getSize());
+	sizes.push_back(temp_alien.getSize());
+	sizes.push_back(temp_bullet.getSize());
 	presentation_.initializeSpriteSizes(sizes);
 
 }

@@ -29,11 +29,6 @@ HitBox IEntity::getHitBox() const
 	return hitbox_;
 }
 
-Parameters IEntity::getParameters() const
-{
-	return parameters_;
-}
-
 bool IEntity::getStatus() const
 {
 	return parameters_.getStatus();

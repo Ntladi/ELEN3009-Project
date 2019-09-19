@@ -2,14 +2,18 @@
 
 Player::Player(Orientation orientation)
 {
+	four_floats params =
+	{ Constants::PLAYER_X_LENGTH, Constants::PLAYER_Y_LENGTH,
+			Constants::PLAYER_HIT_POINTS, Constants::PLAYER_WORTH };
+
 	parameters_ = Parameters
-	{ ObjectType::PLAYER, orientation };
+	{ ObjectType::PLAYER, orientation, params };
 
 	position_ = Position
 	{ ObjectType::PLAYER, orientation };
 
 	movement_ = Movement
-	{ MoveDirection::NONE };
+	{ MoveDirection::NONE, Constants::PLAYER_MAXIMUM_MOVEMENT_STEP };
 
 	hitbox_ = HitBox
 	{ getPosition(), getSize() };
@@ -51,7 +55,7 @@ bool Player::isWithinScreenBounds()
 	if (movement_.isMovingLeft())
 	{
 		auto left_x = std::get<0>(hitbox_.getTopLeft());
-		left_x -= parameters_.getMovementStep();
+		left_x -= movement_.getMovementStep();
 
 		if (left_x >= 0)
 			return true;
@@ -60,7 +64,7 @@ bool Player::isWithinScreenBounds()
 	else if (movement_.isMovingRight())
 	{
 		auto right_x = std::get<0>(hitbox_.getTopRight());
-		right_x += parameters_.getMovementStep();
+		right_x += movement_.getMovementStep();
 
 		if (right_x <= std::get<0>(parameters_.getScreenSize()))
 			return true;
@@ -74,9 +78,9 @@ void Player::movePlayerHorizontally()
 {
 	auto player_x_position = position_.getXPosition();
 	if (movement_.isMovingLeft())
-		player_x_position -= parameters_.getMovementStep();
+		player_x_position -= movement_.getMovementStep();
 	else if (movement_.isMovingRight())
-		player_x_position += parameters_.getMovementStep();
+		player_x_position += movement_.getMovementStep();
 
 	position_.setXPosition(player_x_position);
 

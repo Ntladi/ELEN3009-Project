@@ -7,11 +7,12 @@
 #include "Bullet.h"
 #include <tuple>
 using two_floats = std::tuple<float, float>;
+using four_floats = std::tuple<float, float, float, float>;
 
 class Alien : public IMovingEntity
 {
 public:
-	Alien(Orientation orientation);
+	Alien(Orientation orientation = Orientation::FACE_UP);
 	void setMoveDirection(const MoveDirection &direction);
 	void setPosition(const two_floats & position);
 	void moveAlienVertically();

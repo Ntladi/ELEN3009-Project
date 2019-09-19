@@ -16,7 +16,7 @@ using vec_of_bullets = std::vector<std::shared_ptr<Bullet>>;
 class Player : public IMovingEntity
 {
 public:
-	Player(Orientation orientation);
+	Player(Orientation orientation = Orientation::FACE_UP);
 	vec_of_bullets getShotsFired();
 	void setMoveDirection(const MoveDirection &direction);
 	virtual void move() override;

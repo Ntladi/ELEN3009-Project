@@ -18,9 +18,9 @@ public:
 
 	const static constexpr float PLAYER_INITAL_X_POSITION = SCREEN_X_LENGTH / 2;
 
-	const static constexpr float PLAYER_BULLET_X_LENGTH = 3 * SCALE;
-	const static constexpr float PLAYER_BULLET_Y_LENGTH = 18 * SCALE;
-	const static constexpr float PLAYER_BULLET_MAXIMUM_MOVEMENT_STEP = 2*GAME_SPEED;
+	const static constexpr float BULLET_X_LENGTH = 3 * SCALE;
+	const static constexpr float BULLET_Y_LENGTH = 18 * SCALE;
+	const static constexpr float BULLET_MAXIMUM_MOVEMENT_STEP = 2*GAME_SPEED;
 
 	const static constexpr float ALIEN_X_LENGTH = 29 * SCALE;
 	const static constexpr float ALIEN_Y_LENGTH = 37 * SCALE;
@@ -36,6 +36,13 @@ public:
 	const static constexpr float MAX_ALIEN_SHOTS_PER_ROW = 3;
 	const static constexpr float SECONDS_BETWEEN_PLAYER_SHOTS = 0.2/GAME_SPEED;
 
+	const static constexpr float PLAYER_HIT_POINTS = 1;
+	const static constexpr float ALIEN_HIT_POINTS = 1;
+	const static constexpr float BULLET_HIT_POINTS = 1;
+
+	const static constexpr float ALIEN_WORTH = 200;
+	const static constexpr float PLAYER_WORTH = 200;
+	const static constexpr float BULLET_WORTH = 200;
 
 };
 

@@ -2,19 +2,22 @@
 
 Alien::Alien(Orientation orientation)
 {
+	four_floats params
+	{ Constants::ALIEN_X_LENGTH, Constants::ALIEN_Y_LENGTH,
+			Constants::ALIEN_HIT_POINTS, Constants::ALIEN_WORTH };
+
 	parameters_ = Parameters
-	{ ObjectType::ALIEN, orientation};
+	{ ObjectType::ALIEN, orientation, params };
 
 	position_ = Position
 	{ ObjectType::ALIEN, orientation };
 
 	movement_ = Movement
-	{ MoveDirection::RIGHT };
+	{ MoveDirection::RIGHT, Constants::ALIEN_MAXIMUM_MOVEMENT_STEP };
 
 	hitbox_ = HitBox
 	{ getPosition(), getSize() };
 }
-
 
 void Alien::setMoveDirection(const MoveDirection &direction)
 {
@@ -49,7 +52,7 @@ bool Alien::isAtEdgeOfScreen()
 	if (movement_.isMovingLeft())
 	{
 		auto left_x = std::get<0>(hitbox_.getTopLeft());
-		left_x += parameters_.getMovementStep();
+		left_x += movement_.getMovementStep();
 
 		if (left_x <= 0)
 			return true;
@@ -58,7 +61,7 @@ bool Alien::isAtEdgeOfScreen()
 	else if (movement_.isMovingRight())
 	{
 		auto right_x = std::get<0>(hitbox_.getTopRight());
-		right_x -= parameters_.getMovementStep();
+		right_x -= movement_.getMovementStep();
 
 		if (right_x >= std::get<0>(parameters_.getScreenSize()))
 			return true;
@@ -92,9 +95,9 @@ void Alien::moveAlienHorizontally()
 	auto alien_x_position = position_.getXPosition();
 
 	if (movement_.isMovingLeft())
-		alien_x_position -= parameters_.getMovementStep();
+		alien_x_position -= movement_.getMovementStep();
 	else if (movement_.isMovingRight())
-		alien_x_position += parameters_.getMovementStep();
+		alien_x_position += movement_.getMovementStep();
 
 	position_.setXPosition(alien_x_position);
 }
@@ -108,7 +111,7 @@ bool Alien::isAtEndOfScreen()
 		auto left_y = std::get<1>(hitbox_.getTopLeft());
 		left_y += std::get<1>(parameters_.getSize());
 
-		if (left_y <= std::get<1>(parameters_.getSize())/ 2)
+		if (left_y <= std::get<1>(parameters_.getSize()) / 2)
 			return true;
 	}
 

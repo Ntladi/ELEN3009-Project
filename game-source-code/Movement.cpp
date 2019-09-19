@@ -1,10 +1,15 @@
 #include <Movement.h>
 
-Movement::Movement(MoveDirection move_direction)
+Movement::Movement(MoveDirection move_direction, const float movement_step)
 {
 	move_direction_ = move_direction;
+	movement_step_ = movement_step;
 }
 
+const float Movement::getMovementStep() const
+{
+	return movement_step_;
+}
 
 MoveDirection Movement::getMoveDirection() const
 {

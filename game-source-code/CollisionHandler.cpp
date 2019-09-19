@@ -3,7 +3,7 @@
 
 CollisionHandler::CollisionHandler()
 {
-
+	score_= 0;
 }
 
 void CollisionHandler::handlecollisions(vec_of_moving_objects &player_bullets,
@@ -13,7 +13,7 @@ void CollisionHandler::handlecollisions(vec_of_moving_objects &player_bullets,
 	dualCollisions(player_bullets, aliens);
 	monoCollisions(player_bullets, players);
 	dualCollisions(alien_bullets,players);
-	//dualCollisions(players, aliens);
+	dualCollisions(players, aliens);
 	monoCollisions(player_bullets,player_bullets);
 	monoCollisions(player_bullets,alien_bullets);
 
