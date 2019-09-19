@@ -10,7 +10,7 @@ void AlienFactory::initializeArmada(aliens_2d & armada,Orientation orientation)
 	std::for_each(begin(armada), end(armada), [&](auto &i)
 	{	i.resize(MAX_ROWS_);});
 
-	position_ = Position{ObjectType::ALIEN, alien.getPosition()};
+	position_ = Position{ alien.getPosition()};
 	generateRows(orientation,armada);
 }
 

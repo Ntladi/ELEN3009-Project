@@ -14,7 +14,7 @@ Sprites::Sprites()
 	downPlayer_life_ = std::make_shared<sf::RectangleShape>();
 }
 
-void Sprites::moveSprite(const ObjectType &object,
+void Sprites::displaySprite(const ObjectType &object,
 		const Orientation &orientation, const two_floats &position)
 {
 	switch (object)
@@ -30,6 +30,9 @@ void Sprites::moveSprite(const ObjectType &object,
 		break;
 	case ObjectType::ALIEN_BULLET:
 		moveSpriteObject(upAlienBullet_,downAlienBullet_,orientation,position);
+		break;
+	case ObjectType::PLAYER_GLYPH:
+		moveSpriteObject(upPlayer_life_,downPlayer_life_,orientation,position);
 		break;
 	default:
 		break;
@@ -69,5 +72,5 @@ void Sprites::setInitialSizes(const vec_of_two_floats &sizes)
 vec_of_sprite_ptrs Sprites::getSprites()
 {
 	return
-	{	upPlayer_, downPlayer_,upAlien_,downAlien_,upPlayerBullet_,downPlayerBullet_,upAlienBullet_,downAlienBullet_};
+	{	upPlayer_, downPlayer_,upAlien_,downAlien_,upPlayerBullet_,downPlayerBullet_,upAlienBullet_,downAlienBullet_, upPlayer_life_,downPlayer_life_};
 }

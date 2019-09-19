@@ -7,6 +7,9 @@ class PlayerGlyph : public IEntity
 {
 public:
 	PlayerGlyph(Orientation orientation = Orientation::FACE_UP);
+private:
+	virtual two_floats initializePosition() override;
+
 };
 
 #endif

@@ -17,7 +17,7 @@ class Sprites
 {
 public:
 	Sprites();
-	void moveSprite(const ObjectType &object, const Orientation &orientation,
+	void displaySprite(const ObjectType &object, const Orientation &orientation,
 			const two_floats &positions);
 	void drawLatestObject(std::shared_ptr<sf::RenderWindow> &window);
 	void setInitialSizes(const vec_of_two_floats &sizes);

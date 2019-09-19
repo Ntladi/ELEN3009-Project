@@ -1,6 +1,6 @@
 #include <Position.h>
 
-Position::Position(ObjectType object, two_floats initialPos)
+Position::Position(two_floats initialPos)
 {
 	std::tie(x_position_,y_position_) = initialPos;
 }

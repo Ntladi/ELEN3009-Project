@@ -9,7 +9,7 @@ using two_floats = std::tuple<float,float>;
 class Position
 {
 public:
-	Position(ObjectType object = ObjectType::NONE, two_floats initialPos = {0,0});
+	Position(two_floats initialPos = {0,0});
 	void setXPosition(const float &x);
 	void setYPosition(const float &y);
 	float getXPosition() const;

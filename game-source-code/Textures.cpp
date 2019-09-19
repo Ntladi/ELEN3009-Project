@@ -34,5 +34,5 @@ vec_of_texture_ptrs Textures::getTextures()
 	{ upPlayer_texture_, downPlayer_texture_, upAlien_texture_,
 			downAlien_texture_, upPlayer_bullet_texture_,
 			downPlayer_bullet_texture_, upAlien_bullet_texture_,
-			downAlien_bullet_texture_ };
+			downAlien_bullet_texture_, upPlayer_texture_, downPlayer_texture_ };
 }

@@ -25,11 +25,11 @@ bool Presentation::isPlaying() const
 	return screen_state_ == ScreenStates::GAME_SCREEN;
 }
 
-void Presentation::moveSprite(const ObjectType &object,
+void Presentation::displaySprite(const ObjectType &object,
 		const Orientation &orientation, const two_floats &position)
 {
 
-	sprites_.moveSprite(object,orientation,position);
+	sprites_.displaySprite(object,orientation,position);
 	sprites_.drawLatestObject(window_);
 }
 

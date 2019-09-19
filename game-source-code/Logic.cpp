@@ -15,10 +15,12 @@ void Logic::loadSizes()
 	Player temp_player;
 	Alien temp_alien;
 	Bullet temp_bullet;
+	PlayerGlyph temp_glyph;
 
 	sizes.push_back(temp_player.getSize());
 	sizes.push_back(temp_alien.getSize());
 	sizes.push_back(temp_bullet.getSize());
+	sizes.push_back(temp_glyph.getSize());
 	presentation_.initializeSpriteSizes(sizes);
 
 }
@@ -74,7 +76,7 @@ void Logic::run()
 
 void Logic::moveObject(std::shared_ptr<IMovingEntity> &object)
 {
-	presentation_.moveSprite(object->getObjectType(), object->getOrientation(),
+	presentation_.displaySprite(object->getObjectType(), object->getOrientation(),
 			object->getPosition());
 }
 
@@ -101,3 +103,5 @@ void Logic::checkGameOver()
 	if(object_factory_.gameWonStatus())
 		presentation_.setGameWon();
 }
+
+

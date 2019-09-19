@@ -16,7 +16,7 @@ public:
 	void createWindow();
 	void initializeSpriteSizes(const vec_of_two_floats &sizes);
 	void initializeSpritePositions(const vec_of_two_floats &sizes);
-	void moveSprite(const ObjectType &object, const Orientation &orientation,
+	void displaySprite(const ObjectType &object, const Orientation &orientation,
 			const two_floats &positions);
 	void clearWindow();
 	bool isWindowOpen();

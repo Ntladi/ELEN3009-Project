@@ -4,6 +4,7 @@
 #include "CollisionHandler.h"
 #include "ObjectFactory.h"
 #include "IMovingEntity.h"
+#include "PlayerGlyph.h"
 #include <tuple>
 #include <memory>
 #include <vector>
