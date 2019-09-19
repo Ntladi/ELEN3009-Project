@@ -21,18 +21,12 @@ two_floats IEntity::getPosition() const
 
 two_floats IEntity::getSize() const
 {
-	return
-	{	parameters_.getXLength(), parameters_.getYHeight()};
+	return parameters_.getSize();
 }
 
 HitBox IEntity::getHitBox() const
 {
 	return hitbox_;
-}
-
-MoveDirection IEntity::getMoveDirection() const
-{
-	return movement_.getMoveDirection();
 }
 
 Parameters IEntity::getParameters() const
@@ -48,14 +42,4 @@ bool IEntity::getStatus() const
 void IEntity::killEntity()
 {
 	parameters_.setStatus(false);
-}
-
-void IEntity::move()
-{
-
-}
-
-void IEntity::updateHitBox()
-{
-	hitbox_.setNewPositions(getPosition(), getSize());
 }

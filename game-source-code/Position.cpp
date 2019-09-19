@@ -39,9 +39,9 @@ void Position::initializePlayerPosition(Orientation &orientation)
 
 	if (orientation == Orientation::FACE_UP)
 		y_position_ = Constants::SCREEN_Y_LENGTH
-				- Constants::PLAYER_Y_LENGTH / 2;
+				- Constants::PLAYER_Y_LENGTH/2;
 	else if (orientation == Orientation::FACE_DOWN)
-		y_position_ = Constants::PLAYER_Y_LENGTH / 2;
+		y_position_ = Constants::PLAYER_Y_LENGTH*1.5;
 }
 
 void Position::initializeBulletPosition(Orientation &orientation)
@@ -62,8 +62,8 @@ void Position::initializeAliePosition(Orientation &orientation)
 
 	if (orientation == Orientation::FACE_UP)
 		y_position_ = Constants::SCREEN_Y_LENGTH / 2
-				- Constants::ALIEN_Y_LENGTH / 2 - 5;
+				- Constants::ALIEN_Y_LENGTH / 2 - 5 + Constants::PLAYER_Y_LENGTH/2;
 	else if (orientation == Orientation::FACE_DOWN)
 		y_position_ = Constants::SCREEN_Y_LENGTH / 2
-				+ Constants::ALIEN_Y_LENGTH / 2 + 5;
+				+ Constants::ALIEN_Y_LENGTH / 2 + 5 + Constants::PLAYER_Y_LENGTH/2;
 }

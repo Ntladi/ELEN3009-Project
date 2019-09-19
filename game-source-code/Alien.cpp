@@ -60,7 +60,7 @@ bool Alien::isAtEdgeOfScreen()
 		auto right_x = std::get<0>(hitbox_.getTopRight());
 		right_x -= parameters_.getMovementStep();
 
-		if (right_x >= parameters_.getScreenXLength())
+		if (right_x >= std::get<0>(parameters_.getScreenSize()))
 			return true;
 	}
 	return false;
@@ -73,13 +73,13 @@ void Alien::moveAlienVertically()
 
 	if (parameters_.isFacingUp())
 	{
-		alien_y_position -= parameters_.getYHeight();
+		alien_y_position -= std::get<1>(parameters_.getSize());
 		position_.setYPosition(alien_y_position);
 	}
 
 	else if (parameters_.isFacingDown())
 	{
-		alien_y_position += parameters_.getYHeight();
+		alien_y_position += std::get<1>(parameters_.getSize());
 		position_.setYPosition(alien_y_position);
 	}
 
@@ -106,20 +106,20 @@ bool Alien::isAtEndOfScreen()
 	if (parameters_.isFacingUp())
 	{
 		auto left_y = std::get<1>(hitbox_.getTopLeft());
-		left_y += parameters_.getYHeight();
+		left_y += std::get<1>(parameters_.getSize());
 
-		if (left_y <= parameters_.getYHeight() / 2)
+		if (left_y <= std::get<1>(parameters_.getSize())/ 2)
 			return true;
 	}
 
 	else if (parameters_.isFacingDown())
 	{
 		auto right_y = std::get<1>(hitbox_.getBottomRight());
-		right_y -= parameters_.getYHeight();
+		right_y -= std::get<1>(parameters_.getSize());
 
 		if (right_y
-				>= parameters_.getScreenYHeight()
-						- parameters_.getYHeight() / 2)
+				>= std::get<1>(parameters_.getScreenSize())
+						- std::get<1>(parameters_.getSize()) / 2)
 			return true;
 	}
 	return false;

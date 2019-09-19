@@ -10,7 +10,7 @@ public:
 
 	const static constexpr float GAME_SPEED = 1;
 	const static constexpr float SCREEN_X_LENGTH = 1050 * SCALE;
-	const static constexpr float SCREEN_Y_LENGTH = 655 * SCALE;
+	const static constexpr float SCREEN_Y_LENGTH = 690 * SCALE;
 
 	const static constexpr float PLAYER_X_LENGTH = 43 * SCALE;
 	const static constexpr float PLAYER_Y_LENGTH = 37 * SCALE;
@@ -23,8 +23,8 @@ public:
 	const static constexpr float PLAYER_BULLET_MAXIMUM_MOVEMENT_STEP = 2*GAME_SPEED;
 
 	const static constexpr float ALIEN_X_LENGTH = 29 * SCALE;
-	const static constexpr float ALIEN_Y_LENGTH = 38 * SCALE;
-	const static constexpr float ALIEN_MAXIMUM_MOVEMENT_STEP = 0.3*GAME_SPEED; // 0.3
+	const static constexpr float ALIEN_Y_LENGTH = 37 * SCALE;
+	const static constexpr float ALIEN_MAXIMUM_MOVEMENT_STEP = 0.6*GAME_SPEED; // 0.3
 
 	const static constexpr float ALIEN_INITAL_X_POSITION = ALIEN_X_LENGTH / 2;
 

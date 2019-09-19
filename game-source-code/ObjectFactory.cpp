@@ -13,7 +13,7 @@ void ObjectFactory::initializeObjects()
 	downArmada_ = std::make_shared<Armada>(Orientation::FACE_DOWN);
 }
 
-void ObjectFactory::getObjects(vec_of_objects &objects)
+void ObjectFactory::getMovingObjects(vec_of_moving_objects &objects)
 {
 	getPlayers(objects);
 	getAliens(objects);
@@ -22,13 +22,13 @@ void ObjectFactory::getObjects(vec_of_objects &objects)
 
 }
 
-void ObjectFactory::getPlayers(vec_of_objects &objects)
+void ObjectFactory::getPlayers(vec_of_moving_objects &objects)
 {
 	objects.push_back(upPlayer_);
 	objects.push_back(downPlayer_);
 }
 
-void ObjectFactory::getAliens(vec_of_objects &objects)
+void ObjectFactory::getAliens(vec_of_moving_objects &objects)
 {
 	auto upAliens = upArmada_->getArmada();
 	auto downAliens = downArmada_->getArmada();
@@ -40,7 +40,7 @@ void ObjectFactory::getAliens(vec_of_objects &objects)
 		objects.push_back(i);
 }
 
-void ObjectFactory::getPlayerBullets(vec_of_objects &objects)
+void ObjectFactory::getPlayerBullets(vec_of_moving_objects &objects)
 {
 	auto upPlayerBullets = upPlayer_->getShotsFired();
 	auto downPlayerBullets = downPlayer_->getShotsFired();
@@ -52,16 +52,16 @@ void ObjectFactory::getPlayerBullets(vec_of_objects &objects)
 		objects.push_back(i);
 }
 
-void ObjectFactory::getAlienBullets(vec_of_objects &objects)
+void ObjectFactory::getAlienBullets(vec_of_moving_objects &objects)
 {
 	auto upAlienBullets = upArmada_->getOnslaught();
 	auto downAlienBullets = downArmada_->getOnslaught();
 
-	for (auto &i : upAlienBullets)
-		objects.push_back(i);
-
-	for (auto &i : downAlienBullets)
-		objects.push_back(i);
+//	for (auto &i : upAlienBullets)
+//		objects.push_back(i);
+//
+//	for (auto &i : downAlienBullets)
+//		objects.push_back(i);
 }
 
 bool ObjectFactory::gameOverStatus() const

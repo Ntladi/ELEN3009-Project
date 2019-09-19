@@ -17,19 +17,15 @@ public:
 	ObjectType getObjectType() const;
 	two_floats getPosition() const;
 	two_floats getSize() const;
-	MoveDirection getMoveDirection() const;
 	HitBox getHitBox() const;
 	Parameters getParameters() const;
 	bool getStatus() const;
 	void killEntity();
-	virtual void move();
 
 protected:
 	Parameters parameters_;
 	HitBox hitbox_;
 	Position position_;
-	Movement movement_;
-	void updateHitBox();
 
 };
 

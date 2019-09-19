@@ -11,11 +11,12 @@ class Parameters {
 
 public:
 	Parameters(ObjectType object = ObjectType::NONE, Orientation orientation = Orientation::FACE_UP);
-	const float getXLength() const;
-	const float getYHeight() const;
+//	const float getXLength() const;
+//	const float getYHeight() const;
 	two_floats getSize() const;
-	const float getScreenXLength() const;
-	const float getScreenYHeight() const;
+	two_floats getScreenSize() const;
+//	const float getScreenXLength() const;
+//	const float getScreenYHeight() const;
 	const float getMovementStep() const;
 	ObjectType getObjectType() const;
 	Orientation getOrientation() const;
@@ -31,6 +32,8 @@ private:
 	float x_length_;
 	float y_length_;
 	float movement_step_;
+	int score_value_;
+	int hit_points_;
 	bool is_Alive_;
 	void initializePlayer();
 	void initializeBullet();

@@ -62,7 +62,7 @@ bool Player::isWithinScreenBounds()
 		auto right_x = std::get<0>(hitbox_.getTopRight());
 		right_x += parameters_.getMovementStep();
 
-		if (right_x <= parameters_.getScreenXLength())
+		if (right_x <= std::get<0>(parameters_.getScreenSize()))
 			return true;
 	}
 

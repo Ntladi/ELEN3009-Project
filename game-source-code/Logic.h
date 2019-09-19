@@ -3,11 +3,12 @@
 #include "Presentation.h"
 #include "CollisionHandler.h"
 #include "ObjectFactory.h"
-#include "IEntity.h"
+#include "IMovingEntity.h"
 #include <tuple>
 #include <memory>
 #include <vector>
-using vec_of_objects = std::vector<std::shared_ptr<IEntity>>;
+using moving_object = std::shared_ptr<IMovingEntity>;
+using vec_of_moving_objects = std::vector<std::shared_ptr<IMovingEntity>>;
 using two_floats = std::tuple<float,float>;
 
 
@@ -24,7 +25,7 @@ private:
 	void process(std::vector<bool> & inputs);
 	void loadSizes();
 	void loadPositions();
-	void moveObject(std::shared_ptr<IEntity> &object);
+	void moveObject(std::shared_ptr<IMovingEntity> &object);
 	void moveAllObjects();
 	void checkColisions();
 	void checkGameOver();

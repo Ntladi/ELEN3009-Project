@@ -17,28 +17,14 @@ Parameters::Parameters(ObjectType object, Orientation orientation)
 
 }
 
-const float Parameters::getXLength() const
-{
-	return x_length_;
-}
-
-const float Parameters::getYHeight() const
-{
-	return y_length_;
-}
-
 two_floats Parameters::getSize() const
 {
 	return {x_length_,y_length_};
 }
-const float Parameters::getScreenXLength() const
-{
-	return Constants::SCREEN_X_LENGTH;
-}
 
-const float Parameters::getScreenYHeight() const
+two_floats Parameters::getScreenSize() const
 {
-	return Constants::SCREEN_Y_LENGTH;
+	return {Constants::SCREEN_X_LENGTH,Constants::SCREEN_Y_LENGTH};
 }
 
 const float Parameters::getMovementStep() const

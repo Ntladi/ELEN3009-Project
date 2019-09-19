@@ -9,11 +9,11 @@
 #include "Parameters.h"
 #include "HitBox.h"
 #include "Bullet.h"
-#include "IEntity.h"
+#include "IMovingEntity.h"
 using two_floats = std::tuple<float, float>;
 using vec_of_bullets = std::vector<std::shared_ptr<Bullet>>;
 
-class Player : public IEntity
+class Player : public IMovingEntity
 {
 public:
 	Player(Orientation orientation);

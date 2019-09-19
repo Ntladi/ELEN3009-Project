@@ -36,8 +36,8 @@ void Logic::reset()
 
 void Logic::loadPositions()
 {
-	vec_of_objects objects;
-	object_factory_.getObjects(objects);
+	vec_of_moving_objects objects;
+	object_factory_.getMovingObjects(objects);
 
 	for (auto &i : objects)
 		moveObject(i);
@@ -55,8 +55,8 @@ void Logic::process(std::vector<bool> &inputs)
 
 void Logic::moveAllObjects()
 {
-	vec_of_objects objects;
-	object_factory_.getObjects(objects);
+	vec_of_moving_objects objects;
+	object_factory_.getMovingObjects(objects);
 
 	for (auto &i : objects)
 		i->move();
@@ -76,7 +76,7 @@ void Logic::run()
 	}
 }
 
-void Logic::moveObject(std::shared_ptr<IEntity> &object)
+void Logic::moveObject(std::shared_ptr<IMovingEntity> &object)
 {
 	presentation_.moveSprite(object->getObjectType(), object->getOrientation(),
 			object->getPosition());
@@ -84,10 +84,10 @@ void Logic::moveObject(std::shared_ptr<IEntity> &object)
 
 void Logic::checkColisions()
 {
-	vec_of_objects player_bullets;
-	vec_of_objects aliens;
-	vec_of_objects players;
-	vec_of_objects alien_bullets;
+	vec_of_moving_objects player_bullets;
+	vec_of_moving_objects aliens;
+	vec_of_moving_objects players;
+	vec_of_moving_objects alien_bullets;
 	object_factory_.getPlayerBullets(player_bullets);
 	object_factory_.getAliens(aliens);
 	object_factory_.getPlayers(players);

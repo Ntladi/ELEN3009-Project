@@ -3,11 +3,12 @@
 #include "Orientation.h"
 #include "MoveDirection.h"
 #include "IEntity.h"
+#include "IMovingEntity.h"
 #include "Bullet.h"
 #include <tuple>
 using two_floats = std::tuple<float, float>;
 
-class Alien : public IEntity
+class Alien : public IMovingEntity
 {
 public:
 	Alien(Orientation orientation);

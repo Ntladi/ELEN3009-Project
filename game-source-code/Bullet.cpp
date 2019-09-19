@@ -40,7 +40,7 @@ bool Bullet::isOnScreen()
 	{
 		auto y_top_left = std::get<1>(hitbox_.getTopLeft());
 
-		if (y_top_left <= parameters_.getScreenYHeight())
+		if (y_top_left <= std::get<1>(parameters_.getScreenSize()))
 			return true;
 	}
 	else if (movement_.isMovingUp())

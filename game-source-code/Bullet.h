@@ -5,10 +5,10 @@
 #include "MoveDirection.h"
 #include "HitBox.h"
 #include "Parameters.h"
-#include "IEntity.h"
+#include "IMovingEntity.h"
 using two_floats = std::tuple<float, float>;
 
-class Bullet : public IEntity
+class Bullet : public IMovingEntity
 {
 public:
 	Bullet(two_floats position, ObjectType bullet_type, Orientation orientation);

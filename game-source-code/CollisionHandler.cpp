@@ -6,21 +6,21 @@ CollisionHandler::CollisionHandler()
 
 }
 
-void CollisionHandler::handlecollisions(vec_of_objects &player_bullets,
-		vec_of_objects &aliens, vec_of_objects &players,
-		vec_of_objects &alien_bullets)
+void CollisionHandler::handlecollisions(vec_of_moving_objects &player_bullets,
+		vec_of_moving_objects &aliens, vec_of_moving_objects &players,
+		vec_of_moving_objects &alien_bullets)
 {
 	dualCollisions(player_bullets, aliens);
 	monoCollisions(player_bullets, players);
 	dualCollisions(alien_bullets,players);
-	dualCollisions(players, aliens);
+	//dualCollisions(players, aliens);
 	monoCollisions(player_bullets,player_bullets);
 	monoCollisions(player_bullets,alien_bullets);
 
 }
 
-void CollisionHandler::dualCollisions(vec_of_objects &player_bullets,
-		vec_of_objects &aliens)
+void CollisionHandler::dualCollisions(vec_of_moving_objects &player_bullets,
+		vec_of_moving_objects &aliens)
 {
 	for (auto &i : player_bullets)
 	{
@@ -31,7 +31,7 @@ void CollisionHandler::dualCollisions(vec_of_objects &player_bullets,
 
 	}
 }
-void CollisionHandler::checkColision(object &object1, object &object2)
+void CollisionHandler::checkColision(moving_object &object1, moving_object &object2)
 {
 	auto box_1 = object1->getHitBox();
 	auto box_2 = object2->getHitBox();
@@ -44,8 +44,8 @@ void CollisionHandler::checkColision(object &object1, object &object2)
 
 }
 
-void CollisionHandler::monoCollisions(vec_of_objects &objects,
-		vec_of_objects &players)
+void CollisionHandler::monoCollisions(vec_of_moving_objects &objects,
+		vec_of_moving_objects &players)
 {
 	for (auto &i : objects)
 	{
@@ -60,8 +60,8 @@ void CollisionHandler::monoCollisions(vec_of_objects &objects,
 	}
 }
 
-void CollisionHandler::checkMonoCollision(vec_of_objects &objects,
-		object &object1, Orientation orientation)
+void CollisionHandler::checkMonoCollision(vec_of_moving_objects &objects,
+		moving_object &object1, Orientation orientation)
 {
 	for (auto &j : objects)
 		if (j->getOrientation() == orientation)
