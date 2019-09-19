@@ -10,7 +10,7 @@ Alien::Alien(Orientation orientation)
 	{ ObjectType::ALIEN, orientation, params };
 
 	position_ = Position
-	{ ObjectType::ALIEN, orientation, initializePosition() };
+	{ ObjectType::ALIEN, initializePosition() };
 
 	movement_ = Movement
 	{ MoveDirection::RIGHT, Constants::ALIEN_MAXIMUM_MOVEMENT_STEP };

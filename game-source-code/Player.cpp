@@ -10,7 +10,7 @@ Player::Player(Orientation orientation)
 	{ ObjectType::PLAYER, orientation, params };
 
 	position_ = Position
-	{ ObjectType::PLAYER, orientation, initializePosition() };
+	{ ObjectType::PLAYER, initializePosition() };
 
 	movement_ = Movement
 	{ MoveDirection::NONE, Constants::PLAYER_MAXIMUM_MOVEMENT_STEP };
