@@ -6,21 +6,7 @@ RightDiagonalBullet::RightDiagonalBullet(two_floats position, Orientation orient
 	{ Constants::BULLET_X_LENGTH, Constants::BULLET_Y_LENGTH,
 			Constants::BULLET_HIT_POINTS, Constants::BULLET_WORTH };
 
-	parameters_ = Parameters
-	{ ObjectType::PLAYER_BULLET, orientation, params };
-
-	if (parameters_.isFacingUp())
-		movement_ = Movement
-		{ MoveDirection::UP, Constants::BULLET_MAXIMUM_MOVEMENT_STEP };
-
-	else if (parameters_.isFacingDown())
-		movement_ = Movement
-		{ MoveDirection::DOWN, Constants::BULLET_MAXIMUM_MOVEMENT_STEP };
-
-	position_.setXPosition(std::get<0>(position));
-	position_.setYPosition(std::get<1>(position));
-	hitbox_ = HitBox
-	{ getPosition(), getSize() };
+	setup(params,ObjectType::PLAYER_BULLET,orientation,position);
 }
 
 void RightDiagonalBullet::moveBullet()

@@ -16,6 +16,7 @@ public:
 	void move() override;
 protected:
 	virtual void moveBullet();
+	void setup(four_floats params, ObjectType bullet_type,Orientation orientation, two_floats position);
 	two_floats initializePosition() override;
 };
 

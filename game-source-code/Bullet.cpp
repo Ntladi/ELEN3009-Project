@@ -8,21 +8,7 @@ Bullet::Bullet(two_floats position, ObjectType bullet_type,
 	{ Constants::BULLET_X_LENGTH,Constants::BULLET_Y_LENGTH,
 			Constants::BULLET_HIT_POINTS, Constants::BULLET_WORTH };
 
-	parameters_ = Parameters
-	{ bullet_type, orientation, params };
-
-	if (parameters_.isFacingUp())
-		movement_ = Movement
-		{ MoveDirection::UP, Constants::BULLET_MAXIMUM_MOVEMENT_STEP };
-
-	else if (parameters_.isFacingDown())
-		movement_ = Movement
-		{ MoveDirection::DOWN, Constants::BULLET_MAXIMUM_MOVEMENT_STEP };
-
-	position_.setXPosition(std::get<0>(position));
-	position_.setYPosition(std::get<1>(position));
-	hitbox_ = HitBox
-	{ getPosition(), getSize() };
+	setup(params,bullet_type,orientation,position);
 
 }
 
@@ -62,3 +48,21 @@ two_floats Bullet::initializePosition()
 	{	x_position,y_position};
 }
 
+void Bullet::setup(four_floats params,ObjectType bullet_type, Orientation orientation, two_floats position)
+{
+	parameters_ = Parameters
+	{ bullet_type, orientation, params };
+
+	if (parameters_.isFacingUp())
+		movement_ = Movement
+		{ MoveDirection::UP, Constants::BULLET_MAXIMUM_MOVEMENT_STEP };
+
+	else if (parameters_.isFacingDown())
+		movement_ = Movement
+		{ MoveDirection::DOWN, Constants::BULLET_MAXIMUM_MOVEMENT_STEP };
+
+	position_.setXPosition(std::get<0>(position));
+	position_.setYPosition(std::get<1>(position));
+	hitbox_ = HitBox
+	{ getPosition(), getSize() };
+}
