@@ -26,9 +26,6 @@ Textures::Textures()
 	downAlien_bullet_texture_ = std::make_shared<sf::Texture>();
 	downAlien_bullet_texture_->loadFromFile("Assets/Alien2Bullet.png");
 
-	downAlien_bullet_texture_ = std::make_shared<sf::Texture>();
-	downAlien_bullet_texture_->loadFromFile("Assets/Player_Life.png");
-
 	upPlayer_life_texture_ = std::make_shared<sf::Texture>();
 	upPlayer_life_texture_->loadFromFile("Assets/Player_Life.png");
 

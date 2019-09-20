@@ -56,11 +56,11 @@ void ObjectFactory::getAliens(vec_of_moving_objects &objects)
 	auto upAliens = up_armada_->getArmada();
 	auto downAliens = down_armada_->getArmada();
 
-//	for (auto &i : upAliens)
-//		objects.push_back(i);
-//
-//	for (auto &i : downAliens)
-//		objects.push_back(i);
+	for (auto &i : upAliens)
+		objects.push_back(i);
+
+	for (auto &i : downAliens)
+		objects.push_back(i);
 }
 
 void ObjectFactory::getPlayerBullets(vec_of_moving_objects &objects)
@@ -80,11 +80,11 @@ void ObjectFactory::getAlienBullets(vec_of_moving_objects &objects)
 	auto upAlienBullets = up_armada_->getOnslaught();
 	auto downAlienBullets = down_armada_->getOnslaught();
 
-//	for (auto &i : upAlienBullets)
-//		objects.push_back(i);
-//
-//	for (auto &i : downAlienBullets)
-//		objects.push_back(i);
+	for (auto &i : upAlienBullets)
+		objects.push_back(i);
+
+	for (auto &i : downAlienBullets)
+		objects.push_back(i);
 }
 
 bool ObjectFactory::gameOverStatus() const

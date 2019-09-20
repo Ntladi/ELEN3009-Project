@@ -29,6 +29,13 @@ vec_of_bullets Player::getShotsFired()
 	return bullet_factory_.getShotsFired();
 }
 
+void Player::setPosition(const two_floats &position)
+{
+	position_.setXPosition(std::get<0>(position));
+	position_.setYPosition(std::get<1>(position));
+	updateHitBox();
+}
+
 void Player::move()
 {
 	if ((movement_.isMovingLeft() || movement_.isMovingRight())
@@ -44,7 +51,7 @@ void Player::move()
 
 void Player::shoot()
 {
-	bullet_factory_.shoot(parameters_.getOrientation(),getPosition());
+	bullet_factory_.shoot(parameters_.getOrientation(), getPosition());
 }
 
 bool Player::isWithinScreenBounds()
@@ -67,7 +74,6 @@ bool Player::isWithinScreenBounds()
 		if (right_x <= std::get<0>(parameters_.getScreenSize()))
 			return true;
 	}
-
 	return false;
 }
 
@@ -84,6 +90,16 @@ bool Player::isAtNotAtEndOfScreen()
 	return true;
 }
 
+bool Player::isNotMovingVertucally()
+{
+	if ((position_.getYPosition() < (Constants::PLAYER_Y_LENGTH * 1.5 + 5)))
+		return true;
+	if ((position_.getYPosition()
+			> (Constants::SCREEN_Y_LENGTH - Constants::PLAYER_Y_LENGTH / 2 - 5)))
+		return true;
+	return false;
+}
+
 void Player::movePlayerHorizontally()
 {
 	auto player_x_position = position_.getXPosition();
@@ -97,10 +113,10 @@ void Player::movePlayerHorizontally()
 
 void Player::changeOrientation()
 {
-	if(position_.getYPosition() > Constants::SCREEN_Y_LENGTH
-				- Constants::PLAYER_Y_LENGTH / 2 - 5)
+	if (position_.getYPosition()
+			> Constants::SCREEN_Y_LENGTH - Constants::PLAYER_Y_LENGTH / 2 - 5)
 		parameters_.setOrientation(Orientation::FACE_UP);
-	else if(position_.getYPosition() < Constants::PLAYER_Y_LENGTH * 1.5 + 5)
+	else if (position_.getYPosition() < Constants::PLAYER_Y_LENGTH * 1.5 + 5)
 		parameters_.setOrientation(Orientation::FACE_DOWN);
 }
 

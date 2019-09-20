@@ -28,6 +28,7 @@ void Alien::setPosition(const two_floats &position)
 {
 	position_.setXPosition(std::get<0>(position));
 	position_.setYPosition(std::get<1>(position));
+	updateHitBox();
 }
 
 void Alien::move()

@@ -13,8 +13,10 @@ class Player : public IMovingEntity
 {
 public:
 	Player(Orientation orientation = Orientation::FACE_UP);
+	void setPosition(const two_floats & position);
 	vec_of_bullets getShotsFired();
 	void setMoveDirection(const MoveDirection &direction);
+	bool isNotMovingVertucally();
 	virtual void move() override;
 	void shoot();
 
@@ -22,9 +24,9 @@ private:
 	PlayerBulletFactory bullet_factory_;
 	void incrementPlayerPosition();
 	bool isWithinScreenBounds();
-	bool isAtNotAtEndOfScreen();
 	void movePlayerHorizontally();
 	void movePlayerVertically();
+	bool isAtNotAtEndOfScreen();
 	void changeOrientation();
 	virtual two_floats initializePosition() override;
 };
