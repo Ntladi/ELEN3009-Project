@@ -45,6 +45,9 @@ void Player::move()
 			&& !isAtEndOfScreen())
 		movePlayerVertically();
 
+	if(isAtEndOfScreen())
+		changeOrientation();
+
 	updateHitBox();
 	movement_.setMoveDirection(MoveDirection::NONE);
 }
@@ -52,19 +55,6 @@ void Player::move()
 void Player::shoot()
 {
 	bullet_factory_.shoot(parameters_.getOrientation(), getPosition());
-}
-
-bool Player::isAtEndOfScreen()
-{
-	updateHitBox();
-	if ((position_.getYPosition() - movement_.getMovementStep()
-			< parameters_.getTopEdge()) && movement_.isMovingUp())
-		return true;
-	if ((position_.getYPosition() + movement_.getMovementStep()
-			> parameters_.getBottomEdge()) && movement_.isMovingDown())
-		return true;
-	changeOrientation();
-	return false;
 }
 
 bool Player::isNotMovingVertucally()

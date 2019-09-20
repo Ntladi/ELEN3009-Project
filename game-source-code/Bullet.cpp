@@ -28,33 +28,12 @@ Bullet::Bullet(two_floats position, ObjectType bullet_type,
 
 void Bullet::move()
 {
-	if (isOnScreen())
+	if (!isAtEndOfScreen())
 		moveBullet();
 	else
 		killEntity();
 
 	updateHitBox();
-}
-
-bool Bullet::isOnScreen()
-{
-	updateHitBox();
-	if (movement_.isMovingDown())
-	{
-		auto y_top_left = std::get<1>(hitbox_.getTopLeft());
-
-		if (y_top_left <= Constants::SCREEN_Y_LENGTH)
-			return true;
-	}
-	else if (movement_.isMovingUp())
-	{
-		auto y_bottom_right = std::get<1>(hitbox_.getBottomLeft());
-
-		if (y_bottom_right >= 0)
-			return true;
-	}
-
-	return false;
 }
 
 void Bullet::moveBullet()

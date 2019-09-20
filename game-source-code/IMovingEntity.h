@@ -11,6 +11,7 @@ protected:
 	Movement movement_;
 	void updateHitBox();
 	bool isAtEdgeOfScreen();
+	virtual bool isAtEndOfScreen();
 
 };
 

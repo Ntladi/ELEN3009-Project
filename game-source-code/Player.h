@@ -25,7 +25,6 @@ private:
 	void incrementPlayerPosition();
 	void movePlayerHorizontally();
 	void movePlayerVertically();
-	bool isAtEndOfScreen();
 	void changeOrientation();
 	virtual two_floats initializePosition() override;
 };

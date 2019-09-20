@@ -23,3 +23,15 @@ bool IMovingEntity::isAtEdgeOfScreen()
 
 	return false;
 }
+
+bool IMovingEntity::isAtEndOfScreen()
+{
+	updateHitBox();
+	if ((position_.getYPosition() - movement_.getMovementStep()
+			< parameters_.getTopEdge()) && movement_.isMovingUp())
+		return true;
+	if ((position_.getYPosition() + movement_.getMovementStep()
+			> parameters_.getBottomEdge()) && movement_.isMovingDown())
+		return true;
+	return false;
+}

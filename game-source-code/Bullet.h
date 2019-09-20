@@ -13,9 +13,7 @@ class Bullet : public IMovingEntity
 {
 public:
 	Bullet(two_floats position = {0,0}, ObjectType bullet_type = ObjectType::NONE, Orientation orientation = Orientation::FACE_UP);
-	void move() override;
-	bool isOnScreen();
-
+	virtual void move() override;
 private:
 	void moveBullet();
 	virtual two_floats initializePosition() override;

@@ -18,11 +18,11 @@ public:
 	void moveAlienVertically();
 	bool checkEdge();
 	bool checkEnd();
-	bool isAtEndOfScreen();
 	void move() override;
 	Bullet shoot();
 
 private:
+	bool isAtEndOfScreen() override;
 	void moveAlienHorizontally();
 	void incrementAlienPosition();
 	virtual two_floats initializePosition() override;

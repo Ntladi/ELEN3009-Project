@@ -16,6 +16,9 @@ public:
 private:
 	vec_of_bullets bulletsFired_;
 	void removeWaste();
+	void makeStandardBullet();
+	void makePiercerBullet();
+	void makeMultiShotBullets();
 };
 
 #endif
