@@ -19,6 +19,7 @@ public:
 	PlayerBulletFactory();
 	void shoot(Orientation orientation, two_floats position);
 	vec_of_bullets getShotsFired();
+	void resetFactory();
 private:
 	vec_of_bullets bulletsFired_;
 	StopWatch stopwatch_;

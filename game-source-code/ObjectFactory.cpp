@@ -100,6 +100,20 @@ bool ObjectFactory::gameWonStatus() const
 
 void ObjectFactory::changePlayerDirections(std::vector<bool> &inputs)
 {
-	player_input_handler_.changePlayerDirections(up_player_,down_player_,inputs);
+	player_input_handler_.changePlayerDirections(up_player_, down_player_,
+			inputs);
 }
 
+void ObjectFactory::checkPlayer()
+{
+	if (up_player_->getHit())
+		up_player_->resetPosition();
+	else if (down_player_->getHit())
+		down_player_->resetPosition();
+}
+
+void ObjectFactory::startPowerClock(bool isGamestate)
+{
+	if(!isGamestate)
+		up_player_->startClock();
+}

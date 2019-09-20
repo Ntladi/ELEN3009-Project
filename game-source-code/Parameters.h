@@ -22,11 +22,13 @@ public:
 	ObjectType getObjectType() const;
 	Orientation getOrientation() const;
 	void damage();
+	void resetHit();
 	bool getStatus() const;
 	void setOrientation(const Orientation& orientation);
 	void setStatus(const bool &status);
 	bool isFacingUp();
 	bool isFacingDown();
+	bool isHit() const;
 
 private:
 	ObjectType object_;
@@ -36,6 +38,7 @@ private:
 	float y_length_;
 	float hit_points_;
 	float worth_;
+	bool is_Hit_;
 
 
 };

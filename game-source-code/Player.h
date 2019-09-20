@@ -19,7 +19,9 @@ public:
 	bool isNotMovingVertucally();
 	virtual void move() override;
 	void shoot();
-
+	bool getHit() const;
+	void resetPosition();
+	void startClock();
 private:
 	PlayerBulletFactory bullet_factory_;
 	void incrementPlayerPosition();

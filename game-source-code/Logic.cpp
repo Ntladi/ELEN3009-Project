@@ -1,5 +1,4 @@
 #include <Logic.h>
-#include <iostream>
 
 Logic::Logic()
 {
@@ -74,7 +73,7 @@ void Logic::run()
 	{
 		presentation_.clearWindow();
 		auto inputs = presentation_.checkInputs();
-
+		object_factory_.startPowerClock(presentation_.isPlaying());
 		if (presentation_.isPlaying())
 			process(inputs);
 		presentation_.displayWindow();
@@ -105,8 +104,7 @@ void Logic::checkColisions()
 	object_factory_.getAlienBullets(alien_bullets);
 	collision_handler_.handlecollisions(player_bullets, aliens, players,
 			alien_bullets);
-
-	std::cout << collision_handler_.getScore() << std::endl;
+	object_factory_.checkPlayer();
 }
 
 void Logic::checkGameOver()

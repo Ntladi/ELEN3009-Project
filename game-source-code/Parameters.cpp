@@ -7,6 +7,7 @@ Parameters::Parameters(ObjectType object, Orientation orientation,
 	this->object_ = object;
 	this->orientation_ = orientation;
 	this->is_Alive_ = true;
+	this->is_Hit_ = false;
 
 	std::tie(x_length_, y_length_, hit_points_, worth_) = params;
 
@@ -41,7 +42,10 @@ float Parameters::getRightEdge() const
 void Parameters::damage()
 {
 	if (hit_points_ > 0)
+	{
 		hit_points_--;
+		is_Hit_= true;
+	}
 	if (hit_points_ <= 0)
 		setStatus(false);
 }
@@ -90,3 +94,12 @@ bool Parameters::isFacingUp()
 	return orientation_ == Orientation::FACE_UP;
 }
 
+bool Parameters::isHit() const
+{
+	return is_Hit_;
+}
+
+void Parameters::resetHit()
+{
+	is_Hit_ = false;
+}

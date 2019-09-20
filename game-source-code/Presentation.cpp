@@ -122,3 +122,8 @@ void Presentation::setGameWon()
 {
 	screen_state_ = ScreenStates::GAME_WON;
 }
+
+GameModes Presentation::getGameMode() const
+{
+	return game_mode_;
+}

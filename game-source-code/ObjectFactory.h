@@ -7,6 +7,7 @@
 #include <iterator>
 #include <vector>
 #include <algorithm>
+#include "ScreenStates.h"
 using vec_of_moving_objects = std::vector<std::shared_ptr<IMovingEntity>>;
 using vec_of_static_objects = std::vector<std::shared_ptr<IEntity>>;
 using two_floats = std::tuple<float,float>;
@@ -22,8 +23,10 @@ public:
 	void getPlayerBullets(vec_of_moving_objects & objects);
 	void getAlienBullets(vec_of_moving_objects & objects);
 	void changePlayerDirections(std::vector<bool> &inputs);
+	void checkPlayer();
 	bool gameOverStatus() const;
 	bool gameWonStatus() const;
+	void startPowerClock(bool isGameState);
 
 private:
 	std::shared_ptr<Player> up_player_;

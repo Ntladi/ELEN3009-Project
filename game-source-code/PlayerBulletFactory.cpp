@@ -58,10 +58,12 @@ void PlayerBulletFactory::removeWaste()
 {
 	auto lambda = [](auto i)
 	{	return !(i->getStatus());};
-
 	auto remove_idiom = std::remove_if(bulletsFired_.begin(),
 			bulletsFired_.end(), lambda);
-
 	bulletsFired_.erase(remove_idiom, bulletsFired_.end());
+}
 
+void PlayerBulletFactory::resetFactory()
+{
+	stopwatch_.start();
 }

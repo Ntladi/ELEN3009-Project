@@ -25,6 +25,7 @@ public:
 	void setGameWon();
 	std::vector<bool> checkInputs();
 	bool isPlaying() const;
+	GameModes getGameMode() const;
 
 private:
 	void events();

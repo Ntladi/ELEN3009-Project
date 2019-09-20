@@ -45,7 +45,7 @@ void Player::move()
 			&& !isAtEndOfScreen())
 		movePlayerVertically();
 
-	if(isAtEndOfScreen())
+	if (isAtEndOfScreen())
 		changeOrientation();
 
 	updateHitBox();
@@ -108,4 +108,24 @@ two_floats Player::initializePosition()
 
 	return
 	{	x_position,y_position};
+}
+
+void Player::resetPosition()
+{
+	auto [x_position, y_position] = initializePosition();
+
+	position_.setXPosition(x_position);
+	position_.setYPosition(y_position);
+
+	parameters_.resetHit();
+}
+
+bool Player::getHit() const
+{
+	return parameters_.isHit();
+}
+
+void Player::startClock()
+{
+	bullet_factory_.resetFactory();
 }
