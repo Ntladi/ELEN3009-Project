@@ -21,6 +21,8 @@ private:
 	texture_ptr downPlayer_bullet_texture_;
 	texture_ptr upAlien_bullet_texture_;
 	texture_ptr downAlien_bullet_texture_;
+	texture_ptr upPlayer_life_texture_;
+	texture_ptr downPlayer_life_texture_;
 
 };
 

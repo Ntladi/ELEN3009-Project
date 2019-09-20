@@ -2,14 +2,10 @@
 #define PLAYER_H_
 #include <vector>
 #include <memory>
-#include <algorithm>
 #include <tuple>
-#include "Orientation.h"
-#include "MoveDirection.h"
-#include "Parameters.h"
-#include "HitBox.h"
 #include "Bullet.h"
 #include "IMovingEntity.h"
+#include "PlayerBulletFactory.h"
 using two_floats = std::tuple<float, float>;
 using vec_of_bullets = std::vector<std::shared_ptr<Bullet>>;
 
@@ -23,11 +19,13 @@ public:
 	void shoot();
 
 private:
-	vec_of_bullets bulletsFired_;
+	PlayerBulletFactory bullet_factory_;
 	void incrementPlayerPosition();
 	bool isWithinScreenBounds();
+	bool isAtNotAtEndOfScreen();
 	void movePlayerHorizontally();
-	void removeWaste();
+	void movePlayerVertically();
+	void changeOrientation();
 	virtual two_floats initializePosition() override;
 };
 

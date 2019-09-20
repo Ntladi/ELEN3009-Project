@@ -11,7 +11,6 @@ void Logic::loadSizes()
 	vec_of_two_floats sizes;
 	sizes.clear();
 
-
 	Player temp_player;
 	Alien temp_alien;
 	Bullet temp_bullet;
@@ -38,15 +37,14 @@ void Logic::loadPositions()
 	object_factory_.getMovingObjects(moving_objects);
 
 	for (auto &i : moving_objects)
-		moveObject(i);
-
+		setObjects(i);
 
 	vec_of_static_objects static_objects;
 	object_factory_.getStaticObjects(static_objects);
 
-	for(auto &i:static_objects)
-		presentation_.displaySprite(i->getObjectType(), i->getOrientation(),
-					i->getPosition());
+	for (auto &i : static_objects)
+		setObjects(i);
+
 }
 
 void Logic::process(std::vector<bool> &inputs)
@@ -56,7 +54,6 @@ void Logic::process(std::vector<bool> &inputs)
 	loadPositions();
 	checkColisions();
 	checkGameOver();
-
 }
 
 void Logic::moveAllObjects()
@@ -82,11 +79,16 @@ void Logic::run()
 	}
 }
 
-void Logic::moveObject(std::shared_ptr<IMovingEntity> &object)
+void Logic::setObjects(std::shared_ptr<IMovingEntity> &object)
 {
 	presentation_.displaySprite(object->getObjectType(), object->getOrientation(),
 			object->getPosition());
+}
 
+void Logic::setObjects(std::shared_ptr<IEntity> &object)
+{
+	presentation_.displaySprite(object->getObjectType(), object->getOrientation(),
+			object->getPosition());
 }
 
 void Logic::checkColisions()

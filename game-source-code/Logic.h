@@ -4,7 +4,6 @@
 #include "CollisionHandler.h"
 #include "ObjectFactory.h"
 #include "IMovingEntity.h"
-#include "PlayerGlyph.h"
 #include <tuple>
 #include <memory>
 #include <vector>
@@ -26,7 +25,8 @@ private:
 	void process(std::vector<bool> & inputs);
 	void loadSizes();
 	void loadPositions();
-	void moveObject(std::shared_ptr<IMovingEntity> &object);
+	void setObjects(std::shared_ptr<IMovingEntity> &object);
+	void setObjects(std::shared_ptr<IEntity> &object);
 	void moveAllObjects();
 	void checkColisions();
 	void checkGameOver();

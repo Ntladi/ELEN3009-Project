@@ -17,9 +17,13 @@ public:
 private:
 	bool moveUpPlayerLeft_;
 	bool moveUpPlayerRight_;
+	bool moveUpPlayerUp_;
+	bool moveUpPlayerDown_;
 	bool upPlayerShoots_;
 	bool moveDownPlayerLeft_;
 	bool moveDownPlayerRight_;
+	bool moveDownPlayerUp_;
+	bool moveDownPlayerDown_;
 	bool downPlayerShoots_;
 	StopWatch stopwatch1_;
 	StopWatch stopwatch2_;

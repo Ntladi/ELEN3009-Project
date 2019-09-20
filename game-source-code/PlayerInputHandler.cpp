@@ -11,8 +11,12 @@ void PlayerInputHandler::resetInputs()
 {
 	moveUpPlayerLeft_ = false;
 	moveUpPlayerRight_ = false;
+	moveUpPlayerUp_ = false;
+	moveUpPlayerDown_ = false;
 	moveDownPlayerLeft_ = false;
 	moveDownPlayerRight_ = false;
+	moveDownPlayerUp_ = false;
+	moveDownPlayerDown_ = false;
 	upPlayerShoots_ = false;
 	downPlayerShoots_ = false;
 
@@ -24,11 +28,19 @@ void PlayerInputHandler::multiPlayerInputs()
 		moveUpPlayerLeft_ = true;
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 		moveUpPlayerRight_ = true;
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+		moveUpPlayerUp_ = true;
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+		moveUpPlayerDown_ = true;
 
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
 		moveDownPlayerLeft_ = true;
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::G))
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::F))
 		moveDownPlayerRight_ = true;
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::E))
+		moveDownPlayerUp_ = true;
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+		moveDownPlayerDown_ = true;
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)
 			&& stopwatch1_.getTimeElapsed()
@@ -82,8 +94,8 @@ void PlayerInputHandler::singlePlayerInvertedInputs()
 std::vector<bool> PlayerInputHandler::getInputs()
 {
 	return
-	{	moveUpPlayerLeft_, moveUpPlayerRight_, moveDownPlayerLeft_,
-		moveDownPlayerRight_, upPlayerShoots_, downPlayerShoots_};
+	{	moveUpPlayerLeft_, moveUpPlayerRight_, moveUpPlayerUp_, moveUpPlayerDown_, moveDownPlayerLeft_,
+		moveDownPlayerRight_, moveDownPlayerUp_, moveDownPlayerDown_, upPlayerShoots_, downPlayerShoots_};
 }
 
 void PlayerInputHandler::singlePlayerShooting()

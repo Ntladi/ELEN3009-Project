@@ -26,14 +26,17 @@ void Player::setMoveDirection(const MoveDirection &direction)
 
 vec_of_bullets Player::getShotsFired()
 {
-	removeWaste();
-	return bulletsFired_;
+	return bullet_factory_.getShotsFired();
 }
 
 void Player::move()
 {
-	if (isWithinScreenBounds())
+	if ((movement_.isMovingLeft() || movement_.isMovingRight())
+			&& isWithinScreenBounds())
 		movePlayerHorizontally();
+	if ((movement_.isMovingUp() || movement_.isMovingDown())
+			&& isAtNotAtEndOfScreen())
+		movePlayerVertically();
 
 	updateHitBox();
 	movement_.setMoveDirection(MoveDirection::NONE);
@@ -41,17 +44,12 @@ void Player::move()
 
 void Player::shoot()
 {
-	auto newBullet = std::make_shared<Bullet>(getPosition(),
-			ObjectType::PLAYER_BULLET, getOrientation());
-
-	bulletsFired_.push_back(newBullet);
+	bullet_factory_.shoot(parameters_.getOrientation(),getPosition());
 }
 
 bool Player::isWithinScreenBounds()
 {
-
 	updateHitBox();
-
 	if (movement_.isMovingLeft())
 	{
 		auto left_x = std::get<0>(hitbox_.getTopLeft());
@@ -71,7 +69,19 @@ bool Player::isWithinScreenBounds()
 	}
 
 	return false;
+}
 
+bool Player::isAtNotAtEndOfScreen()
+{
+	if ((position_.getYPosition() - movement_.getMovementStep()
+			< (Constants::PLAYER_Y_LENGTH * 1.5)) && movement_.isMovingUp())
+		return false;
+	if ((position_.getYPosition() + movement_.getMovementStep()
+			> (Constants::SCREEN_Y_LENGTH - Constants::PLAYER_Y_LENGTH / 2))
+			&& movement_.isMovingDown())
+		return false;
+	changeOrientation();
+	return true;
 }
 
 void Player::movePlayerHorizontally()
@@ -83,19 +93,26 @@ void Player::movePlayerHorizontally()
 		player_x_position += movement_.getMovementStep();
 
 	position_.setXPosition(player_x_position);
-
 }
 
-void Player::removeWaste()
+void Player::changeOrientation()
 {
-	auto lambda = [](auto i)
-	{	return !(i->getStatus());};
+	if(position_.getYPosition() > Constants::SCREEN_Y_LENGTH
+				- Constants::PLAYER_Y_LENGTH / 2 - 5)
+		parameters_.setOrientation(Orientation::FACE_UP);
+	else if(position_.getYPosition() < Constants::PLAYER_Y_LENGTH * 1.5 + 5)
+		parameters_.setOrientation(Orientation::FACE_DOWN);
+}
 
-	auto remove_idiom = std::remove_if(bulletsFired_.begin(),
-			bulletsFired_.end(), lambda);
+void Player::movePlayerVertically()
+{
+	auto player_y_position = position_.getYPosition();
+	if (movement_.isMovingUp())
+		player_y_position -= movement_.getMovementStep();
+	else if (movement_.isMovingDown())
+		player_y_position += movement_.getMovementStep();
 
-	bulletsFired_.erase(remove_idiom, bulletsFired_.end());
-
+	position_.setYPosition(player_y_position);
 }
 
 two_floats Player::initializePosition()
@@ -105,9 +122,10 @@ two_floats Player::initializePosition()
 
 	if (parameters_.isFacingUp())
 		y_position = Constants::SCREEN_Y_LENGTH
-				- Constants::PLAYER_Y_LENGTH/2;
+				- Constants::PLAYER_Y_LENGTH / 2;
 	else if (parameters_.isFacingDown())
-		y_position = Constants::PLAYER_Y_LENGTH*1.5;
+		y_position = Constants::PLAYER_Y_LENGTH * 1.5;
 
-	return {x_position,y_position};
+	return
+	{	x_position,y_position};
 }
