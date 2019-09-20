@@ -30,7 +30,7 @@ Textures::Textures()
 
 vec_of_texture_ptrs Textures::getTextures()
 {
-	return vec_of_texture_ptrs
+	return
 	{ upPlayer_texture_, downPlayer_texture_, upAlien_texture_,
 			downAlien_texture_, upPlayer_bullet_texture_,
 			downPlayer_bullet_texture_, upAlien_bullet_texture_,

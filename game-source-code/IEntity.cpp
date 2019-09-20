@@ -33,11 +33,16 @@ float IEntity::getScore() const
 {
 	return parameters_.getWorth();
 }
+
 bool IEntity::getStatus() const
 {
 	return parameters_.getStatus();
 }
 
+int IEntity::getLives() const
+{
+	return parameters_.getLives();
+}
 void IEntity::killEntity()
 {
 	parameters_.setStatus(false);

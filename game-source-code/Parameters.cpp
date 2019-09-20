@@ -34,6 +34,11 @@ float Parameters::getWorth() const
 	return worth_;
 }
 
+int Parameters::getLives() const
+{
+	return hit_points_;
+}
+
 ObjectType Parameters::getObjectType() const
 {
 	return object_;

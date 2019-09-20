@@ -48,10 +48,10 @@ void AlienFactory::generateColumn(const double &x_position,
 
 	for (auto j = 0u; j < MAX_ROWS_; j++)
 	{
-		auto newAlien = std::make_shared<Alien>(orientation);
-		newAlien->setPosition(
-		{ x_position, y_position });
-		armada.at(index).at(j) = newAlien;
+		auto new_alien = std::make_shared<Alien>(orientation);
+		two_floats new_position = {x_position,y_position};
+		new_alien->setPosition(new_position);
+		armada.at(index).at(j) = new_alien;
 
 		if (orientation == Orientation::FACE_DOWN)
 			y_position += std::get<1>(size_)

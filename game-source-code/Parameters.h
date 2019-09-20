@@ -15,6 +15,7 @@ public:
 	two_floats getSize() const;
 	two_floats getScreenSize() const;
 	float getWorth() const;
+	int getLives() const;
 	ObjectType getObjectType() const;
 	Orientation getOrientation() const;
 	void damage();

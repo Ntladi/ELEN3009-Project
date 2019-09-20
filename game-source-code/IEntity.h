@@ -20,6 +20,7 @@ public:
 	HitBox getHitBox() const;
 	bool getStatus() const;
 	float getScore() const;
+	int getLives() const;
 	void killEntity();
 	void hitEntity();
 

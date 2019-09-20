@@ -34,11 +34,19 @@ void Logic::reset()
 
 void Logic::loadPositions()
 {
-	vec_of_moving_objects objects;
-	object_factory_.getMovingObjects(objects);
+	vec_of_moving_objects moving_objects;
+	object_factory_.getMovingObjects(moving_objects);
 
-	for (auto &i : objects)
+	for (auto &i : moving_objects)
 		moveObject(i);
+
+
+	vec_of_static_objects static_objects;
+	object_factory_.getStaticObjects(static_objects);
+
+	for(auto &i:static_objects)
+		presentation_.displaySprite(i->getObjectType(), i->getOrientation(),
+					i->getPosition());
 }
 
 void Logic::process(std::vector<bool> &inputs)
@@ -78,6 +86,7 @@ void Logic::moveObject(std::shared_ptr<IMovingEntity> &object)
 {
 	presentation_.displaySprite(object->getObjectType(), object->getOrientation(),
 			object->getPosition());
+
 }
 
 void Logic::checkColisions()

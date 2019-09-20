@@ -11,6 +11,8 @@ void ObjectFactory::initializeObjects()
 	downPlayer_ = std::make_shared<Player>(Orientation::FACE_DOWN);
 	upArmada_ = std::make_shared<Armada>(Orientation::FACE_UP);
 	downArmada_ = std::make_shared<Armada>(Orientation::FACE_DOWN);
+	upLives_ = std::make_shared<LifeFactory>(Orientation::FACE_UP,upPlayer_->getLives());
+	downLives_ = std::make_shared<LifeFactory>(Orientation::FACE_DOWN,downPlayer_->getLives());
 }
 
 void ObjectFactory::getMovingObjects(vec_of_moving_objects &objects)
@@ -20,6 +22,26 @@ void ObjectFactory::getMovingObjects(vec_of_moving_objects &objects)
 	getPlayerBullets(objects);
 	getAlienBullets(objects);
 
+}
+
+void ObjectFactory::getStaticObjects(vec_of_static_objects& objects)
+{
+	getGlyphs(objects);
+}
+
+void ObjectFactory::getGlyphs(vec_of_static_objects& objects)
+{
+	upLives_->manageLives(upPlayer_->getLives());
+	downLives_->manageLives(downPlayer_->getLives());
+
+	auto upLives = upLives_->getGlyphs();
+	auto downLives = downLives_->getGlyphs();
+
+	for(auto&i:upLives)
+		objects.push_back(i);
+
+	for(auto&i:downLives)
+		objects.push_back(i);
 }
 
 void ObjectFactory::getPlayers(vec_of_moving_objects &objects)
