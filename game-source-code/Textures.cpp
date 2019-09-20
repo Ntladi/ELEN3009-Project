@@ -20,6 +20,12 @@ Textures::Textures()
 	downPlayer_bullet_texture_ = std::make_shared<sf::Texture>();
 	downPlayer_bullet_texture_->loadFromFile("Assets/Player2Bullet.png");
 
+	upPiercer_bullet_texture_ = std::make_shared<sf::Texture>();
+	upPiercer_bullet_texture_->loadFromFile("Assets/Player1Bullet.png");
+
+	downPiercer_bullet_texture_ = std::make_shared<sf::Texture>();
+	downPiercer_bullet_texture_->loadFromFile("Assets/Player2Bullet.png");
+
 	upAlien_bullet_texture_ = std::make_shared<sf::Texture>();
 	upAlien_bullet_texture_->loadFromFile("Assets/Alien1Bullet.png");
 
@@ -39,6 +45,6 @@ vec_of_texture_ptrs Textures::getTextures()
 	return
 	{ upPlayer_texture_, downPlayer_texture_, upAlien_texture_,
 			downAlien_texture_, upPlayer_bullet_texture_,
-			downPlayer_bullet_texture_, upAlien_bullet_texture_,
+			downPlayer_bullet_texture_, upPiercer_bullet_texture_,downPiercer_bullet_texture_,upAlien_bullet_texture_,
 			downAlien_bullet_texture_,upPlayer_life_texture_,downPlayer_life_texture_ };
 }

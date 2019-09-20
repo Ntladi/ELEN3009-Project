@@ -5,7 +5,7 @@ Bullet::Bullet(two_floats position, ObjectType bullet_type,
 		Orientation orientation)
 {
 	four_floats params =
-	{ Constants::BULLET_X_LENGTH, Constants::BULLET_Y_LENGTH,
+	{ Constants::BULLET_X_LENGTH,Constants::BULLET_Y_LENGTH,
 			Constants::BULLET_HIT_POINTS, Constants::BULLET_WORTH };
 
 	parameters_ = Parameters
@@ -58,5 +58,7 @@ two_floats Bullet::initializePosition()
 	auto x_position = 0.0f;
 	auto y_position = 0.0f;
 
-	return {x_position,y_position};
+	return
+	{	x_position,y_position};
 }
+

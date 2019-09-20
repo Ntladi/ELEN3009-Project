@@ -5,20 +5,27 @@
 #include <memory>
 #include <algorithm>
 #include "Bullet.h"
+#include "PiercerBullet.h"
+#include "RightDiagonalBullet.h"
+#include "LeftDiagonalBullet.h"
+#include "StopWatch.h"
+using bullet_ptr = std::shared_ptr<Bullet>;
 using two_floats = std::tuple<float, float>;
-using vec_of_bullets = std::vector<std::shared_ptr<Bullet>>;
+using vec_of_bullets = std::vector<bullet_ptr>;
 
 class PlayerBulletFactory
 {
 public:
+	PlayerBulletFactory();
 	void shoot(Orientation orientation, two_floats position);
 	vec_of_bullets getShotsFired();
 private:
 	vec_of_bullets bulletsFired_;
+	StopWatch stopwatch_;
 	void removeWaste();
-	void makeStandardBullet();
-	void makePiercerBullet();
-	void makeMultiShotBullets();
+	void makeStandardBullet(Orientation orientation, two_floats position);
+	void makePiercerBullet(Orientation orientation, two_floats position);
+	void makeMultiShotBullets(Orientation orientation, two_floats position);
 };
 
 #endif

@@ -13,12 +13,10 @@ class Bullet : public IMovingEntity
 {
 public:
 	Bullet(two_floats position = {0,0}, ObjectType bullet_type = ObjectType::NONE, Orientation orientation = Orientation::FACE_UP);
-	virtual void move() override;
-private:
-	void moveBullet();
-	virtual two_floats initializePosition() override;
-
-
+	void move() override;
+protected:
+	virtual void moveBullet();
+	two_floats initializePosition() override;
 };
 
 #endif

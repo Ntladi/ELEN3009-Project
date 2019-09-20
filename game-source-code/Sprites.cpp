@@ -8,6 +8,8 @@ Sprites::Sprites()
 	downAlien_ = std::make_shared<sf::RectangleShape>();
 	upPlayerBullet_ = std::make_shared<sf::RectangleShape>();
 	downPlayerBullet_ = std::make_shared<sf::RectangleShape>();
+	upPiercerBullet_ = std::make_shared<sf::RectangleShape>();
+	downPiercerBullet_ = std::make_shared<sf::RectangleShape>();
 	upAlienBullet_ = std::make_shared<sf::RectangleShape>();
 	downAlienBullet_ = std::make_shared<sf::RectangleShape>();
 	upPlayer_life_ = std::make_shared<sf::RectangleShape>();
@@ -27,6 +29,9 @@ void Sprites::displaySprite(const ObjectType &object,
 		break;
 	case ObjectType::PLAYER_BULLET:
 		moveSpriteObject(upPlayerBullet_,downPlayerBullet_,orientation,position);
+		break;
+	case ObjectType::PIERCER_BULLET:
+		moveSpriteObject(upPiercerBullet_,downPiercerBullet_,orientation,position);
 		break;
 	case ObjectType::ALIEN_BULLET:
 		moveSpriteObject(upAlienBullet_,downAlienBullet_,orientation,position);
@@ -72,5 +77,6 @@ void Sprites::setInitialSizes(const vec_of_two_floats &sizes)
 vec_of_sprite_ptrs Sprites::getSprites()
 {
 	return
-	{	upPlayer_, downPlayer_,upAlien_,downAlien_,upPlayerBullet_,downPlayerBullet_,upAlienBullet_,downAlienBullet_, upPlayer_life_,downPlayer_life_};
+	{	upPlayer_, downPlayer_,upAlien_,downAlien_,upPlayerBullet_,downPlayerBullet_,upPiercerBullet_,
+		downPiercerBullet_,upAlienBullet_,downAlienBullet_, upPlayer_life_,downPlayer_life_};
 }

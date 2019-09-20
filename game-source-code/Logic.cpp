@@ -14,11 +14,13 @@ void Logic::loadSizes()
 	Player temp_player;
 	Alien temp_alien;
 	Bullet temp_bullet;
+	PiercerBullet temp_piercer;
 	PlayerGlyph temp_glyph;
 
 	sizes.push_back(temp_player.getSize());
 	sizes.push_back(temp_alien.getSize());
 	sizes.push_back(temp_bullet.getSize());
+	sizes.push_back(temp_piercer.getSize());
 	sizes.push_back(temp_glyph.getSize());
 	presentation_.initializeSpriteSizes(sizes);
 

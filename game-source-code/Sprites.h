@@ -29,6 +29,8 @@ private:
 	sprite_ptr downAlien_;
 	sprite_ptr upPlayerBullet_;
 	sprite_ptr downPlayerBullet_;
+	sprite_ptr upPiercerBullet_;
+	sprite_ptr downPiercerBullet_;
 	sprite_ptr upAlienBullet_;
 	sprite_ptr downAlienBullet_;
 	sprite_ptr upPlayer_life_;

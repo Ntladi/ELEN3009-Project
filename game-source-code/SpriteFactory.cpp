@@ -29,6 +29,7 @@ void SpriteFactory::setInitialSizes(const vec_of_two_floats &sizes, vec_of_sprit
 	sprites.at(5)->setOrigin(sf::Vector2f(x_size / 2, y_size / 2));
 	sprites.at(5)->setRotation(180.0f);
 
+	std::tie(x_size, y_size) = sizes.at(3);
 	sprites.at(6)->setSize(sf::Vector2f(x_size, y_size));
 	sprites.at(6)->setOrigin(sf::Vector2f(x_size / 2, y_size / 2));
 
@@ -36,12 +37,19 @@ void SpriteFactory::setInitialSizes(const vec_of_two_floats &sizes, vec_of_sprit
 	sprites.at(7)->setOrigin(sf::Vector2f(x_size / 2, y_size / 2));
 	sprites.at(7)->setRotation(180.0f);
 
-	std::tie(x_size, y_size) = sizes.at(3);
+	std::tie(x_size, y_size) = sizes.at(2);
 	sprites.at(8)->setSize(sf::Vector2f(x_size, y_size));
 	sprites.at(8)->setOrigin(sf::Vector2f(x_size / 2, y_size / 2));
 
 	sprites.at(9)->setSize(sf::Vector2f(x_size, y_size));
 	sprites.at(9)->setOrigin(sf::Vector2f(x_size / 2, y_size / 2));
+
+	std::tie(x_size, y_size) = sizes.at(4);
+	sprites.at(10)->setSize(sf::Vector2f(x_size, y_size));
+	sprites.at(10)->setOrigin(sf::Vector2f(x_size / 2, y_size / 2));
+
+	sprites.at(11)->setSize(sf::Vector2f(x_size, y_size));
+	sprites.at(11)->setOrigin(sf::Vector2f(x_size / 2, y_size / 2));
 }
 void SpriteFactory::applyTextures(vec_of_sprite_ptrs & sprites)
 {
