@@ -1,31 +1,48 @@
 #include <Parameters.h>
 #include <iostream>
 
-Parameters::Parameters(ObjectType object, Orientation orientation, four_floats params)
+Parameters::Parameters(ObjectType object, Orientation orientation,
+		four_floats params)
 {
 	this->object_ = object;
 	this->orientation_ = orientation;
 	this->is_Alive_ = true;
 
-	std::tie(x_length_,y_length_,hit_points_, worth_) = params;
+	std::tie(x_length_, y_length_, hit_points_, worth_) = params;
 
 }
 
 two_floats Parameters::getSize() const
 {
-	return {x_length_,y_length_};
+	return
+	{	x_length_,y_length_};
 }
 
-two_floats Parameters::getScreenSize() const
+float Parameters::getBottomEdge() const
 {
-	return {Constants::SCREEN_X_LENGTH,Constants::SCREEN_Y_LENGTH};
+	return Constants::SCREEN_Y_LENGTH - (y_length_ / 2);
+}
+
+float Parameters::getTopEdge() const
+{
+	return y_length_ * 1.5;
+}
+
+float Parameters::getLeftEdge() const
+{
+	return x_length_ / 2;
+}
+
+float Parameters::getRightEdge() const
+{
+	return Constants::SCREEN_X_LENGTH - (x_length_ / 2);
 }
 
 void Parameters::damage()
 {
-	if(hit_points_ > 0)
+	if (hit_points_ > 0)
 		hit_points_--;
-	if(hit_points_ <= 0)
+	if (hit_points_ <= 0)
 		setStatus(false);
 }
 

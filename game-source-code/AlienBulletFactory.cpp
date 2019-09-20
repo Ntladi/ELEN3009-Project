@@ -1,4 +1,4 @@
-#include <BulletFactory.h>
+#include <AlienBulletFactory.h>
 
 
 BulletFactory::BulletFactory()
@@ -13,7 +13,7 @@ vec_of_bullets BulletFactory::getOnslaught()
 
 void BulletFactory::generateBullets(aliens_2d &aliens, const int &size)
 {
-	if (stopwatch_.getTimeElapsed() > SECONDS_BETWEEN_ALIEN_SHOTS_
+	if (stopwatch_.getTimeElapsed() > Constants::SECONDS_BETWEEN_ALIEN_SHOTS
 			&& size > 0)
 	{
 		stopwatch_.start();
@@ -25,7 +25,7 @@ void BulletFactory::generateBullets(aliens_2d &aliens, const int &size)
 		auto shot_col1 = rand() % aliens.size();
 		addBullet(endOfCols, shot_col1, aliens);
 
-		for (auto i = 1u; i <= MAX_ALIEN_SHOTS_PER_ROW_; i++)
+		for (auto i = 1u; i <= Constants::MAX_ALIEN_SHOTS_PER_ROW; i++)
 		{
 			shot_col1 = (shot_col1 + i) % aliens.size();
 			addBullet(endOfCols, shot_col1, aliens);

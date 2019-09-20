@@ -10,6 +10,7 @@ public:
 protected:
 	Movement movement_;
 	void updateHitBox();
+	bool isAtEdgeOfScreen();
 
 };
 

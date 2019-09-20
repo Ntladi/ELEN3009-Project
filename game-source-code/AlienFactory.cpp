@@ -5,10 +5,10 @@ void AlienFactory::initializeArmada(aliens_2d & armada,Orientation orientation)
 {
 	Alien alien(orientation);
 	size_ = alien.getSize();
-	armada.resize(MAX_COLS_);
+	armada.resize(Constants::MAX_ARMADA_COLS);
 
 	std::for_each(begin(armada), end(armada), [&](auto &i)
-	{	i.resize(MAX_ROWS_);});
+	{	i.resize(Constants::MAX_ARMADA_ROWS);});
 
 	position_ = Position{ alien.getPosition()};
 	generateRows(orientation,armada);
@@ -33,11 +33,11 @@ void AlienFactory::generateRows(Orientation & orientation,aliens_2d & armada)
 {
 	auto x_position = std::get<0>(size_);
 
-	for (auto i = 0u; i < MAX_COLS_; i++)
+	for (auto i = 0u; i < Constants::MAX_ARMADA_COLS; i++)
 	{
 		generateColumn(x_position, i, orientation,armada);
 
-		x_position += std::get<0>(size_) + SPACE_BETWEEN_COLS_;
+		x_position += std::get<0>(size_) + Constants::SPACE_BETWEEN_ARMADA_COLS;
 	}
 }
 
@@ -46,7 +46,7 @@ void AlienFactory::generateColumn(const double &x_position,
 {
 	auto y_position = position_.getYPosition();
 
-	for (auto j = 0u; j < MAX_ROWS_; j++)
+	for (auto j = 0u; j < Constants::MAX_ARMADA_ROWS; j++)
 	{
 		auto new_alien = std::make_shared<Alien>(orientation);
 		two_floats new_position = {x_position,y_position};
@@ -55,10 +55,10 @@ void AlienFactory::generateColumn(const double &x_position,
 
 		if (orientation == Orientation::FACE_DOWN)
 			y_position += std::get<1>(size_)
-					+ SPACE_BETWEEN_ROWS_;
+					+ Constants::SPACE_BETWEEN_ARMADA_ROWS;
 		else if (orientation == Orientation::FACE_UP)
 			y_position -= std::get<1>(size_)
-					+ SPACE_BETWEEN_ROWS_;
+					+ Constants::SPACE_BETWEEN_ARMADA_ROWS;
 
 		counter_++;
 	}

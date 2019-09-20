@@ -32,7 +32,7 @@ two_floats PlayerGlyph::initializePosition()
 	if (parameters_.isFacingUp())
 		x_position = Constants::GLYPH_X_LENGTH / 2 + 5;
 	else if(parameters_.isFacingDown())
-		x_position = std::get<0>(parameters_.getScreenSize()) - (Constants::GLYPH_X_LENGTH / 2) - 5;
+		x_position = Constants::SCREEN_X_LENGTH - (Constants::GLYPH_X_LENGTH / 2) - 5;
 
 	return
 	{	x_position, y_position};

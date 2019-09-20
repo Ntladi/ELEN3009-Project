@@ -1,5 +1,5 @@
-#ifndef BULLETFACTORY_H_
-#define BULLETFACTORY_H_
+#ifndef ALIENBULLETFACTORY_H_
+#define ALIENBULLETFACTORY_H_
 #include "StopWatch.h"
 #include "Bullet.h"
 #include "Alien.h"
@@ -19,9 +19,6 @@ public:
 private:
 	vec_of_bullets bullets_;
 	StopWatch stopwatch_;
-	const float SECONDS_BETWEEN_ALIEN_SHOTS_ =
-			Constants::SECONDS_BETWEEN_ALIEN_SHOTS;
-	const float MAX_ALIEN_SHOTS_PER_ROW_ = Constants::MAX_ALIEN_SHOTS_PER_ROW;
 	const unsigned int getAlienToShoot();
 	const float getSecondsBetweenShots() const;
 	void addBullet(std::vector<unsigned int> &endOfCols,

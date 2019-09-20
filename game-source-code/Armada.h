@@ -1,11 +1,11 @@
 #ifndef ARMADA_H_
 #define ARMADA_H_
+#include <AlienBulletFactory.h>
 #include "Alien.h"
 #include "IEntity.h"
 #include <memory>
 #include <vector>
 #include <algorithm>
-#include "BulletFactory.h"
 #include "AlienFactory.h"
 using vec_of_aliens = std::vector<std::shared_ptr<Alien>>;
 using aliens_2d = std::vector<vec_of_aliens>;

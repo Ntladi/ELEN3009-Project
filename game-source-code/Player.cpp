@@ -39,10 +39,10 @@ void Player::setPosition(const two_floats &position)
 void Player::move()
 {
 	if ((movement_.isMovingLeft() || movement_.isMovingRight())
-			&& isWithinScreenBounds())
+			&& !isAtEdgeOfScreen())
 		movePlayerHorizontally();
 	if ((movement_.isMovingUp() || movement_.isMovingDown())
-			&& isAtNotAtEndOfScreen())
+			&& !isAtEndOfScreen())
 		movePlayerVertically();
 
 	updateHitBox();
@@ -54,48 +54,24 @@ void Player::shoot()
 	bullet_factory_.shoot(parameters_.getOrientation(), getPosition());
 }
 
-bool Player::isWithinScreenBounds()
+bool Player::isAtEndOfScreen()
 {
 	updateHitBox();
-	if (movement_.isMovingLeft())
-	{
-		auto left_x = std::get<0>(hitbox_.getTopLeft());
-		left_x -= movement_.getMovementStep();
-
-		if (left_x >= 0)
-			return true;
-	}
-
-	else if (movement_.isMovingRight())
-	{
-		auto right_x = std::get<0>(hitbox_.getTopRight());
-		right_x += movement_.getMovementStep();
-
-		if (right_x <= std::get<0>(parameters_.getScreenSize()))
-			return true;
-	}
-	return false;
-}
-
-bool Player::isAtNotAtEndOfScreen()
-{
 	if ((position_.getYPosition() - movement_.getMovementStep()
-			< (Constants::PLAYER_Y_LENGTH * 1.5)) && movement_.isMovingUp())
-		return false;
+			< parameters_.getTopEdge()) && movement_.isMovingUp())
+		return true;
 	if ((position_.getYPosition() + movement_.getMovementStep()
-			> (Constants::SCREEN_Y_LENGTH - Constants::PLAYER_Y_LENGTH / 2))
-			&& movement_.isMovingDown())
-		return false;
+			> parameters_.getBottomEdge()) && movement_.isMovingDown())
+		return true;
 	changeOrientation();
-	return true;
+	return false;
 }
 
 bool Player::isNotMovingVertucally()
 {
-	if ((position_.getYPosition() < (Constants::PLAYER_Y_LENGTH * 1.5 + 5)))
+	if ((position_.getYPosition() < (parameters_.getTopEdge() + 5)))
 		return true;
-	if ((position_.getYPosition()
-			> (Constants::SCREEN_Y_LENGTH - Constants::PLAYER_Y_LENGTH / 2 - 5)))
+	if ((position_.getYPosition() > (parameters_.getBottomEdge() - 5)))
 		return true;
 	return false;
 }
@@ -113,10 +89,9 @@ void Player::movePlayerHorizontally()
 
 void Player::changeOrientation()
 {
-	if (position_.getYPosition()
-			> Constants::SCREEN_Y_LENGTH - Constants::PLAYER_Y_LENGTH / 2 - 5)
+	if (position_.getYPosition() > parameters_.getBottomEdge() - 5)
 		parameters_.setOrientation(Orientation::FACE_UP);
-	else if (position_.getYPosition() < Constants::PLAYER_Y_LENGTH * 1.5 + 5)
+	else if (position_.getYPosition() < parameters_.getTopEdge() + 5)
 		parameters_.setOrientation(Orientation::FACE_DOWN);
 }
 
@@ -137,10 +112,9 @@ two_floats Player::initializePosition()
 	auto y_position = 0.0f;
 
 	if (parameters_.isFacingUp())
-		y_position = Constants::SCREEN_Y_LENGTH
-				- Constants::PLAYER_Y_LENGTH / 2;
+		y_position = parameters_.getBottomEdge();
 	else if (parameters_.isFacingDown())
-		y_position = Constants::PLAYER_Y_LENGTH * 1.5;
+		y_position = parameters_.getTopEdge();
 
 	return
 	{	x_position,y_position};

@@ -13,8 +13,11 @@ class Parameters {
 public:
 	Parameters(ObjectType object = ObjectType::NONE, Orientation orientation = Orientation::FACE_UP, four_floats params = {0,0,0,0});
 	two_floats getSize() const;
-	two_floats getScreenSize() const;
 	float getWorth() const;
+	float getTopEdge() const;
+	float getBottomEdge() const;
+	float getLeftEdge() const;
+	float getRightEdge() const;
 	int getLives() const;
 	ObjectType getObjectType() const;
 	Orientation getOrientation() const;

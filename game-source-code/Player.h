@@ -23,10 +23,9 @@ public:
 private:
 	PlayerBulletFactory bullet_factory_;
 	void incrementPlayerPosition();
-	bool isWithinScreenBounds();
 	void movePlayerHorizontally();
 	void movePlayerVertically();
-	bool isAtNotAtEndOfScreen();
+	bool isAtEndOfScreen();
 	void changeOrientation();
 	virtual two_floats initializePosition() override;
 };

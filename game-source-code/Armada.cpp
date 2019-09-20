@@ -23,7 +23,7 @@ vec_of_bullets Armada::getOnslaught()
 bool Armada::isGameOver()
 {
 	for (auto &i : aliens1D())
-		if (i->isAtEndOfScreen())
+		if (i->checkEnd())
 			return true;
 
 	return false;
@@ -45,11 +45,9 @@ void Armada::removeWaste()
 void Armada::checkEdges()
 {
 	if (alien_factory_.getCounter() > 0)
-		if (aliens1D().at(0)->isAtEdgeOfScreen()
-				|| aliens1D().at(alien_factory_.getCounter()-1)->isAtEdgeOfScreen())
-		{
+		if (aliens1D().at(0)->checkEdge()
+				|| aliens1D().at(alien_factory_.getCounter()-1)->checkEdge())
 			moveAllVertically();
-		}
 
 }
 

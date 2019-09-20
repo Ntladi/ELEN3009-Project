@@ -43,7 +43,7 @@ bool Bullet::isOnScreen()
 	{
 		auto y_top_left = std::get<1>(hitbox_.getTopLeft());
 
-		if (y_top_left <= std::get<1>(parameters_.getScreenSize()))
+		if (y_top_left <= Constants::SCREEN_Y_LENGTH)
 			return true;
 	}
 	else if (movement_.isMovingUp())
@@ -78,13 +78,6 @@ two_floats Bullet::initializePosition()
 {
 	auto x_position = 0.0f;
 	auto y_position = 0.0f;
-
-	if (parameters_.isFacingUp())
-		y_position = -(Constants::BULLET_Y_LENGTH / 2)
-				- Constants::BULLET_Y_LENGTH;
-	else if (parameters_.isFacingDown())
-		y_position = (Constants::BULLET_Y_LENGTH / 2)
-				+ Constants::BULLET_Y_LENGTH;
 
 	return {x_position,y_position};
 }

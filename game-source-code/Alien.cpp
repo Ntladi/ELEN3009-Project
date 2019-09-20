@@ -10,7 +10,7 @@ Alien::Alien(Orientation orientation)
 	{ ObjectType::ALIEN, orientation, params };
 
 	position_ = Position
-	{initializePosition() };
+	{ initializePosition() };
 
 	movement_ = Movement
 	{ MoveDirection::RIGHT, Constants::ALIEN_MAXIMUM_MOVEMENT_STEP };
@@ -46,29 +46,14 @@ Bullet Alien::shoot()
 	{ getPosition(), ObjectType::ALIEN_BULLET, parameters_.getOrientation() };
 }
 
-bool Alien::isAtEdgeOfScreen()
+bool Alien::checkEdge()
 {
-	updateHitBox();
+	return isAtEdgeOfScreen();
+}
 
-	if (movement_.isMovingLeft())
-	{
-		auto left_x = std::get<0>(hitbox_.getTopLeft());
-		left_x += movement_.getMovementStep();
-
-		if (left_x <= 0)
-			return true;
-	}
-
-	else if (movement_.isMovingRight())
-	{
-		auto right_x = std::get<0>(hitbox_.getTopRight());
-		right_x -= movement_.getMovementStep();
-
-		if (right_x >= std::get<0>(parameters_.getScreenSize()))
-			return true;
-	}
-	return false;
-
+bool Alien::checkEnd()
+{
+	return isAtEndOfScreen();
 }
 
 void Alien::moveAlienVertically()
@@ -86,9 +71,7 @@ void Alien::moveAlienVertically()
 		alien_y_position += std::get<1>(parameters_.getSize());
 		position_.setYPosition(alien_y_position);
 	}
-
 	movement_.changeHorizontalDirection();
-
 }
 
 void Alien::moveAlienHorizontally()
@@ -106,26 +89,12 @@ void Alien::moveAlienHorizontally()
 bool Alien::isAtEndOfScreen()
 {
 	updateHitBox();
-
-	if (parameters_.isFacingUp())
-	{
-		auto left_y = std::get<1>(hitbox_.getTopLeft());
-		left_y += std::get<1>(parameters_.getSize());
-
-		if (left_y <= std::get<1>(parameters_.getSize()) / 2)
-			return true;
-	}
-
-	else if (parameters_.isFacingDown())
-	{
-		auto right_y = std::get<1>(hitbox_.getBottomRight());
-		right_y -= std::get<1>(parameters_.getSize());
-
-		if (right_y
-				>= std::get<1>(parameters_.getScreenSize())
-						- std::get<1>(parameters_.getSize()) / 2)
-			return true;
-	}
+	if ((position_.getYPosition() - movement_.getMovementStep()
+			< parameters_.getTopEdge()) && parameters_.isFacingUp())
+		return true;
+	if ((position_.getYPosition() + movement_.getMovementStep()
+			> parameters_.getBottomEdge()) && parameters_.isFacingDown())
+		return true;
 	return false;
 }
 
@@ -135,11 +104,10 @@ two_floats Alien::initializePosition()
 	auto y_position = 0.0f;
 
 	if (parameters_.isFacingUp())
-		y_position = Constants::SCREEN_Y_LENGTH / 2
-				- Constants::ALIEN_Y_LENGTH / 2 - 5 + Constants::PLAYER_Y_LENGTH/2;
+		y_position = Constants::ALIEN_INITAL_UP_Y_POSITION;
 	else if (parameters_.isFacingDown())
-		y_position = Constants::SCREEN_Y_LENGTH / 2
-				+ Constants::ALIEN_Y_LENGTH / 2 + 5 + Constants::PLAYER_Y_LENGTH/2;
+		y_position = Constants::ALIEN_INITAL_DOWN_Y_POSITION;
 
-	return {x_position,y_position};
+	return
+	{	x_position,y_position};
 }

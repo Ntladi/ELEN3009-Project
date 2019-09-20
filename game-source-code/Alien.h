@@ -16,7 +16,8 @@ public:
 	void setMoveDirection(const MoveDirection &direction);
 	void setPosition(const two_floats & position);
 	void moveAlienVertically();
-	bool isAtEdgeOfScreen();
+	bool checkEdge();
+	bool checkEnd();
 	bool isAtEndOfScreen();
 	void move() override;
 	Bullet shoot();
