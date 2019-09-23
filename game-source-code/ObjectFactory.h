@@ -6,16 +6,19 @@
 #include "PlayerObjectHandler.h"
 #include <iterator>
 #include <vector>
+#include <map>
 #include <algorithm>
 #include "ScreenStates.h"
 using vec_of_moving_objects = std::vector<std::shared_ptr<IMovingEntity>>;
 using vec_of_static_objects = std::vector<std::shared_ptr<IEntity>>;
 using two_floats = std::tuple<float,float>;
+using map_of_two_floats = std::map<ObjectType,two_floats>;
 
 class ObjectFactory
 {
 public:
 	ObjectFactory();
+	void getSizes(map_of_two_floats& sizes);
 	void getMovingObjects(vec_of_moving_objects& objects);
 	void getStaticObjects(vec_of_static_objects& objects);
 	void getPlayers(vec_of_moving_objects & objects);
@@ -26,7 +29,7 @@ public:
 	void checkPlayer();
 	bool gameOverStatus() const;
 	bool gameWonStatus() const;
-	void startPowerClock(bool isGameState);
+	void startPowerClock();
 
 private:
 	std::shared_ptr<Player> up_player_;

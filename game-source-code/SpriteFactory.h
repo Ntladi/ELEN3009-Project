@@ -1,20 +1,23 @@
 #ifndef SPRITEFACTORY_H_
 #define SPRITEFACTORY_H_
 #include <SFML/Graphics.hpp>
-#include <vector>
+#include <map>
+#include "ObjectType.h"
 #include "Textures.h"
 using sprite_ptr = std::shared_ptr<sf::RectangleShape>;
-using vec_of_sprite_ptrs = std::vector<sprite_ptr>;
 using two_floats = std::tuple<float,float>;
-using vec_of_two_floats = std::vector<two_floats>;
+using map_of_sprite_ptrs = std::map<MapKeys, sprite_ptr>;
+using map_of_two_floats = std::map<ObjectType,two_floats>;
 
 class SpriteFactory
 {
 public:
-	void setInitialSizes(const vec_of_two_floats &sizes, vec_of_sprite_ptrs & sprites);
-	void applyTextures(vec_of_sprite_ptrs & sprites);
+	void setInitialSizes(const map_of_two_floats &sizes, map_of_sprite_ptrs & sprites);
+	void applyTextures(map_of_sprite_ptrs & sprites);
 private:
 	Textures textures_;
+	void setSize(const map_of_two_floats &sizes, map_of_sprite_ptrs &sprites,
+			MapKeys up_object, MapKeys down_object, ObjectType size_key, bool flip_down);
 };
 
 #endif

@@ -107,13 +107,28 @@ void ObjectFactory::changePlayerDirections(std::vector<bool> &inputs)
 void ObjectFactory::checkPlayer()
 {
 	if (up_player_->getHit())
-		up_player_->resetPosition();
+		up_player_->resetPosition(Orientation::FACE_UP);
 	else if (down_player_->getHit())
-		down_player_->resetPosition();
+		down_player_->resetPosition(Orientation::FACE_DOWN);
 }
 
-void ObjectFactory::startPowerClock(bool isGamestate)
+void ObjectFactory::startPowerClock()
 {
-	if(!isGamestate)
-		up_player_->startClock();
+	up_player_->startClock();
+	down_player_->startClock();
+}
+
+void ObjectFactory::getSizes(map_of_two_floats & sizes)
+{
+	Player temp_player;
+	Alien temp_alien;
+	Bullet temp_bullet;
+	PiercerBullet temp_piercer;
+	PlayerGlyph temp_glyph;
+
+	sizes.insert(std::pair<ObjectType,two_floats>(ObjectType::PLAYER,temp_player.getSize()));
+	sizes.insert(std::pair<ObjectType,two_floats>(ObjectType::ALIEN,temp_alien.getSize()));
+	sizes.insert(std::pair<ObjectType,two_floats>(ObjectType::PLAYER_BULLET,temp_bullet.getSize()));
+	sizes.insert(std::pair<ObjectType,two_floats>(ObjectType::PIERCER_BULLET,temp_piercer.getSize()));
+	sizes.insert(std::pair<ObjectType,two_floats>(ObjectType::PLAYER_GLYPH,temp_glyph.getSize()));
 }

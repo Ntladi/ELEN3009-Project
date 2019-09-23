@@ -10,6 +10,7 @@
 using moving_object = std::shared_ptr<IMovingEntity>;
 using vec_of_moving_objects = std::vector<std::shared_ptr<IMovingEntity>>;
 using two_floats = std::tuple<float,float>;
+using map_of_two_floats = std::map<ObjectType,two_floats>;
 
 
 class Logic {

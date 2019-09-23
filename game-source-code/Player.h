@@ -20,7 +20,7 @@ public:
 	virtual void move() override;
 	void shoot();
 	bool getHit() const;
-	void resetPosition();
+	void resetPosition(Orientation orientation);
 	void startClock();
 private:
 	PlayerBulletFactory bullet_factory_;

@@ -7,22 +7,10 @@ Logic::Logic()
 
 void Logic::loadSizes()
 {
-	vec_of_two_floats sizes;
+	map_of_two_floats sizes;
 	sizes.clear();
-
-	Player temp_player;
-	Alien temp_alien;
-	Bullet temp_bullet;
-	PiercerBullet temp_piercer;
-	PlayerGlyph temp_glyph;
-
-	sizes.push_back(temp_player.getSize());
-	sizes.push_back(temp_alien.getSize());
-	sizes.push_back(temp_bullet.getSize());
-	sizes.push_back(temp_piercer.getSize());
-	sizes.push_back(temp_glyph.getSize());
+	object_factory_.getSizes(sizes);
 	presentation_.initializeSpriteSizes(sizes);
-
 }
 
 void Logic::reset()
@@ -45,7 +33,6 @@ void Logic::loadPositions()
 
 	for (auto &i : static_objects)
 		setObjects(i);
-
 }
 
 void Logic::process(std::vector<bool> &inputs)
@@ -64,8 +51,8 @@ void Logic::moveAllObjects()
 
 	for (auto &i : objects)
 		i->move();
-
 }
+
 void Logic::run()
 {
 	reset();
@@ -73,9 +60,10 @@ void Logic::run()
 	{
 		presentation_.clearWindow();
 		auto inputs = presentation_.checkInputs();
-		object_factory_.startPowerClock(presentation_.isPlaying());
 		if (presentation_.isPlaying())
 			process(inputs);
+		else
+			object_factory_.startPowerClock();
 		presentation_.displayWindow();
 	}
 }

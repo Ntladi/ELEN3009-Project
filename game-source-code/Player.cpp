@@ -110,8 +110,9 @@ two_floats Player::initializePosition()
 	{	x_position,y_position};
 }
 
-void Player::resetPosition()
+void Player::resetPosition(Orientation orientation)
 {
+	parameters_.setOrientation(orientation);
 	auto [x_position, y_position] = initializePosition();
 
 	position_.setXPosition(x_position);

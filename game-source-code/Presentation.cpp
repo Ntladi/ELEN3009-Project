@@ -15,7 +15,7 @@ void Presentation::createWindow()
 			sf::Style::Close);
 }
 
-void Presentation::initializeSpriteSizes(const vec_of_two_floats &sizes)
+void Presentation::initializeSpriteSizes(const map_of_two_floats &sizes)
 {
 	sprites_.setInitialSizes(sizes);
 }

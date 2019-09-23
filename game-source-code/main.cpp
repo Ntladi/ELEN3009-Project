@@ -1,7 +1,7 @@
 #include "Logic.h"
-
-int main() {
-
+int main()
+{
 	Logic logic;
 	logic.run();
+	return 0;
 }

@@ -8,14 +8,15 @@
 #include "GameModes.h"
 #include "PlayerInputHandler.h"
 #include <memory>
+#include <map>
+using map_of_two_floats = std::map<ObjectType,two_floats>;
 using window_ptr = std::shared_ptr<sf::RenderWindow>;
 
 class Presentation {
 public:
 	Presentation();
 	void createWindow();
-	void initializeSpriteSizes(const vec_of_two_floats &sizes);
-	void initializeSpritePositions(const vec_of_two_floats &sizes);
+	void initializeSpriteSizes(const map_of_two_floats &sizes);
 	void displaySprite(const ObjectType &object, const Orientation &orientation,
 			const two_floats &positions);
 	void clearWindow();
