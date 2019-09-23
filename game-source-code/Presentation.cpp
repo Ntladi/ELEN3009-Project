@@ -13,6 +13,7 @@ void Presentation::createWindow()
 			sf::VideoMode(Constants::SCREEN_X_LENGTH,
 					Constants::SCREEN_Y_LENGTH), "Dual Invaders",
 			sf::Style::Close);
+	window_->setFramerateLimit(60);
 }
 
 void Presentation::initializeSpriteSizes(const map_of_two_floats &sizes)

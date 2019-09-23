@@ -13,7 +13,7 @@ vec_of_bullets BulletFactory::getOnslaught()
 
 void BulletFactory::generateBullets(aliens_2d &aliens, const int &size)
 {
-	if (stopwatch_.getTimeElapsed() > Constants::SECONDS_BETWEEN_ALIEN_SHOTS
+	if (stopwatch_.getTimeElapsed() > Constants::TIME_BETWEEN_ALIEN_SHOTS
 			&& size > 0)
 	{
 		stopwatch_.start();

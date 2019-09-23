@@ -6,14 +6,14 @@ PlayerBulletFactory::PlayerBulletFactory()
 }
 void PlayerBulletFactory::shoot(Orientation orientation, two_floats position)
 {
-	if (stopwatch_.getTimeElapsed() < Constants::SECONDS_BEFORE_1ST_POWER_UP)
+	if (stopwatch_.getTimeElapsed() < Constants::TIME_BEFORE_1ST_POWER_UP)
 		makeStandardBullet(orientation, position);
 	else if (stopwatch_.getTimeElapsed()
-			> Constants::SECONDS_BEFORE_1ST_POWER_UP
+			> Constants::TIME_BEFORE_1ST_POWER_UP
 			&& stopwatch_.getTimeElapsed()
-					< Constants::SECONDS_BEFORE_2ND_POWER_UP)
+					< Constants::TIME_BEFORE_2ND_POWER_UP)
 		makeMultiShotBullets(orientation, position);
-	else if (stopwatch_.getTimeElapsed() > Constants::SECONDS_BEFORE_2ND_POWER_UP)
+	else if (stopwatch_.getTimeElapsed() > Constants::TIME_BEFORE_2ND_POWER_UP)
 		makePiercerBullet(orientation,position);
 }
 

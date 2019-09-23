@@ -6,6 +6,8 @@
 #include <ctime>
 #include <cstdlib>
 #include <vector>
+#include <memory>
+#include <algorithm>
 using vec_of_aliens = std::vector<std::shared_ptr<Alien>>;
 using aliens_2d = std::vector<vec_of_aliens>;
 using vec_of_bullets = std::vector<std::shared_ptr<Bullet>>;

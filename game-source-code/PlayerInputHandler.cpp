@@ -44,7 +44,7 @@ void PlayerInputHandler::multiPlayerInputs()
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)
 			&& stopwatch1_.getTimeElapsed()
-					> Constants::SECONDS_BETWEEN_PLAYER_SHOTS)
+					> Constants::TIME_BETWEEN_PLAYER_SHOTS)
 	{
 		upPlayerShoots_ = true;
 		stopwatch1_.start();
@@ -52,7 +52,7 @@ void PlayerInputHandler::multiPlayerInputs()
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q)
 			&& stopwatch2_.getTimeElapsed()
-					> Constants::SECONDS_BETWEEN_PLAYER_SHOTS)
+					> Constants::TIME_BETWEEN_PLAYER_SHOTS)
 	{
 		downPlayerShoots_ = true;
 		stopwatch2_.start();
@@ -102,7 +102,7 @@ void PlayerInputHandler::singlePlayerShooting()
 {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)
 			&& stopwatch1_.getTimeElapsed()
-					> Constants::SECONDS_BETWEEN_PLAYER_SHOTS)
+					> Constants::TIME_BETWEEN_PLAYER_SHOTS)
 	{
 		upPlayerShoots_ = true;
 		downPlayerShoots_ = true;
