@@ -4,6 +4,7 @@ Movement::Movement(MoveDirection move_direction, const float movement_step)
 {
 	move_direction_ = move_direction;
 	movement_step_ = movement_step;
+	edge_step_ = Constants::EDGE_STEP;
 }
 
 const float Movement::getMovementStep() const
@@ -11,6 +12,10 @@ const float Movement::getMovementStep() const
 	return movement_step_;
 }
 
+const float Movement::getEdgeStep() const
+{
+	return edge_step_;
+}
 MoveDirection Movement::getMoveDirection() const
 {
 	return move_direction_;

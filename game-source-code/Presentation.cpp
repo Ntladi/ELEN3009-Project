@@ -1,19 +1,12 @@
 #include <Presentation.h>
 #include "Constants.h"
+
 Presentation::Presentation()
 {
 	game_mode_ = GameModes::NONE;
 	screen_state_ = ScreenStates::SPLASHSCREEN;
-}
-
-void Presentation::createWindow()
-{
 	window_ = std::make_shared<sf::RenderWindow>();
-	window_->create(
-			sf::VideoMode(Constants::SCREEN_X_LENGTH,
-					Constants::SCREEN_Y_LENGTH), "Dual Invaders",
-			sf::Style::Close);
-	window_->setFramerateLimit(60);
+	window_handler_.createWindow(window_);
 }
 
 void Presentation::initializeSpriteSizes(const map_of_two_floats &sizes)
@@ -26,32 +19,11 @@ bool Presentation::isPlaying() const
 	return screen_state_ == ScreenStates::GAME_SCREEN;
 }
 
-void Presentation::displaySprite(const ObjectType &object,
+void Presentation::drawObject(const ObjectType &object,
 		const Orientation &orientation, const two_floats &position)
 {
-
 	sprites_.displaySprite(object,orientation,position);
 	sprites_.drawLatestObject(window_);
-}
-
-void Presentation::events()
-{
-	sf::Event evnt;
-
-	while (window_->pollEvent(evnt))
-	{
-		switch (evnt.type)
-		{
-		case sf::Event::Closed:
-			window_->close();
-			break;
-		case sf::Event::KeyPressed:
-			checkPressed();
-			break;
-		default:
-			break;
-		}
-	}
 }
 
 void Presentation::checkPressed()
@@ -87,7 +59,9 @@ void Presentation::displayWindow()
 
 std::vector<bool> Presentation::checkInputs()
 {
-	events();
+	if (window_handler_.events(window_))
+		checkPressed();
+
 	player_input_handler_.resetInputs();
 
 	if (game_mode_ == GameModes::SINGLE_PLAYER_MIRRORED)
@@ -102,16 +76,7 @@ std::vector<bool> Presentation::checkInputs()
 
 void Presentation::clearWindow()
 {
-	window_->clear(sf::Color::White);
-
-	if (screen_state_ == ScreenStates::SPLASHSCREEN)
-		window_->draw(backgrounds_.getSplashScreen());
-	if (screen_state_ == ScreenStates::GAME_SCREEN)
-		window_->draw(backgrounds_.getBackgroundScreen());
-	if (screen_state_ == ScreenStates::GAME_OVER)
-		window_->draw(backgrounds_.getGameOverScreen());
-	if (screen_state_ == ScreenStates::GAME_WON)
-		window_->draw(backgrounds_.getGameWonScreen());
+	window_handler_.clearWindow(screen_state_,window_);
 }
 
 void Presentation::setGameOver()
@@ -124,7 +89,8 @@ void Presentation::setGameWon()
 	screen_state_ = ScreenStates::GAME_WON;
 }
 
-GameModes Presentation::getGameMode() const
+void Presentation::drawScore(const unsigned int & score)
 {
-	return game_mode_;
+
 }
+

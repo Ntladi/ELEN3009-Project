@@ -1,6 +1,7 @@
 #ifndef MOVEMENT_H_
 #define MOVEMENT_H_
 #include "MoveDirection.h"
+#include "Constants.h"
 
 class Movement
 {
@@ -9,6 +10,7 @@ public:
 	void setMoveDirection(const MoveDirection& moveDirection);
 	MoveDirection getMoveDirection() const;
 	const float getMovementStep() const;
+	const float getEdgeStep() const;
 	void changeHorizontalDirection();
 	bool isMovingUp() const;
 	bool isMovingDown() const;
@@ -19,6 +21,7 @@ public:
 private:
 	MoveDirection move_direction_;
 	float movement_step_;
+	float edge_step_;
 };
 
 #endif

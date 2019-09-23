@@ -59,9 +59,9 @@ void Player::shoot()
 
 bool Player::isNotMovingVertucally()
 {
-	if ((position_.getYPosition() < (parameters_.getTopEdge() + 5)))
+	if ((position_.getYPosition() <= (parameters_.getTopEdge())))
 		return true;
-	if ((position_.getYPosition() > (parameters_.getBottomEdge() - 5)))
+	if ((position_.getYPosition() >= (parameters_.getBottomEdge())))
 		return true;
 	return false;
 }
@@ -79,9 +79,9 @@ void Player::movePlayerHorizontally()
 
 void Player::changeOrientation()
 {
-	if (position_.getYPosition() > parameters_.getBottomEdge() - 5)
+	if (position_.getYPosition() >= parameters_.getBottomEdge())
 		parameters_.setOrientation(Orientation::FACE_UP);
-	else if (position_.getYPosition() < parameters_.getTopEdge() + 5)
+	else if (position_.getYPosition() <= parameters_.getTopEdge())
 		parameters_.setOrientation(Orientation::FACE_DOWN);
 }
 

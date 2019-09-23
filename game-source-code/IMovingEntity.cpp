@@ -27,10 +27,10 @@ bool IMovingEntity::isAtEdgeOfScreen()
 bool IMovingEntity::isAtEndOfScreen()
 {
 	updateHitBox();
-	if ((position_.getYPosition() - movement_.getMovementStep()
+	if ((position_.getYPosition() - movement_.getEdgeStep()
 			< parameters_.getTopEdge()) && movement_.isMovingUp())
 		return true;
-	if ((position_.getYPosition() + movement_.getMovementStep()
+	if ((position_.getYPosition() + movement_.getEdgeStep()
 			> parameters_.getBottomEdge()) && movement_.isMovingDown())
 		return true;
 	return false;

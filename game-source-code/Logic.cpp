@@ -2,7 +2,6 @@
 
 Logic::Logic()
 {
-	presentation_.createWindow();
 }
 
 void Logic::loadSizes()
@@ -70,13 +69,13 @@ void Logic::run()
 
 void Logic::setObjects(std::shared_ptr<IMovingEntity> &object)
 {
-	presentation_.displaySprite(object->getObjectType(), object->getOrientation(),
+	presentation_.drawObject(object->getObjectType(), object->getOrientation(),
 			object->getPosition());
 }
 
 void Logic::setObjects(std::shared_ptr<IEntity> &object)
 {
-	presentation_.displaySprite(object->getObjectType(), object->getOrientation(),
+	presentation_.drawObject(object->getObjectType(), object->getOrientation(),
 			object->getPosition());
 }
 
@@ -93,6 +92,8 @@ void Logic::checkColisions()
 	collision_handler_.handlecollisions(player_bullets, aliens, players,
 			alien_bullets);
 	object_factory_.checkPlayer();
+
+	presentation_.drawScore(collision_handler_.getScore());
 }
 
 void Logic::checkGameOver()
