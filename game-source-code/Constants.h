@@ -34,7 +34,7 @@ public:
 	const static constexpr float TIME_BETWEEN_ALIEN_SHOTS = 2;
 	const static constexpr float TIME_BEFORE_1ST_POWER_UP = 6;
 	const static constexpr float TIME_BEFORE_2ND_POWER_UP = 15;
-	const static constexpr float MAX_ALIEN_SHOTS_PER_ROW = 10;
+	const static constexpr float MAX_ALIEN_SHOTS_PER_ROW = 5;
 
 	const static constexpr float PLAYER_INITAL_X_POSITION = SCREEN_X_LENGTH / 2;
 	const static constexpr float ALIEN_INITAL_X_POSITION = ALIEN_X_LENGTH / 2;
@@ -50,6 +50,21 @@ public:
 	const static constexpr float ALIEN_WORTH = 200;
 	const static constexpr float PLAYER_WORTH = -200;
 	const static constexpr float BULLET_WORTH = 20;
+
+	const static constexpr float HIGH_SCORE_INITIAL_CHAR_SIZE = 42*SCALE;
+	const static constexpr float HIGH_SCORE_INITIAL_X = 385*SCALE;
+	const static constexpr float HIGH_SCORE_INITIAL_Y = 125*SCALE;
+
+	const static constexpr float SCORE_CHAR_SIZE = 15*SCALE;
+	const static constexpr float SCORE_INITIAL_X = 475*SCALE;
+	const static constexpr float SCORE_INITIAL_Y = 0;
+
+	const static constexpr float FINAL_SCORE_CHAR_SIZE = 22*SCALE;
+	const static constexpr float FINAL_SCORE_X = 260*SCALE;
+
+	const static constexpr float FINAL_SCORE_Y = 75*SCALE;
+	const static constexpr float FINAL_HIGH_SCORE_Y = 35*SCALE;
+
 };
 
 #endif

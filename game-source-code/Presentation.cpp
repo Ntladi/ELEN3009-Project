@@ -1,5 +1,6 @@
 #include <Presentation.h>
 #include "Constants.h"
+#include <iostream>
 
 Presentation::Presentation()
 {
@@ -76,7 +77,9 @@ std::vector<bool> Presentation::checkInputs()
 
 void Presentation::clearWindow()
 {
-	window_handler_.clearWindow(screen_state_,window_);
+	auto score = score_.getScore(screen_state_);
+	auto high_score = score_.getHighScore(screen_state_);
+	window_handler_.clearWindow(screen_state_,window_, score, high_score);
 }
 
 void Presentation::setGameOver()
@@ -89,8 +92,8 @@ void Presentation::setGameWon()
 	screen_state_ = ScreenStates::GAME_WON;
 }
 
-void Presentation::drawScore(const unsigned int & score)
+void Presentation::drawScore(const int & score)
 {
-
+	score_.setScore(score);
 }
 

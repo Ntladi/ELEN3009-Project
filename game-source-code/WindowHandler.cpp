@@ -1,20 +1,35 @@
 #include <WindowHandler.h>
 
-void WindowHandler::clearWindow(ScreenStates & state, window_ptr & window)
+void WindowHandler::clearWindow(ScreenStates &state, window_ptr &window,
+		text_ptr &score, text_ptr &high_score)
 {
 	window->clear(sf::Color::White);
 
-	if (state == ScreenStates::SPLASHSCREEN)
+	switch (state)
+	{
+	case ScreenStates::SPLASHSCREEN:
 		window->draw(backgrounds_.getSplashScreen());
-	if (state == ScreenStates::GAME_SCREEN)
+		window->draw(*high_score);
+		break;
+	case ScreenStates::GAME_SCREEN:
 		window->draw(backgrounds_.getBackgroundScreen());
-	if (state == ScreenStates::GAME_OVER)
+		window->draw(*score);
+		break;
+	case ScreenStates::GAME_OVER:
 		window->draw(backgrounds_.getGameOverScreen());
-	if (state == ScreenStates::GAME_WON)
+		window->draw(*score);
+		window->draw(*high_score);
+		break;
+	case ScreenStates::GAME_WON:
 		window->draw(backgrounds_.getGameWonScreen());
+		window->draw(*score);
+		window->draw(*high_score);
+		break;
+	}
+
 }
 
-void WindowHandler::createWindow(window_ptr & window)
+void WindowHandler::createWindow(window_ptr &window)
 {
 	window->create(
 			sf::VideoMode(Constants::SCREEN_X_LENGTH,
@@ -23,7 +38,7 @@ void WindowHandler::createWindow(window_ptr & window)
 	window->setFramerateLimit(60);
 }
 
-bool WindowHandler::events(window_ptr & window)
+bool WindowHandler::events(window_ptr &window)
 {
 	bool isPressed = false;
 	sf::Event evnt;

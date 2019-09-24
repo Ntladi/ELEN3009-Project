@@ -9,16 +9,16 @@ Backgrounds::Backgrounds()
 void Backgrounds::setTextures()
 {
 	splash_screen_texture_ = std::make_shared<sf::Texture>();
-	splash_screen_texture_->loadFromFile("Assets/SplashScreen.jpg");
+	splash_screen_texture_->loadFromFile("Assets/SplashScreen.png");
 
 	background_screen_texture_ = std::make_shared<sf::Texture>();
 	background_screen_texture_->loadFromFile("Assets/BackgroundScreen.jpg");
 
 	game_over_screen_texture_ = std::make_shared<sf::Texture>();
-	game_over_screen_texture_->loadFromFile("Assets/GameOverScreen.jpg");
+	game_over_screen_texture_->loadFromFile("Assets/GameOverScreen.png");
 
 	game_won_screen_texture_ = std::make_shared<sf::Texture>();
-	game_won_screen_texture_->loadFromFile("Assets/GameWonScreen.jpg");
+	game_won_screen_texture_->loadFromFile("Assets/GameWonScreen.png");
 }
 
 void Backgrounds::setShapes()
