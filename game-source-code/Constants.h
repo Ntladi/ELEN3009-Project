@@ -4,7 +4,7 @@
 struct Constants
 {
 public:
-	const static constexpr float SCALE = 2;
+	const static constexpr float SCALE = 1.3;
 	const static constexpr float SCREEN_X_LENGTH = 960*SCALE;
 	const static constexpr float SCREEN_Y_LENGTH = 500*SCALE;
 

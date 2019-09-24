@@ -14,8 +14,6 @@ void CollisionHandler::handlecollisions(vec_of_moving_objects &player_bullets,
 		vec_of_moving_objects &aliens, vec_of_moving_objects &players,
 		vec_of_moving_objects &alien_bullets)
 {
-	//auto player_1_lives = players.at(0)->getLives();
-	//is_up_player_hit_ = false;
 	dualCollisions(player_bullets, aliens);
 	monoCollisions(player_bullets, players);
 	dualCollisions(alien_bullets,players);
@@ -23,8 +21,6 @@ void CollisionHandler::handlecollisions(vec_of_moving_objects &player_bullets,
 	monoCollisions(player_bullets,player_bullets);
 	monoCollisions(player_bullets,alien_bullets);
 
-	//if(player_1_lives < players.at(0)->getLives())
-		//is_up_player_hit_ = true;
 }
 
 void CollisionHandler::dualCollisions(vec_of_moving_objects &player_bullets,
@@ -65,7 +61,6 @@ void CollisionHandler::monoCollisions(vec_of_moving_objects &objects,
 				checkMonoCollision(players, i, Orientation::FACE_DOWN);
 			else if (i->getOrientation() == Orientation::FACE_DOWN)
 				checkMonoCollision(players, i, Orientation::FACE_UP);
-
 		}
 	}
 }

@@ -14,7 +14,7 @@ void PlayerBulletFactory::shoot(Orientation orientation, two_floats position)
 					< Constants::TIME_BEFORE_2ND_POWER_UP)
 		makeMultiShotBullets(orientation, position);
 	else if (stopwatch_.getTimeElapsed() > Constants::TIME_BEFORE_2ND_POWER_UP)
-		makePiercerBullet(orientation,position);
+		makeMultiShotPiercer(orientation,position);
 }
 
 void PlayerBulletFactory::makeStandardBullet(Orientation orientation,
@@ -26,6 +26,24 @@ void PlayerBulletFactory::makeStandardBullet(Orientation orientation,
 	bulletsFired_.push_back(newBullet);
 }
 
+
+void PlayerBulletFactory::makeMultiShotPiercer(Orientation orientation, two_floats position)
+{
+	makePiercerBullet(orientation,position);
+
+	auto [x_position, y_position] = position;
+	x_position += Constants::PLAYER_X_LENGTH/2;
+	two_floats new_pos = {x_position, y_position};
+
+	makePiercerBullet(orientation, new_pos);
+
+	std::tie(x_position,y_position) = position;
+	x_position -= Constants::PLAYER_X_LENGTH/2;
+	new_pos = {x_position, y_position};
+
+	makePiercerBullet(orientation, new_pos);
+
+}
 void PlayerBulletFactory::makePiercerBullet(Orientation orientation,
 		two_floats position)
 {
@@ -37,8 +55,6 @@ void PlayerBulletFactory::makePiercerBullet(Orientation orientation,
 void PlayerBulletFactory::makeMultiShotBullets(Orientation orientation,
 		two_floats position)
 {
-	makeStandardBullet(orientation, position);
-
 	bullet_ptr newLeftBullet = std::make_shared<LeftDiagonalBullet>(position,
 			orientation);
 	bulletsFired_.push_back(newLeftBullet);

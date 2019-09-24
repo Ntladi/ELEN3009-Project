@@ -6,6 +6,8 @@ class Barrier : public IEntity
 {
 	Barrier(Orientation orientation = Orientation::FACE_UP);
 
+private:
+
 };
 
 #endif

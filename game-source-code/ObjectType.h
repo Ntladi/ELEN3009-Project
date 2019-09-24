@@ -9,6 +9,7 @@ enum class ObjectType
 	PIERCER_BULLET,
 	ALIEN_BULLET,
 	PLAYER_GLYPH,
+	BARRIER,
 	NONE
 };
 

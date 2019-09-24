@@ -25,6 +25,7 @@ private:
 	StopWatch stopwatch_;
 	void removeWaste();
 	void makeStandardBullet(Orientation orientation, two_floats position);
+	void makeMultiShotPiercer(Orientation orientation, two_floats position);
 	void makePiercerBullet(Orientation orientation, two_floats position);
 	void makeMultiShotBullets(Orientation orientation, two_floats position);
 };
