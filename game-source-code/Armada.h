@@ -19,7 +19,6 @@ public:
 	vec_of_bullets getOnslaught();
 	bool isGameOver();
 	bool isArmadaEmpty();
-
 private:
 	aliens_2d armada_;
 	BulletFactory bullet_factory_;

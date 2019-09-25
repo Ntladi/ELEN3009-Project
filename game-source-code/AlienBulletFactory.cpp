@@ -30,7 +30,6 @@ void BulletFactory::generateBullets(aliens_2d &aliens, const int &size)
 			shot_col1 = (shot_col1 + i) % aliens.size();
 			addBullet(endOfCols, shot_col1, aliens);
 		}
-
 	}
 }
 

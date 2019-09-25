@@ -22,6 +22,7 @@ void PlayerGlyph::setPosition(const two_floats & position)
 	auto [x_position,y_position] = position;
 	position_.setXPosition(x_position);
 	position_.setYPosition(y_position);
+	updateHitBox();
 }
 
 two_floats PlayerGlyph::initializePosition()

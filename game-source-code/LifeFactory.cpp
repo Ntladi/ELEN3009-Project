@@ -38,8 +38,8 @@ void LifeFactory::generateGlyphs()
 		glyphs_.push_back(new_life);
 
 		if(orientation_ == Orientation::FACE_UP)
-			x_position += std::get<0>(temp_glyph.getSize()) + 5;
+			x_position += std::get<0>(temp_glyph.getSize()) + Constants::PLAYER_GLYPH_OFFSET;
 		else if(orientation_ == Orientation::FACE_DOWN)
-			x_position -= std::get<0>(temp_glyph.getSize()) + 5;
+			x_position -= std::get<0>(temp_glyph.getSize()) + Constants::PLAYER_GLYPH_OFFSET;
 	}
 }

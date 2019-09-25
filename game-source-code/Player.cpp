@@ -117,8 +117,8 @@ void Player::resetPosition(Orientation orientation)
 
 	position_.setXPosition(x_position);
 	position_.setYPosition(y_position);
-
 	parameters_.resetHit();
+	startClock();
 }
 
 bool Player::getHit() const
