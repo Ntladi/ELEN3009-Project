@@ -110,7 +110,7 @@ bool ObjectFactory::gameWonStatus() const
 	return (up_armada_->isArmadaEmpty() && down_armada_->isArmadaEmpty());
 }
 
-void ObjectFactory::changePlayerDirections(std::vector<bool> &inputs)
+void ObjectFactory::changePlayerDirections(const std::vector<bool> &inputs)
 {
 	vec_of_object_ptrs barriers;
 	getBarriers(barriers);

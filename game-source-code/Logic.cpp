@@ -19,7 +19,7 @@ void Logic::reset()
 	setPositions();
 }
 
-void Logic::process(std::vector<bool> &inputs)
+void Logic::process(const std::vector<bool> &inputs)
 {
 	object_factory_.changePlayerDirections(inputs);
 	moveAllObjects();

@@ -107,17 +107,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab4bcca663737f2336bc945a9c5642e35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_factory.html#ab4bcca663737f2336bc945a9c5642e35">getMovingObjects</a> (<a class="el" href="_logic_8h.html#a2618eadaf948b4b69b555abf9121515c">vec_of_moving_object_ptrs</a> &amp;movingObjects)</td></tr>
 <tr class="memdesc:ab4bcca663737f2336bc945a9c5642e35"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method manipulates a vector containing all movable game objects of type <a class="el" href="class_i_moving_entity.html">IMovingEntity</a> from the <a class="el" href="class_logic.html" title="This class is the main class of the logic layer. The class manages when and how the game entities on ...">Logic</a> class.  <a href="class_object_factory.html#ab4bcca663737f2336bc945a9c5642e35">More...</a><br /></td></tr>
 <tr class="separator:ab4bcca663737f2336bc945a9c5642e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1ff943e7f784deb7d5cc8712face2c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_factory.html#af1ff943e7f784deb7d5cc8712face2c2">changePlayerDirections</a> (std::vector&lt; bool &gt; &amp;inputs)</td></tr>
-<tr class="memdesc:af1ff943e7f784deb7d5cc8712face2c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method receives a vector of player inputs from the <a class="el" href="class_logic.html" title="This class is the main class of the logic layer. The class manages when and how the game entities on ...">Logic</a> class and queries the <a class="el" href="class_player_object_handler.html">PlayerObjectHandler</a> class to manipulate the player.  <a href="class_object_factory.html#af1ff943e7f784deb7d5cc8712face2c2">More...</a><br /></td></tr>
-<tr class="separator:af1ff943e7f784deb7d5cc8712face2c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a883bcca1119baef57bdd67b47020aa27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_factory.html#a883bcca1119baef57bdd67b47020aa27">changePlayerDirections</a> (const std::vector&lt; bool &gt; &amp;inputs)</td></tr>
+<tr class="memdesc:a883bcca1119baef57bdd67b47020aa27"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method receives a constant vector of player inputs from the <a class="el" href="class_logic.html" title="This class is the main class of the logic layer. The class manages when and how the game entities on ...">Logic</a> class and queries the <a class="el" href="class_player_object_handler.html">PlayerObjectHandler</a> class to manipulate the player.  <a href="class_object_factory.html#a883bcca1119baef57bdd67b47020aa27">More...</a><br /></td></tr>
+<tr class="separator:a883bcca1119baef57bdd67b47020aa27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeee15544d28aa610c833042f3381535c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_factory.html#aeee15544d28aa610c833042f3381535c">resetPlayerIfHit</a> ()</td></tr>
 <tr class="memdesc:aeee15544d28aa610c833042f3381535c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method resets a <a class="el" href="class_player.html">Player</a> object's position and its power-up counter if its hit.  <a href="class_object_factory.html#aeee15544d28aa610c833042f3381535c">More...</a><br /></td></tr>
 <tr class="separator:aeee15544d28aa610c833042f3381535c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a083afbe71d41386575ce33814c9d2619"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_factory.html#a083afbe71d41386575ce33814c9d2619">gameOverStatus</a> () const</td></tr>
-<tr class="memdesc:a083afbe71d41386575ce33814c9d2619"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns true if the game over conditions have been met.  <a href="class_object_factory.html#a083afbe71d41386575ce33814c9d2619">More...</a><br /></td></tr>
+<tr class="memdesc:a083afbe71d41386575ce33814c9d2619"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns true if the game over conditions have been met. No modifications are are made to member variables.  <a href="class_object_factory.html#a083afbe71d41386575ce33814c9d2619">More...</a><br /></td></tr>
 <tr class="separator:a083afbe71d41386575ce33814c9d2619"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf24b9c49ccb9d6f30fa8f413226b190"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_factory.html#adf24b9c49ccb9d6f30fa8f413226b190">gameWonStatus</a> () const</td></tr>
-<tr class="memdesc:adf24b9c49ccb9d6f30fa8f413226b190"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns true if the winning conditions have been met.  <a href="class_object_factory.html#adf24b9c49ccb9d6f30fa8f413226b190">More...</a><br /></td></tr>
+<tr class="memdesc:adf24b9c49ccb9d6f30fa8f413226b190"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns true if the winning conditions have been met. No modifications are are made to member variables.  <a href="class_object_factory.html#adf24b9c49ccb9d6f30fa8f413226b190">More...</a><br /></td></tr>
 <tr class="separator:adf24b9c49ccb9d6f30fa8f413226b190"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a664ad6367f3996df097461d374f84b25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_factory.html#a664ad6367f3996df097461d374f84b25">startPowerClock</a> ()</td></tr>
 <tr class="memdesc:a664ad6367f3996df097461d374f84b25"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method resets the power-up timer for both <a class="el" href="class_player.html">Player</a> objects.  <a href="class_object_factory.html#a664ad6367f3996df097461d374f84b25">More...</a><br /></td></tr>
@@ -193,8 +193,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="af1ff943e7f784deb7d5cc8712face2c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1ff943e7f784deb7d5cc8712face2c2">&#9670;&nbsp;</a></span>changePlayerDirections()</h2>
+<a id="a883bcca1119baef57bdd67b47020aa27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a883bcca1119baef57bdd67b47020aa27">&#9670;&nbsp;</a></span>changePlayerDirections()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -202,17 +202,17 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void ObjectFactory::changePlayerDirections </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; bool &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; bool &gt; &amp;&#160;</td>
           <td class="paramname"><em>inputs</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>This method receives a vector of player inputs from the <a class="el" href="class_logic.html" title="This class is the main class of the logic layer. The class manages when and how the game entities on ...">Logic</a> class and queries the <a class="el" href="class_player_object_handler.html">PlayerObjectHandler</a> class to manipulate the player. </p>
+<p>This method receives a constant vector of player inputs from the <a class="el" href="class_logic.html" title="This class is the main class of the logic layer. The class manages when and how the game entities on ...">Logic</a> class and queries the <a class="el" href="class_player_object_handler.html">PlayerObjectHandler</a> class to manipulate the player. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">inputs</td><td>of type std::vector&lt;bool&gt; </td></tr>
+    <tr><td class="paramname">inputs</td><td>of type const std::vector&lt;bool&gt; </td></tr>
   </table>
   </dd>
 </dl>
@@ -234,7 +234,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This method returns true if the game over conditions have been met. </p>
+<p>This method returns true if the game over conditions have been met. No modifications are are made to member variables. </p>
 <dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
@@ -254,7 +254,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This method returns true if the winning conditions have been met. </p>
+<p>This method returns true if the winning conditions have been met. No modifications are are made to member variables. </p>
 <dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>

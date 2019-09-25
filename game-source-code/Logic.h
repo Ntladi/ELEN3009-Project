@@ -45,9 +45,9 @@ private:
 	/** \brief While the game is running, this method receives
 	 * a vector containing all player inputs from the Presentation
 	 * class and manipulates all game objects accordingly.
-	 * \param inputs of type std::vector<bool>.
+	 * \param inputs of type const std::vector<bool>.
 	 */
-	void process(std::vector<bool> & inputs);
+	void process(const std::vector<bool> & inputs);
 
 	/** \brief This method communicates the initial sizes of all
 	 *  game objects to the Presentation class.

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gamemodes_1026',['GameModes',['../_game_modes_8h.html#ae1530eae5079db496724a4857d911f09',1,'GameModes.h']]]
+  ['gamemode_1024',['GameMode',['../_game_mode_8h.html#aaf5ef5a17b53e9997c837b07015589de',1,'GameMode.h']]]
 ];

@@ -1,7 +1,7 @@
-#ifndef GAMEMODES_H_
-#define GAMEMODES_H_
+#ifndef GAMEMODE_H_
+#define GAMEMODE_H_
 
-enum class GameModes{
+enum class GameMode{
 	SINGLE_PLAYER_MIRRORED,
 	SINGLE_PLAYER_INVERTED,
 	MULTI_PLAYER,

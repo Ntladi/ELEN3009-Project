@@ -15,17 +15,17 @@ void Score::loadHighScore()
 	inFile.close();
 }
 
-text_ptr Score::getScore(ScreenStates screenstate)
+text_ptr Score::getScore(ScreenState screenstate)
 {
 	switch(screenstate)
 	{
-	case ScreenStates::GAME_SCREEN:
+	case ScreenState::GAME_SCREEN:
 		setGamePosition();
 		break;
-	case ScreenStates::GAME_OVER:
+	case ScreenState::GAME_OVER:
 		setFinalScorePosition();
 		break;
-	case ScreenStates::GAME_WON:
+	case ScreenState::GAME_WON:
 		setFinalScorePosition();
 		break;
 	default:
@@ -35,17 +35,17 @@ text_ptr Score::getScore(ScreenStates screenstate)
 	return score_ptr_;
 }
 
-text_ptr Score::getHighScore(ScreenStates screenstate)
+text_ptr Score::getHighScore(ScreenState screenstate)
 {
 	switch(screenstate)
 	{
-	case ScreenStates::SPLASHSCREEN:
+	case ScreenState::SPLASHSCREEN:
 		setSplashPosition();
 		break;
-	case ScreenStates::GAME_OVER:
+	case ScreenState::GAME_OVER:
 		setFinalHighScorePosition();
 		break;
-	case ScreenStates::GAME_WON:
+	case ScreenState::GAME_WON:
 		setFinalHighScorePosition();
 		break;
 	default:

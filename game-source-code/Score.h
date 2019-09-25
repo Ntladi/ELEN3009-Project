@@ -1,10 +1,10 @@
 #ifndef SCORE_H_
 #define SCORE_H_
+#include <ScreenState.h>
 #include <SFML/Graphics.hpp>
 #include <fstream>
 #include <memory>
 #include "Constants.h"
-#include "ScreenStates.h"
 using text_ptr = std::shared_ptr<sf::Text>;
 
 class Score
@@ -12,8 +12,8 @@ class Score
 public:
 	Score();
 	void setScore(const int & score);
-	text_ptr getScore(ScreenStates screen_state);
-	text_ptr getHighScore(ScreenStates screen_state);
+	text_ptr getScore(ScreenState screen_state);
+	text_ptr getHighScore(ScreenState screen_state);
 private:
 	int high_score_;
 	int current_score_;

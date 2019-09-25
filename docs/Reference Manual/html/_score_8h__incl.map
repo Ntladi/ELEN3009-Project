@@ -1,8 +1,8 @@
 <map id="Score.h" name="Score.h">
-<area shape="rect" id="node1" title=" " alt="" coords="260,5,327,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,144,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="169,80,234,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="259,80,328,107"/>
-<area shape="rect" id="node5" href="$_constants_8h.html" title=" " alt="" coords="353,80,445,107"/>
-<area shape="rect" id="node6" href="$_screen_states_8h.html" title=" " alt="" coords="469,80,581,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="298,5,365,32"/>
+<area shape="rect" id="node2" href="$_screen_state_8h.html" title=" " alt="" coords="5,80,111,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="135,80,274,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="299,80,364,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="389,80,458,107"/>
+<area shape="rect" id="node6" href="$_constants_8h.html" title=" " alt="" coords="483,80,575,107"/>
 </map>

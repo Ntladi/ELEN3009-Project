@@ -12,12 +12,12 @@ class PlayerObjectHandler
 {
 public:
 	void changePlayerDirections(player_ptr &up_player, player_ptr &down_player,
-			std::vector<bool> &inputs, vec_of_object_ptrs & barriers);
+			const std::vector<bool> &inputs, vec_of_object_ptrs & barriers);
 private:
 	bool isColliding(player_ptr &up_player, player_ptr &down_player,
 			MoveDirection up_direction, MoveDirection down_direction,
 			Orientation up_orientation, Orientation down_orientation, vec_of_object_ptrs & barriers );
-	void getDirection(std::vector<bool> &inputs,player_ptr &up_player, player_ptr &down_player);
+	void getDirection(const std::vector<bool> &inputs,player_ptr &up_player, player_ptr &down_player);
 
 	bool checkBarrierCollisions(HitBox &hitbox,vec_of_object_ptrs & barriers);
 	SeperatingAxisTheorem axis_;

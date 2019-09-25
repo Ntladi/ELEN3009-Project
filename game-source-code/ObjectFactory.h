@@ -46,11 +46,11 @@ public:
 	 */
 	void getMovingObjects(vec_of_moving_object_ptrs& movingObjects);
 
-	/** \brief This method receives a vector of player inputs from the Logic class
-	 * and queries the PlayerObjectHandler class to manipulate the player.
-	 * \param inputs of type std::vector<bool>
+	/** \brief This method receives a constant  vector of player inputs from the
+	 * Logic class and queries the PlayerObjectHandler class to manipulate the player.
+	 * \param inputs of type const std::vector<bool>
 	 */
-	void changePlayerDirections(std::vector<bool> &inputs);
+	void changePlayerDirections(const std::vector<bool> &inputs);
 
 	/** \brief This method resets a Player object's position and its power-up counter
 	 * if its hit.
@@ -58,11 +58,13 @@ public:
 	void resetPlayerIfHit();
 
 	/** \brief This method returns true if the game over conditions have been met.
+	 * No modifications are are made to member variables.
 	 *	\return bool
 	 */
 	bool gameOverStatus() const;
 
 	/** \brief This method returns true if the winning conditions have been met.
+	 * No modifications are are made to member variables.
 	 * \return bool
 	 */
 	bool gameWonStatus() const;

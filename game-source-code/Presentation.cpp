@@ -4,8 +4,8 @@
 
 Presentation::Presentation()
 {
-	game_mode_ = GameModes::NONE;
-	screen_state_ = ScreenStates::SPLASHSCREEN;
+	game_mode_ = GameMode::NONE;
+	screen_state_ = ScreenState::SPLASHSCREEN;
 	window_ = std::make_shared<sf::RenderWindow>();
 	window_handler_.createWindow(window_);
 }
@@ -17,7 +17,7 @@ void Presentation::initializeSpriteSizes(const map_of_two_floats &sizes)
 
 bool Presentation::isPlaying() const
 {
-	return screen_state_ == ScreenStates::GAME_SCREEN;
+	return screen_state_ == ScreenState::GAME_SCREEN;
 }
 
 void Presentation::drawObject(const ObjectType &object,
@@ -27,28 +27,28 @@ void Presentation::drawObject(const ObjectType &object,
 	sprites_.drawLatestObject(window_);
 }
 
-void Presentation::checkPressed()
+void Presentation::setMode()
 {
-	if (screen_state_ == ScreenStates::SPLASHSCREEN)
+	if (screen_state_ == ScreenState::SPLASHSCREEN)
 	{
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
-			game_mode_ = GameModes::MULTI_PLAYER;
+			game_mode_ = GameMode::MULTI_PLAYER;
 		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::I))
-			game_mode_ = GameModes::SINGLE_PLAYER_INVERTED;
+			game_mode_ = GameMode::SINGLE_PLAYER_INVERTED;
 		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::M))
-			game_mode_ = GameModes::SINGLE_PLAYER_MIRRORED;
-		if (game_mode_ != GameModes::NONE)
-			screen_state_ = ScreenStates::GAME_SCREEN;
+			game_mode_ = GameMode::SINGLE_PLAYER_MIRRORED;
+		if (game_mode_ != GameMode::NONE)
+			screen_state_ = ScreenState::GAME_SCREEN;
 	}
-	else if (screen_state_ == ScreenStates::GAME_OVER
-			|| screen_state_ == ScreenStates::GAME_WON)
+	else if (screen_state_ == ScreenState::GAME_OVER
+			|| screen_state_ == ScreenState::GAME_WON)
 	{
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter))
 			window_->close();
 	}
 }
 
-bool Presentation::isWindowOpen()
+bool Presentation::isWindowOpen() const
 {
 	return window_->isOpen();
 }
@@ -61,15 +61,15 @@ void Presentation::displayWindow()
 std::vector<bool> Presentation::checkInputs()
 {
 	if (window_handler_.events(window_))
-		checkPressed();
+		setMode();
 
 	player_input_handler_.resetInputs();
 
-	if (game_mode_ == GameModes::SINGLE_PLAYER_MIRRORED)
+	if (game_mode_ == GameMode::SINGLE_PLAYER_MIRRORED)
 		player_input_handler_.singlePlayerMirroredInputs();
-	else if (game_mode_ == GameModes::SINGLE_PLAYER_INVERTED)
+	else if (game_mode_ == GameMode::SINGLE_PLAYER_INVERTED)
 		player_input_handler_.singlePlayerInvertedInputs();
-	else if (game_mode_ == GameModes::MULTI_PLAYER)
+	else if (game_mode_ == GameMode::MULTI_PLAYER)
 		player_input_handler_.multiPlayerInputs();
 
 	return player_input_handler_.getInputs();
@@ -84,12 +84,12 @@ void Presentation::clearWindow()
 
 void Presentation::setGameOver()
 {
-	screen_state_ = ScreenStates::GAME_OVER;
+	screen_state_ = ScreenState::GAME_OVER;
 }
 
 void Presentation::setGameWon()
 {
-	screen_state_ = ScreenStates::GAME_WON;
+	screen_state_ = ScreenState::GAME_WON;
 }
 
 void Presentation::drawScore(const int & score)

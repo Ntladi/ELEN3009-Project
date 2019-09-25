@@ -1,7 +1,7 @@
 #include <PlayerObjectHandler.h>
 
 void PlayerObjectHandler::changePlayerDirections(player_ptr &up_player,
-		player_ptr &down_player, std::vector<bool> &inputs,
+		player_ptr &down_player,const std::vector<bool> &inputs,
 		vec_of_object_ptrs &barriers)
 {
 	up_direction_ = MoveDirection::NONE;
@@ -51,7 +51,7 @@ bool PlayerObjectHandler::isColliding(player_ptr &up_player,
 	return axis_.isOverlapping(hit_box_1, hit_box_2);
 
 }
-void PlayerObjectHandler::getDirection(std::vector<bool> &inputs,
+void PlayerObjectHandler::getDirection(const std::vector<bool> &inputs,
 		player_ptr &up_player, player_ptr &down_player)
 {
 	if (up_player->isNotMovingVertucally())
