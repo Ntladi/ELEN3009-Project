@@ -52,3 +52,8 @@ void IEntity::hitEntity()
 {
 	parameters_.damage();
 }
+
+void IEntity::updateHitBox()
+{
+	hitbox_.setNewPositions(getPosition(), getSize());
+}

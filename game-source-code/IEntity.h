@@ -29,6 +29,7 @@ protected:
 	HitBox hitbox_;
 	Position position_;
 	virtual two_floats initializePosition() = 0;
+	void updateHitBox();
 
 };
 

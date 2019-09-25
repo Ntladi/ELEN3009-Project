@@ -5,10 +5,6 @@ MoveDirection IMovingEntity::getMoveDirection() const
 	return movement_.getMoveDirection();
 }
 
-void IMovingEntity::updateHitBox()
-{
-	hitbox_.setNewPositions(getPosition(), getSize());
-}
 
 bool IMovingEntity::isAtEdgeOfScreen()
 {

@@ -9,7 +9,6 @@ public:
 	virtual void move() = 0;
 protected:
 	Movement movement_;
-	void updateHitBox();
 	bool isAtEdgeOfScreen();
 	virtual bool isAtEndOfScreen();
 
