@@ -1,7 +1,7 @@
 <map id="PlayerGlyph" name="PlayerGlyph">
 <area shape="rect" id="node1" title=" " alt="" coords="206,333,299,360"/>
-<area shape="rect" id="node2" href="$class_i_entity.html" title=" " alt="" coords="223,257,282,284"/>
-<area shape="rect" id="node3" href="$class_parameters.html" title=" " alt="" coords="208,168,297,195"/>
+<area shape="rect" id="node2" href="$class_i_entity.html" title="This class is the main class by which all game objects inherit from." alt="" coords="223,257,282,284"/>
+<area shape="rect" id="node3" href="$class_parameters.html" title="This class is a data layer class that encapsulates the data members of the IEntity class." alt="" coords="208,168,297,195"/>
 <area shape="rect" id="node4" title=" " alt="" coords="29,5,76,32"/>
 <area shape="rect" id="node8" href="$class_position.html" title=" " alt="" coords="69,168,138,195"/>
 <area shape="rect" id="node5" title=" " alt="" coords="142,5,230,32"/>

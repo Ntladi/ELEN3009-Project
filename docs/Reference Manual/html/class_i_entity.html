@@ -72,13 +72,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>This class is the main class by which all game objects inherit from.  
+ <a href="class_i_entity.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_i_entity_8h_source.html">IEntity.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for IEntity:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_i_entity__inherit__graph.png" border="0" usemap="#_i_entity_inherit__map" alt="Inheritance graph"/></div>
 <map name="_i_entity_inherit__map" id="_i_entity_inherit__map">
-<area shape="rect" title=" " alt="" coords="175,5,234,32"/>
+<area shape="rect" title="This class is the main class by which all game objects inherit from." alt="" coords="175,5,234,32"/>
 <area shape="rect" href="class_barrier.html" title=" " alt="" coords="71,80,131,107"/>
 <area shape="rect" href="class_i_moving_entity.html" title=" " alt="" coords="155,80,254,107"/>
 <area shape="rect" href="class_player_glyph.html" title=" " alt="" coords="278,80,371,107"/>
@@ -95,8 +98,8 @@ Collaboration diagram for IEntity:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_i_entity__coll__graph.png" border="0" usemap="#_i_entity_coll__map" alt="Collaboration graph"/></div>
 <map name="_i_entity_coll__map" id="_i_entity_coll__map">
-<area shape="rect" title=" " alt="" coords="223,257,282,284"/>
-<area shape="rect" href="class_parameters.html" title=" " alt="" coords="208,168,297,195"/>
+<area shape="rect" title="This class is the main class by which all game objects inherit from." alt="" coords="223,257,282,284"/>
+<area shape="rect" href="class_parameters.html" title="This class is a data layer class that encapsulates the data members of the IEntity class." alt="" coords="208,168,297,195"/>
 <area shape="rect" title=" " alt="" coords="29,5,76,32"/>
 <area shape="rect" href="class_position.html" title=" " alt="" coords="69,168,138,195"/>
 <area shape="rect" title=" " alt="" coords="142,5,230,32"/>
@@ -111,33 +114,46 @@ Collaboration diagram for IEntity:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3b655de5cc8d629efb34f8e3a0acdb41"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#a3b655de5cc8d629efb34f8e3a0acdb41">~IEntity</a> ()</td></tr>
+<tr class="memdesc:a3b655de5cc8d629efb34f8e3a0acdb41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mandatory virtual destructor.  <a href="class_i_entity.html#a3b655de5cc8d629efb34f8e3a0acdb41">More...</a><br /></td></tr>
 <tr class="separator:a3b655de5cc8d629efb34f8e3a0acdb41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee393f9f560feb9440df1c39c4ebe1f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#aee393f9f560feb9440df1c39c4ebe1f7">getOrientation</a> () const</td></tr>
-<tr class="separator:aee393f9f560feb9440df1c39c4ebe1f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f123d2fad55a42e5673eacd6776e130"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_object_type_8h.html#a842c5e2e69277690b064bf363c017980">ObjectType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#a9f123d2fad55a42e5673eacd6776e130">getObjectType</a> () const</td></tr>
-<tr class="separator:a9f123d2fad55a42e5673eacd6776e130"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac187598f47340e20d6fde52ada4eb39d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#ac187598f47340e20d6fde52ada4eb39d">getPosition</a> () const</td></tr>
-<tr class="separator:ac187598f47340e20d6fde52ada4eb39d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a2cf16b36097294f49c6e14a0a14224"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#a1a2cf16b36097294f49c6e14a0a14224">getSize</a> () const</td></tr>
-<tr class="separator:a1a2cf16b36097294f49c6e14a0a14224"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bc6b87091665c0e4dc39c4f9177379f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_hit_box.html">HitBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#a8bc6b87091665c0e4dc39c4f9177379f">getHitBox</a> () const</td></tr>
-<tr class="separator:a8bc6b87091665c0e4dc39c4f9177379f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1812fef17be7d6e549b45620691d698d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#a1812fef17be7d6e549b45620691d698d">getStatus</a> () const</td></tr>
-<tr class="separator:a1812fef17be7d6e549b45620691d698d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad39ece42cf2320e1102b8cbc184be566"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#ad39ece42cf2320e1102b8cbc184be566">getScore</a> () const</td></tr>
-<tr class="separator:ad39ece42cf2320e1102b8cbc184be566"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8059ffd38915147f8141551add1f277b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#a8059ffd38915147f8141551add1f277b">getLives</a> () const</td></tr>
-<tr class="separator:a8059ffd38915147f8141551add1f277b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fd9ad8dcfb11af27cb9829d92540792"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#a7fd9ad8dcfb11af27cb9829d92540792">getOrientation</a> () const</td></tr>
+<tr class="memdesc:a7fd9ad8dcfb11af27cb9829d92540792"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns a constant Orientation enumeration, which details the current orientation of the object inherited from this class. It queries the <a class="el" href="class_parameters.html" title="This class is a data layer class that encapsulates the data members of the IEntity class.">Parameters</a> class to do so. No modifications are made to member variables.  <a href="class_i_entity.html#a7fd9ad8dcfb11af27cb9829d92540792">More...</a><br /></td></tr>
+<tr class="separator:a7fd9ad8dcfb11af27cb9829d92540792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25a97c2a502de997491a652a950428ca"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_object_type_8h.html#a842c5e2e69277690b064bf363c017980">ObjectType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#a25a97c2a502de997491a652a950428ca">getObjectType</a> () const</td></tr>
+<tr class="memdesc:a25a97c2a502de997491a652a950428ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns a constant ObjectType enumeration, which details the type of the object inherited from this class. It queries the <a class="el" href="class_parameters.html" title="This class is a data layer class that encapsulates the data members of the IEntity class.">Parameters</a> class to do so. No modifications are made to member variables.  <a href="class_i_entity.html#a25a97c2a502de997491a652a950428ca">More...</a><br /></td></tr>
+<tr class="separator:a25a97c2a502de997491a652a950428ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5991233900aa3df6ace57b4e8363cdd9"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#a5991233900aa3df6ace57b4e8363cdd9">getPosition</a> () const</td></tr>
+<tr class="memdesc:a5991233900aa3df6ace57b4e8363cdd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns a constant tuple of which each element is of type float. The tuple that is returned details the position of the object inherited from this class. The method queries the <a class="el" href="class_parameters.html" title="This class is a data layer class that encapsulates the data members of the IEntity class.">Parameters</a> class to do so. No modifications are made to member variables.  <a href="class_i_entity.html#a5991233900aa3df6ace57b4e8363cdd9">More...</a><br /></td></tr>
+<tr class="separator:a5991233900aa3df6ace57b4e8363cdd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43984ff0f63853a56501c8e99e332a5d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#a43984ff0f63853a56501c8e99e332a5d">getSize</a> () const</td></tr>
+<tr class="memdesc:a43984ff0f63853a56501c8e99e332a5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns a constant tuple of which each element is of type float. The tuple details the size of the object inherited from this class. queries the <a class="el" href="class_parameters.html" title="This class is a data layer class that encapsulates the data members of the IEntity class.">Parameters</a> class to do so. No modifications are made to member variables.  <a href="class_i_entity.html#a43984ff0f63853a56501c8e99e332a5d">More...</a><br /></td></tr>
+<tr class="separator:a43984ff0f63853a56501c8e99e332a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab05484562eb9c759453a06ac5977907c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_hit_box.html">HitBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#ab05484562eb9c759453a06ac5977907c">getHitBox</a> () const</td></tr>
+<tr class="memdesc:ab05484562eb9c759453a06ac5977907c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns a constant <a class="el" href="class_hit_box.html">HitBox</a> object, which details the boundary box of the object inherited from this class. No modifications are made to member variables.  <a href="class_i_entity.html#ab05484562eb9c759453a06ac5977907c">More...</a><br /></td></tr>
+<tr class="separator:ab05484562eb9c759453a06ac5977907c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a434a3f74b5c764627012c5e0b0428c94"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#a434a3f74b5c764627012c5e0b0428c94">getStatus</a> () const</td></tr>
+<tr class="memdesc:a434a3f74b5c764627012c5e0b0428c94"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns a constant boolean, which details whether the object inherited from this class is alive or not. It queries the <a class="el" href="class_parameters.html" title="This class is a data layer class that encapsulates the data members of the IEntity class.">Parameters</a> class to do so. No modifications are made to member variables.  <a href="class_i_entity.html#a434a3f74b5c764627012c5e0b0428c94">More...</a><br /></td></tr>
+<tr class="separator:a434a3f74b5c764627012c5e0b0428c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab13daaadb36b63e11eb4007a320400ae"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#ab13daaadb36b63e11eb4007a320400ae">getScore</a> () const</td></tr>
+<tr class="memdesc:ab13daaadb36b63e11eb4007a320400ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns a constant float, which details the worth of the object inherited from this class. It queries the <a class="el" href="class_parameters.html" title="This class is a data layer class that encapsulates the data members of the IEntity class.">Parameters</a> class to do so. No modifications are made to member variables.  <a href="class_i_entity.html#ab13daaadb36b63e11eb4007a320400ae">More...</a><br /></td></tr>
+<tr class="separator:ab13daaadb36b63e11eb4007a320400ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee2c1812821e3d8636fdc1154c635527"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#aee2c1812821e3d8636fdc1154c635527">getLives</a> () const</td></tr>
+<tr class="memdesc:aee2c1812821e3d8636fdc1154c635527"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns a constant integer, which details how many hit-points the object inherited from this class has left. It queries the <a class="el" href="class_parameters.html" title="This class is a data layer class that encapsulates the data members of the IEntity class.">Parameters</a> class to do so. No modifications are made to member variables.  <a href="class_i_entity.html#aee2c1812821e3d8636fdc1154c635527">More...</a><br /></td></tr>
+<tr class="separator:aee2c1812821e3d8636fdc1154c635527"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a735f69ac43f3bcdfefe081ef894e5b4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#a735f69ac43f3bcdfefe081ef894e5b4b">killEntity</a> ()</td></tr>
+<tr class="memdesc:a735f69ac43f3bcdfefe081ef894e5b4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method changes the status of the object inherited from this class from alive to dead. It does this through the <a class="el" href="class_parameters.html" title="This class is a data layer class that encapsulates the data members of the IEntity class.">Parameters</a> class.  <a href="class_i_entity.html#a735f69ac43f3bcdfefe081ef894e5b4b">More...</a><br /></td></tr>
 <tr class="separator:a735f69ac43f3bcdfefe081ef894e5b4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0bcbb262f4b9a5bd438d27401cf971b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#ae0bcbb262f4b9a5bd438d27401cf971b">hitEntity</a> ()</td></tr>
+<tr class="memdesc:ae0bcbb262f4b9a5bd438d27401cf971b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method decrements the total hit-points of the object inherited from this class. It does this through the <a class="el" href="class_parameters.html" title="This class is a data layer class that encapsulates the data members of the IEntity class.">Parameters</a> class.  <a href="class_i_entity.html#ae0bcbb262f4b9a5bd438d27401cf971b">More...</a><br /></td></tr>
 <tr class="separator:ae0bcbb262f4b9a5bd438d27401cf971b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a3d3141516c674499a5b9463208435c62"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#a3d3141516c674499a5b9463208435c62">initializePosition</a> ()=0</td></tr>
+<tr class="memdesc:a3d3141516c674499a5b9463208435c62"><td class="mdescLeft">&#160;</td><td class="mdescRight">This pure virtual method returns a tuple of which each element is of type float. It serves as an interface in order for objects which are inherited from this class to set their initial position.  <a href="class_i_entity.html#a3d3141516c674499a5b9463208435c62">More...</a><br /></td></tr>
 <tr class="separator:a3d3141516c674499a5b9463208435c62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaaaca732cb29443765672a2aea245dc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#aaaaca732cb29443765672a2aea245dc1">updateHitBox</a> ()</td></tr>
+<tr class="memdesc:aaaaca732cb29443765672a2aea245dc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method updates the <a class="el" href="class_hit_box.html">HitBox</a> object to ensure that its position relative to the position of the object inherited from this class is correct.  <a href="class_i_entity.html#aaaaca732cb29443765672a2aea245dc1">More...</a><br /></td></tr>
 <tr class="separator:aaaaca732cb29443765672a2aea245dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -149,7 +165,11 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:aa6bbbb49940a1eb11d7f2ebe3764904b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_position.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_entity.html#aa6bbbb49940a1eb11d7f2ebe3764904b">position_</a></td></tr>
 <tr class="separator:aa6bbbb49940a1eb11d7f2ebe3764904b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class is the main class by which all game objects inherit from. </p>
+<dl class="section author"><dt>Author</dt><dd>1599953 Ntladi Mohajane and 1705890 Tshepo Chokoe </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>3.0 </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3b655de5cc8d629efb34f8e3a0acdb41"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3b655de5cc8d629efb34f8e3a0acdb41">&#9670;&nbsp;</a></span>~IEntity()</h2>
 
@@ -173,17 +193,19 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Mandatory virtual destructor. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a8bc6b87091665c0e4dc39c4f9177379f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8bc6b87091665c0e4dc39c4f9177379f">&#9670;&nbsp;</a></span>getHitBox()</h2>
+<a id="ab05484562eb9c759453a06ac5977907c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab05484562eb9c759453a06ac5977907c">&#9670;&nbsp;</a></span>getHitBox()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_hit_box.html">HitBox</a> IEntity::getHitBox </td>
+          <td class="memname">const <a class="el" href="class_hit_box.html">HitBox</a> IEntity::getHitBox </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -191,16 +213,19 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This method returns a constant <a class="el" href="class_hit_box.html">HitBox</a> object, which details the boundary box of the object inherited from this class. No modifications are made to member variables. </p>
+<dl class="section return"><dt>Returns</dt><dd>const <a class="el" href="class_hit_box.html">HitBox</a> </dd></dl>
+
 </div>
 </div>
-<a id="a8059ffd38915147f8141551add1f277b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8059ffd38915147f8141551add1f277b">&#9670;&nbsp;</a></span>getLives()</h2>
+<a id="aee2c1812821e3d8636fdc1154c635527"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee2c1812821e3d8636fdc1154c635527">&#9670;&nbsp;</a></span>getLives()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int IEntity::getLives </td>
+          <td class="memname">const int IEntity::getLives </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -208,16 +233,19 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This method returns a constant integer, which details how many hit-points the object inherited from this class has left. It queries the <a class="el" href="class_parameters.html" title="This class is a data layer class that encapsulates the data members of the IEntity class.">Parameters</a> class to do so. No modifications are made to member variables. </p>
+<dl class="section return"><dt>Returns</dt><dd>const int </dd></dl>
+
 </div>
 </div>
-<a id="a9f123d2fad55a42e5673eacd6776e130"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f123d2fad55a42e5673eacd6776e130">&#9670;&nbsp;</a></span>getObjectType()</h2>
+<a id="a25a97c2a502de997491a652a950428ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25a97c2a502de997491a652a950428ca">&#9670;&nbsp;</a></span>getObjectType()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_object_type_8h.html#a842c5e2e69277690b064bf363c017980">ObjectType</a> IEntity::getObjectType </td>
+          <td class="memname">const <a class="el" href="_object_type_8h.html#a842c5e2e69277690b064bf363c017980">ObjectType</a> IEntity::getObjectType </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -225,16 +253,19 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This method returns a constant ObjectType enumeration, which details the type of the object inherited from this class. It queries the <a class="el" href="class_parameters.html" title="This class is a data layer class that encapsulates the data members of the IEntity class.">Parameters</a> class to do so. No modifications are made to member variables. </p>
+<dl class="section return"><dt>Returns</dt><dd>const ObjectType </dd></dl>
+
 </div>
 </div>
-<a id="aee393f9f560feb9440df1c39c4ebe1f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee393f9f560feb9440df1c39c4ebe1f7">&#9670;&nbsp;</a></span>getOrientation()</h2>
+<a id="a7fd9ad8dcfb11af27cb9829d92540792"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fd9ad8dcfb11af27cb9829d92540792">&#9670;&nbsp;</a></span>getOrientation()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> IEntity::getOrientation </td>
+          <td class="memname">const <a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> IEntity::getOrientation </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -242,16 +273,19 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This method returns a constant Orientation enumeration, which details the current orientation of the object inherited from this class. It queries the <a class="el" href="class_parameters.html" title="This class is a data layer class that encapsulates the data members of the IEntity class.">Parameters</a> class to do so. No modifications are made to member variables. </p>
+<dl class="section return"><dt>Returns</dt><dd>const Orientation </dd></dl>
+
 </div>
 </div>
-<a id="ac187598f47340e20d6fde52ada4eb39d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac187598f47340e20d6fde52ada4eb39d">&#9670;&nbsp;</a></span>getPosition()</h2>
+<a id="a5991233900aa3df6ace57b4e8363cdd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5991233900aa3df6ace57b4e8363cdd9">&#9670;&nbsp;</a></span>getPosition()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> IEntity::getPosition </td>
+          <td class="memname">const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> IEntity::getPosition </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -259,16 +293,19 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This method returns a constant tuple of which each element is of type float. The tuple that is returned details the position of the object inherited from this class. The method queries the <a class="el" href="class_parameters.html" title="This class is a data layer class that encapsulates the data members of the IEntity class.">Parameters</a> class to do so. No modifications are made to member variables. </p>
+<dl class="section return"><dt>Returns</dt><dd>const std::tuple&lt;float,float&gt; </dd></dl>
+
 </div>
 </div>
-<a id="ad39ece42cf2320e1102b8cbc184be566"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad39ece42cf2320e1102b8cbc184be566">&#9670;&nbsp;</a></span>getScore()</h2>
+<a id="ab13daaadb36b63e11eb4007a320400ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab13daaadb36b63e11eb4007a320400ae">&#9670;&nbsp;</a></span>getScore()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float IEntity::getScore </td>
+          <td class="memname">const float IEntity::getScore </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -276,16 +313,19 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This method returns a constant float, which details the worth of the object inherited from this class. It queries the <a class="el" href="class_parameters.html" title="This class is a data layer class that encapsulates the data members of the IEntity class.">Parameters</a> class to do so. No modifications are made to member variables. </p>
+<dl class="section return"><dt>Returns</dt><dd>const float </dd></dl>
+
 </div>
 </div>
-<a id="a1a2cf16b36097294f49c6e14a0a14224"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a2cf16b36097294f49c6e14a0a14224">&#9670;&nbsp;</a></span>getSize()</h2>
+<a id="a43984ff0f63853a56501c8e99e332a5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43984ff0f63853a56501c8e99e332a5d">&#9670;&nbsp;</a></span>getSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> IEntity::getSize </td>
+          <td class="memname">const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> IEntity::getSize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -293,22 +333,28 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This method returns a constant tuple of which each element is of type float. The tuple details the size of the object inherited from this class. queries the <a class="el" href="class_parameters.html" title="This class is a data layer class that encapsulates the data members of the IEntity class.">Parameters</a> class to do so. No modifications are made to member variables. </p>
+<dl class="section return"><dt>Returns</dt><dd>const std::tuple&lt;float,float&gt; </dd></dl>
+
 </div>
 </div>
-<a id="a1812fef17be7d6e549b45620691d698d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1812fef17be7d6e549b45620691d698d">&#9670;&nbsp;</a></span>getStatus()</h2>
+<a id="a434a3f74b5c764627012c5e0b0428c94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a434a3f74b5c764627012c5e0b0428c94">&#9670;&nbsp;</a></span>getStatus()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool IEntity::getStatus </td>
+          <td class="memname">const bool IEntity::getStatus </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This method returns a constant boolean, which details whether the object inherited from this class is alive or not. It queries the <a class="el" href="class_parameters.html" title="This class is a data layer class that encapsulates the data members of the IEntity class.">Parameters</a> class to do so. No modifications are made to member variables. </p>
+<dl class="section return"><dt>Returns</dt><dd>const bool </dd></dl>
 
 </div>
 </div>
@@ -326,6 +372,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This method decrements the total hit-points of the object inherited from this class. It does this through the <a class="el" href="class_parameters.html" title="This class is a data layer class that encapsulates the data members of the IEntity class.">Parameters</a> class. </p>
 
 </div>
 </div>
@@ -352,6 +400,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>This pure virtual method returns a tuple of which each element is of type float. It serves as an interface in order for objects which are inherited from this class to set their initial position. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::tuple&lt;float, float&gt; </dd></dl>
+
 <p>Implemented in <a class="el" href="class_player.html#aa09ae75b9ce37c407a2c971326df2d7c">Player</a>, <a class="el" href="class_alien.html#ac2ba4dcc2d0153c4882dd27a44e1c262">Alien</a>, <a class="el" href="class_bullet.html#a8e1d3ddb485d118b644fa1f5f7254bba">Bullet</a>, <a class="el" href="class_player_glyph.html#a8eaeeeb83500a409d6d8cab88b390075">PlayerGlyph</a>, and <a class="el" href="class_barrier.html#a754ecae3ddd44c70c3ebd9b1b0134232">Barrier</a>.</p>
 
 </div>
@@ -370,6 +421,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This method changes the status of the object inherited from this class from alive to dead. It does this through the <a class="el" href="class_parameters.html" title="This class is a data layer class that encapsulates the data members of the IEntity class.">Parameters</a> class. </p>
 
 </div>
 </div>
@@ -395,6 +448,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>This method updates the <a class="el" href="class_hit_box.html">HitBox</a> object to ensure that its position relative to the position of the object inherited from this class is correct. </p>
 
 </div>
 </div>

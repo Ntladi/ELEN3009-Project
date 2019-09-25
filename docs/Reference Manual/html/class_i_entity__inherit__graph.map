@@ -1,5 +1,5 @@
 <map id="IEntity" name="IEntity">
-<area shape="rect" id="node1" title=" " alt="" coords="175,5,234,32"/>
+<area shape="rect" id="node1" title="This class is the main class by which all game objects inherit from." alt="" coords="175,5,234,32"/>
 <area shape="rect" id="node2" href="$class_barrier.html" title=" " alt="" coords="71,80,131,107"/>
 <area shape="rect" id="node3" href="$class_i_moving_entity.html" title=" " alt="" coords="155,80,254,107"/>
 <area shape="rect" id="node10" href="$class_player_glyph.html" title=" " alt="" coords="278,80,371,107"/>

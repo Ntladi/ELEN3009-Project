@@ -2,8 +2,8 @@
 <area shape="rect" id="node1" title=" " alt="" coords="276,485,403,512"/>
 <area shape="rect" id="node2" href="$class_bullet.html" title=" " alt="" coords="312,409,367,436"/>
 <area shape="rect" id="node3" href="$class_i_moving_entity.html" title=" " alt="" coords="290,333,389,360"/>
-<area shape="rect" id="node4" href="$class_i_entity.html" title=" " alt="" coords="425,257,483,284"/>
-<area shape="rect" id="node5" href="$class_parameters.html" title=" " alt="" coords="465,168,555,195"/>
+<area shape="rect" id="node4" href="$class_i_entity.html" title="This class is the main class by which all game objects inherit from." alt="" coords="425,257,483,284"/>
+<area shape="rect" id="node5" href="$class_parameters.html" title="This class is a data layer class that encapsulates the data members of the IEntity class." alt="" coords="465,168,555,195"/>
 <area shape="rect" id="node6" title=" " alt="" coords="291,5,337,32"/>
 <area shape="rect" id="node10" href="$class_position.html" title=" " alt="" coords="325,168,394,195"/>
 <area shape="rect" id="node14" href="$class_movement.html" title=" " alt="" coords="144,168,225,195"/>

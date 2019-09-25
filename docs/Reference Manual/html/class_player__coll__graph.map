@@ -1,8 +1,8 @@
 <map id="Player" name="Player">
 <area shape="rect" id="node1" title=" " alt="" coords="676,424,735,451"/>
 <area shape="rect" id="node2" href="$class_i_moving_entity.html" title=" " alt="" coords="555,348,653,375"/>
-<area shape="rect" id="node3" href="$class_i_entity.html" title=" " alt="" coords="575,272,633,299"/>
-<area shape="rect" id="node4" href="$class_parameters.html" title=" " alt="" coords="823,175,913,202"/>
+<area shape="rect" id="node3" href="$class_i_entity.html" title="This class is the main class by which all game objects inherit from." alt="" coords="575,272,633,299"/>
+<area shape="rect" id="node4" href="$class_parameters.html" title="This class is a data layer class that encapsulates the data members of the IEntity class." alt="" coords="823,175,913,202"/>
 <area shape="rect" id="node5" title=" " alt="" coords="635,5,682,32"/>
 <area shape="rect" id="node9" href="$class_position.html" title=" " alt="" coords="571,175,640,202"/>
 <area shape="rect" id="node13" href="$class_movement.html" title=" " alt="" coords="438,175,519,202"/>

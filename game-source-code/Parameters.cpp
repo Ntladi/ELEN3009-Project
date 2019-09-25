@@ -13,28 +13,28 @@ Parameters::Parameters(ObjectType object, Orientation orientation,
 
 }
 
-two_floats Parameters::getSize() const
+const two_floats Parameters::getSize() const
 {
 	return
 	{	x_length_,y_length_};
 }
 
-float Parameters::getBottomEdge() const
+const float Parameters::getBottomEdge() const
 {
 	return Constants::SCREEN_Y_LENGTH - (y_length_ / 2);
 }
 
-float Parameters::getTopEdge() const
+const float Parameters::getTopEdge() const
 {
 	return y_length_ * 1.5;
 }
 
-float Parameters::getLeftEdge() const
+const float Parameters::getLeftEdge() const
 {
 	return x_length_ / 2;
 }
 
-float Parameters::getRightEdge() const
+const float Parameters::getRightEdge() const
 {
 	return Constants::SCREEN_X_LENGTH - (x_length_ / 2);
 }
@@ -50,26 +50,26 @@ void Parameters::damage()
 		setStatus(false);
 }
 
-float Parameters::getWorth() const
+const float Parameters::getWorth() const
 {
 	return worth_;
 }
 
-int Parameters::getLives() const
+const int Parameters::getLives() const
 {
 	return hit_points_;
 }
 
-ObjectType Parameters::getObjectType() const
+const ObjectType Parameters::getObjectType() const
 {
 	return object_;
 }
-Orientation Parameters::getOrientation() const
+const Orientation Parameters::getOrientation() const
 {
 	return orientation_;
 }
 
-bool Parameters::getStatus() const
+const bool Parameters::getStatus() const
 {
 	return is_Alive_;
 }
@@ -84,17 +84,17 @@ void Parameters::setStatus(const bool &status)
 	is_Alive_ = status;
 }
 
-bool Parameters::isFacingDown()
+const bool Parameters::isFacingDown() const
 {
 	return orientation_ == Orientation::FACE_DOWN;
 }
 
-bool Parameters::isFacingUp()
+const bool Parameters::isFacingUp() const
 {
 	return orientation_ == Orientation::FACE_UP;
 }
 
-bool Parameters::isHit() const
+const bool Parameters::isHit() const
 {
 	return is_Hit_;
 }

@@ -4,5 +4,5 @@
 <area shape="rect" id="node5" href="$class_piercer_bullet.html" title=" " alt="" coords="157,229,253,256"/>
 <area shape="rect" id="node6" href="$class_right_diagonal_bullet.html" title=" " alt="" coords="277,229,412,256"/>
 <area shape="rect" id="node2" href="$class_i_moving_entity.html" title=" " alt="" coords="155,80,254,107"/>
-<area shape="rect" id="node3" href="$class_i_entity.html" title=" " alt="" coords="175,5,234,32"/>
+<area shape="rect" id="node3" href="$class_i_entity.html" title="This class is the main class by which all game objects inherit from." alt="" coords="175,5,234,32"/>
 </map>

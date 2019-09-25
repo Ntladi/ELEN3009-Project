@@ -1,4 +1,4 @@
 <map id="PlayerGlyph" name="PlayerGlyph">
 <area shape="rect" id="node1" title=" " alt="" coords="5,80,99,107"/>
-<area shape="rect" id="node2" href="$class_i_entity.html" title=" " alt="" coords="23,5,81,32"/>
+<area shape="rect" id="node2" href="$class_i_entity.html" title="This class is the main class by which all game objects inherit from." alt="" coords="23,5,81,32"/>
 </map>

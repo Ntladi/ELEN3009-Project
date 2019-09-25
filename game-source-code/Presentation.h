@@ -28,8 +28,7 @@ public:
 	 */
 	Presentation();
 
-	/** \brief This method receives a constant
-	 * map containing the sizes of all game objects
+	/** \brief This method receives a constant map containing the sizes of all game objects
 	 * and applies those sizes to all sprite objects through the Sprites class.
 	 * \param sizes of type std::map<ObjectType, std::tuple<float, float> >
 	 */
@@ -45,10 +44,10 @@ public:
 	void drawObject(const ObjectType &object, const Orientation &orientation,
 			const two_floats &position);
 
-	/** \brief This method receives the current player score of type constant
-	 *  int from the Logic class. It then draws the score on the window through
-	 *   the Score class.
-	 *   \param score of type const int
+	/** \brief This method receives the current player score which is of type
+	 * constant int from the Logic class. It then draws the score on the window
+	 *  through the Score class.
+	 *  \param score of type const int
 	 */
 	void drawScore(const int & score);
 
@@ -58,6 +57,7 @@ public:
 
 	/** \brief This method is called by the Logic class to query if a window is
 	 *  still open.
+	 *  No modifications are are made to member variables.
 	 *  \return bool
 	 */
 	bool isWindowOpen() const;
@@ -83,6 +83,7 @@ public:
 
 	/** \brief This method returns true if the current screen state is the game screen.
 	 * \return bool
+	 * No modifications are are made to member variables.
 	 */
 	bool isPlaying() const;
 
