@@ -22,7 +22,7 @@ public:
 	const static constexpr float BARRIER_Y_LENGTH = 5*SCALE;
 
 	const static constexpr float EDGE_STEP = 0.5;
-	const static constexpr float PLAYER_MAXIMUM_MOVEMENT_STEP = 4*SCALE;
+	const static constexpr float PLAYER_MAXIMUM_MOVEMENT_STEP = 3*SCALE;
 	const static constexpr float BULLET_MAXIMUM_MOVEMENT_STEP = 2*SCALE;
 	const static constexpr float ALIEN_MAXIMUM_MOVEMENT_STEP = 1*SCALE;
 
