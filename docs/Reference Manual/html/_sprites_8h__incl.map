@@ -1,0 +1,12 @@
+<map id="Sprites.h" name="Sprites.h">
+<area shape="rect" id="node1" title=" " alt="" coords="197,5,272,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="293,229,432,256"/>
+<area shape="rect" id="node3" title=" " alt="" coords="45,80,96,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,229,75,256"/>
+<area shape="rect" id="node5" title=" " alt="" coords="278,155,325,181"/>
+<area shape="rect" id="node6" href="$_textures_8h.html" title=" " alt="" coords="171,155,253,181"/>
+<area shape="rect" id="node7" href="$_map_keys_8h.html" title=" " alt="" coords="129,229,217,256"/>
+<area shape="rect" id="node8" href="$_object_type_8h.html" title=" " alt="" coords="400,155,499,181"/>
+<area shape="rect" id="node9" href="$_orientation_8h.html" title=" " alt="" coords="459,80,555,107"/>
+<area shape="rect" id="node10" href="$_sprite_factory_8h.html" title=" " alt="" coords="273,80,383,107"/>
+</map>

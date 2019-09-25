@@ -16,23 +16,14 @@ void Logic::reset()
 {
 	object_factory_ = ObjectFactory {};
 	loadSizes();
-	loadPositions();
-}
-
-void Logic::loadPositions()
-{
-	vec_of_object_ptrs all_objects;
-	object_factory_.getAllObjects(all_objects);
-
-	for (auto &i : all_objects)
-		setObjects(i);
+	setPositions();
 }
 
 void Logic::process(std::vector<bool> &inputs)
 {
 	object_factory_.changePlayerDirections(inputs);
 	moveAllObjects();
-	loadPositions();
+	setPositions();
 	checkColisions();
 	checkGameOver();
 }
@@ -61,16 +52,14 @@ void Logic::run()
 	}
 }
 
-void Logic::setObjects(std::shared_ptr<IMovingEntity> &object)
+void Logic::setPositions()
 {
-	presentation_.drawObject(object->getObjectType(), object->getOrientation(),
-			object->getPosition());
-}
+	vec_of_object_ptrs all_objects;
+	object_factory_.getAllObjects(all_objects);
 
-void Logic::setObjects(std::shared_ptr<IEntity> &object)
-{
-	presentation_.drawObject(object->getObjectType(), object->getOrientation(),
-			object->getPosition());
+	for (auto &i : all_objects)
+		presentation_.drawObject(i->getObjectType(), i->getOrientation(),
+					i->getPosition());
 }
 
 void Logic::checkColisions()
@@ -78,7 +67,7 @@ void Logic::checkColisions()
 	vec_of_object_ptrs all_objects;
 	object_factory_.getAllObjects(all_objects);
 	collision_handler_.handlecollisions(all_objects);
-	object_factory_.checkPlayer();
+	object_factory_.resetPlayerIfHit();
 
 	presentation_.drawScore(collision_handler_.getScore());
 }

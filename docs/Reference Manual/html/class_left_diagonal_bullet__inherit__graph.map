@@ -1,0 +1,6 @@
+<map id="LeftDiagonalBullet" name="LeftDiagonalBullet">
+<area shape="rect" id="node1" title=" " alt="" coords="5,229,132,256"/>
+<area shape="rect" id="node2" href="$class_bullet.html" title=" " alt="" coords="41,155,96,181"/>
+<area shape="rect" id="node3" href="$class_i_moving_entity.html" title=" " alt="" coords="19,80,118,107"/>
+<area shape="rect" id="node4" href="$class_i_entity.html" title=" " alt="" coords="39,5,98,32"/>
+</map>

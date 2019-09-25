@@ -1,0 +1,12 @@
+<map id="Armada" name="Armada">
+<area shape="rect" id="node1" title=" " alt="" coords="201,317,268,344"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,228,163,255"/>
+<area shape="rect" id="node3" href="$class_alien_factory.html" title=" " alt="" coords="187,228,282,255"/>
+<area shape="rect" id="node4" title=" " alt="" coords="79,131,118,158"/>
+<area shape="rect" id="node5" href="$class_position.html" title=" " alt="" coords="143,131,212,158"/>
+<area shape="rect" id="node6" title=" " alt="" coords="399,5,446,32"/>
+<area shape="rect" id="node10" href="$class_stop_watch.html" title=" " alt="" coords="549,131,635,158"/>
+<area shape="rect" id="node7" title=" " alt="" coords="236,131,367,158"/>
+<area shape="rect" id="node8" href="$class_bullet_factory.html" title=" " alt="" coords="408,228,507,255"/>
+<area shape="rect" id="node9" title=" " alt="" coords="391,124,524,165"/>
+</map>

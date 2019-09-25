@@ -1,0 +1,16 @@
+<map id="RightDiagonalBullet.h" name="RightDiagonalBullet.h">
+<area shape="rect" id="node1" title=" " alt="" coords="247,5,393,32"/>
+<area shape="rect" id="node2" href="$_bullet_8h.html" title=" " alt="" coords="287,80,353,107"/>
+<area shape="rect" id="node3" href="$_orientation_8h.html" title=" " alt="" coords="148,379,244,405"/>
+<area shape="rect" id="node4" href="$_object_type_8h.html" title=" " alt="" coords="460,379,559,405"/>
+<area shape="rect" id="node5" href="$_move_direction_8h.html" title=" " alt="" coords="5,379,120,405"/>
+<area shape="rect" id="node6" href="$_hit_box_8h.html" title=" " alt="" coords="544,304,616,331"/>
+<area shape="rect" id="node9" href="$_parameters_8h.html" title=" " alt="" coords="265,304,365,331"/>
+<area shape="rect" id="node11" href="$_i_moving_entity_8h.html" title=" " alt="" coords="311,155,422,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="385,379,436,405"/>
+<area shape="rect" id="node8" title=" " alt="" coords="583,379,639,405"/>
+<area shape="rect" id="node10" href="$_constants_8h.html" title=" " alt="" coords="269,379,361,405"/>
+<area shape="rect" id="node12" href="$_i_entity_8h.html" title=" " alt="" coords="322,229,393,256"/>
+<area shape="rect" id="node13" href="$_position_8h.html" title=" " alt="" coords="389,304,469,331"/>
+<area shape="rect" id="node14" href="$_movement_8h.html" title=" " alt="" coords="97,304,189,331"/>
+</map>

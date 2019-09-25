@@ -1,0 +1,10 @@
+<map id="IMovingEntity" name="IMovingEntity">
+<area shape="rect" id="node1" title=" " alt="" coords="155,80,254,107"/>
+<area shape="rect" id="node3" href="$class_alien.html" title=" " alt="" coords="102,155,153,181"/>
+<area shape="rect" id="node4" href="$class_bullet.html" title=" " alt="" coords="177,155,232,181"/>
+<area shape="rect" id="node8" href="$class_player.html" title=" " alt="" coords="257,155,315,181"/>
+<area shape="rect" id="node2" href="$class_i_entity.html" title=" " alt="" coords="175,5,234,32"/>
+<area shape="rect" id="node5" href="$class_left_diagonal_bullet.html" title=" " alt="" coords="5,229,132,256"/>
+<area shape="rect" id="node6" href="$class_piercer_bullet.html" title=" " alt="" coords="157,229,253,256"/>
+<area shape="rect" id="node7" href="$class_right_diagonal_bullet.html" title=" " alt="" coords="277,229,412,256"/>
+</map>

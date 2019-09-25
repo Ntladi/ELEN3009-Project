@@ -118,7 +118,7 @@ void ObjectFactory::changePlayerDirections(std::vector<bool> &inputs)
 			inputs, barriers);
 }
 
-void ObjectFactory::checkPlayer()
+void ObjectFactory::resetPlayerIfHit()
 {
 	if (up_player_->getHit())
 		up_player_->resetPosition(Orientation::FACE_UP);
