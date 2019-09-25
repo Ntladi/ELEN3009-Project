@@ -20,6 +20,9 @@ void SpriteFactory::setInitialSizes(const map_of_two_floats &sizes,
 
 	setSize(sizes, sprites, MapKeys::UP_PLAYER_LIFE, MapKeys::DOWN_PLAYER_LIFE,
 			ObjectType::PLAYER_GLYPH, false);
+
+	setSize(sizes, sprites, MapKeys::UP_BARRIER, MapKeys::DOWN_BARRIER,
+			ObjectType::BARRIER, true);
 }
 
 void SpriteFactory::applyTextures(map_of_sprite_ptrs &sprites)

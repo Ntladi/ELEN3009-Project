@@ -14,6 +14,8 @@ Textures::Textures()
 	initializeTexture(MapKeys::DOWN_ALIEN_BULLET, "Assets/Alien2Bullet.png");
 	initializeTexture(MapKeys::UP_PLAYER_LIFE, "Assets/Player_Life.png");
 	initializeTexture(MapKeys::DOWN_PLAYER_LIFE, "Assets/Player_Life.png");
+	initializeTexture(MapKeys::UP_BARRIER, "Assets/RockTexture.png");
+	initializeTexture(MapKeys::DOWN_BARRIER, "Assets/RockTexture.png");
 }
 
 map_of_texture_ptrs Textures::getTextureMap()

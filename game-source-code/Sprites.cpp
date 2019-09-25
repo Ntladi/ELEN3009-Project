@@ -14,7 +14,8 @@ Sprites::Sprites()
 	initializeSprite(MapKeys::DOWN_ALIEN_BULLET);
 	initializeSprite(MapKeys::UP_PLAYER_LIFE);
 	initializeSprite(MapKeys::DOWN_PLAYER_LIFE);
-
+	initializeSprite(MapKeys::UP_BARRIER);
+	initializeSprite(MapKeys::DOWN_BARRIER);
 }
 
 void Sprites::displaySprite(const ObjectType &object,
@@ -47,6 +48,10 @@ void Sprites::displaySprite(const ObjectType &object,
 		moveSpriteObject(MapKeys::UP_PLAYER_LIFE, MapKeys::DOWN_PLAYER_LIFE,
 				orientation, position);
 		break;
+	case ObjectType::BARRIER:
+		moveSpriteObject(MapKeys::UP_BARRIER, MapKeys::DOWN_BARRIER,
+				orientation, position);
+		break;
 	default:
 		break;
 	}
@@ -75,9 +80,9 @@ void Sprites::drawLatestObject(std::shared_ptr<sf::RenderWindow> &window)
 	window->draw(*latestObject_);
 }
 
-void Sprites::setInitialSizes(const map_of_two_floats & sizes)
+void Sprites::setInitialSizes(const map_of_two_floats &sizes)
 {
-	sprite_factory_.setInitialSizes(sizes,sprites_);
+	sprite_factory_.setInitialSizes(sizes, sprites_);
 	sprite_factory_.applyTextures(sprites_);
 }
 

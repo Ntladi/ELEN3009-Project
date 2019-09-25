@@ -8,22 +8,27 @@
 #include "IMovingEntity.h"
 #include "SeperatingAxisTheorem.h"
 #include "Orientation.h"
-using moving_object = std::shared_ptr<IMovingEntity>;
-using vec_of_moving_objects = std::vector<moving_object>;
+using object_ptr = std::shared_ptr<IEntity>;
+using vec_of_object_ptrs = std::vector<object_ptr>;
 class CollisionHandler
 {
 public:
 	CollisionHandler();
-	void handlecollisions(vec_of_moving_objects &player_bullets, vec_of_moving_objects &aliens, vec_of_moving_objects &players, vec_of_moving_objects &alien_bullets);
+	void handlecollisions(vec_of_object_ptrs & objects);
 	float getScore() const;
-
 private:
-	void dualCollisions(vec_of_moving_objects &player_bullets, vec_of_moving_objects &aliens);
-	void monoCollisions(vec_of_moving_objects &objects, vec_of_moving_objects &players);
-	void checkColision(moving_object &object1, moving_object &object2);
-	void checkMonoCollision(vec_of_moving_objects &objects, moving_object &object1, Orientation orientation);
+	void dualCollisions(vec_of_object_ptrs &player_bullets, vec_of_object_ptrs &aliens);
+	void monoCollisions(vec_of_object_ptrs &objects, vec_of_object_ptrs &players);
+	void checkMonoCollision(vec_of_object_ptrs &objects, object_ptr &object1, Orientation orientation);
+	void checkColision(object_ptr &object1, object_ptr &object2);
+	void seprateObjects(vec_of_object_ptrs & allObjects);
 	SeperatingAxisTheorem theorem_;
 	float score_;
+	vec_of_object_ptrs players_;
+	vec_of_object_ptrs aliens_;
+	vec_of_object_ptrs player_bullets_;
+	vec_of_object_ptrs alien_bullets_;
+	vec_of_object_ptrs barriers_;
 };
 
 #endif
