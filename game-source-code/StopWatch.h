@@ -14,7 +14,7 @@ class StopWatch
 public:
 	/** \brief Default StopWatch constructor. Initializes member variables.
 	 */
-	StopWatch() : startTime_(0), elapsedTime_(0), stop_(0) {};
+	StopWatch() : startTime_(0), elapsedTime_(0) {};
 
 	/** \brief This method starts recording how much time has elapsed from the
 	 * moment it is called.
@@ -30,7 +30,6 @@ public:
 private:
 	float startTime_;
 	float elapsedTime_;
-	float stop_;
 
 	/** \brief This method returns a constant float, which describes the total runtime
 	 * of the game in seconds. It uses the system's built in clock to calculate this result.

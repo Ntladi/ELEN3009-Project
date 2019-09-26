@@ -57,7 +57,7 @@ protected:
 	 * both axes.
 	 * \return std::tuple<float,float>
 	 */
-	two_floats initializePosition();
+	two_floats initializePosition() override;
 };
 
 #endif
