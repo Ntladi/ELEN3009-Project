@@ -72,46 +72,56 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>This class checks for and handles collision detection for all game objects.  
+ <a href="class_collision_handler.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_collision_handler_8h_source.html">CollisionHandler.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for CollisionHandler:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_collision_handler__coll__graph.png" border="0" usemap="#_collision_handler_coll__map" alt="Collaboration graph"/></div>
 <map name="_collision_handler_coll__map" id="_collision_handler_coll__map">
-<area shape="rect" title=" " alt="" coords="87,287,202,313"/>
-<area shape="rect" title=" " alt="" coords="5,124,52,151"/>
-<area shape="rect" title=" " alt="" coords="76,124,213,151"/>
-<area shape="rect" href="class_seperating_axis_theorem.html" title=" " alt="" coords="238,124,398,151"/>
-<area shape="rect" title=" " alt="" coords="249,5,387,32"/>
+<area shape="rect" title="This class checks for and handles collision detection for all game objects." alt="" coords="89,505,243,685"/>
+<area shape="rect" title=" " alt="" coords="5,241,52,318"/>
+<area shape="rect" href="class_separating_axis_theorem.html" title="This class uses the Separating Axis Theorem to check for collisions between two game objects." alt="" coords="76,189,256,369"/>
+<area shape="rect" title=" " alt="" coords="97,5,235,83"/>
+<area shape="rect" title=" " alt="" coords="280,241,417,318"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab02079362792cd6e13ff5dd7428f4d7c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_handler.html#ab02079362792cd6e13ff5dd7428f4d7c">CollisionHandler</a> ()</td></tr>
+<tr class="memdesc:ab02079362792cd6e13ff5dd7428f4d7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default <a class="el" href="class_collision_handler.html" title="This class checks for and handles collision detection for all game objects.">CollisionHandler</a> constructor. Initializes the game score to zero.  <a href="class_collision_handler.html#ab02079362792cd6e13ff5dd7428f4d7c">More...</a><br /></td></tr>
 <tr class="separator:ab02079362792cd6e13ff5dd7428f4d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36c95bc19a0e4f52c1e85de5552c3801"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_handler.html#a36c95bc19a0e4f52c1e85de5552c3801">handlecollisions</a> (<a class="el" href="_collision_handler_8h.html#a01927f8856df826f38659233b6a50418">vec_of_object_ptrs</a> &amp;objects)</td></tr>
+<tr class="memdesc:a36c95bc19a0e4f52c1e85de5552c3801"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method receives a vector of game object shared pointers in order to perform collision detection on them.  <a href="class_collision_handler.html#a36c95bc19a0e4f52c1e85de5552c3801">More...</a><br /></td></tr>
 <tr class="separator:a36c95bc19a0e4f52c1e85de5552c3801"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf1092e6544782304cec61b85c9499a1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_handler.html#aaf1092e6544782304cec61b85c9499a1">getScore</a> () const</td></tr>
 <tr class="separator:aaf1092e6544782304cec61b85c9499a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a32559aca11ea099084785cdaeb97dbf1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_handler.html#a32559aca11ea099084785cdaeb97dbf1">dualCollisions</a> (<a class="el" href="_collision_handler_8h.html#a01927f8856df826f38659233b6a50418">vec_of_object_ptrs</a> &amp;player_bullets, <a class="el" href="_collision_handler_8h.html#a01927f8856df826f38659233b6a50418">vec_of_object_ptrs</a> &amp;aliens)</td></tr>
-<tr class="separator:a32559aca11ea099084785cdaeb97dbf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a246c89da208ef7e983f45a8dd5e9c993"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_handler.html#a246c89da208ef7e983f45a8dd5e9c993">monoCollisions</a> (<a class="el" href="_collision_handler_8h.html#a01927f8856df826f38659233b6a50418">vec_of_object_ptrs</a> &amp;objects, <a class="el" href="_collision_handler_8h.html#a01927f8856df826f38659233b6a50418">vec_of_object_ptrs</a> &amp;players)</td></tr>
-<tr class="separator:a246c89da208ef7e983f45a8dd5e9c993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b6d8dbf9d3a4b38bc9bd8ee8d04f24c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_handler.html#a5b6d8dbf9d3a4b38bc9bd8ee8d04f24c">dualCollisions</a> (<a class="el" href="_collision_handler_8h.html#a01927f8856df826f38659233b6a50418">vec_of_object_ptrs</a> &amp;objects_1, <a class="el" href="_collision_handler_8h.html#a01927f8856df826f38659233b6a50418">vec_of_object_ptrs</a> &amp;objects_2)</td></tr>
+<tr class="memdesc:a5b6d8dbf9d3a4b38bc9bd8ee8d04f24c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method checks for collision detection between all objects_1 and all objects_2 regardless of orientation.  <a href="class_collision_handler.html#a5b6d8dbf9d3a4b38bc9bd8ee8d04f24c">More...</a><br /></td></tr>
+<tr class="separator:a5b6d8dbf9d3a4b38bc9bd8ee8d04f24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af39865745ad2def18c9617a0d436a260"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_handler.html#af39865745ad2def18c9617a0d436a260">monoCollisions</a> (<a class="el" href="_collision_handler_8h.html#a01927f8856df826f38659233b6a50418">vec_of_object_ptrs</a> &amp;objects_1, <a class="el" href="_collision_handler_8h.html#a01927f8856df826f38659233b6a50418">vec_of_object_ptrs</a> &amp;objects_2)</td></tr>
+<tr class="memdesc:af39865745ad2def18c9617a0d436a260"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method checks for collision detection between all objects_1 and all objects_2, so long as their orientations are different.  <a href="class_collision_handler.html#af39865745ad2def18c9617a0d436a260">More...</a><br /></td></tr>
+<tr class="separator:af39865745ad2def18c9617a0d436a260"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c2bbcb701386fd0288aba80ef0d4dae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_handler.html#a7c2bbcb701386fd0288aba80ef0d4dae">checkMonoCollision</a> (<a class="el" href="_collision_handler_8h.html#a01927f8856df826f38659233b6a50418">vec_of_object_ptrs</a> &amp;objects, <a class="el" href="_collision_handler_8h.html#ae68aaaa03be86264159fdc990a753232">object_ptr</a> &amp;object1, <a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> orientation)</td></tr>
+<tr class="memdesc:a7c2bbcb701386fd0288aba80ef0d4dae"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method ignores orientation checking for the <a class="el" href="class_collision_handler.html#af39865745ad2def18c9617a0d436a260" title="This method checks for collision detection between all objects_1 and all objects_2,...">monoCollisions()</a> method.  <a href="class_collision_handler.html#a7c2bbcb701386fd0288aba80ef0d4dae">More...</a><br /></td></tr>
 <tr class="separator:a7c2bbcb701386fd0288aba80ef0d4dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a931da2f0721e12de11489baccdeed23a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_handler.html#a931da2f0721e12de11489baccdeed23a">checkColision</a> (<a class="el" href="_collision_handler_8h.html#ae68aaaa03be86264159fdc990a753232">object_ptr</a> &amp;object1, <a class="el" href="_collision_handler_8h.html#ae68aaaa03be86264159fdc990a753232">object_ptr</a> &amp;object2)</td></tr>
+<tr class="memdesc:a931da2f0721e12de11489baccdeed23a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method uses the separation of axis theorem to perform collision detection between object 1 and object 2.  <a href="class_collision_handler.html#a931da2f0721e12de11489baccdeed23a">More...</a><br /></td></tr>
 <tr class="separator:a931da2f0721e12de11489baccdeed23a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae23670ad88e56f53c31bde8677fb261c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_handler.html#ae23670ad88e56f53c31bde8677fb261c">seprateObjects</a> (<a class="el" href="_collision_handler_8h.html#a01927f8856df826f38659233b6a50418">vec_of_object_ptrs</a> &amp;allObjects)</td></tr>
+<tr class="memdesc:ae23670ad88e56f53c31bde8677fb261c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method separates the game objects by type into distinct vectors.  <a href="class_collision_handler.html#ae23670ad88e56f53c31bde8677fb261c">More...</a><br /></td></tr>
 <tr class="separator:ae23670ad88e56f53c31bde8677fb261c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a28cc89aba9e182010f94b752a9760dfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_seperating_axis_theorem.html">SeperatingAxisTheorem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_handler.html#a28cc89aba9e182010f94b752a9760dfc">theorem_</a></td></tr>
-<tr class="separator:a28cc89aba9e182010f94b752a9760dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a936123a976aa49de4889e394efda2083"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_separating_axis_theorem.html">SeparatingAxisTheorem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_handler.html#a936123a976aa49de4889e394efda2083">theorem_</a></td></tr>
+<tr class="separator:a936123a976aa49de4889e394efda2083"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a923e8dfee812082577c594d36d017e79"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_handler.html#a923e8dfee812082577c594d36d017e79">score_</a></td></tr>
 <tr class="separator:a923e8dfee812082577c594d36d017e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27844c0b6b5fa7de094b68e49c930c40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_collision_handler_8h.html#a01927f8856df826f38659233b6a50418">vec_of_object_ptrs</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_handler.html#a27844c0b6b5fa7de094b68e49c930c40">players_</a></td></tr>
@@ -125,7 +135,11 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:ad79557a3cb375b7ff9c6f0e068c1e777"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_collision_handler_8h.html#a01927f8856df826f38659233b6a50418">vec_of_object_ptrs</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_handler.html#ad79557a3cb375b7ff9c6f0e068c1e777">barriers_</a></td></tr>
 <tr class="separator:ad79557a3cb375b7ff9c6f0e068c1e777"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class checks for and handles collision detection for all game objects. </p>
+<dl class="section author"><dt>Author</dt><dd>1599953 Ntladi Mohajane and 1705890 Tshepo Chokoe </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>3.0 </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab02079362792cd6e13ff5dd7428f4d7c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab02079362792cd6e13ff5dd7428f4d7c">&#9670;&nbsp;</a></span>CollisionHandler()</h2>
 
@@ -140,6 +154,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Default <a class="el" href="class_collision_handler.html" title="This class checks for and handles collision detection for all game objects.">CollisionHandler</a> constructor. Initializes the game score to zero. </p>
 
 </div>
 </div>
@@ -177,6 +193,15 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>This method uses the separation of axis theorem to perform collision detection between object 1 and object 2. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object1</td><td></td></tr>
+    <tr><td class="paramname">object2</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -220,10 +245,20 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>This method ignores orientation checking for the <a class="el" href="class_collision_handler.html#af39865745ad2def18c9617a0d436a260" title="This method checks for collision detection between all objects_1 and all objects_2,...">monoCollisions()</a> method. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">objects</td><td>of type std::vector&lt;std::shared_ptr&lt;IEntity&gt;&gt;; </td></tr>
+    <tr><td class="paramname">object1</td><td>of type std::vector&lt;std::shared_ptr&lt;IEntity&gt;&gt;; </td></tr>
+    <tr><td class="paramname">orientation</td><td>of type Orientation </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a32559aca11ea099084785cdaeb97dbf1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32559aca11ea099084785cdaeb97dbf1">&#9670;&nbsp;</a></span>dualCollisions()</h2>
+<a id="a5b6d8dbf9d3a4b38bc9bd8ee8d04f24c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b6d8dbf9d3a4b38bc9bd8ee8d04f24c">&#9670;&nbsp;</a></span>dualCollisions()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -235,13 +270,13 @@ Private Attributes</h2></td></tr>
           <td class="memname">void CollisionHandler::dualCollisions </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="_collision_handler_8h.html#a01927f8856df826f38659233b6a50418">vec_of_object_ptrs</a> &amp;&#160;</td>
-          <td class="paramname"><em>player_bullets</em>, </td>
+          <td class="paramname"><em>objects_1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="_collision_handler_8h.html#a01927f8856df826f38659233b6a50418">vec_of_object_ptrs</a> &amp;&#160;</td>
-          <td class="paramname"><em>aliens</em>&#160;</td>
+          <td class="paramname"><em>objects_2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -255,6 +290,15 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>This method checks for collision detection between all objects_1 and all objects_2 regardless of orientation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">objects_1</td><td>of type std::vector&lt;std::shared_ptr&lt;IEntity&gt;&gt;; </td></tr>
+    <tr><td class="paramname">objects_2</td><td>of type std::vector&lt;std::shared_ptr&lt;IEntity&gt;&gt;; </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -291,10 +335,18 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This method receives a vector of game object shared pointers in order to perform collision detection on them. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">objects</td><td>of type std::vector&lt;std::shared_ptr&lt;IEntity&gt;&gt;; </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a246c89da208ef7e983f45a8dd5e9c993"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a246c89da208ef7e983f45a8dd5e9c993">&#9670;&nbsp;</a></span>monoCollisions()</h2>
+<a id="af39865745ad2def18c9617a0d436a260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af39865745ad2def18c9617a0d436a260">&#9670;&nbsp;</a></span>monoCollisions()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -306,13 +358,13 @@ Private Attributes</h2></td></tr>
           <td class="memname">void CollisionHandler::monoCollisions </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="_collision_handler_8h.html#a01927f8856df826f38659233b6a50418">vec_of_object_ptrs</a> &amp;&#160;</td>
-          <td class="paramname"><em>objects</em>, </td>
+          <td class="paramname"><em>objects_1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="_collision_handler_8h.html#a01927f8856df826f38659233b6a50418">vec_of_object_ptrs</a> &amp;&#160;</td>
-          <td class="paramname"><em>players</em>&#160;</td>
+          <td class="paramname"><em>objects_2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -326,6 +378,15 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>This method checks for collision detection between all objects_1 and all objects_2, so long as their orientations are different. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">objects_1</td><td>of type std::vector&lt;std::shared_ptr&lt;IEntity&gt;&gt;; </td></tr>
+    <tr><td class="paramname">objects_2</td><td>of type std::vector&lt;std::shared_ptr&lt;IEntity&gt;&gt;; </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -352,6 +413,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>This method separates the game objects by type into distinct vectors. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">allObjects</td><td>of type std::vector&lt;std::shared_ptr&lt;IEntity&gt;&gt;; </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -488,8 +557,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a28cc89aba9e182010f94b752a9760dfc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28cc89aba9e182010f94b752a9760dfc">&#9670;&nbsp;</a></span>theorem_</h2>
+<a id="a936123a976aa49de4889e394efda2083"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a936123a976aa49de4889e394efda2083">&#9670;&nbsp;</a></span>theorem_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -498,7 +567,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_seperating_axis_theorem.html">SeperatingAxisTheorem</a> CollisionHandler::theorem_</td>
+          <td class="memname"><a class="el" href="class_separating_axis_theorem.html">SeparatingAxisTheorem</a> CollisionHandler::theorem_</td>
         </tr>
       </table>
   </td>

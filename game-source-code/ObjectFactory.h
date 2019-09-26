@@ -16,7 +16,7 @@ using map_of_two_floats = std::map<ObjectType,two_floats>;
 
 /** \class ObjectFactory
  * \brief This class is a data layer class composed within the Logic class.
- * it stores all the objects that the Logic class manipulates. The class
+ * it stores all the game objects that the Logic class manipulates. The class
  * also encapsulates the PlayerObjectHandlerClass.
  * \author 1599953 Ntladi Mohajane and 1705890 Tshepo Chokoe
  * \version 3.0
@@ -84,7 +84,7 @@ private:
 	std::shared_ptr<LifeFactory> down_lives_;
 	PlayerObjectHandler player_input_handler_;
 
-	/** \brief This method initializes all shared pointer objects contained within
+	/** \brief This method initializes all game shared pointer objects contained within
 	 * the class.
 	 */
 	void initializeObjects();

@@ -73,7 +73,7 @@ $(function() {
 <div class="title">LifeFactory.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="_player_glyph_8h_source.html">PlayerGlyph.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="_player_life_8h_source.html">PlayerLife.h</a>&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -82,7 +82,7 @@ Include dependency graph for LifeFactory.h:</div>
 <div class="center"><img src="_life_factory_8h__incl.png" border="0" usemap="#_life_factory_8h" alt=""/></div>
 <map name="_life_factory_8h" id="_life_factory_8h">
 <area shape="rect" title=" " alt="" coords="634,5,731,32"/>
-<area shape="rect" href="_player_glyph_8h.html" title=" " alt="" coords="410,80,514,107"/>
+<area shape="rect" href="_player_life_8h.html" title=" " alt="" coords="420,80,510,107"/>
 <area shape="rect" title=" " alt="" coords="633,304,689,331"/>
 <area shape="rect" title=" " alt="" coords="720,80,789,107"/>
 <area shape="rect" href="_i_entity_8h.html" title=" " alt="" coords="334,155,404,181"/>
@@ -117,38 +117,39 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_life_factory.html">LifeFactory</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class manages the behavior of all player lives that appear in the game. All <a class="el" href="class_player_life.html" title="This class is a game object class that inherits from the IEntity class. This class models the icons t...">PlayerLife</a> objects are encapsulated within this class.  <a href="class_life_factory.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ad262a7eef1245799db248a97c7fb00bb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_life_factory_8h.html#ad262a7eef1245799db248a97c7fb00bb">glyph_ptr</a> = std::shared_ptr&lt; <a class="el" href="class_player_glyph.html">PlayerGlyph</a> &gt;</td></tr>
-<tr class="separator:ad262a7eef1245799db248a97c7fb00bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5af8f67b9174616c42fb50164f4a534d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_life_factory_8h.html#a5af8f67b9174616c42fb50164f4a534d">vec_of_glyph_ptrs</a> = std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_player_glyph.html">PlayerGlyph</a> &gt; &gt;</td></tr>
-<tr class="separator:a5af8f67b9174616c42fb50164f4a534d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40a00d524beda9cdb7a9198c8b6ba837"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_life_factory_8h.html#a40a00d524beda9cdb7a9198c8b6ba837">glyph_ptr</a> = std::shared_ptr&lt; <a class="el" href="class_player_life.html">PlayerLife</a> &gt;</td></tr>
+<tr class="separator:a40a00d524beda9cdb7a9198c8b6ba837"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9be8b26da3d4588aa51fa62ac4825f7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_life_factory_8h.html#ac9be8b26da3d4588aa51fa62ac4825f7">vec_of_glyph_ptrs</a> = std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_player_life.html">PlayerLife</a> &gt; &gt;</td></tr>
+<tr class="separator:ac9be8b26da3d4588aa51fa62ac4825f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
-<a id="ad262a7eef1245799db248a97c7fb00bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad262a7eef1245799db248a97c7fb00bb">&#9670;&nbsp;</a></span>glyph_ptr</h2>
+<a id="a40a00d524beda9cdb7a9198c8b6ba837"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40a00d524beda9cdb7a9198c8b6ba837">&#9670;&nbsp;</a></span>glyph_ptr</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="_life_factory_8h.html#ad262a7eef1245799db248a97c7fb00bb">glyph_ptr</a> =  std::shared_ptr&lt;<a class="el" href="class_player_glyph.html">PlayerGlyph</a>&gt;</td>
+          <td class="memname">using <a class="el" href="_life_factory_8h.html#a40a00d524beda9cdb7a9198c8b6ba837">glyph_ptr</a> =  std::shared_ptr&lt;<a class="el" href="class_player_life.html">PlayerLife</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a5af8f67b9174616c42fb50164f4a534d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5af8f67b9174616c42fb50164f4a534d">&#9670;&nbsp;</a></span>vec_of_glyph_ptrs</h2>
+<a id="ac9be8b26da3d4588aa51fa62ac4825f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9be8b26da3d4588aa51fa62ac4825f7">&#9670;&nbsp;</a></span>vec_of_glyph_ptrs</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="_life_factory_8h.html#a5af8f67b9174616c42fb50164f4a534d">vec_of_glyph_ptrs</a> =  std::vector&lt;std::shared_ptr&lt;<a class="el" href="class_player_glyph.html">PlayerGlyph</a>&gt; &gt;</td>
+          <td class="memname">using <a class="el" href="_life_factory_8h.html#ac9be8b26da3d4588aa51fa62ac4825f7">vec_of_glyph_ptrs</a> =  std::vector&lt;std::shared_ptr&lt;<a class="el" href="class_player_life.html">PlayerLife</a>&gt; &gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">

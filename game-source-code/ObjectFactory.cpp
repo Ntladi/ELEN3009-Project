@@ -138,13 +138,13 @@ void ObjectFactory::getSizes(map_of_two_floats &sizes)
 	Alien temp_alien;
 	Bullet temp_bullet;
 	PiercerBullet temp_piercer;
-	PlayerGlyph temp_glyph;
+	PlayerLife temp_glyph;
 	Barrier temp_barrier;
 
 	sizes.insert(std::pair<ObjectType, two_floats>(ObjectType::PLAYER, temp_player.getSize()));
 	sizes.insert(std::pair<ObjectType, two_floats>(ObjectType::ALIEN, temp_alien.getSize()));
 	sizes.insert(std::pair<ObjectType, two_floats>(ObjectType::PLAYER_BULLET, temp_bullet.getSize()));
 	sizes.insert(std::pair<ObjectType, two_floats>(ObjectType::PIERCER_BULLET, temp_piercer.getSize()));
-	sizes.insert(std::pair<ObjectType, two_floats>(ObjectType::PLAYER_GLYPH, temp_glyph.getSize()));
+	sizes.insert(std::pair<ObjectType, two_floats>(ObjectType::PLAYER_LIFE, temp_glyph.getSize()));
 	sizes.insert(std::pair<ObjectType, two_floats>(ObjectType::BARRIER, temp_barrier.getSize()));
 }

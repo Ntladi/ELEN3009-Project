@@ -1,7 +1,7 @@
 var searchData=
 [
   ['damage_90',['damage',['../class_parameters.html#ae3dfea2c5499716fef887ff7cb828fe2',1,'Parameters']]],
-  ['displaysprite_91',['displaySprite',['../class_sprites.html#a498f524e708a01f82c2c88180f250fc8',1,'Sprites']]],
+  ['displaysprite_91',['displaySprite',['../class_sprites.html#a09fd08c6d78300c0b806f6ec8767c831',1,'Sprites']]],
   ['displaywindow_92',['displayWindow',['../class_presentation.html#a933425df8fbf914a2fd88862a5b66489',1,'Presentation']]],
   ['down_93',['DOWN',['../_move_direction_8h.html#a00ec4eba48da32d6cbdf827185fd3d34ac4e0e4e3118472beeb2ae75827450f1f',1,'MoveDirection.h']]],
   ['down_5falien_94',['DOWN_ALIEN',['../_map_keys_8h.html#a554599939b797e7446541ad7608478a2a288b4552b0cb0c5e67585d8422725128',1,'MapKeys.h']]],
@@ -20,5 +20,5 @@ var searchData=
   ['drawlatestobject_107',['drawLatestObject',['../class_sprites.html#a5c69ccdcfd85da96922344f71e3dcbe0',1,'Sprites']]],
   ['drawobject_108',['drawObject',['../class_presentation.html#a262291c9c8462059ed93ba6df40b628e',1,'Presentation']]],
   ['drawscore_109',['drawScore',['../class_presentation.html#ab98d6e11caf394841265df14caf8b1f5',1,'Presentation']]],
-  ['dualcollisions_110',['dualCollisions',['../class_collision_handler.html#a32559aca11ea099084785cdaeb97dbf1',1,'CollisionHandler']]]
+  ['dualcollisions_110',['dualCollisions',['../class_collision_handler.html#a5b6d8dbf9d3a4b38bc9bd8ee8d04f24c',1,'CollisionHandler']]]
 ];

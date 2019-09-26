@@ -1,5 +1,5 @@
 <map id="HitBox" name="HitBox">
-<area shape="rect" id="node1" title=" " alt="" coords="85,168,146,195"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,65,32"/>
-<area shape="rect" id="node3" title=" " alt="" coords="130,5,261,32"/>
+<area shape="rect" id="node1" title="This class is a data layer class that models the space that of all objects inherited from the IEntity..." alt="" coords="44,219,189,399"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,65,83"/>
+<area shape="rect" id="node3" title=" " alt="" coords="134,5,265,83"/>
 </map>

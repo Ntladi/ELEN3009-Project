@@ -1,13 +1,19 @@
 #ifndef PLAYEROBJECTHANDLER_H_
 #define PLAYEROBJECTHANDLER_H_
+#include <SeparatingAxisTheorem.h>
 #include "Player.h"
-#include "SeperatingAxisTheorem.h"
 #include "HitBox.h"
 #include <vector>
 #include <memory>
 using player_ptr = std::shared_ptr<Player>;
 using vec_of_object_ptrs = std::vector<std::shared_ptr<IEntity>>;
 
+/** \brief This class determines whether or not it is appropriate to move a Player
+ * game object based on what game inputs the received. This class is encapsulated within
+ * the ObjectFactory class.
+ * \author 1599953 Ntladi Mohajane and 1705890 Tshepo Chokoe
+ * \version 3.0
+ */
 class PlayerObjectHandler
 {
 public:
@@ -20,7 +26,7 @@ private:
 	void getDirection(const std::vector<bool> &inputs,player_ptr &up_player, player_ptr &down_player);
 
 	bool checkBarrierCollisions(HitBox &hitbox,vec_of_object_ptrs & barriers);
-	SeperatingAxisTheorem axis_;
+	SeparatingAxisTheorem axis_;
 	MoveDirection up_direction_;
 	MoveDirection down_direction_;
 };

@@ -1,7 +1,7 @@
 <map id="Parameters" name="Parameters">
-<area shape="rect" id="node1" title="This class is a data layer class that encapsulates the data members of the IEntity class." alt="" coords="127,139,216,165"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,52,32"/>
-<area shape="rect" id="node3" title=" " alt="" coords="78,5,166,32"/>
-<area shape="rect" id="node4" title=" " alt="" coords="190,5,275,32"/>
-<area shape="rect" id="node5" title=" " alt="" coords="305,5,352,32"/>
+<area shape="rect" id="node1" title="This class is a data layer class that encapsulates the data members of the IEntity class." alt="" coords="105,189,237,413"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,52,83"/>
+<area shape="rect" id="node3" title=" " alt="" coords="79,5,167,83"/>
+<area shape="rect" id="node4" title=" " alt="" coords="191,5,277,83"/>
+<area shape="rect" id="node5" title=" " alt="" coords="309,5,356,83"/>
 </map>

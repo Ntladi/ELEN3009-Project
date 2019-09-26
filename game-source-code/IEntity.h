@@ -68,7 +68,7 @@ public:
 	const bool getStatus() const;
 
 	/** \brief This method returns a constant float, which details the worth of the object
-	 * inherited from this class. It queries the Parameters class to do so.
+	 * inherited from this class in terms of the score. It queries the Parameters class to do so.
 	 * No modifications are made to member variables.
 	 * \return const float
 	 */
@@ -90,6 +90,13 @@ public:
 	 * this class. It does this through the Parameters class.
 	 */
 	void hitEntity();
+
+	/** \brief This method receives a constant tuple of which each element is of
+	 * type float. It sets the position of the inherited object to that of the values
+	 * of the parameter passed in.
+	 * \param position of type std::tuple<float, float>
+	 */
+	void setPosition(const two_floats & position);
 
 protected:
 	Parameters parameters_;

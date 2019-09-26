@@ -14,22 +14,22 @@ std::vector<two_floats> HitBox::getVertecies() const
 
 }
 
-two_floats HitBox::getTopLeft() const
+const two_floats HitBox::getTopLeft() const
 {
 	return this->top_left_;
 }
 
-two_floats HitBox::getTopRight() const
+const two_floats HitBox::getTopRight() const
 {
 	return this->top_right_;
 }
 
-two_floats HitBox::getBottomLeft() const
+const two_floats HitBox::getBottomLeft() const
 {
 	return this->bottom_left_;
 }
 
-two_floats HitBox::getBottomRight() const
+const two_floats HitBox::getBottomRight() const
 {
 	return this->bottom_right_;
 }

@@ -1,6 +1,6 @@
 <map id="PlayerObjectHandler" name="PlayerObjectHandler">
-<area shape="rect" id="node1" title=" " alt="" coords="57,228,198,255"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,124,108,151"/>
-<area shape="rect" id="node3" href="$class_seperating_axis_theorem.html" title=" " alt="" coords="133,124,293,151"/>
-<area shape="rect" id="node4" title=" " alt="" coords="143,5,282,32"/>
+<area shape="rect" id="node1" title="This class determines whether or not it is appropriate to move a Player game object based on what gam..." alt="" coords="41,447,219,568"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,241,108,318"/>
+<area shape="rect" id="node3" href="$class_separating_axis_theorem.html" title="This class uses the Separating Axis Theorem to check for collisions between two game objects." alt="" coords="132,189,312,369"/>
+<area shape="rect" id="node4" title=" " alt="" coords="153,5,291,83"/>
 </map>

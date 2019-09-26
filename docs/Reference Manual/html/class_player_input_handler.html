@@ -72,32 +72,40 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>This class is detects player inputs and relays them back to the <a class="el" href="class_presentation.html" title="This class is the main class of the presentation layer. The class receives information from the Logic...">Presentation</a> class.  
+ <a href="class_player_input_handler.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_player_input_handler_8h_source.html">PlayerInputHandler.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for PlayerInputHandler:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_player_input_handler__coll__graph.png" border="0" usemap="#_player_input_handler_coll__map" alt="Collaboration graph"/></div>
 <map name="_player_input_handler_coll__map" id="_player_input_handler_coll__map">
-<area shape="rect" title=" " alt="" coords="37,433,167,460"/>
-<area shape="rect" href="class_stop_watch.html" title=" " alt="" coords="5,124,92,151"/>
-<area shape="rect" title=" " alt="" coords="25,5,72,32"/>
-<area shape="rect" title=" " alt="" coords="133,124,180,151"/>
+<area shape="rect" title="This class is detects player inputs and relays them back to the Presentation class." alt="" coords="34,637,229,803"/>
+<area shape="rect" href="class_stop_watch.html" title="This class keeps track of amount of time passed as the game is running." alt="" coords="5,175,140,311"/>
+<area shape="rect" title=" " alt="" coords="49,5,96,83"/>
+<area shape="rect" title=" " alt="" coords="164,204,211,281"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a265717cc650f95f4b75f00f4f7f98f46"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_input_handler.html#a265717cc650f95f4b75f00f4f7f98f46">PlayerInputHandler</a> ()</td></tr>
 <tr class="separator:a265717cc650f95f4b75f00f4f7f98f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b5bd61cf1198e94fe474d67db5362a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_input_handler.html#a9b5bd61cf1198e94fe474d67db5362a8">multiPlayerInputs</a> ()</td></tr>
+<tr class="memdesc:a9b5bd61cf1198e94fe474d67db5362a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method checks if the relevant inputs for multi player mirrored mode have been entered, and sets the appropriate member booleans to false.  <a href="class_player_input_handler.html#a9b5bd61cf1198e94fe474d67db5362a8">More...</a><br /></td></tr>
 <tr class="separator:a9b5bd61cf1198e94fe474d67db5362a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ab74af09bd6c2205482732460a036b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_input_handler.html#a5ab74af09bd6c2205482732460a036b8">singlePlayerMirroredInputs</a> ()</td></tr>
+<tr class="memdesc:a5ab74af09bd6c2205482732460a036b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method checks if the relevant inputs for single player mirrored mode have been entered, and sets the appropriate member booleans to false.  <a href="class_player_input_handler.html#a5ab74af09bd6c2205482732460a036b8">More...</a><br /></td></tr>
 <tr class="separator:a5ab74af09bd6c2205482732460a036b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c2808375a8ceaf68a652c00c1c8de07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_input_handler.html#a2c2808375a8ceaf68a652c00c1c8de07">singlePlayerInvertedInputs</a> ()</td></tr>
+<tr class="memdesc:a2c2808375a8ceaf68a652c00c1c8de07"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method checks if the relevant inputs for single player inverted mode have been entered, and sets the appropriate member booleans to false.  <a href="class_player_input_handler.html#a2c2808375a8ceaf68a652c00c1c8de07">More...</a><br /></td></tr>
 <tr class="separator:a2c2808375a8ceaf68a652c00c1c8de07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61ca5f6edb209081967a8ae6b388bfff"><td class="memItemLeft" align="right" valign="top">std::vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_input_handler.html#a61ca5f6edb209081967a8ae6b388bfff">getInputs</a> ()</td></tr>
+<tr class="memdesc:a61ca5f6edb209081967a8ae6b388bfff"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns a vector of boolean variables back to the presentation layer for processing.  <a href="class_player_input_handler.html#a61ca5f6edb209081967a8ae6b388bfff">More...</a><br /></td></tr>
 <tr class="separator:a61ca5f6edb209081967a8ae6b388bfff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdbb5c61c75c00ec407e6b210c87e6cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_input_handler.html#abdbb5c61c75c00ec407e6b210c87e6cc">resetInputs</a> ()</td></tr>
+<tr class="memdesc:abdbb5c61c75c00ec407e6b210c87e6cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method resets all member booleans to false;.  <a href="class_player_input_handler.html#abdbb5c61c75c00ec407e6b210c87e6cc">More...</a><br /></td></tr>
 <tr class="separator:abdbb5c61c75c00ec407e6b210c87e6cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
@@ -132,7 +140,11 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a77b7b4540502b102035c6a058e35f2d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_stop_watch.html">StopWatch</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_input_handler.html#a77b7b4540502b102035c6a058e35f2d4">stopwatch2_</a></td></tr>
 <tr class="separator:a77b7b4540502b102035c6a058e35f2d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class is detects player inputs and relays them back to the <a class="el" href="class_presentation.html" title="This class is the main class of the presentation layer. The class receives information from the Logic...">Presentation</a> class. </p>
+<dl class="section author"><dt>Author</dt><dd>1599953 Ntladi Mohajane and 1705890 Tshepo Chokoe </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>3.0 </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a265717cc650f95f4b75f00f4f7f98f46"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a265717cc650f95f4b75f00f4f7f98f46">&#9670;&nbsp;</a></span>PlayerInputHandler()</h2>
 
@@ -147,6 +159,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Default <a class="el" href="class_player_input_handler.html" title="This class is detects player inputs and relays them back to the Presentation class.">PlayerInputHandler</a> constructor. Initializes all member variables. </p>
 
 </div>
 </div>
@@ -166,6 +179,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This method returns a vector of boolean variables back to the presentation layer for processing. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;bool&gt; </dd></dl>
+
 </div>
 </div>
 <a id="a9b5bd61cf1198e94fe474d67db5362a8"></a>
@@ -182,6 +198,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This method checks if the relevant inputs for multi player mirrored mode have been entered, and sets the appropriate member booleans to false. </p>
 
 </div>
 </div>
@@ -200,6 +218,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This method resets all member booleans to false;. </p>
+
 </div>
 </div>
 <a id="a2c2808375a8ceaf68a652c00c1c8de07"></a>
@@ -217,6 +237,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This method checks if the relevant inputs for single player inverted mode have been entered, and sets the appropriate member booleans to false. </p>
+
 </div>
 </div>
 <a id="a5ab74af09bd6c2205482732460a036b8"></a>
@@ -233,6 +255,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This method checks if the relevant inputs for single player mirrored mode have been entered, and sets the appropriate member booleans to false. </p>
 
 </div>
 </div>
@@ -258,6 +282,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>This method only allows the member booleans concerned with shooting to be set to true only if enough time has elapsed according to the appropriate stop-watch. </p>
 
 </div>
 </div>

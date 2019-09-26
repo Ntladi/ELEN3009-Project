@@ -1,13 +1,13 @@
 <map id="Barrier" name="Barrier">
-<area shape="rect" id="node1" title=" " alt="" coords="223,333,283,360"/>
-<area shape="rect" id="node2" href="$class_i_entity.html" title="This class is the main class by which all game objects inherit from." alt="" coords="223,257,282,284"/>
-<area shape="rect" id="node3" href="$class_parameters.html" title="This class is a data layer class that encapsulates the data members of the IEntity class." alt="" coords="208,168,297,195"/>
-<area shape="rect" id="node4" title=" " alt="" coords="29,5,76,32"/>
-<area shape="rect" id="node8" href="$class_position.html" title=" " alt="" coords="69,168,138,195"/>
-<area shape="rect" id="node5" title=" " alt="" coords="142,5,230,32"/>
-<area shape="rect" id="node6" title=" " alt="" coords="254,5,339,32"/>
-<area shape="rect" id="node7" title=" " alt="" coords="371,5,417,32"/>
-<area shape="rect" id="node9" href="$class_hit_box.html" title=" " alt="" coords="446,168,507,195"/>
-<area shape="rect" id="node10" title=" " alt="" coords="447,5,507,32"/>
-<area shape="rect" id="node11" title=" " alt="" coords="571,5,702,32"/>
+<area shape="rect" id="node1" title="This class is a game object class that inherits from the IEntity class. This class models a piece of ..." alt="" coords="190,823,322,915"/>
+<area shape="rect" id="node2" href="$class_i_entity.html" title="This class is the main class by which all game objects inherit from." alt="" coords="188,505,323,773"/>
+<area shape="rect" id="node3" href="$class_parameters.html" title="This class is a data layer class that encapsulates the data members of the IEntity class." alt="" coords="190,219,322,443"/>
+<area shape="rect" id="node4" title=" " alt="" coords="30,5,76,83"/>
+<area shape="rect" id="node8" href="$class_position.html" title="This class is a data layer class that encapsulates the current position of all objects inherited from..." alt="" coords="22,263,138,399"/>
+<area shape="rect" id="node5" title=" " alt="" coords="150,5,238,83"/>
+<area shape="rect" id="node6" title=" " alt="" coords="262,5,348,83"/>
+<area shape="rect" id="node7" title=" " alt="" coords="380,5,427,83"/>
+<area shape="rect" id="node9" href="$class_hit_box.html" title="This class is a data layer class that models the space that of all objects inherited from the IEntity..." alt="" coords="422,241,567,421"/>
+<area shape="rect" id="node10" title=" " alt="" coords="464,5,524,83"/>
+<area shape="rect" id="node11" title=" " alt="" coords="593,5,724,83"/>
 </map>

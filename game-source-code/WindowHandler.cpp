@@ -1,7 +1,7 @@
 #include <WindowHandler.h>
 
-void WindowHandler::clearWindow(ScreenState &state, window_ptr &window,
-		text_ptr &score, text_ptr &high_score)
+void WindowHandler::clearWindow(const ScreenState &state, const window_ptr &window,
+		const text_ptr &score,const text_ptr &high_score)
 {
 	window->clear(sf::Color::White);
 
@@ -29,7 +29,7 @@ void WindowHandler::clearWindow(ScreenState &state, window_ptr &window,
 
 }
 
-void WindowHandler::createWindow(window_ptr &window)
+void WindowHandler::createWindow(const window_ptr &window)
 {
 	window->create(
 			sf::VideoMode(Constants::SCREEN_X_LENGTH,
@@ -38,7 +38,7 @@ void WindowHandler::createWindow(window_ptr &window)
 	window->setFramerateLimit(60);
 }
 
-bool WindowHandler::events(window_ptr &window)
+bool WindowHandler::events(const window_ptr &window)
 {
 	bool isPressed = false;
 	sf::Event evnt;

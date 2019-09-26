@@ -18,14 +18,18 @@ class Parameters
 {
 
 public:
-	/** \brief Default parameterized Parameters constructor. Initializes member variables
-	 * to those that are passed in.
+	/** \brief Parameterized Parameters constructor. Initializes member variables
+	 * to those that are passed in. The constutor's parameters have default values
+	 * to avoid the need for a default constructor.
+	 * \param object of type ObjectType
+	 * \param orientation of type Orientation
+	 * \param params of type std::tuple<float, float, float, float>;
 	 */
 	Parameters(ObjectType object = ObjectType::NONE, Orientation orientation =
 			Orientation::FACE_UP, four_floats params = { 0, 0, 0, 0 });
 
-	/** \brief This method returns a constant tuple of which each element is of type
-	 * float. It returns the size of the inherited object back to the IEntity class.
+	/** \brief This method returns a constant tuple, of which each element is of type
+	 * float. It returns
 	 * No modifications are made to member variables.
 	 * \return const std::tuple<float,float>
 	 */
@@ -39,28 +43,28 @@ public:
 	const float getWorth() const;
 
 	/** \brief This method returns a constant float, which details position of the
-	 * top edge inherited object.
+	 * top edge of the inherited object relatave to the screen.
 	 * No modifications are made to member variables.
 	 * \return const float
 	 */
 	const float getTopEdge() const;
 
 	/** \brief This method returns a constant float, which details position of the
-	 * bottom edge inherited object.
+	 * bottom edge of the inherited object relatave to the screen.
 	 * No modifications are made to member variables.
 	 * \return const float
 	 */
 	const float getBottomEdge() const;
 
 	/** \brief This method returns a constant float, which details position of the
-	 * left edge inherited object.
+	 * left edge of the inherited object relatave to the screen.
 	 * No modifications are made to member variables.
 	 * \return const float
 	 */
 	const float getLeftEdge() const;
 
 	/** \brief This method returns a constant float, which details position of the
-	 * right edge inherited object.
+	 * right edge of the inherited object relatave to the screen.
 	 * No modifications are made to member variables.
 	 * \return const float
 	 */
@@ -104,13 +108,13 @@ public:
 	const bool getStatus() const;
 
 	/** \brief This method receives a constant enumeration of type Orientation. It
-	 * then sets the member orientation variable to that of the received one.
+	 * then assigns the member orientation variable to that of the received one.
 	 * \param orientation of type Orientation
 	 */
 	void setOrientation(const Orientation &orientation);
 
 	/** \brief This method receives a constant boolean. It
-	 * then sets the is_Alive member variable to that of the received one.
+	 * then assigns the is_Alive member variable to that of the received one.
 	 * \param status of type bool
 	 */
 	void setStatus(const bool &status);

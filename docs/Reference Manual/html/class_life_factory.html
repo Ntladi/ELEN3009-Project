@@ -72,47 +72,53 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>This class manages the behavior of all player lives that appear in the game. All <a class="el" href="class_player_life.html" title="This class is a game object class that inherits from the IEntity class. This class models the icons t...">PlayerLife</a> objects are encapsulated within this class.  
+ <a href="class_life_factory.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_life_factory_8h_source.html">LifeFactory.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for LifeFactory:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_life_factory__coll__graph.png" border="0" usemap="#_life_factory_coll__map" alt="Collaboration graph"/></div>
 <map name="_life_factory_coll__map" id="_life_factory_coll__map">
-<area shape="rect" title=" " alt="" coords="76,109,163,136"/>
-<area shape="rect" title=" " alt="" coords="5,13,52,39"/>
-<area shape="rect" title=" " alt="" coords="77,13,162,39"/>
-<area shape="rect" title=" " alt="" coords="187,5,337,47"/>
+<area shape="rect" title="This class manages the behavior of all player lives that appear in the game. All PlayerLife objects a..." alt="" coords="55,160,184,281"/>
+<area shape="rect" title=" " alt="" coords="5,13,52,90"/>
+<area shape="rect" title=" " alt="" coords="77,13,162,90"/>
+<area shape="rect" title=" " alt="" coords="187,5,324,97"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a718663c6440be3d3120e4f63cd47368c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_life_factory.html#a718663c6440be3d3120e4f63cd47368c">LifeFactory</a> (<a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> orientation=<a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58a87a77fb30e508725d35683af9611e146">Orientation::FACE_UP</a>, const int &amp;lives=0)</td></tr>
+<tr class="memdesc:a718663c6440be3d3120e4f63cd47368c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameterized <a class="el" href="class_life_factory.html" title="This class manages the behavior of all player lives that appear in the game. All PlayerLife objects a...">LifeFactory</a> constructor. It initializes all <a class="el" href="class_player_life.html" title="This class is a game object class that inherits from the IEntity class. This class models the icons t...">PlayerLife</a> objects that appear on the screen.  <a href="class_life_factory.html#a718663c6440be3d3120e4f63cd47368c">More...</a><br /></td></tr>
 <tr class="separator:a718663c6440be3d3120e4f63cd47368c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a120c392833c128a683176c15d1c5ea9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_life_factory_8h.html#a5af8f67b9174616c42fb50164f4a534d">vec_of_glyph_ptrs</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_life_factory.html#a120c392833c128a683176c15d1c5ea9c">getGlyphs</a> () const</td></tr>
+<tr class="memitem:a120c392833c128a683176c15d1c5ea9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_life_factory_8h.html#ac9be8b26da3d4588aa51fa62ac4825f7">vec_of_glyph_ptrs</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_life_factory.html#a120c392833c128a683176c15d1c5ea9c">getGlyphs</a> () const</td></tr>
+<tr class="memdesc:a120c392833c128a683176c15d1c5ea9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns a vector of <a class="el" href="class_player_life.html" title="This class is a game object class that inherits from the IEntity class. This class models the icons t...">PlayerLife</a> shared_pointers that represent the number of lives that a currently player has.  <a href="class_life_factory.html#a120c392833c128a683176c15d1c5ea9c">More...</a><br /></td></tr>
 <tr class="separator:a120c392833c128a683176c15d1c5ea9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f401995a0c6568a8389d2a80b90d1ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_life_factory.html#a2f401995a0c6568a8389d2a80b90d1ee">manageLives</a> (const int &amp;i)</td></tr>
+<tr class="memdesc:a2f401995a0c6568a8389d2a80b90d1ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method determines the number of <a class="el" href="class_player_life.html" title="This class is a game object class that inherits from the IEntity class. This class models the icons t...">PlayerLife</a> objects that appear on the screen based on the value passed in.  <a href="class_life_factory.html#a2f401995a0c6568a8389d2a80b90d1ee">More...</a><br /></td></tr>
 <tr class="separator:a2f401995a0c6568a8389d2a80b90d1ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:ac08534aef2d4e9059020a86e29f71e95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_life_factory.html#ac08534aef2d4e9059020a86e29f71e95">generateGlyphs</a> ()</td></tr>
 <tr class="separator:ac08534aef2d4e9059020a86e29f71e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29a73d25a7bac12d92d6a9653c91b96c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_life_factory.html#a29a73d25a7bac12d92d6a9653c91b96c">generateUpGlyphs</a> ()</td></tr>
-<tr class="separator:a29a73d25a7bac12d92d6a9653c91b96c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeca2dc9d0fb274a42565fff3f5eb08f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_life_factory.html#aeca2dc9d0fb274a42565fff3f5eb08f4">generateDownGlyphs</a> ()</td></tr>
-<tr class="separator:aeca2dc9d0fb274a42565fff3f5eb08f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:af002e7c209830b566d00c2427d87a35a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_life_factory.html#af002e7c209830b566d00c2427d87a35a">orientation_</a></td></tr>
 <tr class="separator:af002e7c209830b566d00c2427d87a35a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f4dd74c0d8167f186a9af7ebe53b490"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_life_factory_8h.html#a5af8f67b9174616c42fb50164f4a534d">vec_of_glyph_ptrs</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_life_factory.html#a2f4dd74c0d8167f186a9af7ebe53b490">glyphs_</a></td></tr>
+<tr class="memitem:a2f4dd74c0d8167f186a9af7ebe53b490"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_life_factory_8h.html#ac9be8b26da3d4588aa51fa62ac4825f7">vec_of_glyph_ptrs</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_life_factory.html#a2f4dd74c0d8167f186a9af7ebe53b490">glyphs_</a></td></tr>
 <tr class="separator:a2f4dd74c0d8167f186a9af7ebe53b490"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cb2fe148fcf18eecaf3db3da54a6a00"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_life_factory.html#a8cb2fe148fcf18eecaf3db3da54a6a00">lives_</a></td></tr>
 <tr class="separator:a8cb2fe148fcf18eecaf3db3da54a6a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class manages the behavior of all player lives that appear in the game. All <a class="el" href="class_player_life.html" title="This class is a game object class that inherits from the IEntity class. This class models the icons t...">PlayerLife</a> objects are encapsulated within this class. </p>
+<dl class="section author"><dt>Author</dt><dd>1599953 Ntladi Mohajane and 1705890 Tshepo Chokoe </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>3.0 </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a718663c6440be3d3120e4f63cd47368c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a718663c6440be3d3120e4f63cd47368c">&#9670;&nbsp;</a></span>LifeFactory()</h2>
 
@@ -139,34 +145,18 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Parameterized <a class="el" href="class_life_factory.html" title="This class manages the behavior of all player lives that appear in the game. All PlayerLife objects a...">LifeFactory</a> constructor. It initializes all <a class="el" href="class_player_life.html" title="This class is a game object class that inherits from the IEntity class. This class models the icons t...">PlayerLife</a> objects that appear on the screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">orientation</td><td>of type Orientation </td></tr>
+    <tr><td class="paramname">lives</td><td>of type int </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aeca2dc9d0fb274a42565fff3f5eb08f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeca2dc9d0fb274a42565fff3f5eb08f4">&#9670;&nbsp;</a></span>generateDownGlyphs()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LifeFactory::generateDownGlyphs </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ac08534aef2d4e9059020a86e29f71e95"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac08534aef2d4e9059020a86e29f71e95">&#9670;&nbsp;</a></span>generateGlyphs()</h2>
 
@@ -189,31 +179,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="a29a73d25a7bac12d92d6a9653c91b96c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29a73d25a7bac12d92d6a9653c91b96c">&#9670;&nbsp;</a></span>generateUpGlyphs()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void LifeFactory::generateUpGlyphs </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>This method generates a row of player life objects. The number of objects generated depends on how many lives are passed into the constructor </p>
 
 </div>
 </div>
@@ -224,13 +190,16 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_life_factory_8h.html#a5af8f67b9174616c42fb50164f4a534d">vec_of_glyph_ptrs</a> LifeFactory::getGlyphs </td>
+          <td class="memname"><a class="el" href="_life_factory_8h.html#ac9be8b26da3d4588aa51fa62ac4825f7">vec_of_glyph_ptrs</a> LifeFactory::getGlyphs </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This method returns a vector of <a class="el" href="class_player_life.html" title="This class is a game object class that inherits from the IEntity class. This class models the icons t...">PlayerLife</a> shared_pointers that represent the number of lives that a currently player has. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;std::shared_ptr&lt;PlayerLife&gt;&gt; </dd></dl>
 
 </div>
 </div>
@@ -250,6 +219,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This method determines the number of <a class="el" href="class_player_life.html" title="This class is a game object class that inherits from the IEntity class. This class models the icons t...">PlayerLife</a> objects that appear on the screen based on the value passed in. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>of type lives </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -263,7 +240,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_life_factory_8h.html#a5af8f67b9174616c42fb50164f4a534d">vec_of_glyph_ptrs</a> LifeFactory::glyphs_</td>
+          <td class="memname"><a class="el" href="_life_factory_8h.html#ac9be8b26da3d4588aa51fa62ac4825f7">vec_of_glyph_ptrs</a> LifeFactory::glyphs_</td>
         </tr>
       </table>
   </td>

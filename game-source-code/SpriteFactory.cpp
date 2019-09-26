@@ -19,7 +19,7 @@ void SpriteFactory::setInitialSizes(const map_of_two_floats &sizes,
 			ObjectType::PLAYER_BULLET, true);
 
 	setSize(sizes, sprites, MapKeys::UP_PLAYER_LIFE, MapKeys::DOWN_PLAYER_LIFE,
-			ObjectType::PLAYER_GLYPH, false);
+			ObjectType::PLAYER_LIFE, false);
 
 	setSize(sizes, sprites, MapKeys::UP_BARRIER, MapKeys::DOWN_BARRIER,
 			ObjectType::BARRIER, true);
@@ -32,8 +32,8 @@ void SpriteFactory::applyTextures(map_of_sprite_ptrs &sprites)
 }
 
 void SpriteFactory::setSize(const map_of_two_floats &sizes,
-		map_of_sprite_ptrs &sprites, MapKeys up_object, MapKeys down_object,
-		ObjectType size_key, bool flip_down)
+		map_of_sprite_ptrs &sprites, const MapKeys up_object, const MapKeys down_object,
+		const ObjectType size_key, const bool flip_down)
 {
 	auto [x_size, y_size] = sizes.at(size_key);
 

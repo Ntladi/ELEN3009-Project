@@ -57,3 +57,11 @@ void IEntity::updateHitBox()
 {
 	hitbox_.setNewPositions(getPosition(), getSize());
 }
+
+void IEntity::setPosition(const two_floats &position)
+{
+	position_.setXPosition(std::get<0>(position));
+	position_.setYPosition(std::get<1>(position));
+	updateHitBox();
+}
+

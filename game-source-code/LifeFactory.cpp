@@ -4,9 +4,7 @@ LifeFactory::LifeFactory(Orientation orientation,const int & lives)
 {
 	lives_ = lives;
 	orientation_ = orientation;
-
 		generateGlyphs();
-
 }
 
 void LifeFactory::manageLives(const int& i)
@@ -26,13 +24,13 @@ vec_of_glyph_ptrs LifeFactory::getGlyphs() const
 
 void LifeFactory::generateGlyphs()
 {
-	auto temp_glyph = PlayerGlyph{orientation_};
+	auto temp_glyph = PlayerLife{orientation_};
 	auto x_position = std::get<0>(temp_glyph.getPosition());
 	auto y_position = std::get<1>(temp_glyph.getPosition());
 
 	for(auto i=0u; i< lives_; i++)
 	{
-		auto new_life = std::make_shared<PlayerGlyph>(orientation_);
+		auto new_life = std::make_shared<PlayerLife>(orientation_);
 		two_floats position = {x_position,y_position};
 		new_life->setPosition(position);
 		glyphs_.push_back(new_life);

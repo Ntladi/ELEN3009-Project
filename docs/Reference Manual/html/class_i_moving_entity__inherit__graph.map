@@ -1,10 +1,10 @@
 <map id="IMovingEntity" name="IMovingEntity">
-<area shape="rect" id="node1" title=" " alt="" coords="155,80,254,107"/>
-<area shape="rect" id="node3" href="$class_alien.html" title=" " alt="" coords="102,155,153,181"/>
-<area shape="rect" id="node4" href="$class_bullet.html" title=" " alt="" coords="177,155,232,181"/>
-<area shape="rect" id="node8" href="$class_player.html" title=" " alt="" coords="257,155,315,181"/>
-<area shape="rect" id="node2" href="$class_i_entity.html" title="This class is the main class by which all game objects inherit from." alt="" coords="175,5,234,32"/>
-<area shape="rect" id="node5" href="$class_left_diagonal_bullet.html" title=" " alt="" coords="5,229,132,256"/>
-<area shape="rect" id="node6" href="$class_piercer_bullet.html" title=" " alt="" coords="157,229,253,256"/>
-<area shape="rect" id="node7" href="$class_right_diagonal_bullet.html" title=" " alt="" coords="277,229,412,256"/>
+<area shape="rect" id="node1" title="This class is the main class by which all moving game objects inherit from. It inherits from the IEnt..." alt="" coords="189,351,337,472"/>
+<area shape="rect" id="node3" href="$class_alien.html" title="This class is a game object class that inherits from the IMovingEntity class. This class models the b..." alt="" coords="5,542,171,751"/>
+<area shape="rect" id="node4" href="$class_bullet.html" title="This class is a game object class that inherits from the IMovingEntity class. This class models the b..." alt="" coords="195,579,330,715"/>
+<area shape="rect" id="node8" href="$class_player.html" title="This class is a game object class that inherits from the IMovingEntity class. This class models the b..." alt="" coords="355,520,528,773"/>
+<area shape="rect" id="node2" href="$class_i_entity.html" title="This class is the main class by which all game objects inherit from." alt="" coords="195,5,330,303"/>
+<area shape="rect" id="node5" href="$class_left_diagonal_bullet.html" title="This class is a game object class that inherits from the Bullet class. This class models the behavior..." alt="" coords="33,821,180,913"/>
+<area shape="rect" id="node6" href="$class_piercer_bullet.html" title="This class is a game object class that inherits from the Bullet class. This class models the behavior..." alt="" coords="205,829,321,906"/>
+<area shape="rect" id="node7" href="$class_right_diagonal_bullet.html" title="This class is a game object class that inherits from the Bullet class. This class models the behavior..." alt="" coords="345,821,500,913"/>
 </map>

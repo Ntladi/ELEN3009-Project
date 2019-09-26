@@ -1,6 +1,6 @@
 <map id="WindowHandler" name="WindowHandler">
-<area shape="rect" id="node1" title=" " alt="" coords="91,287,203,313"/>
-<area shape="rect" id="node2" href="$class_backgrounds.html" title=" " alt="" coords="97,197,196,224"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,5,123,32"/>
-<area shape="rect" id="node4" title=" " alt="" coords="147,5,315,32"/>
+<area shape="rect" id="node1" title="This class is composed within the Presentation class and handles basic window events...." alt="" coords="85,476,209,583"/>
+<area shape="rect" id="node2" href="$class_backgrounds.html" title="This class is a data layer class that handles the backgrounds displayed during the various screen sta..." alt="" coords="61,248,232,413"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,5,123,83"/>
+<area shape="rect" id="node4" title=" " alt="" coords="147,5,315,83"/>
 </map>

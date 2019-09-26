@@ -1,10 +1,18 @@
 #ifndef CONSTANTS_H_
 #define CONSTANTS_H_
 
+/** \struct Constants
+ * \brief This struct contains all the constant values used
+ * all objects while the game is running.
+ */
 struct Constants
 {
 public:
-	const static constexpr float SCALE = 2;
+	/**
+	 * \brief This constant determines the scale of the game window
+	 * and all objects drawn on it.
+	 */
+	const static constexpr float SCALE = 1.9;
 	const static constexpr float SCREEN_X_LENGTH = 960*SCALE;
 	const static constexpr float SCREEN_Y_LENGTH = 500*SCALE;
 

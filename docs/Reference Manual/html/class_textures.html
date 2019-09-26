@@ -72,27 +72,33 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>This class is a data class composed within the <a class="el" href="class_sprite_factory.html" title="This class is a presentation class that facilitates communication between the Sprites class and the T...">SpriteFactory</a> class. It manages the textures that are applied to the <a class="el" href="class_sprites.html" title="This class is a data layer class composed within the Presentation class. it stores all the sprite obj...">Sprites</a>. The Texture objects are managed by the SFML library.  
+ <a href="class_textures.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_textures_8h_source.html">Textures.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for Textures:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_textures__coll__graph.png" border="0" usemap="#_textures_coll__map" alt="Collaboration graph"/></div>
 <map name="_textures_coll__map" id="_textures_coll__map">
-<area shape="rect" title=" " alt="" coords="51,109,123,136"/>
-<area shape="rect" title=" " alt="" coords="5,5,168,47"/>
+<area shape="rect" title="This class is a data class composed within the SpriteFactory class. It manages the textures that are ..." alt="" coords="23,160,151,267"/>
+<area shape="rect" title=" " alt="" coords="5,5,168,97"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a43eceaf4fb6fa052e1c41cebb7b18189"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_textures.html#a43eceaf4fb6fa052e1c41cebb7b18189">Textures</a> ()</td></tr>
+<tr class="memdesc:a43eceaf4fb6fa052e1c41cebb7b18189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Texture constructor. Initializes the texture map.  <a href="class_textures.html#a43eceaf4fb6fa052e1c41cebb7b18189">More...</a><br /></td></tr>
 <tr class="separator:a43eceaf4fb6fa052e1c41cebb7b18189"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55b1d5d8375bdb9e85c51004231eafb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_textures_8h.html#a944c0a92f2b22d2374ea55020805fb2b">map_of_texture_ptrs</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_textures.html#a55b1d5d8375bdb9e85c51004231eafb9">getTextureMap</a> ()</td></tr>
+<tr class="memdesc:a55b1d5d8375bdb9e85c51004231eafb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns a map containing pointers to the sf::Texture objects. The map uses values from the MapKeys enumeration as keys.  <a href="class_textures.html#a55b1d5d8375bdb9e85c51004231eafb9">More...</a><br /></td></tr>
 <tr class="separator:a55b1d5d8375bdb9e85c51004231eafb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a03b0312531a431c48904c1ab75b6390b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_textures.html#a03b0312531a431c48904c1ab75b6390b">initializeTexture</a> (<a class="el" href="_map_keys_8h.html#a554599939b797e7446541ad7608478a2">MapKeys</a> key, std::string fileString)</td></tr>
+<tr class="memdesc:a03b0312531a431c48904c1ab75b6390b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method receives an enumeration of type MapKeys, as well as a string which describes the path to the texture that must be loaded. It uses these parameters as key value pairs to initialize a shared sf::Texture pointer which is stored in the map member variable.  <a href="class_textures.html#a03b0312531a431c48904c1ab75b6390b">More...</a><br /></td></tr>
 <tr class="separator:a03b0312531a431c48904c1ab75b6390b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -100,7 +106,11 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a4b863e6488123979d1dc33fe877e9ce5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_textures_8h.html#a944c0a92f2b22d2374ea55020805fb2b">map_of_texture_ptrs</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_textures.html#a4b863e6488123979d1dc33fe877e9ce5">textures_</a></td></tr>
 <tr class="separator:a4b863e6488123979d1dc33fe877e9ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class is a data class composed within the <a class="el" href="class_sprite_factory.html" title="This class is a presentation class that facilitates communication between the Sprites class and the T...">SpriteFactory</a> class. It manages the textures that are applied to the <a class="el" href="class_sprites.html" title="This class is a data layer class composed within the Presentation class. it stores all the sprite obj...">Sprites</a>. The Texture objects are managed by the SFML library. </p>
+<dl class="section author"><dt>Author</dt><dd>1599953 Ntladi Mohajane and 1705890 Tshepo Chokoe </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>3.0 </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a43eceaf4fb6fa052e1c41cebb7b18189"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a43eceaf4fb6fa052e1c41cebb7b18189">&#9670;&nbsp;</a></span>Textures()</h2>
 
@@ -115,6 +125,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Default Texture constructor. Initializes the texture map. </p>
 
 </div>
 </div>
@@ -133,6 +145,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This method returns a map containing pointers to the sf::Texture objects. The map uses values from the MapKeys enumeration as keys. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::map&lt;MapKeys,std::shared_ptr&lt;sf::Texture&gt;&gt;; </dd></dl>
 
 </div>
 </div>
@@ -169,6 +184,15 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>This method receives an enumeration of type MapKeys, as well as a string which describes the path to the texture that must be loaded. It uses these parameters as key value pairs to initialize a shared sf::Texture pointer which is stored in the map member variable. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>of type MapKeys </td></tr>
+    <tr><td class="paramname">fileString</td><td>of type std::string </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

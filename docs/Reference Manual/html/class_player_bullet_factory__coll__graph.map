@@ -1,6 +1,6 @@
 <map id="PlayerBulletFactory" name="PlayerBulletFactory">
-<area shape="rect" id="node1" title=" " alt="" coords="64,228,200,255"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,124,139,165"/>
-<area shape="rect" id="node3" href="$class_stop_watch.html" title=" " alt="" coords="163,131,250,158"/>
-<area shape="rect" id="node4" title=" " alt="" coords="183,5,230,32"/>
+<area shape="rect" id="node1" title="This class is a data layer class that manages the shots fired by objects from the Player class." alt="" coords="57,373,223,568"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,197,139,289"/>
+<area shape="rect" id="node3" href="$class_stop_watch.html" title="This class keeps track of amount of time passed as the game is running." alt="" coords="163,175,298,311"/>
+<area shape="rect" id="node4" title=" " alt="" coords="207,5,254,83"/>
 </map>

@@ -1,11 +1,11 @@
 <map id="ObjectFactory" name="ObjectFactory">
-<area shape="rect" id="node1" title="This class is a data layer class composed within the Logic class. it stores all the objects that the ..." alt="" coords="967,157,1071,184"/>
-<area shape="rect" id="node2" href="$class_player_object_handler.html" title=" " alt="" coords="623,37,764,64"/>
-<area shape="rect" id="node3" title=" " alt="" coords="322,12,425,39"/>
-<area shape="rect" id="node4" href="$class_seperating_axis_theorem.html" title=" " alt="" coords="293,63,453,89"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,63,144,89"/>
-<area shape="rect" id="node6" title=" " alt="" coords="608,97,779,124"/>
-<area shape="rect" id="node7" title=" " alt="" coords="617,157,769,184"/>
-<area shape="rect" id="node8" title=" " alt="" coords="599,217,788,244"/>
-<area shape="rect" id="node9" title=" " alt="" coords="621,277,765,304"/>
+<area shape="rect" id="node1" title="This class is a data layer class composed within the Logic class. it stores all the game objects that..." alt="" coords="415,645,594,943"/>
+<area shape="rect" id="node2" href="$class_player_object_handler.html" title="This class determines whether or not it is appropriate to move a Player game object based on what gam..." alt="" coords="31,447,210,568"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,241,108,318"/>
+<area shape="rect" id="node4" href="$class_separating_axis_theorem.html" title="This class uses the Separating Axis Theorem to check for collisions between two game objects." alt="" coords="132,189,312,369"/>
+<area shape="rect" id="node5" title=" " alt="" coords="153,5,291,83"/>
+<area shape="rect" id="node6" title=" " alt="" coords="234,469,405,546"/>
+<area shape="rect" id="node7" title=" " alt="" coords="429,469,581,546"/>
+<area shape="rect" id="node8" title=" " alt="" coords="605,469,794,546"/>
+<area shape="rect" id="node9" title=" " alt="" coords="818,469,962,546"/>
 </map>

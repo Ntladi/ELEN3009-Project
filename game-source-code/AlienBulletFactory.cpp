@@ -1,17 +1,17 @@
 #include <AlienBulletFactory.h>
 
 
-BulletFactory::BulletFactory()
+AlienBulletFactory::AlienBulletFactory()
 {
 	srand(time(0));
 }
-vec_of_bullets BulletFactory::getOnslaught()
+const vec_of_bullets AlienBulletFactory::getOnslaught()
 {
 	removeWaste();
 	return bullets_;
 }
 
-void BulletFactory::generateBullets(aliens_2d &aliens, const int &size)
+void AlienBulletFactory::generateBullets(const aliens_2d &aliens, const int &size)
 {
 	if (stopwatch_.getTimeElapsed() > Constants::TIME_BETWEEN_ALIEN_SHOTS
 			&& size > 0)
@@ -33,8 +33,8 @@ void BulletFactory::generateBullets(aliens_2d &aliens, const int &size)
 	}
 }
 
-void BulletFactory::addBullet(std::vector<unsigned int> &endOfCols,
-		const unsigned int &index, aliens_2d &aliens)
+void AlienBulletFactory::addBullet(const std::vector<unsigned int> &endOfCols,
+		const unsigned int &index, const aliens_2d &aliens)
 {
 	if (aliens.at(index).size() > 0)
 	{
@@ -45,7 +45,7 @@ void BulletFactory::addBullet(std::vector<unsigned int> &endOfCols,
 	}
 }
 
-void BulletFactory::removeWaste()
+void AlienBulletFactory::removeWaste()
 {
 	auto lambda = [](auto i)
 	{	return !(i->getStatus());};

@@ -16,31 +16,31 @@ const float Movement::getEdgeStep() const
 {
 	return edge_step_;
 }
-MoveDirection Movement::getMoveDirection() const
+const MoveDirection Movement::getMoveDirection() const
 {
 	return move_direction_;
 }
-bool Movement::isMovingUp() const
+const bool Movement::isMovingUp() const
 {
 	return move_direction_ == MoveDirection::UP;
 }
 
-bool Movement::isMovingDown() const
+const bool Movement::isMovingDown() const
 {
 	return move_direction_ == MoveDirection::DOWN;
 }
 
-bool Movement::isMovingLeft() const
+const bool Movement::isMovingLeft() const
 {
 	return move_direction_ == MoveDirection::LEFT;
 }
 
-bool Movement::isMovingRight() const
+const bool Movement::isMovingRight() const
 {
 	return move_direction_ == MoveDirection::RIGHT;
 }
 
-bool Movement::isNotMoving() const
+const bool Movement::isNotMoving() const
 {
 	return move_direction_ == MoveDirection::NONE;
 }

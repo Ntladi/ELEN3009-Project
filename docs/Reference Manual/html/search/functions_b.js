@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['normalizeaxis_781',['normalizeAxis',['../class_seperating_axis_theorem.html#ab1e3ae69e58c019728f9c9c3fa877527',1,'SeperatingAxisTheorem']]]
+  ['normalizeaxis_766',['normalizeAxis',['../class_separating_axis_theorem.html#a0c55751b1a7a5882c4c327b571fca96b',1,'SeparatingAxisTheorem']]]
 ];

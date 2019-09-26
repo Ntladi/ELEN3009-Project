@@ -15,12 +15,12 @@ void Position::setYPosition(const float &y)
 	y_position_ = y;
 }
 
-float Position::getXPosition() const
+const float Position::getXPosition() const
 {
 	return x_position_;
 }
 
-float Position::getYPosition() const
+const float Position::getYPosition() const
 {
 	return y_position_;
 }

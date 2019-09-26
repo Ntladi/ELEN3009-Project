@@ -17,14 +17,6 @@ Barrier::Barrier(Orientation orientation)
 
 }
 
-void Barrier::setPosition(const two_floats & position)
-{
-	auto [x_position,y_position] = position;
-	position_.setXPosition(x_position);
-	position_.setYPosition(y_position);
-	updateHitBox();
-}
-
 two_floats Barrier::initializePosition()
 {
 	auto x_position = Constants::BARRIER_INITAL_X_POSITION;

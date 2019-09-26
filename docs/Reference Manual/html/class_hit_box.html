@@ -72,34 +72,43 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>This class is a data layer class that models the space that of all objects inherited from the <a class="el" href="class_i_entity.html" title="This class is the main class by which all game objects inherit from.">IEntity</a> class occupies.  
+ <a href="class_hit_box.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_hit_box_8h_source.html">HitBox.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for HitBox:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_hit_box__coll__graph.png" border="0" usemap="#_hit_box_coll__map" alt="Collaboration graph"/></div>
 <map name="_hit_box_coll__map" id="_hit_box_coll__map">
-<area shape="rect" title=" " alt="" coords="85,168,146,195"/>
-<area shape="rect" title=" " alt="" coords="5,5,65,32"/>
-<area shape="rect" title=" " alt="" coords="130,5,261,32"/>
+<area shape="rect" title="This class is a data layer class that models the space that of all objects inherited from the IEntity..." alt="" coords="44,219,189,399"/>
+<area shape="rect" title=" " alt="" coords="5,5,65,83"/>
+<area shape="rect" title=" " alt="" coords="134,5,265,83"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa2d212c1d612bd2f133762739debbb85"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hit_box.html#aa2d212c1d612bd2f133762739debbb85">HitBox</a> (<a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> position={}, <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> size={})</td></tr>
+<tr class="memdesc:aa2d212c1d612bd2f133762739debbb85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameterized <a class="el" href="class_movement.html" title="This class is a data layer class that encapsulates all movement information for all objects inherited...">Movement</a> constructor. Initializes member variables to those that are passed in. The constutor's parameters have default values to avoid the need for a default constructor.  <a href="class_hit_box.html#aa2d212c1d612bd2f133762739debbb85">More...</a><br /></td></tr>
 <tr class="separator:aa2d212c1d612bd2f133762739debbb85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8d67bcc2d9645946433cd5cbc0e8220"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hit_box.html#ae8d67bcc2d9645946433cd5cbc0e8220">setNewPositions</a> (<a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> position, <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> size)</td></tr>
-<tr class="separator:ae8d67bcc2d9645946433cd5cbc0e8220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfffce36ea0898e881824fdc8a6eed21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hit_box.html#adfffce36ea0898e881824fdc8a6eed21">setNewPositions</a> (const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> position, const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> size)</td></tr>
+<tr class="memdesc:adfffce36ea0898e881824fdc8a6eed21"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method receives two constant floats and uses them to calculate the positions of all relevant positions contained within the Hitbox.  <a href="class_hit_box.html#adfffce36ea0898e881824fdc8a6eed21">More...</a><br /></td></tr>
+<tr class="separator:adfffce36ea0898e881824fdc8a6eed21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a686cd3f6af779610efb9d78dc3889b52"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hit_box.html#a686cd3f6af779610efb9d78dc3889b52">getVertecies</a> () const</td></tr>
 <tr class="separator:a686cd3f6af779610efb9d78dc3889b52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e37167ad812619d799bbbe3c099b6e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hit_box.html#a0e37167ad812619d799bbbe3c099b6e0">getTopLeft</a> () const</td></tr>
-<tr class="separator:a0e37167ad812619d799bbbe3c099b6e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa683050b0cb9b05e808e77dc954f995"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hit_box.html#afa683050b0cb9b05e808e77dc954f995">getTopRight</a> () const</td></tr>
-<tr class="separator:afa683050b0cb9b05e808e77dc954f995"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33048da785e4543eecea76e7c4eff072"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hit_box.html#a33048da785e4543eecea76e7c4eff072">getBottomLeft</a> () const</td></tr>
-<tr class="separator:a33048da785e4543eecea76e7c4eff072"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a435cbc6b746c38c24c7a8df9b71e48ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hit_box.html#a435cbc6b746c38c24c7a8df9b71e48ad">getBottomRight</a> () const</td></tr>
-<tr class="separator:a435cbc6b746c38c24c7a8df9b71e48ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefcc48346ad7f42c96bbdbf7d4ea7de4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hit_box.html#aefcc48346ad7f42c96bbdbf7d4ea7de4">getTopLeft</a> () const</td></tr>
+<tr class="memdesc:aefcc48346ad7f42c96bbdbf7d4ea7de4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns a constant tuple of which each element is of type float. The tuple details the position of the top left corner of the object inherited from the <a class="el" href="class_i_entity.html" title="This class is the main class by which all game objects inherit from.">IEntity</a> class. No modifications are made to member variables.  <a href="class_hit_box.html#aefcc48346ad7f42c96bbdbf7d4ea7de4">More...</a><br /></td></tr>
+<tr class="separator:aefcc48346ad7f42c96bbdbf7d4ea7de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4314bfb5a242277c6102857e66eaecf2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hit_box.html#a4314bfb5a242277c6102857e66eaecf2">getTopRight</a> () const</td></tr>
+<tr class="memdesc:a4314bfb5a242277c6102857e66eaecf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns a constant tuple of which each element is of type float. The tuple details the position of the top right corner of the object inherited from the <a class="el" href="class_i_entity.html" title="This class is the main class by which all game objects inherit from.">IEntity</a> class. No modifications are made to member variables.  <a href="class_hit_box.html#a4314bfb5a242277c6102857e66eaecf2">More...</a><br /></td></tr>
+<tr class="separator:a4314bfb5a242277c6102857e66eaecf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18f86b4522f476170aae4e398add594b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hit_box.html#a18f86b4522f476170aae4e398add594b">getBottomLeft</a> () const</td></tr>
+<tr class="memdesc:a18f86b4522f476170aae4e398add594b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns a constant tuple of which each element is of type float. The tuple details the position of the bottom left corner of the object inherited from the <a class="el" href="class_i_entity.html" title="This class is the main class by which all game objects inherit from.">IEntity</a> class. No modifications are made to member variables.  <a href="class_hit_box.html#a18f86b4522f476170aae4e398add594b">More...</a><br /></td></tr>
+<tr class="separator:a18f86b4522f476170aae4e398add594b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68525cdc53f789ffd7f57c11805c0faf"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hit_box.html#a68525cdc53f789ffd7f57c11805c0faf">getBottomRight</a> () const</td></tr>
+<tr class="memdesc:a68525cdc53f789ffd7f57c11805c0faf"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns a constant tuple of which each element is of type float. The tuple details the position of the bottom right corner of the object inherited from the <a class="el" href="class_i_entity.html" title="This class is the main class by which all game objects inherit from.">IEntity</a> class. No modifications are made to member variables.  <a href="class_hit_box.html#a68525cdc53f789ffd7f57c11805c0faf">More...</a><br /></td></tr>
+<tr class="separator:a68525cdc53f789ffd7f57c11805c0faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -125,7 +134,11 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:ad5436363b99254bf3aa85a0321910c7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hit_box.html#ad5436363b99254bf3aa85a0321910c7c">bottom_right_</a></td></tr>
 <tr class="separator:ad5436363b99254bf3aa85a0321910c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class is a data layer class that models the space that of all objects inherited from the <a class="el" href="class_i_entity.html" title="This class is the main class by which all game objects inherit from.">IEntity</a> class occupies. </p>
+<dl class="section author"><dt>Author</dt><dd>1599953 Ntladi Mohajane and 1705890 Tshepo Chokoe </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>3.0 </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa2d212c1d612bd2f133762739debbb85"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa2d212c1d612bd2f133762739debbb85">&#9670;&nbsp;</a></span>HitBox()</h2>
 
@@ -151,6 +164,15 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Parameterized <a class="el" href="class_movement.html" title="This class is a data layer class that encapsulates all movement information for all objects inherited...">Movement</a> constructor. Initializes member variables to those that are passed in. The constutor's parameters have default values to avoid the need for a default constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>of type std::tuple&lt;float, float&gt; </td></tr>
+    <tr><td class="paramname">size</td><td>of type std::tuple&lt;float, float&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -180,14 +202,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a33048da785e4543eecea76e7c4eff072"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33048da785e4543eecea76e7c4eff072">&#9670;&nbsp;</a></span>getBottomLeft()</h2>
+<a id="a18f86b4522f476170aae4e398add594b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18f86b4522f476170aae4e398add594b">&#9670;&nbsp;</a></span>getBottomLeft()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> HitBox::getBottomLeft </td>
+          <td class="memname">const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> HitBox::getBottomLeft </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -195,16 +217,19 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This method returns a constant tuple of which each element is of type float. The tuple details the position of the bottom left corner of the object inherited from the <a class="el" href="class_i_entity.html" title="This class is the main class by which all game objects inherit from.">IEntity</a> class. No modifications are made to member variables. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::tuple&lt;float,float&gt; </dd></dl>
+
 </div>
 </div>
-<a id="a435cbc6b746c38c24c7a8df9b71e48ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a435cbc6b746c38c24c7a8df9b71e48ad">&#9670;&nbsp;</a></span>getBottomRight()</h2>
+<a id="a68525cdc53f789ffd7f57c11805c0faf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68525cdc53f789ffd7f57c11805c0faf">&#9670;&nbsp;</a></span>getBottomRight()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> HitBox::getBottomRight </td>
+          <td class="memname">const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> HitBox::getBottomRight </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -212,16 +237,19 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This method returns a constant tuple of which each element is of type float. The tuple details the position of the bottom right corner of the object inherited from the <a class="el" href="class_i_entity.html" title="This class is the main class by which all game objects inherit from.">IEntity</a> class. No modifications are made to member variables. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::tuple&lt;float,float&gt; </dd></dl>
+
 </div>
 </div>
-<a id="a0e37167ad812619d799bbbe3c099b6e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e37167ad812619d799bbbe3c099b6e0">&#9670;&nbsp;</a></span>getTopLeft()</h2>
+<a id="aefcc48346ad7f42c96bbdbf7d4ea7de4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefcc48346ad7f42c96bbdbf7d4ea7de4">&#9670;&nbsp;</a></span>getTopLeft()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> HitBox::getTopLeft </td>
+          <td class="memname">const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> HitBox::getTopLeft </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -229,22 +257,28 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This method returns a constant tuple of which each element is of type float. The tuple details the position of the top left corner of the object inherited from the <a class="el" href="class_i_entity.html" title="This class is the main class by which all game objects inherit from.">IEntity</a> class. No modifications are made to member variables. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::tuple&lt;float,float&gt; </dd></dl>
+
 </div>
 </div>
-<a id="afa683050b0cb9b05e808e77dc954f995"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa683050b0cb9b05e808e77dc954f995">&#9670;&nbsp;</a></span>getTopRight()</h2>
+<a id="a4314bfb5a242277c6102857e66eaecf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4314bfb5a242277c6102857e66eaecf2">&#9670;&nbsp;</a></span>getTopRight()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> HitBox::getTopRight </td>
+          <td class="memname">const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> HitBox::getTopRight </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This method returns a constant tuple of which each element is of type float. The tuple details the position of the top right corner of the object inherited from the <a class="el" href="class_i_entity.html" title="This class is the main class by which all game objects inherit from.">IEntity</a> class. No modifications are made to member variables. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::tuple&lt;float,float&gt; </dd></dl>
 
 </div>
 </div>
@@ -265,8 +299,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae8d67bcc2d9645946433cd5cbc0e8220"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8d67bcc2d9645946433cd5cbc0e8220">&#9670;&nbsp;</a></span>setNewPositions()</h2>
+<a id="adfffce36ea0898e881824fdc8a6eed21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfffce36ea0898e881824fdc8a6eed21">&#9670;&nbsp;</a></span>setNewPositions()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -274,13 +308,13 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void HitBox::setNewPositions </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td>
           <td class="paramname"><em>position</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td>
           <td class="paramname"><em>size</em>&#160;</td>
         </tr>
         <tr>
@@ -290,6 +324,15 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This method receives two constant floats and uses them to calculate the positions of all relevant positions contained within the Hitbox. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>of type std::tuple&lt;float, float&gt; </td></tr>
+    <tr><td class="paramname">size</td><td>of type std::tuple&lt;float, float&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

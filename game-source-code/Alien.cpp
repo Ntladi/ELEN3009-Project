@@ -24,12 +24,6 @@ void Alien::setMoveDirection(const MoveDirection &direction)
 	movement_.setMoveDirection(direction);
 }
 
-void Alien::setPosition(const two_floats &position)
-{
-	position_.setXPosition(std::get<0>(position));
-	position_.setYPosition(std::get<1>(position));
-	updateHitBox();
-}
 
 void Alien::move()
 {
@@ -46,12 +40,12 @@ Bullet Alien::shoot()
 	{ getPosition(), ObjectType::ALIEN_BULLET, parameters_.getOrientation() };
 }
 
-bool Alien::checkEdge()
+const bool Alien::checkEdge()
 {
 	return isAtEdgeOfScreen();
 }
 
-bool Alien::checkEnd()
+const bool Alien::checkEnd()
 {
 	return isAtEndOfScreen();
 }
@@ -86,7 +80,7 @@ void Alien::moveAlienHorizontally()
 	position_.setXPosition(alien_x_position);
 }
 
-bool Alien::isAtEndOfScreen()
+const bool Alien::isAtEndOfScreen()
 {
 	updateHitBox();
 	if ((position_.getYPosition() - movement_.getMovementStep()

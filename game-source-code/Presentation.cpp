@@ -15,7 +15,7 @@ void Presentation::initializeSpriteSizes(const map_of_two_floats &sizes)
 	sprites_.setInitialSizes(sizes);
 }
 
-bool Presentation::isPlaying() const
+const bool Presentation::isPlaying() const
 {
 	return screen_state_ == ScreenState::GAME_SCREEN;
 }
@@ -48,7 +48,7 @@ void Presentation::setMode()
 	}
 }
 
-bool Presentation::isWindowOpen() const
+const bool Presentation::isWindowOpen() const
 {
 	return window_->isOpen();
 }

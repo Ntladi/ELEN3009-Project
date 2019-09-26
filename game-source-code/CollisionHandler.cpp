@@ -19,9 +19,7 @@ void CollisionHandler::handlecollisions(vec_of_object_ptrs & objects)
 	dualCollisions(players_, aliens_);
 	monoCollisions(player_bullets_, player_bullets_);
 	monoCollisions(player_bullets_, alien_bullets_);
-
 	monoCollisions(barriers_, alien_bullets_);
-	//monoCollisions(barriers_, aliens_);
 	dualCollisions(barriers_, player_bullets_);
 }
 

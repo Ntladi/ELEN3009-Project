@@ -7,6 +7,12 @@
 #include "Constants.h"
 using text_ptr = std::shared_ptr<sf::Text>;
 
+/** \class Score
+ * \brief This class is responsible for managing how the player's score
+ * is displayed on the render window. It is encapsulated within the Presentation class.
+ * \author 1599953 Ntladi Mohajane and 1705890 Tshepo Chokoe
+ * \version 3.0
+ */
 class Score
 {
 public:

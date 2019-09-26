@@ -1,12 +1,12 @@
 #include <IMovingEntity.h>
 
-MoveDirection IMovingEntity::getMoveDirection() const
+const MoveDirection IMovingEntity::getMoveDirection() const
 {
 	return movement_.getMoveDirection();
 }
 
 
-bool IMovingEntity::isAtEdgeOfScreen()
+const bool IMovingEntity::isAtEdgeOfScreen()
 {
 	updateHitBox();
 	if ((position_.getXPosition() + movement_.getMovementStep()
@@ -20,7 +20,7 @@ bool IMovingEntity::isAtEdgeOfScreen()
 	return false;
 }
 
-bool IMovingEntity::isAtEndOfScreen()
+const bool IMovingEntity::isAtEndOfScreen()
 {
 	updateHitBox();
 	if ((position_.getYPosition() - movement_.getEdgeStep()

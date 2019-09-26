@@ -1,7 +1,7 @@
 <map id="CollisionHandler" name="CollisionHandler">
-<area shape="rect" id="node1" title=" " alt="" coords="87,287,202,313"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,124,52,151"/>
-<area shape="rect" id="node3" title=" " alt="" coords="76,124,213,151"/>
-<area shape="rect" id="node4" href="$class_seperating_axis_theorem.html" title=" " alt="" coords="238,124,398,151"/>
-<area shape="rect" id="node5" title=" " alt="" coords="249,5,387,32"/>
+<area shape="rect" id="node1" title="This class checks for and handles collision detection for all game objects." alt="" coords="89,505,243,685"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,241,52,318"/>
+<area shape="rect" id="node3" href="$class_separating_axis_theorem.html" title="This class uses the Separating Axis Theorem to check for collisions between two game objects." alt="" coords="76,189,256,369"/>
+<area shape="rect" id="node4" title=" " alt="" coords="97,5,235,83"/>
+<area shape="rect" id="node5" title=" " alt="" coords="280,241,417,318"/>
 </map>

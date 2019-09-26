@@ -1,6 +1,6 @@
 <map id="RightDiagonalBullet" name="RightDiagonalBullet">
-<area shape="rect" id="node1" title=" " alt="" coords="5,229,140,256"/>
-<area shape="rect" id="node2" href="$class_bullet.html" title=" " alt="" coords="45,155,100,181"/>
-<area shape="rect" id="node3" href="$class_i_moving_entity.html" title=" " alt="" coords="23,80,122,107"/>
-<area shape="rect" id="node4" href="$class_i_entity.html" title="This class is the main class by which all game objects inherit from." alt="" coords="43,5,102,32"/>
+<area shape="rect" id="node1" title="This class is a game object class that inherits from the Bullet class. This class models the behavior..." alt="" coords="5,704,160,796"/>
+<area shape="rect" id="node2" href="$class_bullet.html" title="This class is a game object class that inherits from the IMovingEntity class. This class models the b..." alt="" coords="15,520,150,656"/>
+<area shape="rect" id="node3" href="$class_i_moving_entity.html" title="This class is the main class by which all moving game objects inherit from. It inherits from the IEnt..." alt="" coords="9,351,157,472"/>
+<area shape="rect" id="node4" href="$class_i_entity.html" title="This class is the main class by which all game objects inherit from." alt="" coords="15,5,150,303"/>
 </map>

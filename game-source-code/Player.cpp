@@ -29,13 +29,6 @@ vec_of_bullets Player::getShotsFired()
 	return bullet_factory_.getShotsFired();
 }
 
-void Player::setPosition(const two_floats &position)
-{
-	position_.setXPosition(std::get<0>(position));
-	position_.setYPosition(std::get<1>(position));
-	updateHitBox();
-}
-
 void Player::move()
 {
 	if ((movement_.isMovingLeft() || movement_.isMovingRight())
@@ -57,7 +50,7 @@ void Player::shoot()
 	bullet_factory_.shoot(parameters_.getOrientation(), getPosition());
 }
 
-bool Player::isNotMovingVertucally()
+const bool Player::isNotMovingVertucally()
 {
 	if ((position_.getYPosition() <= (parameters_.getTopEdge())))
 		return true;
@@ -121,7 +114,7 @@ void Player::resetPosition(Orientation orientation)
 	startClock();
 }
 
-bool Player::getHit() const
+const bool Player::getHit() const
 {
 	return parameters_.isHit();
 }

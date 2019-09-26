@@ -72,33 +72,42 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>This class manages the behavior of all barriers that appear in the game. All <a class="el" href="class_barrier.html" title="This class is a game object class that inherits from the IEntity class. This class models a piece of ...">Barrier</a> objects are encapsulated within this class.  
+ <a href="class_barrier_factory.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_barrier_factory_8h_source.html">BarrierFactory.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for BarrierFactory:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_barrier_factory__coll__graph.png" border="0" usemap="#_barrier_factory_coll__map" alt="Collaboration graph"/></div>
 <map name="_barrier_factory_coll__map" id="_barrier_factory_coll__map">
-<area shape="rect" title=" " alt="" coords="20,109,124,136"/>
-<area shape="rect" title=" " alt="" coords="5,5,139,47"/>
+<area shape="rect" title="This class manages the behavior of all barriers that appear in the game. All Barrier objects are enca..." alt="" coords="5,160,144,311"/>
+<area shape="rect" title=" " alt="" coords="8,5,141,97"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae84f0c0919f22589d4556fb821171f98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_barrier_factory.html#ae84f0c0919f22589d4556fb821171f98">BarrierFactory</a> (<a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> orientation=<a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58a87a77fb30e508725d35683af9611e146">Orientation::FACE_UP</a>)</td></tr>
+<tr class="memdesc:ae84f0c0919f22589d4556fb821171f98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameterized <a class="el" href="class_barrier_factory.html" title="This class manages the behavior of all barriers that appear in the game. All Barrier objects are enca...">BarrierFactory</a> constructor. it initializes all barriers that appear on the screen.  <a href="class_barrier_factory.html#ae84f0c0919f22589d4556fb821171f98">More...</a><br /></td></tr>
 <tr class="separator:ae84f0c0919f22589d4556fb821171f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3b6422e23faded1acce32b6509b30e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_barrier_factory_8h.html#a16a65b22d1a699056d7207b9649f30d9">vec_of_barriers</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_barrier_factory.html#ae3b6422e23faded1acce32b6509b30e7">getBarriers</a> ()</td></tr>
+<tr class="memdesc:ae3b6422e23faded1acce32b6509b30e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns the member vector of <a class="el" href="class_barrier.html" title="This class is a game object class that inherits from the IEntity class. This class models a piece of ...">Barrier</a> shared pointers that have not been destroyed.  <a href="class_barrier_factory.html#ae3b6422e23faded1acce32b6509b30e7">More...</a><br /></td></tr>
 <tr class="separator:ae3b6422e23faded1acce32b6509b30e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:affca8ba1de2cd3d0a753c148f08c75ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_barrier_factory.html#affca8ba1de2cd3d0a753c148f08c75ca">removeWaste</a> ()</td></tr>
+<tr class="memdesc:affca8ba1de2cd3d0a753c148f08c75ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method removes destroyed bullet objects from the member vector of <a class="el" href="class_bullet.html" title="This class is a game object class that inherits from the IMovingEntity class. This class models the b...">Bullet</a> shared pointers.  <a href="class_barrier_factory.html#affca8ba1de2cd3d0a753c148f08c75ca">More...</a><br /></td></tr>
 <tr class="separator:affca8ba1de2cd3d0a753c148f08c75ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48039a94d1a2e7a1ae856b8cfd134484"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_barrier_factory.html#a48039a94d1a2e7a1ae856b8cfd134484">generateBarriers</a> (<a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> orientation)</td></tr>
+<tr class="memdesc:a48039a94d1a2e7a1ae856b8cfd134484"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method generates all barriers that appear on the screen.  <a href="class_barrier_factory.html#a48039a94d1a2e7a1ae856b8cfd134484">More...</a><br /></td></tr>
 <tr class="separator:a48039a94d1a2e7a1ae856b8cfd134484"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4d99f4d597cfa54ace52250b299ee11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_barrier_factory.html#ab4d99f4d597cfa54ace52250b299ee11">generateRows</a> (<a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> orientation, <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> position, <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> size)</td></tr>
+<tr class="memdesc:ab4d99f4d597cfa54ace52250b299ee11"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method generates a row of barriers along the x axis of the screen.  <a href="class_barrier_factory.html#ab4d99f4d597cfa54ace52250b299ee11">More...</a><br /></td></tr>
 <tr class="separator:ab4d99f4d597cfa54ace52250b299ee11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7088562941cd4742e163540072c685e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_barrier_factory.html#a7088562941cd4742e163540072c685e6">generateColumns</a> (<a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> orientation, <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> position, <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> size)</td></tr>
+<tr class="memdesc:a7088562941cd4742e163540072c685e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method generates a column of barriers along the y axis of the screen.  <a href="class_barrier_factory.html#a7088562941cd4742e163540072c685e6">More...</a><br /></td></tr>
 <tr class="separator:a7088562941cd4742e163540072c685e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -106,7 +115,11 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a51a5ab730b634549c880a4f770b1cdb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_barrier_factory_8h.html#a16a65b22d1a699056d7207b9649f30d9">vec_of_barriers</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_barrier_factory.html#a51a5ab730b634549c880a4f770b1cdb2">barriers_</a></td></tr>
 <tr class="separator:a51a5ab730b634549c880a4f770b1cdb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class manages the behavior of all barriers that appear in the game. All <a class="el" href="class_barrier.html" title="This class is a game object class that inherits from the IEntity class. This class models a piece of ...">Barrier</a> objects are encapsulated within this class. </p>
+<dl class="section author"><dt>Author</dt><dd>1599953 Ntladi Mohajane and 1705890 Tshepo Chokoe </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>3.0 </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae84f0c0919f22589d4556fb821171f98"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae84f0c0919f22589d4556fb821171f98">&#9670;&nbsp;</a></span>BarrierFactory()</h2>
 
@@ -122,6 +135,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Parameterized <a class="el" href="class_barrier_factory.html" title="This class manages the behavior of all barriers that appear in the game. All Barrier objects are enca...">BarrierFactory</a> constructor. it initializes all barriers that appear on the screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">orientation</td><td>of type Orientation </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -149,6 +170,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>This method generates all barriers that appear on the screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">orientation</td><td>of type Orientation </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -192,6 +221,16 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>This method generates a column of barriers along the y axis of the screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">orientation</td><td>of type Orientation </td></tr>
+    <tr><td class="paramname">position</td><td>of type std::tuple&lt;float, float&gt;; </td></tr>
+    <tr><td class="paramname">size</td><td>of type std::tuple&lt;float, float&gt;; </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ab4d99f4d597cfa54ace52250b299ee11"></a>
@@ -234,6 +273,16 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>This method generates a row of barriers along the x axis of the screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">orientation</td><td>of type Orientation </td></tr>
+    <tr><td class="paramname">position</td><td>of type std::tuple&lt;float, float&gt;; </td></tr>
+    <tr><td class="paramname">size</td><td>of type std::tuple&lt;float, float&gt;; </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ae3b6422e23faded1acce32b6509b30e7"></a>
@@ -250,6 +299,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This method returns the member vector of <a class="el" href="class_barrier.html" title="This class is a game object class that inherits from the IEntity class. This class models a piece of ...">Barrier</a> shared pointers that have not been destroyed. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;std::shared_ptr&lt;Barrier&gt;&gt; </dd></dl>
 
 </div>
 </div>
@@ -275,6 +327,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>This method removes destroyed bullet objects from the member vector of <a class="el" href="class_bullet.html" title="This class is a game object class that inherits from the IMovingEntity class. This class models the b...">Bullet</a> shared pointers. </p>
 
 </div>
 </div>

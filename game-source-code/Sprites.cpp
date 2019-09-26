@@ -44,7 +44,7 @@ void Sprites::displaySprite(const ObjectType &object,
 		moveSpriteObject(MapKeys::UP_ALIEN_BULLET, MapKeys::DOWN_ALIEN_BULLET,
 				orientation, position);
 		break;
-	case ObjectType::PLAYER_GLYPH:
+	case ObjectType::PLAYER_LIFE:
 		moveSpriteObject(MapKeys::UP_PLAYER_LIFE, MapKeys::DOWN_PLAYER_LIFE,
 				orientation, position);
 		break;
@@ -57,7 +57,7 @@ void Sprites::displaySprite(const ObjectType &object,
 	}
 }
 
-void Sprites::moveSpriteObject(MapKeys upKey, MapKeys downKey,
+void Sprites::moveSpriteObject(const MapKeys upKey, const MapKeys downKey,
 		const Orientation &orientation, const two_floats &position)
 {
 	float x_position, y_position;
@@ -86,7 +86,7 @@ void Sprites::setInitialSizes(const map_of_two_floats &sizes)
 	sprite_factory_.applyTextures(sprites_);
 }
 
-void Sprites::initializeSprite(MapKeys key)
+void Sprites::initializeSprite(const MapKeys key)
 {
 	auto temp_obj = std::make_shared<sf::RectangleShape>();
 	sprites_.insert(std::pair<MapKeys, sprite_ptr>(key, temp_obj));

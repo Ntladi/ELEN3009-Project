@@ -1,0 +1,4 @@
+<map id="PlayerLife" name="PlayerLife">
+<area shape="rect" id="node1" title="This class is a game object class that inherits from the IEntity class. This class models the icons t..." alt="" coords="7,351,139,443"/>
+<area shape="rect" id="node2" href="$class_i_entity.html" title="This class is the main class by which all game objects inherit from." alt="" coords="5,5,140,303"/>
+</map>

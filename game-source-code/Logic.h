@@ -14,9 +14,9 @@ using map_of_two_floats = std::map<ObjectType,two_floats>;
 
 /** \class Logic
  * \brief This class is the main class of the logic layer. The class
- * manages when and how the game entities on the screen
- * move. It then relays that information to the Presentation class.
- * The class queries the ObjectFactory class to move the objects.
+ * manages when and how the game objects move. It then relays that
+ * information to the Presentation class.
+ * The class queries the ObjectFactory class to move the game objects.
  * \author 1599953 Ntladi Mohajane and 1705890 Tshepo Chokoe
  * \version 3.0
  */

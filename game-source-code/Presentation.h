@@ -47,7 +47,7 @@ public:
 	/** \brief This method receives the current player score which is of type
 	 * constant int from the Logic class. It then draws the score on the window
 	 *  through the Score class.
-	 *  \param score of type const int
+	 *  \param score of type int
 	 */
 	void drawScore(const int & score);
 
@@ -56,15 +56,16 @@ public:
 	void clearWindow();
 
 	/** \brief This method is called by the Logic class to query if a window is
-	 *  still open.
+	 *  still open and returns true if it is.
 	 *  No modifications are are made to member variables.
 	 *  \return bool
 	 */
-	bool isWindowOpen() const;
+	const bool isWindowOpen() const;
 
 	/** \brief This method is called by the Logic class to display the render window.
 	 */
 	void displayWindow();
+
 	/** \brief This method is called by the Logic class to set the screen state to
 	 *  game over
 	 */
@@ -81,18 +82,19 @@ public:
 	 */
 	std::vector<bool> checkInputs();
 
-	/** \brief This method returns true if the current screen state is the game screen.
+	/** \brief This method returns a constant boolean which is set to true if the
+	 * current screen state is the game screen.
 	 * \return bool
 	 * No modifications are are made to member variables.
 	 */
-	bool isPlaying() const;
+	const bool isPlaying() const;
 
 private:
 	Sprites sprites_;
-	window_ptr window_;
 	PlayerInputHandler player_input_handler_;
 	WindowHandler window_handler_;
 	Score score_;
+	window_ptr window_;
 	ScreenState screen_state_;
 	GameMode game_mode_;
 

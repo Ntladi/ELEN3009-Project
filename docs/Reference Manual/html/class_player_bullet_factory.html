@@ -72,42 +72,54 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>This class is a data layer class that manages the shots fired by objects from the <a class="el" href="class_player.html" title="This class is a game object class that inherits from the IMovingEntity class. This class models the b...">Player</a> class.  
+ <a href="class_player_bullet_factory.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_player_bullet_factory_8h_source.html">PlayerBulletFactory.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for PlayerBulletFactory:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_player_bullet_factory__coll__graph.png" border="0" usemap="#_player_bullet_factory_coll__map" alt="Collaboration graph"/></div>
 <map name="_player_bullet_factory_coll__map" id="_player_bullet_factory_coll__map">
-<area shape="rect" title=" " alt="" coords="64,228,200,255"/>
-<area shape="rect" title=" " alt="" coords="5,124,139,165"/>
-<area shape="rect" href="class_stop_watch.html" title=" " alt="" coords="163,131,250,158"/>
-<area shape="rect" title=" " alt="" coords="183,5,230,32"/>
+<area shape="rect" title="This class is a data layer class that manages the shots fired by objects from the Player class." alt="" coords="57,373,223,568"/>
+<area shape="rect" title=" " alt="" coords="5,197,139,289"/>
+<area shape="rect" href="class_stop_watch.html" title="This class keeps track of amount of time passed as the game is running." alt="" coords="163,175,298,311"/>
+<area shape="rect" title=" " alt="" coords="207,5,254,83"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a11a5c2162d27990e7186719be1b5670c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet_factory.html#a11a5c2162d27990e7186719be1b5670c">PlayerBulletFactory</a> ()</td></tr>
+<tr class="memdesc:a11a5c2162d27990e7186719be1b5670c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default <a class="el" href="class_player_bullet_factory.html" title="This class is a data layer class that manages the shots fired by objects from the Player class.">PlayerBulletFactory</a> constructor. It initializes the stop-watch that counts the time needed before a power-up is achieved.  <a href="class_player_bullet_factory.html#a11a5c2162d27990e7186719be1b5670c">More...</a><br /></td></tr>
 <tr class="separator:a11a5c2162d27990e7186719be1b5670c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e8a7303b6ab62f3622937bc318f79b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet_factory.html#a1e8a7303b6ab62f3622937bc318f79b9">shoot</a> (<a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> orientation, <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> position)</td></tr>
-<tr class="separator:a1e8a7303b6ab62f3622937bc318f79b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a543c1939c0d0fe64e362af1c27d725"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet_factory.html#a6a543c1939c0d0fe64e362af1c27d725">shoot</a> (const <a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> orientation, const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> position)</td></tr>
+<tr class="memdesc:a6a543c1939c0d0fe64e362af1c27d725"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method receives a constant enumeration of type Orientation, which determines the movement direction of the bullet object that the method will generate. In addition, it also receives a constant tuple of floats, which describe the initial position of the bullet that will be generated.  <a href="class_player_bullet_factory.html#a6a543c1939c0d0fe64e362af1c27d725">More...</a><br /></td></tr>
+<tr class="separator:a6a543c1939c0d0fe64e362af1c27d725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a150598c47b78732780d2d8164755c7e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_alien_bullet_factory_8h.html#abcd367ece1cd5654f4686047d9bb09bc">vec_of_bullets</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet_factory.html#a150598c47b78732780d2d8164755c7e8">getShotsFired</a> ()</td></tr>
+<tr class="memdesc:a150598c47b78732780d2d8164755c7e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns the member vector of <a class="el" href="class_bullet.html" title="This class is a game object class that inherits from the IMovingEntity class. This class models the b...">Bullet</a> shared pointers that have not been destroyed.  <a href="class_player_bullet_factory.html#a150598c47b78732780d2d8164755c7e8">More...</a><br /></td></tr>
 <tr class="separator:a150598c47b78732780d2d8164755c7e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0753f7ead400a98269ae0a50bb9fc773"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet_factory.html#a0753f7ead400a98269ae0a50bb9fc773">resetFactory</a> ()</td></tr>
+<tr class="memdesc:a0753f7ead400a98269ae0a50bb9fc773"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method resets the stop-watch that counts the time needed before a power-up is achieved.  <a href="class_player_bullet_factory.html#a0753f7ead400a98269ae0a50bb9fc773">More...</a><br /></td></tr>
 <tr class="separator:a0753f7ead400a98269ae0a50bb9fc773"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a574af5c6a5d88f2e98afc126a4811c67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet_factory.html#a574af5c6a5d88f2e98afc126a4811c67">removeWaste</a> ()</td></tr>
+<tr class="memdesc:a574af5c6a5d88f2e98afc126a4811c67"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method removes destroyed bullet objects from the member vector of <a class="el" href="class_bullet.html" title="This class is a game object class that inherits from the IMovingEntity class. This class models the b...">Bullet</a> shared pointers.  <a href="class_player_bullet_factory.html#a574af5c6a5d88f2e98afc126a4811c67">More...</a><br /></td></tr>
 <tr class="separator:a574af5c6a5d88f2e98afc126a4811c67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d3e0f3e785cff652e5e67cc8c4276df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet_factory.html#a3d3e0f3e785cff652e5e67cc8c4276df">makeStandardBullet</a> (<a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> orientation, <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> position)</td></tr>
-<tr class="separator:a3d3e0f3e785cff652e5e67cc8c4276df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a580f948aef5acd2ee8040832b3ecba30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet_factory.html#a580f948aef5acd2ee8040832b3ecba30">makeMultiShotPiercer</a> (<a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> orientation, <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> position)</td></tr>
-<tr class="separator:a580f948aef5acd2ee8040832b3ecba30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98ab850bd3efdc58468202e371916bdb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet_factory.html#a98ab850bd3efdc58468202e371916bdb">makePiercerBullet</a> (<a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> orientation, <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> position)</td></tr>
-<tr class="separator:a98ab850bd3efdc58468202e371916bdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a685e5e8345af2fb0a2e2d338eaa4f991"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet_factory.html#a685e5e8345af2fb0a2e2d338eaa4f991">makeMultiShotBullets</a> (<a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> orientation, <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> position)</td></tr>
-<tr class="separator:a685e5e8345af2fb0a2e2d338eaa4f991"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b97a145e58460b18ae11a55b2093987"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet_factory.html#a1b97a145e58460b18ae11a55b2093987">makeStandardBullet</a> (const <a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> orientation, const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> position)</td></tr>
+<tr class="memdesc:a1b97a145e58460b18ae11a55b2093987"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method receives the constant enumeration and tuple of floats from the <a class="el" href="class_player_bullet_factory.html#a6a543c1939c0d0fe64e362af1c27d725" title="This method receives a constant enumeration of type Orientation, which determines the movement direct...">shoot()</a> method and generates a standard bullet.  <a href="class_player_bullet_factory.html#a1b97a145e58460b18ae11a55b2093987">More...</a><br /></td></tr>
+<tr class="separator:a1b97a145e58460b18ae11a55b2093987"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a294af18f47189797e2621d2ca179e081"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet_factory.html#a294af18f47189797e2621d2ca179e081">makeMultiShotPiercer</a> (const <a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> orientation, const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> position)</td></tr>
+<tr class="memdesc:a294af18f47189797e2621d2ca179e081"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method receives the constant enumeration and tuple of floats from the <a class="el" href="class_player_bullet_factory.html#a6a543c1939c0d0fe64e362af1c27d725" title="This method receives a constant enumeration of type Orientation, which determines the movement direct...">shoot()</a> method and generates a several <a class="el" href="class_piercer_bullet.html" title="This class is a game object class that inherits from the Bullet class. This class models the behavior...">PiercerBullet</a> objects. This method models the second power up.  <a href="class_player_bullet_factory.html#a294af18f47189797e2621d2ca179e081">More...</a><br /></td></tr>
+<tr class="separator:a294af18f47189797e2621d2ca179e081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18ce1c1a394eacb622a833e82648c21c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet_factory.html#a18ce1c1a394eacb622a833e82648c21c">makePiercerBullet</a> (const <a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> orientation, const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> position)</td></tr>
+<tr class="memdesc:a18ce1c1a394eacb622a833e82648c21c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method receives the constant enumeration and tuple of floats from the <a class="el" href="class_player_bullet_factory.html#a294af18f47189797e2621d2ca179e081" title="This method receives the constant enumeration and tuple of floats from the shoot() method and generat...">makeMultiShotPiercer()</a> method and generates a <a class="el" href="class_piercer_bullet.html" title="This class is a game object class that inherits from the Bullet class. This class models the behavior...">PiercerBullet</a> object.  <a href="class_player_bullet_factory.html#a18ce1c1a394eacb622a833e82648c21c">More...</a><br /></td></tr>
+<tr class="separator:a18ce1c1a394eacb622a833e82648c21c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73aa3c4590db028e9fa44f842934bae3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet_factory.html#a73aa3c4590db028e9fa44f842934bae3">makeMultiShotBullets</a> (const <a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> orientation, const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> position)</td></tr>
+<tr class="memdesc:a73aa3c4590db028e9fa44f842934bae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method receives the constant enumeration and tuple of floats from the <a class="el" href="class_player_bullet_factory.html#a6a543c1939c0d0fe64e362af1c27d725" title="This method receives a constant enumeration of type Orientation, which determines the movement direct...">shoot()</a> method and generates a a <a class="el" href="class_left_diagonal_bullet.html" title="This class is a game object class that inherits from the Bullet class. This class models the behavior...">LeftDiagonalBullet</a> object, as well a <a class="el" href="class_right_diagonal_bullet.html" title="This class is a game object class that inherits from the Bullet class. This class models the behavior...">RightDiagonalBullet</a> object. This method models the first power up.  <a href="class_player_bullet_factory.html#a73aa3c4590db028e9fa44f842934bae3">More...</a><br /></td></tr>
+<tr class="separator:a73aa3c4590db028e9fa44f842934bae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -116,7 +128,11 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:ad0a1b3cd80be07c20b466f39cd4718e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_stop_watch.html">StopWatch</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet_factory.html#ad0a1b3cd80be07c20b466f39cd4718e8">stopwatch_</a></td></tr>
 <tr class="separator:ad0a1b3cd80be07c20b466f39cd4718e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class is a data layer class that manages the shots fired by objects from the <a class="el" href="class_player.html" title="This class is a game object class that inherits from the IMovingEntity class. This class models the b...">Player</a> class. </p>
+<dl class="section author"><dt>Author</dt><dd>1599953 Ntladi Mohajane and 1705890 Tshepo Chokoe </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>3.0 </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a11a5c2162d27990e7186719be1b5670c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a11a5c2162d27990e7186719be1b5670c">&#9670;&nbsp;</a></span>PlayerBulletFactory()</h2>
 
@@ -131,6 +147,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Default <a class="el" href="class_player_bullet_factory.html" title="This class is a data layer class that manages the shots fired by objects from the Player class.">PlayerBulletFactory</a> constructor. It initializes the stop-watch that counts the time needed before a power-up is achieved. </p>
 
 </div>
 </div>
@@ -150,10 +168,13 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This method returns the member vector of <a class="el" href="class_bullet.html" title="This class is a game object class that inherits from the IMovingEntity class. This class models the b...">Bullet</a> shared pointers that have not been destroyed. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;std::shared_ptr&lt;Bullet&gt;&gt; </dd></dl>
+
 </div>
 </div>
-<a id="a685e5e8345af2fb0a2e2d338eaa4f991"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a685e5e8345af2fb0a2e2d338eaa4f991">&#9670;&nbsp;</a></span>makeMultiShotBullets()</h2>
+<a id="a73aa3c4590db028e9fa44f842934bae3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73aa3c4590db028e9fa44f842934bae3">&#9670;&nbsp;</a></span>makeMultiShotBullets()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -164,13 +185,13 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void PlayerBulletFactory::makeMultiShotBullets </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a>&#160;</td>
           <td class="paramname"><em>orientation</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td>
           <td class="paramname"><em>position</em>&#160;</td>
         </tr>
         <tr>
@@ -186,10 +207,19 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>This method receives the constant enumeration and tuple of floats from the <a class="el" href="class_player_bullet_factory.html#a6a543c1939c0d0fe64e362af1c27d725" title="This method receives a constant enumeration of type Orientation, which determines the movement direct...">shoot()</a> method and generates a a <a class="el" href="class_left_diagonal_bullet.html" title="This class is a game object class that inherits from the Bullet class. This class models the behavior...">LeftDiagonalBullet</a> object, as well a <a class="el" href="class_right_diagonal_bullet.html" title="This class is a game object class that inherits from the Bullet class. This class models the behavior...">RightDiagonalBullet</a> object. This method models the first power up. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">orientation</td><td>of type Orientation </td></tr>
+    <tr><td class="paramname">position</td><td>of type std::tuple&lt;float, float&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a580f948aef5acd2ee8040832b3ecba30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a580f948aef5acd2ee8040832b3ecba30">&#9670;&nbsp;</a></span>makeMultiShotPiercer()</h2>
+<a id="a294af18f47189797e2621d2ca179e081"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a294af18f47189797e2621d2ca179e081">&#9670;&nbsp;</a></span>makeMultiShotPiercer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -200,13 +230,13 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void PlayerBulletFactory::makeMultiShotPiercer </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a>&#160;</td>
           <td class="paramname"><em>orientation</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td>
           <td class="paramname"><em>position</em>&#160;</td>
         </tr>
         <tr>
@@ -222,10 +252,19 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>This method receives the constant enumeration and tuple of floats from the <a class="el" href="class_player_bullet_factory.html#a6a543c1939c0d0fe64e362af1c27d725" title="This method receives a constant enumeration of type Orientation, which determines the movement direct...">shoot()</a> method and generates a several <a class="el" href="class_piercer_bullet.html" title="This class is a game object class that inherits from the Bullet class. This class models the behavior...">PiercerBullet</a> objects. This method models the second power up. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">orientation</td><td>of type Orientation </td></tr>
+    <tr><td class="paramname">position</td><td>of type std::tuple&lt;float, float&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a98ab850bd3efdc58468202e371916bdb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98ab850bd3efdc58468202e371916bdb">&#9670;&nbsp;</a></span>makePiercerBullet()</h2>
+<a id="a18ce1c1a394eacb622a833e82648c21c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18ce1c1a394eacb622a833e82648c21c">&#9670;&nbsp;</a></span>makePiercerBullet()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -236,13 +275,13 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void PlayerBulletFactory::makePiercerBullet </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a>&#160;</td>
           <td class="paramname"><em>orientation</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td>
           <td class="paramname"><em>position</em>&#160;</td>
         </tr>
         <tr>
@@ -258,10 +297,19 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>This method receives the constant enumeration and tuple of floats from the <a class="el" href="class_player_bullet_factory.html#a294af18f47189797e2621d2ca179e081" title="This method receives the constant enumeration and tuple of floats from the shoot() method and generat...">makeMultiShotPiercer()</a> method and generates a <a class="el" href="class_piercer_bullet.html" title="This class is a game object class that inherits from the Bullet class. This class models the behavior...">PiercerBullet</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">orientation</td><td>of type Orientation </td></tr>
+    <tr><td class="paramname">position</td><td>of type std::tuple&lt;float, float&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a3d3e0f3e785cff652e5e67cc8c4276df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d3e0f3e785cff652e5e67cc8c4276df">&#9670;&nbsp;</a></span>makeStandardBullet()</h2>
+<a id="a1b97a145e58460b18ae11a55b2093987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b97a145e58460b18ae11a55b2093987">&#9670;&nbsp;</a></span>makeStandardBullet()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -272,13 +320,13 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void PlayerBulletFactory::makeStandardBullet </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a>&#160;</td>
           <td class="paramname"><em>orientation</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td>
           <td class="paramname"><em>position</em>&#160;</td>
         </tr>
         <tr>
@@ -293,6 +341,15 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>This method receives the constant enumeration and tuple of floats from the <a class="el" href="class_player_bullet_factory.html#a6a543c1939c0d0fe64e362af1c27d725" title="This method receives a constant enumeration of type Orientation, which determines the movement direct...">shoot()</a> method and generates a standard bullet. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">orientation</td><td>of type Orientation </td></tr>
+    <tr><td class="paramname">position</td><td>of type std::tuple&lt;float, float&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -319,6 +376,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>This method removes destroyed bullet objects from the member vector of <a class="el" href="class_bullet.html" title="This class is a game object class that inherits from the IMovingEntity class. This class models the b...">Bullet</a> shared pointers. </p>
+
 </div>
 </div>
 <a id="a0753f7ead400a98269ae0a50bb9fc773"></a>
@@ -336,10 +395,12 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This method resets the stop-watch that counts the time needed before a power-up is achieved. </p>
+
 </div>
 </div>
-<a id="a1e8a7303b6ab62f3622937bc318f79b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e8a7303b6ab62f3622937bc318f79b9">&#9670;&nbsp;</a></span>shoot()</h2>
+<a id="a6a543c1939c0d0fe64e362af1c27d725"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a543c1939c0d0fe64e362af1c27d725">&#9670;&nbsp;</a></span>shoot()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -347,13 +408,13 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void PlayerBulletFactory::shoot </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a>&#160;</td>
           <td class="paramname"><em>orientation</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a>&#160;</td>
           <td class="paramname"><em>position</em>&#160;</td>
         </tr>
         <tr>
@@ -363,6 +424,15 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This method receives a constant enumeration of type Orientation, which determines the movement direction of the bullet object that the method will generate. In addition, it also receives a constant tuple of floats, which describe the initial position of the bullet that will be generated. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">orientation</td><td>of type Orientation </td></tr>
+    <tr><td class="paramname">position</td><td>of type std::tuple&lt;float, float&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

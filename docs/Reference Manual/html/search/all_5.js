@@ -6,5 +6,5 @@ var searchData=
   ['final_5fscore_5fchar_5fsize_118',['FINAL_SCORE_CHAR_SIZE',['../struct_constants.html#abae86bed2a7c62739813a650305fbdde',1,'Constants']]],
   ['final_5fscore_5fx_119',['FINAL_SCORE_X',['../struct_constants.html#af4467beb60bb61608a57f971c7f2ce94',1,'Constants']]],
   ['final_5fscore_5fy_120',['FINAL_SCORE_Y',['../struct_constants.html#a0116f50fc0bd7349b69710c7fc2b1088',1,'Constants']]],
-  ['four_5ffloats_121',['four_floats',['../_alien_8h.html#af647c696fb42bc631a11007faa5fb8b1',1,'four_floats():&#160;Alien.h'],['../_bullet_8h.html#ac2bb6e673963eeb13b5c0c17cd850f3a',1,'four_floats():&#160;Bullet.h'],['../_parameters_8h.html#af647c696fb42bc631a11007faa5fb8b1',1,'four_floats():&#160;Parameters.h'],['../_piercer_bullet_8h.html#ac2bb6e673963eeb13b5c0c17cd850f3a',1,'four_floats():&#160;PiercerBullet.h']]]
+  ['four_5ffloats_121',['four_floats',['../_bullet_8h.html#ac2bb6e673963eeb13b5c0c17cd850f3a',1,'four_floats():&#160;Bullet.h'],['../_parameters_8h.html#af647c696fb42bc631a11007faa5fb8b1',1,'four_floats():&#160;Parameters.h'],['../_piercer_bullet_8h.html#ac2bb6e673963eeb13b5c0c17cd850f3a',1,'four_floats():&#160;PiercerBullet.h']]]
 ];

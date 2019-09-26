@@ -1,6 +1,6 @@
 <map id="LifeFactory" name="LifeFactory">
-<area shape="rect" id="node1" title=" " alt="" coords="76,109,163,136"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,13,52,39"/>
-<area shape="rect" id="node3" title=" " alt="" coords="77,13,162,39"/>
-<area shape="rect" id="node4" title=" " alt="" coords="187,5,337,47"/>
+<area shape="rect" id="node1" title="This class manages the behavior of all player lives that appear in the game. All PlayerLife objects a..." alt="" coords="55,160,184,281"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,13,52,90"/>
+<area shape="rect" id="node3" title=" " alt="" coords="77,13,162,90"/>
+<area shape="rect" id="node4" title=" " alt="" coords="187,5,324,97"/>
 </map>

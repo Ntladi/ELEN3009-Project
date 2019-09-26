@@ -1,4 +1,4 @@
 <map id="Barrier" name="Barrier">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,65,107"/>
-<area shape="rect" id="node2" href="$class_i_entity.html" title="This class is the main class by which all game objects inherit from." alt="" coords="6,5,65,32"/>
+<area shape="rect" id="node1" title="This class is a game object class that inherits from the IEntity class. This class models a piece of ..." alt="" coords="7,351,139,443"/>
+<area shape="rect" id="node2" href="$class_i_entity.html" title="This class is the main class by which all game objects inherit from." alt="" coords="5,5,140,303"/>
 </map>

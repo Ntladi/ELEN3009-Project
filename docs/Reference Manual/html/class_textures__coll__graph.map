@@ -1,4 +1,4 @@
 <map id="Textures" name="Textures">
-<area shape="rect" id="node1" title=" " alt="" coords="51,109,123,136"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,168,47"/>
+<area shape="rect" id="node1" title="This class is a data class composed within the SpriteFactory class. It manages the textures that are ..." alt="" coords="23,160,151,267"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,168,97"/>
 </map>

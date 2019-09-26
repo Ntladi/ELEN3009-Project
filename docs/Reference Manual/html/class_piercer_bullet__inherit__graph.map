@@ -1,6 +1,6 @@
 <map id="PiercerBullet" name="PiercerBullet">
-<area shape="rect" id="node1" title=" " alt="" coords="7,229,103,256"/>
-<area shape="rect" id="node2" href="$class_bullet.html" title=" " alt="" coords="27,155,82,181"/>
-<area shape="rect" id="node3" href="$class_i_moving_entity.html" title=" " alt="" coords="5,80,104,107"/>
-<area shape="rect" id="node4" href="$class_i_entity.html" title="This class is the main class by which all game objects inherit from." alt="" coords="25,5,84,32"/>
+<area shape="rect" id="node1" title="This class is a game object class that inherits from the Bullet class. This class models the behavior..." alt="" coords="21,704,137,781"/>
+<area shape="rect" id="node2" href="$class_bullet.html" title="This class is a game object class that inherits from the IMovingEntity class. This class models the b..." alt="" coords="12,520,147,656"/>
+<area shape="rect" id="node3" href="$class_i_moving_entity.html" title="This class is the main class by which all moving game objects inherit from. It inherits from the IEnt..." alt="" coords="5,351,153,472"/>
+<area shape="rect" id="node4" href="$class_i_entity.html" title="This class is the main class by which all game objects inherit from." alt="" coords="12,5,147,303"/>
 </map>

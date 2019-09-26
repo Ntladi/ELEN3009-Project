@@ -72,36 +72,46 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>This class is a presentation class that facilitates communication between the <a class="el" href="class_sprites.html" title="This class is a data layer class composed within the Presentation class. it stores all the sprite obj...">Sprites</a> class and the <a class="el" href="class_textures.html" title="This class is a data class composed within the SpriteFactory class. It manages the textures that are ...">Textures</a> class.  
+ <a href="class_sprite_factory.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_sprite_factory_8h_source.html">SpriteFactory.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for SpriteFactory:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_sprite_factory__coll__graph.png" border="0" usemap="#_sprite_factory_coll__map" alt="Collaboration graph"/></div>
 <map name="_sprite_factory_coll__map" id="_sprite_factory_coll__map">
-<area shape="rect" title=" " alt="" coords="37,199,137,225"/>
-<area shape="rect" href="class_textures.html" title=" " alt="" coords="51,109,123,136"/>
-<area shape="rect" title=" " alt="" coords="5,5,168,47"/>
+<area shape="rect" title="This class is a presentation class that facilitates communication between the Sprites class and the T..." alt="" coords="25,329,148,436"/>
+<area shape="rect" href="class_textures.html" title="This class is a data class composed within the SpriteFactory class. It manages the textures that are ..." alt="" coords="23,160,151,267"/>
+<area shape="rect" title=" " alt="" coords="5,5,168,97"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a33e93467d92b83c9dfffa2b4aed10978"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_factory.html#a33e93467d92b83c9dfffa2b4aed10978">setInitialSizes</a> (const <a class="el" href="_logic_8h.html#a474c73ec880d3e662f76f423b501d800">map_of_two_floats</a> &amp;sizes, <a class="el" href="_sprite_factory_8h.html#ac41e5dd5fe5001c7b20f145e4df48566">map_of_sprite_ptrs</a> &amp;sprites)</td></tr>
+<tr class="memdesc:a33e93467d92b83c9dfffa2b4aed10978"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method receives a constant map containing game object sizes, as well as a map containing sf::RectangleShape shared pointers. It then applies the appropriate size to the appropriate sf::RectangleShape object.  <a href="class_sprite_factory.html#a33e93467d92b83c9dfffa2b4aed10978">More...</a><br /></td></tr>
 <tr class="separator:a33e93467d92b83c9dfffa2b4aed10978"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9359bbfa08503ebcf9c2bcdd1ce83ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_factory.html#ae9359bbfa08503ebcf9c2bcdd1ce83ed">applyTextures</a> (<a class="el" href="_sprite_factory_8h.html#ac41e5dd5fe5001c7b20f145e4df48566">map_of_sprite_ptrs</a> &amp;sprites)</td></tr>
+<tr class="memdesc:ae9359bbfa08503ebcf9c2bcdd1ce83ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method receives a constant map containing sf::RectangleShape pointers. It then applies the appropriate texture to the appropriate object.  <a href="class_sprite_factory.html#ae9359bbfa08503ebcf9c2bcdd1ce83ed">More...</a><br /></td></tr>
 <tr class="separator:ae9359bbfa08503ebcf9c2bcdd1ce83ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:acfa7449609f650bbfff6d2527ff73ea4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_factory.html#acfa7449609f650bbfff6d2527ff73ea4">setSize</a> (const <a class="el" href="_logic_8h.html#a474c73ec880d3e662f76f423b501d800">map_of_two_floats</a> &amp;sizes, <a class="el" href="_sprite_factory_8h.html#ac41e5dd5fe5001c7b20f145e4df48566">map_of_sprite_ptrs</a> &amp;sprites, <a class="el" href="_map_keys_8h.html#a554599939b797e7446541ad7608478a2">MapKeys</a> up_object, <a class="el" href="_map_keys_8h.html#a554599939b797e7446541ad7608478a2">MapKeys</a> down_object, <a class="el" href="_object_type_8h.html#a842c5e2e69277690b064bf363c017980">ObjectType</a> size_key, bool flip_down)</td></tr>
-<tr class="separator:acfa7449609f650bbfff6d2527ff73ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35ab798e5dfdc82494f0b27f0944c751"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_factory.html#a35ab798e5dfdc82494f0b27f0944c751">setSize</a> (const <a class="el" href="_logic_8h.html#a474c73ec880d3e662f76f423b501d800">map_of_two_floats</a> &amp;sizes, <a class="el" href="_sprite_factory_8h.html#ac41e5dd5fe5001c7b20f145e4df48566">map_of_sprite_ptrs</a> &amp;sprites, const <a class="el" href="_map_keys_8h.html#a554599939b797e7446541ad7608478a2">MapKeys</a> up_object, const <a class="el" href="_map_keys_8h.html#a554599939b797e7446541ad7608478a2">MapKeys</a> down_object, const <a class="el" href="_object_type_8h.html#a842c5e2e69277690b064bf363c017980">ObjectType</a> size_key, const bool flip_down)</td></tr>
+<tr class="memdesc:a35ab798e5dfdc82494f0b27f0944c751"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method receives a constant map containing game object sizes, as well as a map containing sf::RectangleShape shared pointers. In addition, it also receives three constant enumerations, two of which are of type MapKeys that describe the two objects onto which sizes will be applied. The third enumeration is of type ObjectType, which is the key of the size to be applied. Moreover it also receives a constant boolean, which is set to true if a rotation must take place. This method is called by the <a class="el" href="class_sprite_factory.html#a33e93467d92b83c9dfffa2b4aed10978" title="This method receives a constant map containing game object sizes, as well as a map containing sf::Rec...">setInitialSizes()</a> method in order to set the size of each individual sf::RectangleShape object while also taking orientation into account. It rotates the sprite by 180 degrees if the constant boolean allows it.  <a href="class_sprite_factory.html#a35ab798e5dfdc82494f0b27f0944c751">More...</a><br /></td></tr>
+<tr class="separator:a35ab798e5dfdc82494f0b27f0944c751"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a66e72e5984859f45b2b46c791ff90ead"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_textures.html">Textures</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sprite_factory.html#a66e72e5984859f45b2b46c791ff90ead">textures_</a></td></tr>
 <tr class="separator:a66e72e5984859f45b2b46c791ff90ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class is a presentation class that facilitates communication between the <a class="el" href="class_sprites.html" title="This class is a data layer class composed within the Presentation class. it stores all the sprite obj...">Sprites</a> class and the <a class="el" href="class_textures.html" title="This class is a data class composed within the SpriteFactory class. It manages the textures that are ...">Textures</a> class. </p>
+<dl class="section author"><dt>Author</dt><dd>1599953 Ntladi Mohajane and 1705890 Tshepo Chokoe </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>3.0 </dd></dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae9359bbfa08503ebcf9c2bcdd1ce83ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae9359bbfa08503ebcf9c2bcdd1ce83ed">&#9670;&nbsp;</a></span>applyTextures()</h2>
 
@@ -117,6 +127,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This method receives a constant map containing sf::RectangleShape pointers. It then applies the appropriate texture to the appropriate object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sprites</td><td>of type std::map&lt;MapKeys, std::shared_ptr&lt;sf::RectangleShape&gt; &gt; </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -146,10 +164,19 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This method receives a constant map containing game object sizes, as well as a map containing sf::RectangleShape shared pointers. It then applies the appropriate size to the appropriate sf::RectangleShape object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sizes</td><td>of std::map&lt;ObjectType, std::tuple&lt;float,float&gt; &gt; </td></tr>
+    <tr><td class="paramname">sprites</td><td>of type std::map&lt;MapKeys, std::shared_ptr&lt;sf::RectangleShape&gt; &gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="acfa7449609f650bbfff6d2527ff73ea4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acfa7449609f650bbfff6d2527ff73ea4">&#9670;&nbsp;</a></span>setSize()</h2>
+<a id="a35ab798e5dfdc82494f0b27f0944c751"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35ab798e5dfdc82494f0b27f0944c751">&#9670;&nbsp;</a></span>setSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -172,25 +199,25 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_map_keys_8h.html#a554599939b797e7446541ad7608478a2">MapKeys</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_map_keys_8h.html#a554599939b797e7446541ad7608478a2">MapKeys</a>&#160;</td>
           <td class="paramname"><em>up_object</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_map_keys_8h.html#a554599939b797e7446541ad7608478a2">MapKeys</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_map_keys_8h.html#a554599939b797e7446541ad7608478a2">MapKeys</a>&#160;</td>
           <td class="paramname"><em>down_object</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_object_type_8h.html#a842c5e2e69277690b064bf363c017980">ObjectType</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_object_type_8h.html#a842c5e2e69277690b064bf363c017980">ObjectType</a>&#160;</td>
           <td class="paramname"><em>size_key</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
+          <td class="paramtype">const bool&#160;</td>
           <td class="paramname"><em>flip_down</em>&#160;</td>
         </tr>
         <tr>
@@ -205,6 +232,19 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>This method receives a constant map containing game object sizes, as well as a map containing sf::RectangleShape shared pointers. In addition, it also receives three constant enumerations, two of which are of type MapKeys that describe the two objects onto which sizes will be applied. The third enumeration is of type ObjectType, which is the key of the size to be applied. Moreover it also receives a constant boolean, which is set to true if a rotation must take place. This method is called by the <a class="el" href="class_sprite_factory.html#a33e93467d92b83c9dfffa2b4aed10978" title="This method receives a constant map containing game object sizes, as well as a map containing sf::Rec...">setInitialSizes()</a> method in order to set the size of each individual sf::RectangleShape object while also taking orientation into account. It rotates the sprite by 180 degrees if the constant boolean allows it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sizes</td><td>of std::map&lt;ObjectType, std::tuple&lt;float,float&gt; &gt; </td></tr>
+    <tr><td class="paramname">sprites</td><td>of type std::map&lt;MapKeys, std::shared_ptr&lt;sf::RectangleShape&gt; &gt; </td></tr>
+    <tr><td class="paramname">up_object</td><td>of type MapKeys </td></tr>
+    <tr><td class="paramname">down_object</td><td>of type MapKeys </td></tr>
+    <tr><td class="paramname">size_key</td><td>of type ObjectType </td></tr>
+    <tr><td class="paramname">flip_down</td><td>of type bool </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

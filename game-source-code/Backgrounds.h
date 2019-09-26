@@ -6,11 +6,28 @@
 #include "Constants.h"
 using texture_ptr = std::shared_ptr<sf::Texture>;
 
+/** \class Backgrounds
+ * \brief This class is a data layer class that handles the backgrounds
+ * displayed during the various screen states of the game. It is encapsulated
+ * within the WindowHandler class.
+ * \author 1599953 Ntladi Mohajane and 1705890 Tshepo Chokoe
+ * \version 3.0
+ */
 class Backgrounds
 {
 public:
+	/** \brief Default Backgrounds constructor.
+	 */
 	Backgrounds();
+
+	/** \brief This method loads the appropriate background
+	 * textures from file and also initializes the background rectangular
+	 * objects to the correct size.
+	 */
 	void setTextures();
+
+	/** \brief This method sets the appropriate texture to the appropriate game object
+	 */
 	void setShapes();
 	sf::RectangleShape getSplashScreen() const;
 	sf::RectangleShape getBackgroundScreen() const;

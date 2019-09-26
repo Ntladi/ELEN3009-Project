@@ -1,24 +1,24 @@
 <map id="Presentation" name="Presentation">
-<area shape="rect" id="node1" title="This class is the main class of the presentation layer. The class receives information from the Logic..." alt="" coords="1392,383,1487,409"/>
-<area shape="rect" id="node2" title=" " alt="" coords="1001,231,1213,257"/>
-<area shape="rect" id="node3" href="$class_player_input_handler.html" title=" " alt="" coords="1042,281,1173,308"/>
-<area shape="rect" id="node4" href="$class_stop_watch.html" title=" " alt="" coords="693,36,779,63"/>
-<area shape="rect" id="node5" title=" " alt="" coords="335,36,382,63"/>
-<area shape="rect" id="node6" title=" " alt="" coords="713,301,759,328"/>
-<area shape="rect" id="node7" title=" " alt="" coords="1063,332,1152,359"/>
-<area shape="rect" id="node8" href="$class_window_handler.html" title=" " alt="" coords="1051,383,1163,409"/>
-<area shape="rect" id="node9" href="$class_backgrounds.html" title=" " alt="" coords="687,373,785,400"/>
-<area shape="rect" id="node10" title=" " alt="" coords="300,300,417,327"/>
-<area shape="rect" id="node11" title=" " alt="" coords="275,448,443,475"/>
-<area shape="rect" id="node12" title=" " alt="" coords="1060,433,1155,460"/>
-<area shape="rect" id="node13" href="$class_score.html" title=" " alt="" coords="1079,484,1135,511"/>
-<area shape="rect" id="node14" title=" " alt="" coords="712,424,760,451"/>
-<area shape="rect" id="node15" title=" " alt="" coords="717,484,755,511"/>
-<area shape="rect" id="node16" title=" " alt="" coords="661,544,811,571"/>
-<area shape="rect" id="node17" href="$class_sprites.html" title=" " alt="" coords="1076,636,1139,663"/>
-<area shape="rect" id="node18" title=" " alt="" coords="659,595,813,637"/>
-<area shape="rect" id="node19" title=" " alt="" coords="651,661,821,702"/>
-<area shape="rect" id="node20" href="$class_sprite_factory.html" title=" " alt="" coords="686,727,786,753"/>
-<area shape="rect" id="node21" href="$class_textures.html" title=" " alt="" coords="323,727,395,753"/>
-<area shape="rect" id="node22" title=" " alt="" coords="5,719,168,761"/>
+<area shape="rect" id="node1" title="This class is the main class of the presentation layer. The class receives information from the Logic..." alt="" coords="555,1269,711,1508"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,1027,217,1104"/>
+<area shape="rect" id="node3" href="$class_player_input_handler.html" title="This class is detects player inputs and relays them back to the Presentation class." alt="" coords="242,983,437,1148"/>
+<area shape="rect" id="node4" href="$class_stop_watch.html" title="This class keeps track of amount of time passed as the game is running." alt="" coords="215,447,349,583"/>
+<area shape="rect" id="node5" title=" " alt="" coords="259,175,305,252"/>
+<area shape="rect" id="node6" title=" " alt="" coords="373,476,420,553"/>
+<area shape="rect" id="node7" title=" " alt="" coords="461,1027,551,1104"/>
+<area shape="rect" id="node8" href="$class_window_handler.html" title="This class is composed within the Presentation class and handles basic window events...." alt="" coords="575,1012,699,1119"/>
+<area shape="rect" id="node9" href="$class_backgrounds.html" title="This class is a data layer class that handles the backgrounds displayed during the various screen sta..." alt="" coords="551,432,722,597"/>
+<area shape="rect" id="node10" title=" " alt="" coords="494,175,611,252"/>
+<area shape="rect" id="node11" title=" " alt="" coords="635,175,803,252"/>
+<area shape="rect" id="node12" title=" " alt="" coords="723,1027,817,1104"/>
+<area shape="rect" id="node13" href="$class_score.html" title="This class is responsible for managing how the player&#39;s score is displayed on the render window...." alt="" coords="841,924,1032,1207"/>
+<area shape="rect" id="node14" title=" " alt="" coords="775,476,823,553"/>
+<area shape="rect" id="node15" title=" " alt="" coords="887,476,925,553"/>
+<area shape="rect" id="node16" title=" " alt="" coords="952,476,1103,553"/>
+<area shape="rect" id="node17" href="$class_sprites.html" title="This class is a data layer class composed within the Presentation class. it stores all the sprite obj..." alt="" coords="1227,990,1369,1141"/>
+<area shape="rect" id="node18" title=" " alt="" coords="1127,469,1282,561"/>
+<area shape="rect" id="node19" title=" " alt="" coords="1306,469,1477,561"/>
+<area shape="rect" id="node20" href="$class_sprite_factory.html" title="This class is a presentation class that facilitates communication between the Sprites class and the T..." alt="" coords="1501,461,1623,568"/>
+<area shape="rect" id="node21" href="$class_textures.html" title="This class is a data class composed within the SpriteFactory class. It manages the textures that are ..." alt="" coords="1498,160,1626,267"/>
+<area shape="rect" id="node22" title=" " alt="" coords="1481,5,1643,97"/>
 </map>

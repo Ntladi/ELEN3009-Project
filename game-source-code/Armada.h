@@ -11,6 +11,12 @@ using vec_of_aliens = std::vector<std::shared_ptr<Alien>>;
 using aliens_2d = std::vector<vec_of_aliens>;
 using vec_of_bullets = std::vector<std::shared_ptr<Bullet>>;
 
+/** \class Armada
+ * \brief This class manages the behavior of all aliens that appear
+ * in the game. All Alien objects are encapsulated within this class.
+ * \author 1599953 Ntladi Mohajane and 1705890 Tshepo Chokoe
+ * \version 3.0
+ */
 class Armada
 {
 public:
@@ -21,7 +27,7 @@ public:
 	bool isArmadaEmpty();
 private:
 	aliens_2d armada_;
-	BulletFactory bullet_factory_;
+	AlienBulletFactory bullet_factory_;
 	AlienFactory alien_factory_;
 	void removeWaste();
 	void checkEdges();

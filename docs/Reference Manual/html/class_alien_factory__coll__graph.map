@@ -1,7 +1,7 @@
 <map id="AlienFactory" name="AlienFactory">
-<area shape="rect" id="node1" title=" " alt="" coords="63,199,157,225"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,109,44,136"/>
-<area shape="rect" id="node3" href="$class_position.html" title=" " alt="" coords="71,109,141,136"/>
-<area shape="rect" id="node4" title=" " alt="" coords="83,5,129,32"/>
-<area shape="rect" id="node5" title=" " alt="" coords="165,109,295,136"/>
+<area shape="rect" id="node1" title="This class generates an armada of aliens for the Armada class." alt="" coords="54,359,198,509"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,189,44,267"/>
+<area shape="rect" id="node3" href="$class_position.html" title="This class is a data layer class that encapsulates the current position of all objects inherited from..." alt="" coords="68,160,184,296"/>
+<area shape="rect" id="node4" title=" " alt="" coords="103,5,149,83"/>
+<area shape="rect" id="node5" title=" " alt="" coords="209,189,339,267"/>
 </map>

@@ -71,36 +71,46 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>This class is composed within the <a class="el" href="class_presentation.html" title="This class is the main class of the presentation layer. The class receives information from the Logic...">Presentation</a> class and handles basic window events. The RenderWindow is handled by the SFML library.  
+ <a href="class_window_handler.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_window_handler_8h_source.html">WindowHandler.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for WindowHandler:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_window_handler__coll__graph.png" border="0" usemap="#_window_handler_coll__map" alt="Collaboration graph"/></div>
 <map name="_window_handler_coll__map" id="_window_handler_coll__map">
-<area shape="rect" title=" " alt="" coords="91,287,203,313"/>
-<area shape="rect" href="class_backgrounds.html" title=" " alt="" coords="97,197,196,224"/>
-<area shape="rect" title=" " alt="" coords="5,5,123,32"/>
-<area shape="rect" title=" " alt="" coords="147,5,315,32"/>
+<area shape="rect" title="This class is composed within the Presentation class and handles basic window events...." alt="" coords="85,476,209,583"/>
+<area shape="rect" href="class_backgrounds.html" title="This class is a data layer class that handles the backgrounds displayed during the various screen sta..." alt="" coords="61,248,232,413"/>
+<area shape="rect" title=" " alt="" coords="5,5,123,83"/>
+<area shape="rect" title=" " alt="" coords="147,5,315,83"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6609744a114fbf44252b9833803859ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_window_handler.html#a6609744a114fbf44252b9833803859ab">clearWindow</a> (<a class="el" href="_screen_state_8h.html#a5fc5d61fa8521ce5476183998579fa9b">ScreenState</a> &amp;state, <a class="el" href="_presentation_8h.html#ad342326db743b63f9029fd61c53987d6">window_ptr</a> &amp;window, <a class="el" href="_presentation_8h.html#a1f8a6458eec57886cb8e859d5eb149af">text_ptr</a> &amp;score, <a class="el" href="_presentation_8h.html#a1f8a6458eec57886cb8e859d5eb149af">text_ptr</a> &amp;high_score)</td></tr>
-<tr class="separator:a6609744a114fbf44252b9833803859ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a917dcc3c01b1169c82ba54055a726dd1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_window_handler.html#a917dcc3c01b1169c82ba54055a726dd1">createWindow</a> (<a class="el" href="_presentation_8h.html#ad342326db743b63f9029fd61c53987d6">window_ptr</a> &amp;window)</td></tr>
-<tr class="separator:a917dcc3c01b1169c82ba54055a726dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48ab9bacf295cbe3c28d3831c0589915"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_window_handler.html#a48ab9bacf295cbe3c28d3831c0589915">events</a> (<a class="el" href="_presentation_8h.html#ad342326db743b63f9029fd61c53987d6">window_ptr</a> &amp;window)</td></tr>
-<tr class="separator:a48ab9bacf295cbe3c28d3831c0589915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2808bf4d54c4d9eb52d3a19c7415220a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_window_handler.html#a2808bf4d54c4d9eb52d3a19c7415220a">clearWindow</a> (const <a class="el" href="_screen_state_8h.html#a5fc5d61fa8521ce5476183998579fa9b">ScreenState</a> &amp;state, const <a class="el" href="_presentation_8h.html#ad342326db743b63f9029fd61c53987d6">window_ptr</a> &amp;window, const <a class="el" href="_presentation_8h.html#a1f8a6458eec57886cb8e859d5eb149af">text_ptr</a> &amp;score, const <a class="el" href="_presentation_8h.html#a1f8a6458eec57886cb8e859d5eb149af">text_ptr</a> &amp;high_score)</td></tr>
+<tr class="memdesc:a2808bf4d54c4d9eb52d3a19c7415220a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method receives a constant enumeration of type ScreenState, which describes which screen the window must display. In addition, it also receives a constant pointer to a RenderWindow object which will display the screen state. Moreover, two constant pointers to Text objects are also received, which are the scores that are drawn on the RenderWindow object.  <a href="class_window_handler.html#a2808bf4d54c4d9eb52d3a19c7415220a">More...</a><br /></td></tr>
+<tr class="separator:a2808bf4d54c4d9eb52d3a19c7415220a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab42c89a0d5b28ece539fff0a31da863e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_window_handler.html#ab42c89a0d5b28ece539fff0a31da863e">createWindow</a> (const <a class="el" href="_presentation_8h.html#ad342326db743b63f9029fd61c53987d6">window_ptr</a> &amp;window)</td></tr>
+<tr class="memdesc:ab42c89a0d5b28ece539fff0a31da863e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method receives a constant pointer to a RenderWindow object, which is initialized in this method.  <a href="class_window_handler.html#ab42c89a0d5b28ece539fff0a31da863e">More...</a><br /></td></tr>
+<tr class="separator:ab42c89a0d5b28ece539fff0a31da863e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef30a4a15758318a71880a45695f448b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_window_handler.html#aef30a4a15758318a71880a45695f448b">events</a> (const <a class="el" href="_presentation_8h.html#ad342326db743b63f9029fd61c53987d6">window_ptr</a> &amp;window)</td></tr>
+<tr class="memdesc:aef30a4a15758318a71880a45695f448b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method receives a constant pointer to a RenderWindow object, whose poll events are handled within this method. Moreover, the method also return true if a poll event returns true for a key being pressed.  <a href="class_window_handler.html#aef30a4a15758318a71880a45695f448b">More...</a><br /></td></tr>
+<tr class="separator:aef30a4a15758318a71880a45695f448b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ae5748e59159bf8c6b374df1c98b26b47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_backgrounds.html">Backgrounds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_window_handler.html#ae5748e59159bf8c6b374df1c98b26b47">backgrounds_</a></td></tr>
 <tr class="separator:ae5748e59159bf8c6b374df1c98b26b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a6609744a114fbf44252b9833803859ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6609744a114fbf44252b9833803859ab">&#9670;&nbsp;</a></span>clearWindow()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class is composed within the <a class="el" href="class_presentation.html" title="This class is the main class of the presentation layer. The class receives information from the Logic...">Presentation</a> class and handles basic window events. The RenderWindow is handled by the SFML library. </p>
+<dl class="section author"><dt>Author</dt><dd>1599953 Ntladi Mohajane and 1705890 Tshepo Chokoe </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>3.0 </dd></dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2808bf4d54c4d9eb52d3a19c7415220a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2808bf4d54c4d9eb52d3a19c7415220a">&#9670;&nbsp;</a></span>clearWindow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -108,25 +118,25 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void WindowHandler::clearWindow </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_screen_state_8h.html#a5fc5d61fa8521ce5476183998579fa9b">ScreenState</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_screen_state_8h.html#a5fc5d61fa8521ce5476183998579fa9b">ScreenState</a> &amp;&#160;</td>
           <td class="paramname"><em>state</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_presentation_8h.html#ad342326db743b63f9029fd61c53987d6">window_ptr</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_presentation_8h.html#ad342326db743b63f9029fd61c53987d6">window_ptr</a> &amp;&#160;</td>
           <td class="paramname"><em>window</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_presentation_8h.html#a1f8a6458eec57886cb8e859d5eb149af">text_ptr</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_presentation_8h.html#a1f8a6458eec57886cb8e859d5eb149af">text_ptr</a> &amp;&#160;</td>
           <td class="paramname"><em>score</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_presentation_8h.html#a1f8a6458eec57886cb8e859d5eb149af">text_ptr</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_presentation_8h.html#a1f8a6458eec57886cb8e859d5eb149af">text_ptr</a> &amp;&#160;</td>
           <td class="paramname"><em>high_score</em>&#160;</td>
         </tr>
         <tr>
@@ -137,10 +147,21 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This method receives a constant enumeration of type ScreenState, which describes which screen the window must display. In addition, it also receives a constant pointer to a RenderWindow object which will display the screen state. Moreover, two constant pointers to Text objects are also received, which are the scores that are drawn on the RenderWindow object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>of type ScreenState </td></tr>
+    <tr><td class="paramname">window</td><td>of type std::shared_ptr&lt;sf::RenderWindow&gt;; </td></tr>
+    <tr><td class="paramname">score</td><td>of type std::shared_ptr&lt;sf::Text&gt;; </td></tr>
+    <tr><td class="paramname">high_score</td><td>of type std::shared_ptr&lt;sf::Text&gt;; </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a917dcc3c01b1169c82ba54055a726dd1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a917dcc3c01b1169c82ba54055a726dd1">&#9670;&nbsp;</a></span>createWindow()</h2>
+<a id="ab42c89a0d5b28ece539fff0a31da863e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab42c89a0d5b28ece539fff0a31da863e">&#9670;&nbsp;</a></span>createWindow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -148,17 +169,25 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void WindowHandler::createWindow </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_presentation_8h.html#ad342326db743b63f9029fd61c53987d6">window_ptr</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_presentation_8h.html#ad342326db743b63f9029fd61c53987d6">window_ptr</a> &amp;&#160;</td>
           <td class="paramname"><em>window</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>This method receives a constant pointer to a RenderWindow object, which is initialized in this method. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td>of type std::shared_ptr&lt;sf::RenderWindow&gt;; </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a48ab9bacf295cbe3c28d3831c0589915"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48ab9bacf295cbe3c28d3831c0589915">&#9670;&nbsp;</a></span>events()</h2>
+<a id="aef30a4a15758318a71880a45695f448b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef30a4a15758318a71880a45695f448b">&#9670;&nbsp;</a></span>events()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -166,12 +195,21 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">bool WindowHandler::events </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_presentation_8h.html#ad342326db743b63f9029fd61c53987d6">window_ptr</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_presentation_8h.html#ad342326db743b63f9029fd61c53987d6">window_ptr</a> &amp;&#160;</td>
           <td class="paramname"><em>window</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This method receives a constant pointer to a RenderWindow object, whose poll events are handled within this method. Moreover, the method also return true if a poll event returns true for a key being pressed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td>of type std::shared_ptr&lt;sf::RenderWindow&gt;; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>
