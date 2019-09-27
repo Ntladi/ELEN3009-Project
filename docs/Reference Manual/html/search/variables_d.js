@@ -19,8 +19,7 @@ var searchData=
   ['sprite_5ffactory_5f_953',['sprite_factory_',['../class_sprites.html#a6a7a0df3f9b73fa13d4996276e4cc008',1,'Sprites']]],
   ['sprites_5f_954',['sprites_',['../class_presentation.html#a436bf6ccb4137e24706560f413afd79d',1,'Presentation::sprites_()'],['../class_sprites.html#aec912c1d2e2a6f76e1541f1712a3b7d0',1,'Sprites::sprites_()']]],
   ['starttime_5f_955',['startTime_',['../class_stop_watch.html#a47190f345bca2240e963a09d87976905',1,'StopWatch']]],
-  ['stop_5f_956',['stop_',['../class_stop_watch.html#a966fdfe88b0b375b5d0c93d97185fce9',1,'StopWatch']]],
-  ['stopwatch1_5f_957',['stopwatch1_',['../class_player_input_handler.html#a09e6b024f937bbdd2266f7f8b92bad75',1,'PlayerInputHandler']]],
-  ['stopwatch2_5f_958',['stopwatch2_',['../class_player_input_handler.html#a77b7b4540502b102035c6a058e35f2d4',1,'PlayerInputHandler']]],
-  ['stopwatch_5f_959',['stopwatch_',['../class_alien_bullet_factory.html#ae2d03983d8fae29171db84f614fd5a5c',1,'AlienBulletFactory::stopwatch_()'],['../class_player_bullet_factory.html#ad0a1b3cd80be07c20b466f39cd4718e8',1,'PlayerBulletFactory::stopwatch_()']]]
+  ['stopwatch1_5f_956',['stopwatch1_',['../class_player_input_handler.html#a09e6b024f937bbdd2266f7f8b92bad75',1,'PlayerInputHandler']]],
+  ['stopwatch2_5f_957',['stopwatch2_',['../class_player_input_handler.html#a77b7b4540502b102035c6a058e35f2d4',1,'PlayerInputHandler']]],
+  ['stopwatch_5f_958',['stopwatch_',['../class_alien_bullet_factory.html#ae2d03983d8fae29171db84f614fd5a5c',1,'AlienBulletFactory::stopwatch_()'],['../class_player_bullet_factory.html#ad0a1b3cd80be07c20b466f39cd4718e8',1,'PlayerBulletFactory::stopwatch_()']]]
 ];

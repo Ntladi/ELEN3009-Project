@@ -1,6 +1,6 @@
 <map id="AlienBulletFactory" name="AlienBulletFactory">
-<area shape="rect" id="node1" title="This class is a data layer class that manages the shots fired by aliens in the Armada class." alt="" coords="58,373,206,509"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,197,139,289"/>
-<area shape="rect" id="node3" href="$class_stop_watch.html" title="This class keeps track of amount of time passed as the game is running." alt="" coords="163,175,298,311"/>
+<area shape="rect" id="node1" title="This class is a data layer class that manages the shots fired by aliens in the Armada class." alt="" coords="58,359,206,495"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,182,139,274"/>
+<area shape="rect" id="node3" href="$class_stop_watch.html" title="This class keeps track of amount of time passed as the game is running." alt="" coords="163,160,298,296"/>
 <area shape="rect" id="node4" title=" " alt="" coords="207,5,254,83"/>
 </map>

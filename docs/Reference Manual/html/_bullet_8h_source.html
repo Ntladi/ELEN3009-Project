@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Dual Invaders - ELEN3009 Project: Bullet.h Source File</title>
+<title>ELEN3009 Project: Bullet.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Dual Invaders - ELEN3009 Project
+   <div id="projectname">ELEN3009 Project
    &#160;<span id="projectnumber">3.0</span>
    </div>
   </td>
@@ -93,7 +93,7 @@ $(function() {
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_bullet.html#ad3f31bb90a24cc31b8a6438414a0aeb6">setup</a>(<a class="code" href="_bullet_8h.html#ac2bb6e673963eeb13b5c0c17cd850f3a">four_floats</a> params, <a class="code" href="_object_type_8h.html#a842c5e2e69277690b064bf363c017980">ObjectType</a> bullet_type,<a class="code" href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> orientation, <a class="code" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> position);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> <a class="code" href="class_bullet.html#a8d8c6dae28cedcb55320e288d6facda1">initializePosition</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a> <a class="code" href="class_bullet.html#a8e1d3ddb485d118b644fa1f5f7254bba">initializePosition</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif</span></div>
@@ -108,12 +108,12 @@ $(function() {
 <div class="ttc" id="a_orientation_8h_html_a871118a09520247c78a71ecd7b0abd58a87a77fb30e508725d35683af9611e146"><div class="ttname"><a href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58a87a77fb30e508725d35683af9611e146">Orientation::FACE_UP</a></div></div>
 <div class="ttc" id="a_orientation_8h_html_a871118a09520247c78a71ecd7b0abd58"><div class="ttname"><a href="_orientation_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a></div><div class="ttdeci">Orientation</div><div class="ttdef"><b>Definition:</b> Orientation.h:4</div></div>
 <div class="ttc" id="a_move_direction_8h_html"><div class="ttname"><a href="_move_direction_8h.html">MoveDirection.h</a></div></div>
-<div class="ttc" id="aclass_bullet_html_a8d8c6dae28cedcb55320e288d6facda1"><div class="ttname"><a href="class_bullet.html#a8d8c6dae28cedcb55320e288d6facda1">Bullet::initializePosition</a></div><div class="ttdeci">two_floats initializePosition()</div><div class="ttdoc">This method implements the initializePosition() method defined in the IEnity class....</div><div class="ttdef"><b>Definition:</b> Bullet.cpp:42</div></div>
 <div class="ttc" id="a_bullet_8h_html_ac2bb6e673963eeb13b5c0c17cd850f3a"><div class="ttname"><a href="_bullet_8h.html#ac2bb6e673963eeb13b5c0c17cd850f3a">four_floats</a></div><div class="ttdeci">std::tuple&lt; float, float, float, float &gt; four_floats</div><div class="ttdef"><b>Definition:</b> Bullet.h:10</div></div>
 <div class="ttc" id="aclass_bullet_html"><div class="ttname"><a href="class_bullet.html">Bullet</a></div><div class="ttdoc">This class is a game object class that inherits from the IMovingEntity class. This class models the b...</div><div class="ttdef"><b>Definition:</b> Bullet.h:19</div></div>
 <div class="ttc" id="a_object_type_8h_html_a842c5e2e69277690b064bf363c017980"><div class="ttname"><a href="_object_type_8h.html#a842c5e2e69277690b064bf363c017980">ObjectType</a></div><div class="ttdeci">ObjectType</div><div class="ttdef"><b>Definition:</b> ObjectType.h:4</div></div>
 <div class="ttc" id="a_object_type_8h_html"><div class="ttname"><a href="_object_type_8h.html">ObjectType.h</a></div></div>
 <div class="ttc" id="aclass_bullet_html_a88af6034543e11dd8e4b5539b7634838"><div class="ttname"><a href="class_bullet.html#a88af6034543e11dd8e4b5539b7634838">Bullet::move</a></div><div class="ttdeci">void move() override</div><div class="ttdoc">This method implements the move() method defined in the IMovingEntity class. It moves the bullet eith...</div><div class="ttdef"><b>Definition:</b> Bullet.cpp:15</div></div>
+<div class="ttc" id="aclass_bullet_html_a8e1d3ddb485d118b644fa1f5f7254bba"><div class="ttname"><a href="class_bullet.html#a8e1d3ddb485d118b644fa1f5f7254bba">Bullet::initializePosition</a></div><div class="ttdeci">two_floats initializePosition() override</div><div class="ttdoc">This method implements the initializePosition() method defined in the IEnity class....</div><div class="ttdef"><b>Definition:</b> Bullet.cpp:42</div></div>
 <div class="ttc" id="a_alien_8h_html_a4e5f286475bd18682b5a4ec715e5176c"><div class="ttname"><a href="_alien_8h.html#a4e5f286475bd18682b5a4ec715e5176c">two_floats</a></div><div class="ttdeci">std::tuple&lt; float, float &gt; two_floats</div><div class="ttdef"><b>Definition:</b> Alien.h:9</div></div>
 <div class="ttc" id="a_hit_box_8h_html"><div class="ttname"><a href="_hit_box_8h.html">HitBox.h</a></div></div>
 <div class="ttc" id="aclass_bullet_html_ad3f31bb90a24cc31b8a6438414a0aeb6"><div class="ttname"><a href="class_bullet.html#ad3f31bb90a24cc31b8a6438414a0aeb6">Bullet::setup</a></div><div class="ttdeci">void setup(four_floats params, ObjectType bullet_type, Orientation orientation, two_floats position)</div><div class="ttdoc">This method is called by the constructor to set up the bullet object's initial parameters.</div><div class="ttdef"><b>Definition:</b> Bullet.cpp:51</div></div>

@@ -1,6 +1,6 @@
 <map id="PlayerInputHandler" name="PlayerInputHandler">
-<area shape="rect" id="node1" title="This class is detects player inputs and relays them back to the Presentation class." alt="" coords="34,637,229,803"/>
-<area shape="rect" id="node2" href="$class_stop_watch.html" title="This class keeps track of amount of time passed as the game is running." alt="" coords="5,175,140,311"/>
+<area shape="rect" id="node1" title="This class is detects player inputs and relays them back to the Presentation class." alt="" coords="34,623,229,788"/>
+<area shape="rect" id="node2" href="$class_stop_watch.html" title="This class keeps track of amount of time passed as the game is running." alt="" coords="5,160,140,296"/>
 <area shape="rect" id="node3" title=" " alt="" coords="49,5,96,83"/>
-<area shape="rect" id="node4" title=" " alt="" coords="164,204,211,281"/>
+<area shape="rect" id="node4" title=" " alt="" coords="164,189,211,267"/>
 </map>

@@ -20,5 +20,6 @@ var searchData=
   ['drawlatestobject_107',['drawLatestObject',['../class_sprites.html#a5c69ccdcfd85da96922344f71e3dcbe0',1,'Sprites']]],
   ['drawobject_108',['drawObject',['../class_presentation.html#a262291c9c8462059ed93ba6df40b628e',1,'Presentation']]],
   ['drawscore_109',['drawScore',['../class_presentation.html#ab98d6e11caf394841265df14caf8b1f5',1,'Presentation']]],
-  ['dualcollisions_110',['dualCollisions',['../class_collision_handler.html#a5b6d8dbf9d3a4b38bc9bd8ee8d04f24c',1,'CollisionHandler']]]
+  ['dualcollisions_110',['dualCollisions',['../class_collision_handler.html#a5b6d8dbf9d3a4b38bc9bd8ee8d04f24c',1,'CollisionHandler']]],
+  ['duel_20invaders_111',['Duel Invaders',['../index.html',1,'']]]
 ];
