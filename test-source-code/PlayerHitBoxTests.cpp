@@ -1,5 +1,6 @@
 #include "Player.h"
 #include "HitBox.h"
+#include "SeparatingAxisTheorem.h"
 #include <doctest.h>
 
 TEST_CASE("The player's HitBox moves left with the player")
@@ -220,5 +221,34 @@ TEST_CASE("The player's HitBox moves right with the player")
 			;
 		}
 	}
+}
+
+TEST_CASE("Testing for collisions")
+{
+	SUBCASE("No collision")
+		{
+		 auto player1 = Player{Orientation::FACE_UP};
+		 auto player2 = Player{Orientation::FACE_DOWN};
+
+		 SeparatingAxisTheorem axis;
+
+		 auto box_1 = player1.getHitBox();
+		 auto box_2 = player2.getHitBox();
+		 CHECK_FALSE(axis.isOverlapping(box_1,box_2));
+
+		}
+
+	SUBCASE("Collision")
+		{
+		 auto player1 = Player{Orientation::FACE_UP};
+		 auto player2 = Player{Orientation::FACE_UP};
+
+		 SeparatingAxisTheorem axis;
+
+		 auto box_1 = player1.getHitBox();
+		 auto box_2 = player2.getHitBox();
+		 CHECK(axis.isOverlapping(box_1,box_2));
+
+		}
 }
 
