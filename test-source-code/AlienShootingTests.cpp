@@ -48,7 +48,7 @@ TEST_CASE("A bullet can move")
 		CHECK_FALSE(y_alien == y_bullet)
 		;
 		auto y_ref = y_alien
-				- bullet.getParameters().getMovementStep();
+				- Constants::BULLET_MAXIMUM_MOVEMENT_STEP;
 
 		CHECK(y_bullet == y_ref)
 		;
@@ -72,7 +72,7 @@ TEST_CASE("A bullet can move")
 		CHECK_FALSE(y_alien == y_bullet)
 		;
 		auto y_ref = y_alien
-				+ bullet.getParameters().getMovementStep();
+				+ Constants::BULLET_MAXIMUM_MOVEMENT_STEP;;
 
 		CHECK(y_bullet == y_ref)
 		;
@@ -92,8 +92,8 @@ TEST_CASE("A bullet is deleted if it moves out of the screen")
 			auto &new_bullet = bullet;
 			CHECK(bullet.getStatus())
 			;
-			auto endLoop = new_bullet.getParameters().getScreenYHeight()
-					/ new_bullet.getParameters().getMovementStep();
+			auto endLoop = Constants::SCREEN_Y_LENGTH
+					/ Constants::BULLET_MAXIMUM_MOVEMENT_STEP;
 
 			for (auto i = 0u; i < endLoop; i++)
 			{
@@ -116,8 +116,8 @@ TEST_CASE("A bullet is deleted if it moves out of the screen")
 			auto &new_bullet = bullet;
 			CHECK(bullet.getStatus())
 			;
-			auto endLoop = new_bullet.getParameters().getScreenYHeight()
-					/ new_bullet.getParameters().getMovementStep();
+			auto endLoop = Constants::SCREEN_Y_LENGTH
+					/ Constants::BULLET_MAXIMUM_MOVEMENT_STEP;
 
 			for (auto i = 0u; i < endLoop; i++)
 			{

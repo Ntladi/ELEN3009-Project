@@ -1,5 +1,6 @@
 #include "Player.h"
 #include "Bullet.h"
+#include "StopWatch.h"
 #include <doctest.h>
 
 TEST_CASE("If a player shoots, a bullet is returned")
@@ -76,7 +77,7 @@ TEST_CASE("A bullet can move")
 		CHECK_FALSE(y_player == y_bullet)
 		;
 		auto y_ref = y_player
-				- bullets.at(0)->getParameters().getMovementStep();
+				- Constants::BULLET_MAXIMUM_MOVEMENT_STEP;
 
 		CHECK(y_bullet == y_ref)
 		;
@@ -99,7 +100,7 @@ TEST_CASE("A bullet can move")
 		CHECK_FALSE(y_player == y_bullet)
 		;
 		auto y_ref = y_player
-				+ bullets.at(0)->getParameters().getMovementStep();
+				+ Constants::BULLET_MAXIMUM_MOVEMENT_STEP;
 
 		CHECK(y_bullet == y_ref)
 		;
@@ -122,8 +123,8 @@ TEST_CASE("A bullet is deleted if it moves out of the screen")
 			auto &bullet = bullets.at(0);
 			CHECK(bullet->getStatus())
 			;
-			auto endLoop = bullet->getParameters().getScreenYHeight()
-			/ bullet->getParameters().getMovementStep();
+			auto endLoop = Constants::SCREEN_Y_LENGTH
+			/ Constants::BULLET_MAXIMUM_MOVEMENT_STEP;
 
 			for (auto i = 0u; i <endLoop; i++)
 			{
@@ -153,8 +154,8 @@ TEST_CASE("A bullet is deleted if it moves out of the screen")
 			auto &bullet = bullets.at(0);
 			CHECK(bullet->getStatus())
 			;
-			auto endLoop = bullet->getParameters().getScreenYHeight()
-			/ bullet->getParameters().getMovementStep();
+			auto endLoop = Constants::SCREEN_Y_LENGTH
+			/ Constants::BULLET_MAXIMUM_MOVEMENT_STEP;
 
 			for (auto i = 0u; i <endLoop; i++)
 			{
@@ -170,4 +171,46 @@ TEST_CASE("A bullet is deleted if it moves out of the screen")
 		CHECK(bullets.size()==0);
 
 	}
+
+}
+
+TEST_CASE("A power up is achieved")
+{
+	SUBCASE("Dual shot single bullet")
+	{
+		StopWatch watch;
+		auto player = Player
+		{	Orientation::FACE_UP};
+		watch.start();
+		std::cout << "\nPlease wait an additional " << Constants::TIME_BEFORE_1ST_POWER_UP
+				+ Constants::TIME_BEFORE_2ND_POWER_UP << " seconds for shooting tests to complete" << std::endl;
+		while(watch.getTimeElapsed() <= Constants::TIME_BEFORE_1ST_POWER_UP)
+		{
+
+		}
+		player.shoot();
+		CHECK(player.getShotsFired().size() == 2);
+
+	}
+
+	SUBCASE("Dual shot piercer bullet")
+	{
+		StopWatch watch;
+		auto player = Player
+		{	Orientation::FACE_UP};
+		watch.start();
+
+		while(watch.getTimeElapsed() <= Constants::TIME_BEFORE_2ND_POWER_UP)
+		{
+
+		}
+		player.shoot();
+		CHECK(player.getShotsFired().size() == 3);
+		CHECK(player.getShotsFired().at(0)->getObjectType() == ObjectType::PIERCER_BULLET);
+		CHECK(player.getShotsFired().at(1)->getObjectType() == ObjectType::PIERCER_BULLET);
+		CHECK(player.getShotsFired().at(2)->getObjectType() == ObjectType::PIERCER_BULLET);
+
+	}
+
+
 }

@@ -14,11 +14,11 @@ TEST_CASE("The player's HitBox moves left with the player")
 		auto[x_position, y_position] = player.getPosition();
 		auto hitbox = player.getHitBox();
 
-		auto x_left_ref = x_position - player.getParameters().getXLength() / 2;
-		auto x_right_ref = x_position + player.getParameters().getXLength() / 2;
-		auto y_top_ref = y_position - player.getParameters().getYHeight() / 2;
+		auto x_left_ref = x_position - Constants::PLAYER_X_LENGTH / 2;
+		auto x_right_ref = x_position + Constants::PLAYER_X_LENGTH / 2;
+		auto y_top_ref = y_position - Constants::PLAYER_Y_LENGTH / 2;
 		auto y_bottom_ref = y_position
-				+ player.getParameters().getYHeight() / 2;
+				+ Constants::PLAYER_Y_LENGTH / 2;
 
 		SUBCASE("Check top left corner")
 		{
@@ -68,11 +68,11 @@ TEST_CASE("The player's HitBox moves left with the player")
 		auto[x_position, y_position] = player.getPosition();
 		auto hitbox = player.getHitBox();
 
-		auto x_left_ref = x_position - player.getParameters().getXLength() / 2;
-		auto x_right_ref = x_position + player.getParameters().getXLength() / 2;
-		auto y_top_ref = y_position - player.getParameters().getYHeight() / 2;
+		auto x_left_ref = x_position - Constants::PLAYER_X_LENGTH / 2;
+		auto x_right_ref = x_position + Constants::PLAYER_X_LENGTH / 2;
+		auto y_top_ref = y_position - Constants::PLAYER_Y_LENGTH / 2;
 		auto y_bottom_ref = y_position
-				+ player.getParameters().getYHeight() / 2;
+				+ Constants::PLAYER_Y_LENGTH / 2;
 
 		SUBCASE("Check top left corner")
 		{
@@ -124,11 +124,11 @@ TEST_CASE("The player's HitBox moves right with the player")
 		auto[x_position, y_position] = player.getPosition();
 		auto hitbox = player.getHitBox();
 
-		auto x_left_ref = x_position - player.getParameters().getXLength() / 2;
-		auto x_right_ref = x_position + player.getParameters().getXLength() / 2;
-		auto y_top_ref = y_position - player.getParameters().getYHeight() / 2;
+		auto x_left_ref = x_position - Constants::PLAYER_X_LENGTH / 2;
+		auto x_right_ref = x_position + Constants::PLAYER_X_LENGTH / 2;
+		auto y_top_ref = y_position - Constants::PLAYER_Y_LENGTH / 2;
 		auto y_bottom_ref = y_position
-				+ player.getParameters().getYHeight() / 2;
+				+ Constants::PLAYER_Y_LENGTH / 2;
 
 		SUBCASE("Check top left corner")
 		{
@@ -178,11 +178,11 @@ TEST_CASE("The player's HitBox moves right with the player")
 		auto[x_position, y_position] = player.getPosition();
 		auto hitbox = player.getHitBox();
 
-		auto x_left_ref = x_position - player.getParameters().getXLength() / 2;
-		auto x_right_ref = x_position + player.getParameters().getXLength() / 2;
-		auto y_top_ref = y_position - player.getParameters().getYHeight() / 2;
+		auto x_left_ref = x_position - Constants::PLAYER_X_LENGTH / 2;
+		auto x_right_ref = x_position + Constants::PLAYER_X_LENGTH / 2;
+		auto y_top_ref = y_position - Constants::PLAYER_Y_LENGTH / 2;
 		auto y_bottom_ref = y_position
-				+ player.getParameters().getYHeight() / 2;
+				+ Constants::PLAYER_Y_LENGTH / 2;
 
 		SUBCASE("Check top left corner")
 		{
