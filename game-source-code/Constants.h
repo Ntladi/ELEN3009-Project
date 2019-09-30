@@ -12,7 +12,7 @@ public:
 	 * \brief This constant determines the scale of the game window
 	 * and all objects drawn on it.
 	 */
-	const static constexpr float SCALE = 1.9;
+	const static constexpr float SCALE = 1.3;
 	const static constexpr float SCREEN_X_LENGTH = 960*SCALE;
 	const static constexpr float SCREEN_Y_LENGTH = 500*SCALE;
 
